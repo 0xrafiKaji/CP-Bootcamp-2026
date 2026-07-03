@@ -1,0 +1,5 @@
+# Compiled C binaries
+*.out
+
+# Template executable
+09_Templates/template
