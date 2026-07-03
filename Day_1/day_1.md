@@ -1320,67 +1320,621 @@ output.txt
 
 # Build Your Own Test Cases
 
-Beginner
+একজন Beginner সাধারণত Problem-এর দেওয়া **Sample Input** দিয়েই Code Test করে।
 
-শুধু Sample Input।
+কিন্তু একজন ভালো Problem Solver শুধু Sample Input-এর উপর নির্ভর করে না।
 
-Professional
-
-নিজেই নতুন Test বানায়।
+সে নিজে নতুন Test Case বানিয়ে নিজের Code-কে পরীক্ষা করে।
 
 ---
 
-Example
+## 🤔 Sample Test Case কি যথেষ্ট?
 
-Problem
+ধরো Problem—
 
-Largest Number
+> Given `N` numbers, print the largest number.
 
-Sample
+Sample Input:
 
 ```text
 5
-
 1 4 7 2 3
 ```
 
-Professional আরও Test করবে।
+এখানে—
+
+```text
+N = 5
+```
+
+অর্থাৎ এরপর ৫টি Number আছে:
+
+```text
+1 4 7 2 3
+```
+
+সবচেয়ে বড় Number:
+
+```text
+7
+```
+
+তাই Output:
+
+```text
+7
+```
+
+তুমি Code লিখলে।
+
+Sample Input দিয়ে Run করলে।
+
+Output এলো:
+
+```text
+7
+```
+
+এখন Question—
+
+> Code কি অবশ্যই Correct?
+
+**না।**
+
+একটা Sample Test Case Pass করার অর্থ শুধু এই নির্দিষ্ট Input-এর জন্য Code কাজ করেছে।
+
+অন্য ধরনের Input-এ Code ভুল করতে পারে।
+
+তাই একজন Competitive Programmer নিজেই বিভিন্ন ধরনের Test Case বানায়।
+
+---
+
+# 🧪 Test Case 1 — Single Element
+
+ধরো Input:
 
 ```text
 1
+10
+```
 
+এখানে:
+
+```text
+N = 1
+```
+
+এবং একমাত্র Number:
+
+```text
+10
+```
+
+তাহলে Maximum:
+
+```text
+10
+```
+
+Expected Output:
+
+```text
 10
 ```
 
 ---
 
+## 🧠 কেন এই Test?
+
+আমরা দেখতে চাই—
+
+> মাত্র একটি Number থাকলেও Code ঠিকভাবে কাজ করে কি না।
+
+কারণ Problem-এর Constraint যদি হয়:
+
+```text
+1 ≤ N ≤ 100
+```
+
+তাহলে:
+
+```text
+N = 1
+```
+
+একটি Valid Input।
+
+অনেক সময় সবচেয়ে ছোট Allowed Input-এ Code-এর Bug ধরা পড়ে।
+
+---
+
+# 🧪 Test Case 2 — All Numbers Are Negative
+
+Input:
+
 ```text
 5
-
 -5 -2 -8 -1 -9
 ```
 
+এখানে সবচেয়ে বড় Number কোনটি?
+
+অনেকে Negative Number দেখে Confused হতে পারে।
+
+Number Line চিন্তা করো:
+
+```text
+-9 < -8 < -5 < -2 < -1
+```
+
+তাই Maximum:
+
+```text
+-1
+```
+
+Expected Output:
+
+```text
+-1
+```
+
 ---
+
+## ⚠️ এই Test Case কেন গুরুত্বপূর্ণ?
+
+ধরো কেউ Maximum বের করার জন্য লিখল:
+
+```c
+int max = 0;
+```
+
+তারপর প্রতিটি Number-এর সঙ্গে Compare করল।
+
+Dry Run:
+
+```text
+max = 0
+
+-5 > 0 ? No
+
+-2 > 0 ? No
+
+-8 > 0 ? No
+
+-1 > 0 ? No
+
+-9 > 0 ? No
+```
+
+শেষে:
+
+```text
+max = 0
+```
+
+Program Output দেবে:
+
+```text
+0
+```
+
+কিন্তু Correct Answer:
+
+```text
+-1
+```
+
+এমনকি Input-এর মধ্যে `0` ছিলই না।
+
+অর্থাৎ নিজের বানানো Negative Test Case আমাদের Code-এর একটি **Logic Bug** ধরে ফেলেছে।
+
+---
+
+## ✅ Better Initialization
+
+Maximum Problem-এ একটি Safe Approach:
+
+```c
+int max = arr[0];
+```
+
+অর্থাৎ প্রথম Element-কে শুরুতে Maximum ধরে নেওয়া।
+
+Example:
+
+```text
+-5 -2 -8 -1 -9
+```
+
+Dry Run:
+
+```text
+max = -5
+```
+
+Next:
+
+```text
+-2 > -5
+
+Yes
+
+max = -2
+```
+
+Next:
+
+```text
+-8 > -2
+
+No Update
+```
+
+Next:
+
+```text
+-1 > -2
+
+Yes
+
+max = -1
+```
+
+Next:
+
+```text
+-9 > -1
+
+No Update
+```
+
+Final Answer:
+
+```text
+-1
+```
+
+Correct. ✅
+
+---
+
+# 🧪 Test Case 3 — All Values Are Equal
+
+Input:
 
 ```text
 5
-
 7 7 7 7 7
 ```
 
----
+এখানে সব Number একই।
+
+Maximum:
 
 ```text
-2
+7
+```
 
-1000000 999999
+Expected Output:
+
+```text
+7
 ```
 
 ---
 
-এগুলোই
+## 🧠 কেন এই Test?
 
-Edge Case।
+আমরা দেখতে চাই—
+
+> সব Value Equal হলে Code ঠিকভাবে কাজ করে কি না।
+
+Dry Run:
+
+```text
+max = 7
+```
+
+Next:
+
+```text
+7 > 7 ?
+
+No
+```
+
+Next:
+
+```text
+7 > 7 ?
+
+No
+```
+
+এভাবে সব Element Check করার পর:
+
+```text
+max = 7
+```
+
+Correct. ✅
+
+---
+
+# 🧪 Test Case 4 — Maximum at the Beginning
+
+Input:
+
+```text
+5
+100 20 30 40 50
+```
+
+Maximum:
+
+```text
+100
+```
+
+Expected Output:
+
+```text
+100
+```
+
+---
+
+## 🧠 কেন এই Test?
+
+আমরা দেখতে চাই—
+
+> প্রথম Element-টাই Maximum হলে Code সেটাকে ধরে রাখতে পারে কি না।
+
+Dry Run:
+
+```text
+max = 100
+```
+
+তারপর:
+
+```text
+20 > 100 ? No
+
+30 > 100 ? No
+
+40 > 100 ? No
+
+50 > 100 ? No
+```
+
+Final:
+
+```text
+100
+```
+
+Correct. ✅
+
+---
+
+# 🧪 Test Case 5 — Maximum at the End
+
+Input:
+
+```text
+5
+10 20 30 40 100
+```
+
+Maximum:
+
+```text
+100
+```
+
+Expected Output:
+
+```text
+100
+```
+
+---
+
+## 🧠 কেন এই Test?
+
+আমরা দেখতে চাই—
+
+> Code শেষ Element পর্যন্ত সঠিকভাবে Traversal করছে কি না।
+
+যদি Loop ভুল করে এমন হয়:
+
+```c
+for (int i = 0; i < n - 1; i++)
+```
+
+তাহলে শেষ Element:
+
+```text
+100
+```
+
+Check-ই হবে না।
+
+এ ধরনের Bug-কে সাধারণভাবে **Off-by-One Error** বলা হয়।
+
+---
+
+# 🧪 Test Case 6 — Large Values
+
+Input:
+
+```text
+2
+1000000 999999
+```
+
+Maximum:
+
+```text
+1000000
+```
+
+Expected Output:
+
+```text
+1000000
+```
+
+---
+
+## 🧠 কেন এই Test?
+
+আমরা দেখতে চাই—
+
+- বড় Value ঠিকভাবে Handle হচ্ছে কি না।
+- সঠিক Data Type ব্যবহার করা হয়েছে কি না।
+- প্রথম Number Maximum হলেও Code কাজ করছে কি না।
+
+> 💡 `1000000` সহজেই C-এর সাধারণ `int` Range-এর মধ্যে থাকে। এটি শুধু large-value thinking বোঝানোর একটি সহজ Example। সত্যিকারের Overflow Test বানানোর সময় Problem-এর Constraints দেখে Value নির্বাচন করতে হবে।
+
+---
+
+# 🧠 তাহলে Edge Case কী?
+
+সহজ ভাষায়—
+
+> **Edge Case হলো এমন বিশেষ, সীমান্তবর্তী, বা অস্বাভাবিক Valid Input, যেটা সাধারণ Input-এর তুলনায় তোমার Code-এর লুকানো Bug বের করার সম্ভাবনা বেশি রাখে।**
+
+উদাহরণ:
+
+| Situation            | Example           |
+| -------------------- | ----------------- |
+| Single Element       | `10`              |
+| All Negative         | `-5 -2 -8 -1 -9`  |
+| All Equal            | `7 7 7 7 7`       |
+| Maximum at Beginning | `100 20 30 40 50` |
+| Maximum at End       | `10 20 30 40 100` |
+| Large Values         | `1000000 999999`  |
+
+---
+
+# 💡 Mentor Note
+
+Sample Input-এর কাজ হলো—
+
+> **Problem বুঝতে সাহায্য করা।**
+
+নিজের Test Case-এর কাজ হলো—
+
+> **নিজের Solution ভাঙার চেষ্টা করা।**
+
+এই দুইটা এক জিনিস না।
+
+---
+
+# 🔐 Security Mindset Connection
+
+তুমি যেহেতু Security নিয়ে কাজ করেছো, এই Concept তোমার পরিচিত হওয়ার কথা।
+
+Smart Contract Audit করার সময় তুমি শুধু Happy Path দেখো না।
+
+তুমি ভাবো—
+
+```text
+Zero হলে কী হবে?
+
+Maximum Value হলে কী হবে?
+
+একই কাজ দুইবার করলে কী হবে?
+
+Unexpected State হলে কী হবে?
+
+Boundary-তে কী হবে?
+```
+
+CP-তেও একই Mindset ব্যবহার করবে।
+
+ধরো Array Problem।
+
+নিজেকে প্রশ্ন করবে:
+
+```text
+N = 1 হলে?
+
+সব Negative হলে?
+
+সব Equal হলে?
+
+Answer প্রথমে থাকলে?
+
+Answer শেষে থাকলে?
+
+Value অনেক বড় হলে?
+```
+
+এটাই Edge Case Thinking।
+
+---
+
+# 🏆 Contest Habit
+
+Code Submit করার আগে অন্তত তিন ধরনের Test করার চেষ্টা করো:
+
+```text
+1. Normal Case
+
+2. Smallest Valid Case
+
+3. Special / Edge Case
+```
+
+Example:
+
+```text
+Normal Case
+↓
+1 4 7 2 3
+
+Smallest Case
+↓
+10
+
+Edge Case
+↓
+-5 -2 -8 -1 -9
+```
+
+সময় থাকলে আরও Test করো:
+
+```text
+All Equal
+
+Answer at Beginning
+
+Answer at End
+
+Large Values
+```
+
+---
+
+# 🎯 Final Rule
+
+আজ থেকে Sample Input Pass করলেই ভাববে না—
+
+> "আমার Code Correct."
+
+বরং নিজেকে প্রশ্ন করবে—
+
+> **"আমি কী Input দিলে আমার নিজের Code-টা ভেঙে ফেলতে পারি?"**
+
+একজন Beginner নিজের Code-কে Correct প্রমাণ করার চেষ্টা করে।
+
+একজন Strong Problem Solver নিজের Code-কে **ভুল প্রমাণ করার চেষ্টা করে**।
+
+যদি অনেক চেষ্টা করেও Code না ভাঙে, তখন Solution-এর উপর Confidence বাড়ে।
 
 ---
 
