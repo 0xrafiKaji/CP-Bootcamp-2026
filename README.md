@@ -111,32 +111,66 @@ Final Day
 # 📂 Repository Structure
 
 ```text
-cp-bootcamp
+# 📂 Repository Structure
+
+```text
+CP-Bootcamp-2026/
 │
-├── README.md
+├── 00_Day_0/
+│   ├── Assignment_and_Exercise/
+│   │   ├── Day_0_assignment.md
+│   │   └── Day_0_exercise.md
+│   ├── day_0.md
+│   └── day_0.pdf
 │
-├── Day-00
-│   ├── README.md
-│   └── Notes.md
+├── 01_Day_1/
+│   ├── Assignment_and_Exercise/
+│   │   └── Day_1_assignment.md
+│   ├── day_1.md
+│   └── day_1.pdf
 │
-├── Day-01
-│   ├── README.md
-│   ├── Chapters
-│   ├── Assignment.md
-│   └── Exercises.md
+├── 02_Day_2/                # Coming Soon
+├── 03_Day_3/                # Coming Soon
+├── 04_Day_4/                # Coming Soon
+├── 05_Day_5/                # Coming Soon
+├── 06_Day_6/                # Coming Soon
+├── 07_Day_7/                # Coming Soon
+├── 08_Day_8/                # Coming Soon
+├── 09_Day_9/                # Coming Soon
+├── 10_Day_10/               # Coming Soon
+├── 11_Day_11/               # Coming Soon
+├── 12_Day_12/               # Coming Soon
+├── 13_Day_13/               # Coming Soon
+├── 14_Day_14/               # Coming Soon
+├── 15_Day_15/               # Coming Soon
+├── 16_Day_16/               # Coming Soon
 │
-├── Problems
-│   ├── HackerRank
-│   ├── CSES
-│   └── Codeforces
+├── 17_Glossary/
+│   └── CP_Dictionary.md
 │
-├── Notes
+├── 18_Pattern_Library/
+│   └── core_pattern.md
 │
-├── Mistakes
+├── 19_HackerRank/
 │
-├── Templates
+├── 20_CSES/
 │
-└── Resources
+├── 21_Codeforces/
+│
+├── 22_Contest/
+│
+├── 23_Notes/
+│
+├── 24_Templates/
+│   ├── template.c
+│   └── input.txt
+│
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+> **Note:** Day folders are created gradually as the bootcamp progresses. The repository structure above represents the planned final structure of the 16-day bootcamp.
 ```
 
 ---
