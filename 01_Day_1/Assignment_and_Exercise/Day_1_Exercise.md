@@ -192,3 +192,7 @@ Output Average
 ```
 
 ---
+
+Chapter 8 - Task 4:
+
+Problem -> Read -> Highlight(Keyword) -> Pattern -> Own Example -> Brute Force -> Algorithm -> Dray run -> Code -> Review 
