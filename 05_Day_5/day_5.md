@@ -6199,13 +6199,13 @@ if (minIndex != i)
 
 এই table নিজে complete করবে:
 
-| Question              | Bubble Sort | Selection Sort |
-| --------------------- | ----------- | -------------- |
+| Question            | Bubble Sort | Selection Sort |
+| ------------------- | ----------- | -------------- |
 | কী compare করে?       | ...         | ...            |
 | Candidate Index লাগে? | ...         | ...            |
-| Swap behaviour        | ...         | ...            |
-| কোন side fixed হয়?    | ...         | ...            |
-| Complexity            | ...         | ...            |
+| Swap behaviour      | ...         | ...            |
+| কোন side fixed হয়?   | ...         | ...            |
+| Complexity          | ...         | ...            |
 
 ---
 
@@ -6799,9 +6799,9 @@ Short mental table:
 
 | Return | Meaning |
 | ------ | ------- |
-| `< 0`  | `a` আগে |
+| `< 0`  | `a` আগে  |
 | `0`    | Equal   |
-| `> 0`  | `a` পরে |
+| `> 0`  | `a` পরে  |
 
 এটাই comparator-এর core contract।
 
@@ -8882,3 +8882,13909 @@ Frequency Array Approach
 
 ---
 
+# 🚀 CP Bootcamp 2026 — Day 5
+
+# Chapter 5 — Frequency Counting Pattern
+
+> **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
+> **Chapter Goal:** কোনো value কতবার এসেছে—এই ধরনের problem দেখলে **Traversal → Value → Frequency Index → Increment → Query** pattern চিনতে শেখা।
+> **Estimated Time:** 50–70 minutes
+
+---
+
+# 🎯 Chapter Mission
+
+Day 5-এ এখন পর্যন্ত:
+
+```text
+Chapter 1
+Sorting Mental Model
+        ↓
+Chapter 2
+Bubble Sort
+        ↓
+Chapter 3
+Selection Sort
+        ↓
+Chapter 4
+qsort() for Practical Sorting
+        ↓
+Chapter 5
+Frequency Counting
+```
+
+আগের Chapter-এ আমরা duplicate এবং distinct value বের করতে sorting ব্যবহার করেছি।
+
+Example:
+
+```text
+5 2 5 3 2
+```
+
+Sort করলে:
+
+```text
+2 2 3 5 5
+```
+
+তারপর adjacent comparison করে frequency-related কিছু problem solve করা যায়।
+
+কিন্তু যদি প্রশ্ন হয়:
+
+> `2` কতবার আছে?
+
+অথবা:
+
+> প্রতিটি value কতবার এসেছে?
+
+অথবা:
+
+> কোন value সবচেয়ে বেশি এসেছে?
+
+তাহলে অনেক ক্ষেত্রে direct approach:
+
+```text
+Value দেখি
+        ↓
+তার জন্য একটি Counter রাখি
+        ↓
+Value আবার এলে Counter বাড়াই
+        ↓
+Frequency Table তৈরি করি
+```
+
+Core pattern:
+
+```text
+arr[i]
+   ↓
+Value
+   ↓
+freq[value]
+   ↓
+freq[value]++
+```
+
+---
+
+# 1. Frequency মানে কী?
+
+Frequency মানে:
+
+> কোনো value কতবার উপস্থিত হয়েছে।
+
+Array:
+
+```text
+2 5 2 3 5 2
+```
+
+এখানে:
+
+```text
+Value 2
+→ 3 times
+
+Value 3
+→ 1 time
+
+Value 5
+→ 2 times
+```
+
+Frequency Table:
+
+| Value | Frequency |
+| ----: | --------: |
+|     2 |         3 |
+|     3 |         1 |
+|     5 |         2 |
+
+Mental Model:
+
+```text
+Value
+↓
+How Many Times?
+↓
+Frequency
+```
+
+---
+
+# 2. প্রথমে Simple Counting বুঝি
+
+ধরো:
+
+```text
+Array:
+
+2 5 2 3 5 2
+```
+
+Question:
+
+> `2` কতবার আছে?
+
+Day 2-এর Counting Pattern দিয়ে:
+
+```c
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    if (arr[i] == 2)
+    {
+        count++;
+    }
+}
+```
+
+Result:
+
+```text
+count = 3
+```
+
+এটা single target-এর জন্য ঠিক আছে।
+
+Pattern:
+
+```text
+Traversal
+↓
+Condition Match?
+↓
+Counter++
+```
+
+কিন্তু যদি প্রশ্ন হয়:
+
+> সব value কতবার এসেছে?
+
+তখন একটি `count` variable যথেষ্ট না।
+
+কারণ:
+
+```text
+2-এর count দরকার
+
+3-এর count দরকার
+
+5-এর count দরকার
+
+...
+```
+
+তখন দরকার:
+
+```text
+Multiple Counters
+```
+
+এখানেই Frequency Array আসে।
+
+---
+
+# 3. Frequency Array Mental Model
+
+ধরো values-এর range:
+
+```text
+0 থেকে 9
+```
+
+তাহলে:
+
+```c
+int freq[10] = {0};
+```
+
+Initial state:
+
+```text
+Index:  0 1 2 3 4 5 6 7 8 9
+Freq :  0 0 0 0 0 0 0 0 0 0
+```
+
+এখন Array:
+
+```text
+2 5 2 3 5 2
+```
+
+প্রতিটি value-এর জন্য:
+
+```c
+freq[arr[i]]++;
+```
+
+এই এক line-ই Chapter-এর সবচেয়ে গুরুত্বপূর্ণ line।
+
+```c
+freq[arr[i]]++;
+```
+
+---
+
+# 4. `freq[arr[i]]++` কীভাবে কাজ করে?
+
+প্রথমবার দেখলে line-টা confusing লাগতে পারে।
+
+তাই ধীরে ভাঙি।
+
+ধরো:
+
+```text
+i = 0
+```
+
+এবং:
+
+```text
+arr[i] = 2
+```
+
+তাহলে:
+
+```c
+freq[arr[i]]++;
+```
+
+becomes:
+
+```c
+freq[2]++;
+```
+
+অর্থাৎ:
+
+```text
+Value 2 এসেছে
+↓
+Index 2-এর Counter বাড়াও
+```
+
+Before:
+
+```text
+freq[2] = 0
+```
+
+After:
+
+```text
+freq[2] = 1
+```
+
+---
+
+পরের value:
+
+```text
+arr[1] = 5
+```
+
+তখন:
+
+```c
+freq[arr[1]]++;
+```
+
+মানে:
+
+```c
+freq[5]++;
+```
+
+Result:
+
+```text
+freq[5] = 1
+```
+
+---
+
+আবার `2` এলে:
+
+```c
+freq[2]++;
+```
+
+এখন:
+
+```text
+freq[2] = 2
+```
+
+Mental Model:
+
+```text
+Array Value
+        ↓
+Becomes Frequency Array Index
+        ↓
+Increment That Counter
+```
+
+---
+
+# 5. Full Frequency Dry Run
+
+Input Array:
+
+```text
+2 5 2 3 5 2
+```
+
+Initial:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 0 0 0 0
+```
+
+---
+
+## Step 1
+
+Current Value:
+
+```text
+2
+```
+
+Operation:
+
+```text
+freq[2]++
+```
+
+State:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 1 0 0 0
+```
+
+---
+
+## Step 2
+
+Current Value:
+
+```text
+5
+```
+
+Operation:
+
+```text
+freq[5]++
+```
+
+State:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 1 0 0 1
+```
+
+---
+
+## Step 3
+
+Current Value:
+
+```text
+2
+```
+
+Operation:
+
+```text
+freq[2]++
+```
+
+State:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 2 0 0 1
+```
+
+---
+
+## Step 4
+
+Current Value:
+
+```text
+3
+```
+
+Operation:
+
+```text
+freq[3]++
+```
+
+State:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 2 1 0 1
+```
+
+---
+
+## Step 5
+
+Current Value:
+
+```text
+5
+```
+
+Operation:
+
+```text
+freq[5]++
+```
+
+State:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 2 1 0 2
+```
+
+---
+
+## Step 6
+
+Current Value:
+
+```text
+2
+```
+
+Operation:
+
+```text
+freq[2]++
+```
+
+Final:
+
+```text
+Index:  0 1 2 3 4 5
+Freq :  0 0 3 1 0 2
+```
+
+Interpretation:
+
+```text
+freq[0] = 0
+→ 0 appears 0 times
+
+freq[1] = 0
+→ 1 appears 0 times
+
+freq[2] = 3
+→ 2 appears 3 times
+
+freq[3] = 1
+→ 3 appears 1 time
+
+freq[4] = 0
+→ 4 appears 0 times
+
+freq[5] = 2
+→ 5 appears 2 times
+```
+
+---
+
+# 6. Basic Frequency Counting Code
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int arr[n];
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        freq[arr[i]]++;
+    }
+
+    for (int value = 0; value <= 100; value++)
+    {
+        if (freq[value] > 0)
+        {
+            printf("%d appears %d times\n",
+                   value,
+                   freq[value]);
+        }
+    }
+
+    return 0;
+}
+```
+
+Input:
+
+```text
+6
+2 5 2 3 5 2
+```
+
+Output:
+
+```text
+2 appears 3 times
+3 appears 1 time
+5 appears 2 times
+```
+
+---
+
+# 7. কেন `freq[101]`?
+
+ধরো constraint:
+
+```text
+0 ≤ arr[i] ≤ 100
+```
+
+Possible values:
+
+```text
+0, 1, 2, ..., 100
+```
+
+এখানে মোট index দরকার:
+
+```text
+0 থেকে 100
+```
+
+তাই size:
+
+```text
+101
+```
+
+Code:
+
+```c
+int freq[101] = {0};
+```
+
+Important Rule:
+
+```text
+Maximum Value = 100
+        ↓
+Need Index 100
+        ↓
+Array Size at least 101
+```
+
+General:
+
+```text
+Value Range:
+0 to MAX_VALUE
+
+Frequency Array Size:
+MAX_VALUE + 1
+```
+
+---
+
+# 8. Frequency Array Initialize করা কেন জরুরি?
+
+Wrong:
+
+```c
+int freq[101];
+```
+
+Local array-এর values garbage হতে পারে।
+
+তখন:
+
+```c
+freq[2]++;
+```
+
+করলে যদি `freq[2]` আগে random value হয়:
+
+```text
+487
+```
+
+তাহলে result হবে:
+
+```text
+488
+```
+
+যা ভুল।
+
+তাই:
+
+```c
+int freq[101] = {0};
+```
+
+Mental Model:
+
+```text
+Before Counting
+↓
+Every Counter Must Start at 0
+```
+
+---
+
+# 9. Input-এর সময়ই Frequency Count করা যায়
+
+আগের code:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    scanf("%d", &arr[i]);
+}
+
+for (int i = 0; i < n; i++)
+{
+    freq[arr[i]]++;
+}
+```
+
+কিন্তু যদি original array পরে দরকার না হয়, input-এর সময়ই count করা যায়।
+
+```c
+for (int i = 0; i < n; i++)
+{
+    int x;
+
+    scanf("%d", &x);
+
+    freq[x]++;
+}
+```
+
+Full example:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    for (int value = 0; value <= 100; value++)
+    {
+        if (freq[value] > 0)
+        {
+            printf("%d %d\n", value, freq[value]);
+        }
+    }
+
+    return 0;
+}
+```
+
+Mental Decision:
+
+```text
+Need Original Array Later?
+        │
+    ┌───┴───┐
+    │       │
+   Yes      No
+    │       │
+    ▼       ▼
+Store      Count
+Array      Directly
+```
+
+---
+
+# 10. Frequency Counting vs Normal Counting
+
+## Normal Counting
+
+Question:
+
+> `7` কতবার আছে?
+
+```c
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    if (arr[i] == 7)
+    {
+        count++;
+    }
+}
+```
+
+State:
+
+```text
+One Target
+↓
+One Counter
+```
+
+---
+
+## Frequency Counting
+
+Question:
+
+> প্রতিটি value কতবার আছে?
+
+```c
+freq[arr[i]]++;
+```
+
+State:
+
+```text
+Many Possible Values
+↓
+One Counter Per Value
+```
+
+Mental Contrast:
+
+```text
+Single Target
+→ count
+```
+
+```text
+Many Values
+→ freq[]
+```
+
+---
+
+# 11. Query Problem
+
+ধরো তোমাকে দেওয়া হলো:
+
+```text
+Array:
+2 5 2 3 5 2
+```
+
+তারপর অনেক Query:
+
+```text
+How many 2?
+How many 5?
+How many 1?
+How many 3?
+```
+
+Normal approach:
+
+প্রতি Query-এর জন্য পুরো Array traverse করলে:
+
+```text
+Query 1
+→ Traverse n
+
+Query 2
+→ Traverse n
+
+Query 3
+→ Traverse n
+```
+
+যদি `q` queries থাকে:
+
+```text
+O(n × q)
+```
+
+Frequency approach:
+
+```text
+Build Frequency Once
+↓
+freq[value]
+↓
+Direct Answer
+```
+
+Build:
+
+```text
+O(n)
+```
+
+প্রতি query:
+
+```text
+O(1)
+```
+
+Conceptually total:
+
+```text
+O(n + q)
+```
+
+এটাই preprocessing-এর একটি simple example।
+
+---
+
+# 12. Frequency Query Code
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    int q;
+
+    scanf("%d", &q);
+
+    while (q--)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        printf("%d\n", freq[x]);
+    }
+
+    return 0;
+}
+```
+
+Input:
+
+```text
+6
+2 5 2 3 5 2
+
+4
+2
+5
+1
+3
+```
+
+Output:
+
+```text
+3
+2
+0
+1
+```
+
+Mental Model:
+
+```text
+Data
+↓
+Preprocess Frequency
+↓
+Queries Arrive
+↓
+Direct Lookup
+```
+
+---
+
+# 13. Preprocessing শব্দটি বুঝি
+
+এটা CP-তে খুব important term।
+
+**Preprocessing** মানে:
+
+> Query বা main operation-এর আগে data-কে এমনভাবে prepare করা যাতে পরে answer দ্রুত দেওয়া যায়।
+
+Frequency example:
+
+```text
+Raw Array
+↓
+Build freq[]
+↓
+Prepared Information
+↓
+Fast Queries
+```
+
+Without preprocessing:
+
+```text
+Every Query
+↓
+Search Full Array
+```
+
+With preprocessing:
+
+```text
+One Initial Traversal
+↓
+Store Counts
+↓
+Direct Answer
+```
+
+Future-এ তুমি আরও preprocessing pattern দেখবে।
+
+যেমন:
+
+```text
+Prefix Sum
+Sorting
+Frequency Array
+```
+
+এখন শুধু mental idea রাখো:
+
+```text
+Spend Work Once
+↓
+Answer Many Times Faster
+```
+
+---
+
+# 14. Distinct Count Using Frequency Array
+
+Array:
+
+```text
+5 2 5 3 2 8
+```
+
+Frequency:
+
+```text
+2 → 2
+3 → 1
+5 → 2
+8 → 1
+```
+
+Distinct values হলো যাদের:
+
+```text
+freq[value] > 0
+```
+
+তাই:
+
+```c
+int distinct = 0;
+
+for (int value = 0; value <= 100; value++)
+{
+    if (freq[value] > 0)
+    {
+        distinct++;
+    }
+}
+```
+
+Pattern:
+
+```text
+Build Frequency
+↓
+Traverse Frequency Array
+↓
+Positive Frequency?
+↓
+Distinct++
+```
+
+---
+
+# 15. Full Distinct Count Program
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    int distinct = 0;
+
+    for (int value = 0; value <= 100; value++)
+    {
+        if (freq[value] > 0)
+        {
+            distinct++;
+        }
+    }
+
+    printf("%d\n", distinct);
+
+    return 0;
+}
+```
+
+Input:
+
+```text
+6
+5 2 5 3 2 8
+```
+
+Output:
+
+```text
+4
+```
+
+Because:
+
+```text
+2
+3
+5
+8
+```
+
+এই চারটি distinct value।
+
+---
+
+# 16. Most Frequent Value
+
+Problem:
+
+> কোন value সবচেয়ে বেশি এসেছে?
+
+Array:
+
+```text
+2 5 2 3 5 2
+```
+
+Frequency:
+
+```text
+2 → 3
+3 → 1
+5 → 2
+```
+
+Answer:
+
+```text
+2
+```
+
+কারণ highest frequency:
+
+```text
+3
+```
+
+এখানে pattern combination:
+
+```text
+Frequency Counting
++
+Maximum Tracking
++
+Candidate Value Tracking
+```
+
+Variables:
+
+```c
+int bestValue = 0;
+int bestFrequency = 0;
+```
+
+Traversal:
+
+```c
+for (int value = 0; value <= 100; value++)
+{
+    if (freq[value] > bestFrequency)
+    {
+        bestFrequency = freq[value];
+        bestValue = value;
+    }
+}
+```
+
+Mental Model:
+
+```text
+Traverse Possible Values
+↓
+Check Their Frequency
+↓
+Better Frequency Found?
+↓
+Update Best Frequency
+↓
+Remember Value
+```
+
+---
+
+# 17. Most Frequent Value Full Code
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    int bestValue = 0;
+    int bestFrequency = 0;
+
+    for (int value = 0; value <= 100; value++)
+    {
+        if (freq[value] > bestFrequency)
+        {
+            bestFrequency = freq[value];
+            bestValue = value;
+        }
+    }
+
+    printf("Value: %d\n", bestValue);
+    printf("Frequency: %d\n", bestFrequency);
+
+    return 0;
+}
+```
+
+Input:
+
+```text
+6
+2 5 2 3 5 2
+```
+
+Output:
+
+```text
+Value: 2
+Frequency: 3
+```
+
+---
+
+# 18. Tie হলে কী হবে?
+
+ধরো:
+
+```text
+1 1 3 3 5
+```
+
+Frequency:
+
+```text
+1 → 2
+3 → 2
+5 → 1
+```
+
+Maximum frequency tie:
+
+```text
+1 and 3
+```
+
+আগের code:
+
+```c
+if (freq[value] > bestFrequency)
+```
+
+ব্যবহার করলে ছোট value `1` থাকবে।
+
+কারণ frequency array traverse করছি:
+
+```text
+0 → 1 → 2 → 3 → ...
+```
+
+`1` আগে maximum হয়।
+
+তারপর `3`-এর frequency equal:
+
+```text
+2 > 2?
+No
+```
+
+তাই update হয় না।
+
+এখানে lesson:
+
+> Tie-breaking rule problem statement থেকে পড়তে হবে।
+
+Possible rules:
+
+```text
+Smallest Value
+
+Largest Value
+
+First Appearing Value
+
+Last Appearing Value
+```
+
+এগুলো এক জিনিস না।
+
+---
+
+# 19. Frequency Array-এর বড় Limitation
+
+Frequency array খুব powerful।
+
+কিন্তু সব জায়গায় use করা যায় না।
+
+ধরো constraint:
+
+```text
+0 ≤ arr[i] ≤ 100
+```
+
+Excellent।
+
+```c
+int freq[101];
+```
+
+Small memory।
+
+কিন্তু যদি:
+
+```text
+0 ≤ arr[i] ≤ 1000000000
+```
+
+তাহলে:
+
+```c
+int freq[1000000001];
+```
+
+বানানো practical না।
+
+Mental Rule:
+
+```text
+Small Manageable Value Range
+        ↓
+Frequency Array Natural
+```
+
+```text
+Huge Value Range
+        ↓
+Direct Frequency Array Dangerous
+```
+
+এই ক্ষেত্রে future techniques:
+
+```text
+Sorting
+Hash Map
+Coordinate Compression
+```
+
+কাজে আসতে পারে।
+
+এখন তোমার focus:
+
+> **Frequency Array use করার আগে value range check করো।**
+
+---
+
+# 20. Negative Values-এর সমস্যা
+
+ধরো:
+
+```text
+-2 3 -2 5
+```
+
+এই code:
+
+```c
+freq[arr[i]]++;
+```
+
+হলে:
+
+```c
+freq[-2]++;
+```
+
+যা invalid index।
+
+তাই direct frequency indexing-এর basic condition:
+
+```text
+Values Must Map to Valid Array Indices
+```
+
+অর্থাৎ সাধারণ beginner form-এ:
+
+```text
+Non-negative values
++
+Small bounded range
+```
+
+থাকা ভালো।
+
+Negative values handle করার জন্য offset technique আছে।
+
+---
+
+# 21. Offset Technique — Basic Idea
+
+ধরো range:
+
+```text
+-5 থেকে 5
+```
+
+Direct index:
+
+```text
+-5
+```
+
+invalid।
+
+তাই shift করি:
+
+```text
+Index = Value + 5
+```
+
+Mapping:
+
+| Value | Frequency Index |
+| ----: | --------------: |
+|    -5 |               0 |
+|    -4 |               1 |
+|    -3 |               2 |
+|     0 |               5 |
+|     3 |               8 |
+|     5 |              10 |
+
+Code:
+
+```c
+freq[value + 5]++;
+```
+
+Retrieve:
+
+```c
+freq[x + 5]
+```
+
+Mental Model:
+
+```text
+Negative Range
+↓
+Shift Values
+↓
+Map to Valid Non-negative Index
+```
+
+এই technique এখন শুধু পরিচিত হও।
+
+Day 5 assignment-এ এটা mandatory না।
+
+---
+
+# 22. Character Frequency
+
+Frequency pattern শুধু integer-এর জন্য না।
+
+String:
+
+```text
+banana
+```
+
+Characters:
+
+```text
+b a n a n a
+```
+
+Frequency:
+
+```text
+a → 3
+b → 1
+n → 2
+```
+
+Code:
+
+```c
+int freq[256] = {0};
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    freq[(unsigned char)str[i]]++;
+}
+```
+
+Conceptually:
+
+```text
+Character
+↓
+Numeric Code
+↓
+Frequency Index
+```
+
+তুমি Day 3-এ String Traversal শিখেছ।
+
+এখন pattern combination:
+
+```text
+String Traversal
++
+Frequency Counting
+```
+
+---
+
+# 23. Lowercase Letter Frequency
+
+যদি constraint থাকে:
+
+```text
+Only lowercase English letters
+```
+
+তাহলে 26-size frequency array ব্যবহার করা যায়।
+
+```c
+int freq[26] = {0};
+```
+
+Mapping:
+
+```text
+'a' → 0
+'b' → 1
+'c' → 2
+...
+'z' → 25
+```
+
+Formula:
+
+```c
+index = str[i] - 'a';
+```
+
+Count:
+
+```c
+freq[str[i] - 'a']++;
+```
+
+Example:
+
+```text
+String:
+
+banana
+```
+
+For `'b'`:
+
+```text
+'b' - 'a'
+=
+1
+```
+
+তাই:
+
+```text
+freq[1]++
+```
+
+For `'a'`:
+
+```text
+'a' - 'a'
+=
+0
+```
+
+তাই:
+
+```text
+freq[0]++
+```
+
+---
+
+# 24. Lowercase Character Frequency Program
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[101];
+
+    scanf("%100s", str);
+
+    int freq[26] = {0};
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        freq[str[i] - 'a']++;
+    }
+
+    for (int i = 0; i < 26; i++)
+    {
+        if (freq[i] > 0)
+        {
+            printf("%c appears %d times\n",
+                   'a' + i,
+                   freq[i]);
+        }
+    }
+
+    return 0;
+}
+```
+
+Input:
+
+```text
+banana
+```
+
+Output:
+
+```text
+a appears 3 times
+b appears 1 times
+n appears 2 times
+```
+
+Pattern reuse:
+
+```text
+Day 3
+String Traversal
+        +
+Day 5
+Frequency Counting
+```
+
+---
+
+# 25. Frequency Array vs Sorting
+
+ধরো:
+
+```text
+5 2 5 3 2 8
+```
+
+Question:
+
+> কতটি distinct value আছে?
+
+## Approach 1 — Sorting
+
+```text
+Sort
+↓
+2 2 3 5 5 8
+↓
+Adjacent Comparison
+↓
+Count New Groups
+```
+
+---
+
+## Approach 2 — Frequency Array
+
+```text
+Build freq[]
+↓
+Check freq[value] > 0
+↓
+Count Present Values
+```
+
+দুটিই valid হতে পারে।
+
+কোনটা use করবে depend করে:
+
+```text
+Constraints
+Value Range
+Need for Sorted Order
+Available Techniques
+```
+
+Mental comparison:
+
+| Situation                     | Natural Choice        |
+| ----------------------------- | --------------------- |
+| Small value range             | Frequency Array       |
+| Need sorted values            | Sorting               |
+| Many frequency queries        | Frequency Array       |
+| Huge sparse values            | Sorting may be better |
+| Need adjacent sorted relation | Sorting               |
+
+এখন তোমার goal perfect algorithm selection না।
+
+Goal:
+
+```text
+Problem দেখে
+একাধিক possible approach চিনতে শেখা
+```
+
+---
+
+# 26. Frequency Pattern-এর State Variables
+
+Frequency problem-এ different state দেখা যায়।
+
+## Frequency Array
+
+```c
+int freq[MAX + 1];
+```
+
+Role:
+
+```text
+Counter Collection
+```
+
+---
+
+## Distinct Counter
+
+```c
+int distinct = 0;
+```
+
+Role:
+
+```text
+Counter
+```
+
+---
+
+## Best Frequency
+
+```c
+int bestFrequency = 0;
+```
+
+Role:
+
+```text
+Maximum Candidate
+```
+
+---
+
+## Best Value
+
+```c
+int bestValue;
+```
+
+Role:
+
+```text
+Candidate Value
+```
+
+Pattern combination:
+
+```text
+Frequency Array
++
+Traversal
++
+Counter
++
+Candidate Tracking
+```
+
+---
+
+# 27. Common Mistake — Frequency Array ছোট নেওয়া
+
+Constraint:
+
+```text
+0 ≤ arr[i] ≤ 100
+```
+
+Wrong:
+
+```c
+int freq[100];
+```
+
+Valid indexes:
+
+```text
+0 to 99
+```
+
+কিন্তু value `100` এলে:
+
+```c
+freq[100]++;
+```
+
+invalid।
+
+Correct:
+
+```c
+int freq[101] = {0};
+```
+
+Rule:
+
+```text
+Max Value M
+↓
+Need Index M
+↓
+Size at least M + 1
+```
+
+---
+
+# 28. Common Mistake — Initialize না করা
+
+Wrong:
+
+```c
+int freq[101];
+```
+
+Correct:
+
+```c
+int freq[101] = {0};
+```
+
+Frequency মানে counting।
+
+Counting শুরু হওয়া উচিত:
+
+```text
+0
+```
+
+---
+
+# 29. Common Mistake — Index এবং Frequency Confusion
+
+ধরো:
+
+```text
+freq[5] = 3
+```
+
+এর meaning:
+
+```text
+Value 5
+appears
+3 times
+```
+
+এটা না:
+
+```text
+Index 3-এ value 5 আছে
+```
+
+Mental Rule:
+
+```text
+Frequency Array Index
+=
+Original Value
+```
+
+```text
+Frequency Array Content
+=
+Count of That Value
+```
+
+অর্থাৎ:
+
+```text
+freq[value] = count
+```
+
+---
+
+# 30. Common Mistake — Negative Value Direct Index
+
+Wrong:
+
+```c
+freq[arr[i]]++;
+```
+
+যদি:
+
+```text
+arr[i] = -3
+```
+
+তাহলে:
+
+```c
+freq[-3]++;
+```
+
+invalid।
+
+তাই আগে constraint check করবে।
+
+```text
+Can Value Safely Become an Array Index?
+```
+
+এই প্রশ্ন করবে।
+
+---
+
+# 31. Common Mistake — Huge Frequency Array
+
+Constraint:
+
+```text
+arr[i] ≤ 10^9
+```
+
+দেখে:
+
+```c
+int freq[1000000001];
+```
+
+লিখবে না।
+
+কারণ memory enormous।
+
+Mental Decision:
+
+```text
+Need Frequency?
+        ↓
+Check Value Range
+        ↓
+Small?
+├── Yes → Frequency Array Possible
+└── No  → Need Another Technique
+```
+
+---
+
+# 32. Common Mistake — Original Order হারানোর বিষয়
+
+Frequency array:
+
+```text
+5 2 5 3
+```
+
+থেকে তুমি জানো:
+
+```text
+2 → 1
+3 → 1
+5 → 2
+```
+
+কিন্তু original sequence:
+
+```text
+5, তারপর 2, তারপর 5, তারপর 3
+```
+
+এই order frequency table preserve করে না।
+
+তাই যদি problem asks:
+
+> First occurrence কোথায়?
+
+শুধু frequency array যথেষ্ট না।
+
+Important:
+
+```text
+Frequency Table
+Preserves Counts
+
+But Does Not Preserve
+Original Order
+```
+
+---
+
+# 33. Code Derivation Method
+
+Frequency problem দেখলে code ভুলে গেলে এইভাবে derive করবে।
+
+## Step 1 — Need Count Per Value
+
+```c
+int freq[SIZE] = {0};
+```
+
+---
+
+## Step 2 — Traverse Input
+
+```c
+for (int i = 0; i < n; i++)
+{
+}
+```
+
+---
+
+## Step 3 — Current Value
+
+```c
+int x = arr[i];
+```
+
+---
+
+## Step 4 — Increment Its Counter
+
+```c
+freq[x]++;
+```
+
+অথবা directly:
+
+```c
+freq[arr[i]]++;
+```
+
+---
+
+## Step 5 — Use Frequency Table
+
+Example:
+
+```c
+printf("%d\n", freq[target]);
+```
+
+অথবা:
+
+```c
+for (int value = 0; value <= MAX; value++)
+{
+    if (freq[value] > 0)
+    {
+        // use frequency
+    }
+}
+```
+
+Mental derivation:
+
+```text
+Need Count Per Value
+↓
+One Counter Per Possible Value
+↓
+Array of Counters
+↓
+Value Becomes Index
+↓
+Increment
+```
+
+---
+
+# 🧠 Frequency Counting Master Pattern Map
+
+```text
+                    INPUT VALUES
+                         │
+                         ▼
+                    Traverse Data
+                         │
+                         ▼
+                 Read Current Value x
+                         │
+                         ▼
+                      freq[x]
+                         │
+                         ▼
+                    Increment Count
+                         │
+                         ▼
+                Frequency Table Ready
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+        Query         Distinct        Maximum
+        Count          Count          Frequency
+          │              │              │
+          ▼              ▼              ▼
+      freq[x]       freq[x] > 0    Best Candidate
+```
+
+---
+
+# 34. Problem Recognition Signals
+
+Problem statement-এ এই ধরনের শব্দ দেখলে frequency ভাববে:
+
+```text
+How many times?
+
+Occurrence Count
+
+Frequency
+
+Repeated Values
+
+Most Frequent
+
+Least Frequent
+
+Distinct Values
+
+Count of Each Value
+
+Multiple Count Queries
+
+Character Count
+```
+
+Mental trigger:
+
+```text
+Need Count for Many Different Values
+        ↓
+Frequency Counting?
+```
+
+তারপর দ্বিতীয় প্রশ্ন:
+
+```text
+Is Value Range Small and Manageable?
+        ↓
+Yes
+        ↓
+Frequency Array
+```
+
+---
+
+# 35. Sorting না Frequency?
+
+একটি quick decision framework:
+
+```text
+Need Count Information?
+        │
+        ▼
+Are Values in Small Range?
+        │
+    ┌───┴───┐
+    │       │
+   Yes      No
+    │       │
+    ▼       ▼
+Frequency   Consider
+Array       Sorting / Other Technique
+```
+
+আর যদি:
+
+```text
+Need Ordered Relationship
+```
+
+তাহলে:
+
+```text
+Sorting
+```
+
+natural হতে পারে।
+
+Example:
+
+```text
+Minimum Difference
+→ Sorting
+```
+
+Example:
+
+```text
+How many times does 7 occur?
+→ Counting / Frequency
+```
+
+Example:
+
+```text
+100000 frequency queries
+→ Preprocessing with Frequency
+```
+
+---
+
+# 🧪 Chapter 5 Practice
+
+## Task 1 — Basic Frequency Table
+
+Input:
+
+```text
+8
+2 5 2 3 5 2 8 3
+```
+
+Expected conceptual table:
+
+```text
+2 → 3
+3 → 2
+5 → 2
+8 → 1
+```
+
+Requirement:
+
+```text
+Frequency Array
+```
+
+---
+
+## Task 2 — Query Frequency
+
+Input:
+
+```text
+8
+2 5 2 3 5 2 8 3
+
+4
+2
+3
+7
+8
+```
+
+Expected Output:
+
+```text
+3
+2
+0
+1
+```
+
+Pattern:
+
+```text
+Preprocessing
++
+Direct Lookup
+```
+
+---
+
+## Task 3 — Count Distinct Values
+
+Input:
+
+```text
+8
+2 5 2 3 5 2 8 3
+```
+
+Expected:
+
+```text
+4
+```
+
+Pattern:
+
+```text
+Frequency Counting
++
+Frequency Traversal
++
+Counter
+```
+
+---
+
+## Task 4 — Most Frequent Value
+
+Input:
+
+```text
+8
+2 5 2 3 5 2 8 3
+```
+
+Expected:
+
+```text
+Value: 2
+Frequency: 3
+```
+
+Pattern:
+
+```text
+Frequency Counting
++
+Maximum Tracking
++
+Candidate Value
+```
+
+---
+
+## Task 5 — Character Frequency
+
+Input:
+
+```text
+programming
+```
+
+Print each present lowercase letter and its frequency.
+
+Pattern:
+
+```text
+String Traversal
++
+Character Mapping
++
+Frequency Counting
+```
+
+---
+
+# 🧠 Pattern Recognition Drill
+
+## Problem 1
+
+Complete:
+
+```text
+Current Value x
+↓
+freq[_____]
+↓
+Increment
+```
+
+---
+
+## Problem 2
+
+If:
+
+```text
+freq[7] = 4
+```
+
+এর meaning কী?
+
+```text
+...
+```
+
+---
+
+## Problem 3
+
+Constraint:
+
+```text
+0 ≤ arr[i] ≤ 50
+```
+
+Minimum simple frequency array size কত?
+
+```text
+...
+```
+
+---
+
+## Problem 4
+
+Problem:
+
+> 100000 queries-তে প্রতিবার জানতে হবে `x` কতবার এসেছে।
+
+Possible pattern:
+
+```text
+Build ______ Once
+↓
+Answer Each Query with ______
+```
+
+---
+
+## Problem 5
+
+Problem:
+
+> Array-এর original first occurrence বের করো।
+
+শুধু frequency array যথেষ্ট?
+
+```text
+Yes / No
+
+Reason:
+...
+```
+
+---
+
+## Problem 6
+
+Problem:
+
+> Values range from `0` to `10^9`, কিন্তু মাত্র `1000` elements আছে।
+
+Direct frequency array natural?
+
+```text
+Yes / No
+
+Reason:
+...
+```
+
+---
+
+# 📝 Chapter 5 Assignment
+
+Assignment focused রাখা হয়েছে যাতে Day 5 একই দিনে complete করা যায়।
+
+## Part A — Explain
+
+নিজের ভাষায় লিখবে:
+
+```text
+1. Frequency কী?
+
+2. Frequency Array কী?
+
+3. freq[arr[i]]++ কীভাবে কাজ করে?
+
+4. Single Counter এবং Frequency Array-এর difference কী?
+
+5. Frequency Array initialize করা কেন জরুরি?
+
+6. Value Range check করা কেন দরকার?
+
+7. Frequency Query কীভাবে fast হয়?
+
+8. Preprocessing কী?
+
+9. Frequency Array original order preserve করে কি?
+
+10. Huge value range-এ direct frequency array কেন problematic?
+```
+
+---
+
+## Part B — Mandatory Coding
+
+```text
+1. Print Frequency of Every Present Value
+
+2. Answer Multiple Frequency Queries
+
+3. Count Distinct Values
+
+4. Find Most Frequent Value
+
+5. Lowercase Character Frequency
+```
+
+---
+
+## Part C — Dry Run
+
+Array:
+
+```text
+3 1 3 2 1 3
+```
+
+এই table fill করবে:
+
+| Step | Current Value | Updated Frequency |
+| ---: | ------------: | ----------------- |
+|    1 |             3 | `freq[3] = ?`     |
+|    2 |             1 | `freq[1] = ?`     |
+|    3 |             3 | `freq[3] = ?`     |
+|    4 |             2 | `freq[2] = ?`     |
+|    5 |             1 | `freq[1] = ?`     |
+|    6 |             3 | `freq[3] = ?`     |
+
+তারপর final লিখবে:
+
+```text
+freq[1] = ?
+
+freq[2] = ?
+
+freq[3] = ?
+```
+
+---
+
+## Part D — Debugging Exercise
+
+এই code-এ problem খুঁজে বের করো:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[100];
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    for (int i = 0; i <= 100; i++)
+    {
+        if (freq[i] > 0)
+        {
+            printf("%d %d\n", i, freq[i]);
+        }
+    }
+
+    return 0;
+}
+```
+
+ধরো constraint:
+
+```text
+0 ≤ x ≤ 100
+```
+
+Find:
+
+```text
+Problem 1:
+Frequency Array Size:
+
+Problem 2:
+Initialization:
+
+Problem 3:
+Valid Index Range:
+
+Correct Declaration:
+```
+
+---
+
+# 📚 Glossary Update
+
+`CP_Dictionary.md`-এ add করবে:
+
+```text
+Frequency
+Frequency Array
+Frequency Table
+Direct Lookup
+Preprocessing
+Value Range
+Offset
+Character Mapping
+Distinct Value
+Most Frequent Value
+```
+
+Format:
+
+```text
+Term:
+
+Simple Meaning:
+
+Small Example:
+```
+
+---
+
+# 📚 Pattern Library Update
+
+`core_pattern.md`-এ add করবে:
+
+````md
+## Frequency Counting Pattern
+
+### Recognition
+
+Use when a problem asks:
+
+- How many times each value appears
+- Count occurrences of many values
+- Multiple frequency queries
+- Distinct value count
+- Most frequent value
+
+### Core Pattern
+
+```c
+int freq[MAX_VALUE + 1] = {0};
+
+for (int i = 0; i < n; i++)
+{
+    freq[arr[i]]++;
+}
+````
+
+### Mental Model
+
+```text
+Value
+↓
+Use as Index
+↓
+Increment Counter
+↓
+Frequency Table
+```
+
+### Important Condition
+
+```text
+Value Range Must Be Manageable
+```
+
+### Common Uses
+
+```text
+Frequency Query
+Distinct Count
+Most Frequent Value
+Character Frequency
+```
+
+````
+
+---
+
+# 🔥 Chapter 5 Key Lesson
+
+এই Chapter-এর সবচেয়ে গুরুত্বপূর্ণ line:
+
+```c
+freq[arr[i]]++;
+````
+
+কিন্তু line মুখস্থ করাই goal না।
+
+Mental model:
+
+```text
+I Need Count for Many Values
+        ↓
+One Counter Is Not Enough
+        ↓
+Need One Counter Per Value
+        ↓
+Use Array of Counters
+        ↓
+Value Becomes Index
+        ↓
+Increment That Counter
+```
+
+আর algorithm selection-এর আগে:
+
+```text
+Can Values Safely Become Array Indices?
+        ↓
+Is the Range Small Enough?
+```
+
+এই দুইটি প্রশ্ন করবে।
+
+---
+
+# 🔗 Previous Pattern Connection
+
+এখন পর্যন্ত pattern evolution:
+
+```text
+Day 2
+
+Counting Pattern
+↓
+One Condition
+↓
+One Counter
+```
+
+এখন:
+
+```text
+Day 5
+
+Frequency Counting
+↓
+Many Possible Values
+↓
+Many Counters
+↓
+freq[]
+```
+
+আর pattern combination:
+
+```text
+Frequency
++
+Counter
+→ Distinct Count
+```
+
+```text
+Frequency
++
+Maximum Tracking
+→ Most Frequent Value
+```
+
+```text
+String Traversal
++
+Character Mapping
++
+Frequency
+→ Character Count
+```
+
+```text
+Frequency Preprocessing
++
+Direct Lookup
+→ Fast Queries
+```
+
+এটাই CP-এর বড় skill:
+
+> নতুন algorithm মানেই সবসময় সম্পূর্ণ নতুন logic না। অনেক সময় পুরোনো ছোট pattern একসঙ্গে combine হয়।
+
+---
+
+# ✅ Chapter 5 Completion Checklist
+
+```text
+[ ] Frequency কী বুঝি
+
+[ ] Frequency Array-এর mental model বুঝি
+
+[ ] freq[arr[i]]++ explain করতে পারি
+
+[ ] Single Counter এবং Frequency Array-এর difference বুঝি
+
+[ ] Frequency Array zero initialize করতে পারি
+
+[ ] Value Range দেখে array size determine করতে পারি
+
+[ ] MAX_VALUE + 1 rule বুঝি
+
+[ ] Input-এর সময় direct counting করতে পারি
+
+[ ] Original array কখন store করতে হবে বুঝি
+
+[ ] Frequency Query answer করতে পারি
+
+[ ] Preprocessing-এর basic idea বুঝি
+
+[ ] Distinct Count করতে পারি
+
+[ ] Most Frequent Value বের করতে পারি
+
+[ ] Tie-breaking সম্পর্কে সচেতন
+
+[ ] Negative index problem বুঝি
+
+[ ] Offset technique-এর basic idea জানি
+
+[ ] Huge range-এ direct frequency array avoid করতে জানি
+
+[ ] Character Frequency করতে পারি
+
+[ ] str[i] - 'a' mapping বুঝি
+
+[ ] Frequency Array এবং Sorting approach compare করতে পারি
+
+[ ] Original order frequency table preserve করে না বুঝি
+
+[ ] Practice complete করেছি
+
+[ ] Assignment complete করেছি
+
+[ ] Glossary update করেছি
+
+[ ] Pattern Library update করেছি
+```
+
+---
+
+# 🎯 Day 5 Progress
+
+```text
+Day 5
+│
+├── ✅ Chapter 1 — Sorting Mental Model
+│
+├── ✅ Chapter 2 — Bubble Sort
+│
+├── ✅ Chapter 3 — Selection Sort
+│
+├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+│
+├── ✅ Chapter 5 — Frequency Counting Pattern
+│
+├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+│
+├── ⬜ Chapter 7 — Pair Thinking Foundation
+│
+└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+                  Mini Contest & Reflection
+```
+
+# 🏁 Chapter 5 Final Position
+
+এখন তোমার কাছে একই ধরনের data problem-এর জন্য দুইটি আলাদা mental tool আছে:
+
+```text
+Need Order
+↓
+Sorting
+```
+
+এবং:
+
+```text
+Need Count Per Value
+↓
+Frequency Counting
+```
+
+সবচেয়ে গুরুত্বপূর্ণ decision skill:
+
+```text
+Problem
+   │
+   ├── Need Ordered Relationship?
+   │       ↓
+   │     Sorting
+   │
+   └── Need Count Information?
+           ↓
+      Small Value Range?
+           ↓
+      Frequency Array
+```
+
+পরবর্তী **Day 5 — Chapter 6: Sorted Array & Frequency Problems**-এ এই দুইটি idea একসঙ্গে compare এবং apply করা হবে:
+
+```text
+Same Problem
+↓
+Can Sorting Solve It?
+↓
+Can Frequency Solve It?
+↓
+Which Representation Makes the Problem Easier?
+```
+
+সেখানে focus থাকবে **duplicate detection, distinct count, repeated values, mode/frequency reasoning এবং sorted grouping**-এর উপর।
+
+---
+
+# 🚀 CP Bootcamp 2026 — Day 5
+
+# Chapter 6 — Sorted Array & Frequency Problems
+
+> **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
+> **Chapter Goal:** একই problem-কে **Sorting View** এবং **Frequency View**—দুইভাবে দেখতে শেখা, এবং constraint দেখে কোন approach বেশি natural সেটা চিনতে শেখা।
+> **Estimated Time:** 60–75 minutes
+
+---
+
+# 🎯 Chapter Mission
+
+Day 5-এ এখন পর্যন্ত তুমি শিখেছ:
+
+```text
+Chapter 1
+Sorting Mental Model
+        ↓
+Chapter 2
+Bubble Sort
+        ↓
+Chapter 3
+Selection Sort
+        ↓
+Chapter 4
+qsort()
+        ↓
+Chapter 5
+Frequency Counting
+```
+
+এখন পর্যন্ত তোমার কাছে দুইটি powerful representation আছে:
+
+```text
+Raw Array
+   │
+   ├── Sort It
+   │      ↓
+   │   Similar Values Become Neighbors
+   │
+   └── Build Frequency Table
+          ↓
+       Count Stored Directly
+```
+
+Chapter 6-এর মূল প্রশ্ন:
+
+> **একই problem Sorting দিয়েও solve করা যায়, Frequency Array দিয়েও solve করা যায়—তাহলে কোনটা ব্যবহার করব?**
+
+এই Chapter শেষে তোমার mental model হবে:
+
+```text
+Problem
+   ↓
+What Information Do I Need?
+   ↓
+Need Order or Grouping?
+   │
+   ├── Yes → Sorting View
+   │
+   └── Need Direct Count?
+             ↓
+       Small Value Range?
+             ↓
+       Frequency View
+```
+
+---
+
+# 1. Representation কী?
+
+একই data-কে differentভাবে organize করলে problem সহজ হয়ে যেতে পারে।
+
+ধরো:
+
+```text
+5 2 5 3 2 8 5
+```
+
+এটা Raw Array।
+
+---
+
+## Sorted Representation
+
+Sort করলে:
+
+```text
+2 2 3 5 5 5 8
+```
+
+এখন দেখা যাচ্ছে:
+
+```text
+2 2 | 3 | 5 5 5 | 8
+```
+
+Similar values একসঙ্গে group হয়েছে।
+
+---
+
+## Frequency Representation
+
+একই data:
+
+```text
+2 → 2 times
+3 → 1 time
+5 → 3 times
+8 → 1 time
+```
+
+দুই representation একই information-এর different view।
+
+```text
+Sorted View
+→ Values become grouped
+```
+
+```text
+Frequency View
+→ Counts become explicit
+```
+
+এটাই Chapter 6-এর foundation।
+
+---
+
+# 2. Sorting কী পরিবর্তন করে?
+
+ধরো:
+
+```text
+8 2 5 2 8 3
+```
+
+Raw Array:
+
+```text
+8 2 5 2 8 3
+```
+
+এখানে duplicate values দূরে দূরে আছে।
+
+Sort:
+
+```text
+2 2 3 5 8 8
+```
+
+এখন:
+
+```text
+2 2
+↑ ↑
+Neighbors
+```
+
+এবং:
+
+```text
+8 8
+↑ ↑
+Neighbors
+```
+
+Sorting-এর important effect:
+
+```text
+Equal Values
+Scattered Across Array
+        ↓
+      Sorting
+        ↓
+Equal Values Become Consecutive
+```
+
+এই কারণে sorting-এর পরে অনেক problem reduce হয়ে যায়:
+
+```text
+Full Array Relationship
+        ↓
+Adjacent Relationship
+```
+
+এটা খুব গুরুত্বপূর্ণ CP idea।
+
+---
+
+# 3. Sorted Group কী?
+
+Sorted Array:
+
+```text
+1 1 1 3 4 4 7 7 7 7
+```
+
+এখানে groups:
+
+```text
+1 1 1 | 3 | 4 4 | 7 7 7 7
+```
+
+প্রতিটি group:
+
+```text
+Same Value
++
+Consecutive Positions
+```
+
+Group Information:
+
+| Value | Group Size |
+| ----: | ---------: |
+|     1 |          3 |
+|     3 |          1 |
+|     4 |          2 |
+|     7 |          4 |
+
+এটাই frequency information।
+
+অর্থাৎ:
+
+```text
+Sorted Groups
+        ↓
+Can Reveal Frequency
+```
+
+এবং:
+
+```text
+Frequency Table
+        ↓
+Stores Group Sizes Directly
+```
+
+---
+
+# 4. Problem 1 — Duplicate Detection
+
+Problem:
+
+> Array-তে কোনো duplicate value আছে কি না?
+
+Array:
+
+```text
+5 2 8 3 2
+```
+
+Answer:
+
+```text
+Yes
+```
+
+কারণ:
+
+```text
+2 appears more than once
+```
+
+এটা দুইভাবে solve করা যায়।
+
+---
+
+# 5. Duplicate Detection — Sorting Approach
+
+Original:
+
+```text
+5 2 8 3 2
+```
+
+Sort:
+
+```text
+2 2 3 5 8
+```
+
+এখন শুধু neighbor compare:
+
+```text
+2 == 2
+↓
+Duplicate Found
+```
+
+Mental Pattern:
+
+```text
+Raw Array
+↓
+Sort
+↓
+Equal Values Become Adjacent
+↓
+Traverse Neighbors
+↓
+arr[i] == arr[i - 1]?
+↓
+Duplicate Found
+```
+
+Code:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int compareAscending(const void *a, const void *b)
+{
+    int x = *(const int *)a;
+    int y = *(const int *)b;
+
+    return (x > y) - (x < y);
+}
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    qsort(arr, n, sizeof(arr[0]), compareAscending);
+
+    int duplicateFound = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] == arr[i - 1])
+        {
+            duplicateFound = 1;
+            break;
+        }
+    }
+
+    if (duplicateFound)
+    {
+        printf("Duplicate Found\n");
+    }
+    else
+    {
+        printf("No Duplicate\n");
+    }
+
+    return 0;
+}
+```
+
+Pattern Combination:
+
+```text
+Sorting
++
+Adjacent Comparison
++
+Flag
++
+Early Exit
+```
+
+---
+
+# 6. Duplicate Detection — Frequency Approach
+
+Same Array:
+
+```text
+5 2 8 3 2
+```
+
+Build frequency:
+
+```text
+2 → 2
+3 → 1
+5 → 1
+8 → 1
+```
+
+Duplicate condition:
+
+```text
+Any Frequency > 1
+```
+
+Mental Pattern:
+
+```text
+Build Frequency
+↓
+Any freq[value] > 1?
+↓
+Duplicate Found
+```
+
+Code:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int freq[101] = {0};
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+
+        scanf("%d", &x);
+
+        freq[x]++;
+    }
+
+    int duplicateFound = 0;
+
+    for (int value = 0; value <= 100; value++)
+    {
+        if (freq[value] > 1)
+        {
+            duplicateFound = 1;
+            break;
+        }
+    }
+
+    if (duplicateFound)
+    {
+        printf("Duplicate Found\n");
+    }
+    else
+    {
+        printf("No Duplicate\n");
+    }
+
+    return 0;
+}
+```
+
+Pattern Combination:
+
+```text
+Frequency Counting
++
+Frequency Traversal
++
+Condition Check
++
+Flag
+```
+
+---
+
+# 7. Even Better Frequency Duplicate Detection
+
+যদি শুধু জানতে চাই:
+
+> Duplicate আছে কি না?
+
+তাহলে input নেওয়ার সময়ই check করা যায়।
+
+```c
+int duplicateFound = 0;
+
+for (int i = 0; i < n; i++)
+{
+    int x;
+
+    scanf("%d", &x);
+
+    freq[x]++;
+
+    if (freq[x] > 1)
+    {
+        duplicateFound = 1;
+    }
+}
+```
+
+Mental Model:
+
+```text
+Read x
+↓
+Increase freq[x]
+↓
+Did Count Become Greater Than 1?
+↓
+Yes
+↓
+Duplicate Exists
+```
+
+আরও precise version:
+
+```c
+if (freq[x] == 1)
+{
+    duplicateFound = 1;
+}
+
+freq[x]++;
+```
+
+এখানে current value আগে থেকেই একবার থাকলে duplicate পাওয়া গেছে।
+
+তবে beginner-friendly version:
+
+```c
+freq[x]++;
+
+if (freq[x] > 1)
+{
+    duplicateFound = 1;
+}
+```
+
+বোঝা সহজ।
+
+---
+
+# 8. Sorting vs Frequency for Duplicate Detection
+
+| Question                  | Sorting                           | Frequency                  |
+| ------------------------- | --------------------------------- | -------------------------- |
+| কী করি?                     | Sort + Adjacent Compare           | Count Values               |
+| Extra range dependency    | No direct small-range requirement | Small range helpful        |
+| Original order preserved? | No                                | Count table-এ order থাকে না   |
+| Huge values               | Possible                          | Direct array problematic   |
+| Small bounded values      | Works                             | Very natural               |
+| Main observation          | Equal values become neighbors     | Repetition means count > 1 |
+
+Decision:
+
+```text
+Values:
+0 to 100
+↓
+Frequency is Natural
+```
+
+```text
+Values:
+Large or Wide Range
+↓
+Sorting May Be More Natural
+```
+
+---
+
+# 9. Problem 2 — Count Distinct Values
+
+Problem:
+
+> Array-তে কতটি different value আছে?
+
+Array:
+
+```text
+5 2 5 3 2 8
+```
+
+Distinct values:
+
+```text
+2
+3
+5
+8
+```
+
+Answer:
+
+```text
+4
+```
+
+এটাও দুইভাবে solve করা যায়।
+
+---
+
+# 10. Distinct Count — Sorting Approach
+
+Sort:
+
+```text
+2 2 3 5 5 8
+```
+
+Observe:
+
+```text
+2 2 | 3 | 5 5 | 8
+```
+
+প্রথম value:
+
+```text
+2
+```
+
+একটি distinct group।
+
+তাই:
+
+```c
+int distinct = 1;
+```
+
+তারপর:
+
+```text
+Current != Previous
+↓
+New Group
+↓
+distinct++
+```
+
+Code:
+
+```c
+int distinct = 0;
+
+if (n > 0)
+{
+    distinct = 1;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] != arr[i - 1])
+        {
+            distinct++;
+        }
+    }
+}
+```
+
+Mental Pattern:
+
+```text
+Sort
+↓
+First Group Exists
+↓
+Traverse from Index 1
+↓
+Current Different from Previous?
+↓
+New Group
+↓
+Count++
+```
+
+---
+
+# 11. Distinct Count Dry Run
+
+Sorted Array:
+
+```text
+2 2 3 5 5 8
+```
+
+Initially:
+
+```text
+distinct = 1
+```
+
+Now:
+
+### Index 1
+
+```text
+2 != 2?
+No
+```
+
+```text
+distinct = 1
+```
+
+### Index 2
+
+```text
+3 != 2?
+Yes
+```
+
+```text
+distinct = 2
+```
+
+### Index 3
+
+```text
+5 != 3?
+Yes
+```
+
+```text
+distinct = 3
+```
+
+### Index 4
+
+```text
+5 != 5?
+No
+```
+
+```text
+distinct = 3
+```
+
+### Index 5
+
+```text
+8 != 5?
+Yes
+```
+
+```text
+distinct = 4
+```
+
+Final:
+
+```text
+4
+```
+
+---
+
+# 12. Distinct Count — Frequency Approach
+
+Build:
+
+```text
+2 → 2
+3 → 1
+5 → 2
+8 → 1
+```
+
+Distinct condition:
+
+```text
+freq[value] > 0
+```
+
+Code:
+
+```c
+int distinct = 0;
+
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > 0)
+    {
+        distinct++;
+    }
+}
+```
+
+Mental Pattern:
+
+```text
+Build Frequency
+↓
+Traverse Possible Values
+↓
+Present?
+↓
+freq[value] > 0
+↓
+distinct++
+```
+
+---
+
+# 13. Important Difference: `> 0` vs `> 1`
+
+এই দুই condition confuse করবে না।
+
+## Present Value
+
+```c
+freq[value] > 0
+```
+
+Meaning:
+
+```text
+Value exists in the input
+```
+
+Useful for:
+
+```text
+Distinct Count
+```
+
+---
+
+## Repeated Value
+
+```c
+freq[value] > 1
+```
+
+Meaning:
+
+```text
+Value appears multiple times
+```
+
+Useful for:
+
+```text
+Duplicate Detection
+Repeated Value Count
+```
+
+Mental Table:
+
+| Condition      | Meaning      |
+| -------------- | ------------ |
+| `freq[x] == 0` | Absent       |
+| `freq[x] == 1` | Appears once |
+| `freq[x] > 1`  | Repeated     |
+| `freq[x] > 0`  | Present      |
+
+এই table খুব important।
+
+---
+
+# 14. Problem 3 — Count Repeated Values
+
+Array:
+
+```text
+1 1 2 3 3 3 5
+```
+
+Question:
+
+> কয়টি different value repeat করেছে?
+
+Frequency:
+
+```text
+1 → 2
+2 → 1
+3 → 3
+5 → 1
+```
+
+Repeated values:
+
+```text
+1
+3
+```
+
+Answer:
+
+```text
+2
+```
+
+Frequency solution:
+
+```c
+int repeatedValues = 0;
+
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > 1)
+    {
+        repeatedValues++;
+    }
+}
+```
+
+Notice:
+
+এখানে answer `3` না।
+
+কারণ repeated values:
+
+```text
+1 and 3
+```
+
+মোট:
+
+```text
+2 different repeated values
+```
+
+---
+
+# 15. খুব গুরুত্বপূর্ণ — Repeated Values vs Extra Duplicates
+
+Array:
+
+```text
+1 1 2 3 3 3 5
+```
+
+Frequency:
+
+```text
+1 → 2
+3 → 3
+```
+
+দুই ধরনের question হতে পারে।
+
+---
+
+## Question A
+
+> কয়টি distinct value repeat করেছে?
+
+Answer:
+
+```text
+2
+```
+
+কারণ:
+
+```text
+1
+3
+```
+
+Code:
+
+```c
+if (freq[value] > 1)
+{
+    repeatedValues++;
+}
+```
+
+---
+
+## Question B
+
+> সব duplicate copies মিলিয়ে extra element কয়টি?
+
+For `1`:
+
+```text
+1 1
+```
+
+একটি original ধরে:
+
+```text
+Extra = 1
+```
+
+For `3`:
+
+```text
+3 3 3
+```
+
+একটি original ধরে:
+
+```text
+Extra = 2
+```
+
+Total:
+
+```text
+1 + 2 = 3
+```
+
+Formula:
+
+```text
+If Frequency = f
+
+Extra Copies = f - 1
+```
+
+Code:
+
+```c
+int extraDuplicates = 0;
+
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > 1)
+    {
+        extraDuplicates += freq[value] - 1;
+    }
+}
+```
+
+এটা problem statement carefully পড়ার একটি example।
+
+```text
+How many repeated values?
+```
+
+এবং:
+
+```text
+How many duplicate elements?
+```
+
+একই question নাও হতে পারে।
+
+---
+
+# 16. Problem 4 — Most Frequent Value / Mode
+
+Array:
+
+```text
+2 5 2 3 5 2 8
+```
+
+Frequency:
+
+```text
+2 → 3
+3 → 1
+5 → 2
+8 → 1
+```
+
+Most frequent:
+
+```text
+2
+```
+
+Frequency:
+
+```text
+3
+```
+
+এটাকে অনেক context-এ বলা হয়:
+
+```text
+Mode
+```
+
+Mental Pattern:
+
+```text
+Build Frequency
+↓
+Traverse Frequencies
+↓
+Maximum Frequency Tracking
+↓
+Remember Corresponding Value
+```
+
+Variables:
+
+```c
+int bestValue = 0;
+int bestFrequency = 0;
+```
+
+Core:
+
+```c
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > bestFrequency)
+    {
+        bestFrequency = freq[value];
+        bestValue = value;
+    }
+}
+```
+
+---
+
+# 17. Mode Dry Run
+
+Frequency Table:
+
+```text
+Value:  0 1 2 3 4 5 6 7 8
+Freq :  0 0 3 1 0 2 0 0 1
+```
+
+Initially:
+
+```text
+bestFrequency = 0
+bestValue = 0
+```
+
+At value `2`:
+
+```text
+freq[2] = 3
+```
+
+Check:
+
+```text
+3 > 0?
+Yes
+```
+
+Update:
+
+```text
+bestFrequency = 3
+bestValue = 2
+```
+
+At value `3`:
+
+```text
+1 > 3?
+No
+```
+
+At value `5`:
+
+```text
+2 > 3?
+No
+```
+
+Final:
+
+```text
+bestValue = 2
+bestFrequency = 3
+```
+
+Pattern:
+
+```text
+Frequency
++
+Maximum Tracking
++
+Candidate Value
+```
+
+---
+
+# 18. Mode Using Sorted Array
+
+Frequency Array ছাড়া sorted grouping দিয়েও mode বের করা যায়।
+
+Array:
+
+```text
+5 2 5 3 2 5
+```
+
+Sort:
+
+```text
+2 2 | 3 | 5 5 5
+```
+
+Group sizes:
+
+```text
+2 → Group Size 2
+
+3 → Group Size 1
+
+5 → Group Size 3
+```
+
+Largest group:
+
+```text
+5 5 5
+```
+
+Mode:
+
+```text
+5
+```
+
+Mental Model:
+
+```text
+Sort
+↓
+Equal Values Form Groups
+↓
+Count Current Group Length
+↓
+Track Largest Group
+↓
+Mode
+```
+
+এটা frequency approach-এর চেয়ে একটু বেশি complex।
+
+তবে huge value range হলে useful হতে পারে।
+
+---
+
+# 19. Sorted Group Counting Pattern
+
+Sorted Array:
+
+```text
+1 1 1 3 4 4 7 7 7 7
+```
+
+আমরা group count করতে চাই।
+
+State:
+
+```c
+int currentCount = 1;
+```
+
+Traversal:
+
+```c
+for (int i = 1; i < n; i++)
+{
+    if (arr[i] == arr[i - 1])
+    {
+        currentCount++;
+    }
+    else
+    {
+        currentCount = 1;
+    }
+}
+```
+
+কিন্তু mode বের করতে আরও state দরকার:
+
+```text
+currentCount
+→ Current Group Size
+
+bestCount
+→ Largest Group Size
+
+bestValue
+→ Value of Largest Group
+```
+
+Pattern:
+
+```text
+Sorted Traversal
++
+Current Group Tracking
++
+Maximum Tracking
++
+Candidate Value
+```
+
+---
+
+# 20. Mode Using Sorted Array — Code
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int compareAscending(const void *a, const void *b)
+{
+    int x = *(const int *)a;
+    int y = *(const int *)b;
+
+    return (x > y) - (x < y);
+}
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    qsort(arr, n, sizeof(arr[0]), compareAscending);
+
+    int currentCount = 1;
+    int bestCount = 1;
+    int bestValue = arr[0];
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] == arr[i - 1])
+        {
+            currentCount++;
+        }
+        else
+        {
+            currentCount = 1;
+        }
+
+        if (currentCount > bestCount)
+        {
+            bestCount = currentCount;
+            bestValue = arr[i];
+        }
+    }
+
+    printf("Value: %d\n", bestValue);
+    printf("Frequency: %d\n", bestCount);
+
+    return 0;
+}
+```
+
+এই code-এর জন্য ধরে নিচ্ছি:
+
+```text
+n ≥ 1
+```
+
+---
+
+# 21. Group State বুঝি
+
+Sorted Array:
+
+```text
+2 2 3 5 5 5 8
+```
+
+Traversal:
+
+### Start
+
+```text
+currentCount = 1
+bestCount = 1
+bestValue = 2
+```
+
+---
+
+### Second `2`
+
+```text
+2 == 2
+↓
+currentCount = 2
+```
+
+এখন:
+
+```text
+2 > 1
+```
+
+তাই:
+
+```text
+bestCount = 2
+bestValue = 2
+```
+
+---
+
+### `3`
+
+```text
+3 != 2
+↓
+New Group
+↓
+currentCount = 1
+```
+
+---
+
+### First `5`
+
+```text
+5 != 3
+↓
+currentCount = 1
+```
+
+---
+
+### Second `5`
+
+```text
+5 == 5
+↓
+currentCount = 2
+```
+
+---
+
+### Third `5`
+
+```text
+5 == 5
+↓
+currentCount = 3
+```
+
+এখন:
+
+```text
+3 > bestCount
+```
+
+Update:
+
+```text
+bestCount = 3
+bestValue = 5
+```
+
+Final:
+
+```text
+Mode = 5
+Frequency = 3
+```
+
+---
+
+# 22. Group Boundary কী?
+
+Sorted Array:
+
+```text
+1 1 1 3 4 4 7 7
+```
+
+Group boundary হলো যেখানে value change হয়।
+
+```text
+1 1 1 | 3 | 4 4 | 7 7
+      ↑   ↑     ↑
+   Boundary
+```
+
+Code condition:
+
+```c
+arr[i] != arr[i - 1]
+```
+
+Meaning:
+
+```text
+Previous Group Ended
+↓
+New Group Started
+```
+
+এই observation future problem solving-এ useful হবে।
+
+Mental Rule:
+
+```text
+Sorted Array
++
+Current != Previous
+=
+New Group Boundary
+```
+
+---
+
+# 23. Problem 5 — Print Each Value with Frequency
+
+Input:
+
+```text
+5 2 5 3 2 5
+```
+
+Expected:
+
+```text
+2 2
+3 1
+5 3
+```
+
+এটা দুইভাবে করা যায়।
+
+---
+
+## Frequency Approach
+
+```c
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > 0)
+    {
+        printf("%d %d\n",
+               value,
+               freq[value]);
+    }
+}
+```
+
+Simple।
+
+---
+
+## Sorted Group Approach
+
+Sorted:
+
+```text
+2 2 3 5 5 5
+```
+
+Need:
+
+```text
+2 → Count Group
+3 → Count Group
+5 → Count Group
+```
+
+একটি straightforward method:
+
+```c
+int count = 1;
+
+for (int i = 1; i <= n; i++)
+{
+    if (i < n && arr[i] == arr[i - 1])
+    {
+        count++;
+    }
+    else
+    {
+        printf("%d %d\n", arr[i - 1], count);
+
+        count = 1;
+    }
+}
+```
+
+এখানে loop:
+
+```c
+i <= n
+```
+
+পর্যন্ত গেছে যাতে last group print হয়।
+
+এই pattern একটু tricky।
+
+তাই এখন frequency range ছোট হলে frequency approach বেশি beginner-friendly।
+
+---
+
+# 24. Last Group Problem
+
+ধরো sorted array:
+
+```text
+2 2 3 5 5 5
+```
+
+যদি শুধু value change হলে group print করো:
+
+```text
+2 group ends
+→ Print
+
+3 group ends
+→ Print
+```
+
+কিন্তু last group:
+
+```text
+5 5 5
+```
+
+এর পরে নতুন value নেই।
+
+তাই last group miss হতে পারে।
+
+এটা sorted group processing-এর common bug।
+
+Mental Question:
+
+```text
+What Happens to the Final Group?
+```
+
+এই question সব group-processing problem-এ করবে।
+
+Possible solution:
+
+```text
+Process During Traversal
++
+Handle Final Group After Loop
+```
+
+অথবা carefully designed loop condition।
+
+---
+
+# 25. Beginner-Friendly Sorted Frequency Printing
+
+এই version বুঝতে সহজ:
+
+```c
+int count = 1;
+
+for (int i = 1; i < n; i++)
+{
+    if (arr[i] == arr[i - 1])
+    {
+        count++;
+    }
+    else
+    {
+        printf("%d %d\n", arr[i - 1], count);
+
+        count = 1;
+    }
+}
+
+printf("%d %d\n", arr[n - 1], count);
+```
+
+Mental Flow:
+
+```text
+Same Value?
+↓
+Increase Current Group Count
+```
+
+```text
+Different Value?
+↓
+Previous Group Complete
+↓
+Print Previous Group
+↓
+Reset Count
+```
+
+After loop:
+
+```text
+Print Final Group
+```
+
+---
+
+# 26. Problem 6 — Values Appearing Exactly K Times
+
+Problem:
+
+> কয়টি value exactly `k` times এসেছে?
+
+Array:
+
+```text
+1 1 2 3 3 4 4 4
+```
+
+Suppose:
+
+```text
+k = 2
+```
+
+Frequency:
+
+```text
+1 → 2
+2 → 1
+3 → 2
+4 → 3
+```
+
+Exactly twice:
+
+```text
+1
+3
+```
+
+Answer:
+
+```text
+2
+```
+
+Frequency Pattern:
+
+```c
+int answer = 0;
+
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] == k)
+    {
+        answer++;
+    }
+}
+```
+
+Mental Pattern:
+
+```text
+Build Frequency
+↓
+Traverse Frequency Table
+↓
+freq[value] == k?
+↓
+Count++
+```
+
+---
+
+# 27. Frequency Condition Family
+
+একটি frequency table থেকে অনেক problem solve করা যায়।
+
+```text
+freq[x] == 0
+→ Absent
+```
+
+```text
+freq[x] == 1
+→ Unique / Appears Once
+```
+
+```text
+freq[x] > 1
+→ Repeated
+```
+
+```text
+freq[x] == k
+→ Appears Exactly K Times
+```
+
+```text
+freq[x] >= k
+→ Appears At Least K Times
+```
+
+```text
+freq[x] % 2 == 0
+→ Even Frequency
+```
+
+```text
+freq[x] % 2 != 0
+→ Odd Frequency
+```
+
+এখানে বড় lesson:
+
+```text
+Build Frequency Once
+↓
+Different Conditions
+↓
+Different Problems
+```
+
+---
+
+# 28. Problem 7 — Count Values Appearing Once
+
+Array:
+
+```text
+1 1 2 3 3 4 5 5
+```
+
+Frequency:
+
+```text
+1 → 2
+2 → 1
+3 → 2
+4 → 1
+5 → 2
+```
+
+Appear exactly once:
+
+```text
+2
+4
+```
+
+Answer:
+
+```text
+2
+```
+
+Code:
+
+```c
+int uniqueCount = 0;
+
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] == 1)
+    {
+        uniqueCount++;
+    }
+}
+```
+
+Be careful with terminology।
+
+কিছু problem-এ:
+
+```text
+Unique Value
+```
+
+মানে distinct value বোঝাতে পারে।
+
+অন্য problem-এ:
+
+```text
+Appears Exactly Once
+```
+
+বোঝাতে পারে।
+
+তাই problem statement carefully পড়বে।
+
+---
+
+# 29. Problem 8 — First Repeated Value
+
+এখানে interesting difference আছে।
+
+Array:
+
+```text
+5 2 3 2 5
+```
+
+Question:
+
+> প্রথম repeated value কোনটি?
+
+এই question ambiguous হতে পারে।
+
+---
+
+## Meaning A — First Value Whose Second Occurrence Appears
+
+Traversal:
+
+```text
+5
+→ First time
+
+2
+→ First time
+
+3
+→ First time
+
+2
+→ Seen Before
+```
+
+Answer:
+
+```text
+2
+```
+
+এখানে frequency table traversal:
+
+```text
+0 → MAX
+```
+
+করলে answer বের হবে না।
+
+কারণ সেটা value order দেখে, original occurrence order না।
+
+Correct mental pattern:
+
+```text
+Traverse Original Array
+↓
+Seen Before?
+↓
+Yes → First Repeat Event
+```
+
+Code idea:
+
+```c
+int freq[101] = {0};
+
+for (int i = 0; i < n; i++)
+{
+    int x = arr[i];
+
+    if (freq[x] > 0)
+    {
+        printf("%d\n", x);
+        break;
+    }
+
+    freq[x]++;
+}
+```
+
+এখানে important combination:
+
+```text
+Original Order Traversal
++
+Frequency / Seen Table
++
+Early Exit
+```
+
+---
+
+# 30. Frequency Table Traversal vs Original Array Traversal
+
+এই distinction খুব গুরুত্বপূর্ণ।
+
+## Frequency Table Traversal
+
+```c
+for (int value = 0; value <= MAX; value++)
+```
+
+Order:
+
+```text
+Value Order
+```
+
+Example:
+
+```text
+0, 1, 2, 3, 4, ...
+```
+
+---
+
+## Original Array Traversal
+
+```c
+for (int i = 0; i < n; i++)
+```
+
+Order:
+
+```text
+Input Order
+```
+
+Example:
+
+```text
+5, 2, 3, 2, 5
+```
+
+তাই:
+
+```text
+Need Smallest Value?
+→ Frequency Table Traversal can help
+```
+
+```text
+Need First by Input Order?
+→ Traverse Original Array
+```
+
+এই distinction future contest problem-এ খুব useful।
+
+---
+
+# 31. Problem 9 — Smallest Repeated Value
+
+Array:
+
+```text
+8 5 8 3 5 2
+```
+
+Repeated:
+
+```text
+5
+8
+```
+
+Smallest repeated:
+
+```text
+5
+```
+
+Frequency approach:
+
+```text
+Build Frequency
+↓
+Traverse Values from Small to Large
+↓
+First freq[value] > 1
+↓
+Answer
+```
+
+Code:
+
+```c
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > 1)
+    {
+        printf("%d\n", value);
+        break;
+    }
+}
+```
+
+এখানে frequency array-এর index order advantage দিচ্ছে।
+
+Mental Pattern:
+
+```text
+Frequency Array
++
+Ascending Value Traversal
++
+Condition
++
+Early Exit
+```
+
+---
+
+# 32. Largest Repeated Value
+
+Same frequency table।
+
+Largest repeated value চাইলে:
+
+```c
+for (int value = MAX_VALUE; value >= 0; value--)
+{
+    if (freq[value] > 1)
+    {
+        printf("%d\n", value);
+        break;
+    }
+}
+```
+
+Mental Observation:
+
+```text
+Frequency Array Index
+Represents Value
+```
+
+তাই traversal direction change করে:
+
+```text
+Smallest Matching Value
+or
+Largest Matching Value
+```
+
+বের করা যায়।
+
+---
+
+# 33. Sorting Approach-এর Advantage
+
+Sorting useful যখন:
+
+```text
+Values are large
+```
+
+Example:
+
+```text
+1000000000
+-500000000
+999999999
+1000000000
+```
+
+Direct frequency array natural না।
+
+কিন্তু sort করলে:
+
+```text
+-500000000
+999999999
+1000000000
+1000000000
+```
+
+এখন duplicate detection সহজ:
+
+```text
+Adjacent Equal
+```
+
+Sorting আরও useful যখন problem asks:
+
+```text
+Minimum Difference
+
+Closest Pair
+
+Median
+
+Ordered Output
+
+Neighbor Relationship
+
+Group Processing
+```
+
+Mental Rule:
+
+```text
+Need Relative Order
+↓
+Sorting Often Helps
+```
+
+---
+
+# 34. Frequency Approach-এর Advantage
+
+Frequency array useful যখন:
+
+```text
+Value Range Small
++
+Need Count Information
+```
+
+Example:
+
+```text
+0 ≤ arr[i] ≤ 1000
+```
+
+এবং queries:
+
+```text
+How many 7?
+
+How many 15?
+
+How many 500?
+```
+
+Frequency approach:
+
+```text
+Build Once
+↓
+Direct Lookup
+```
+
+Useful for:
+
+```text
+Count Queries
+
+Distinct Count
+
+Mode
+
+Repeated Values
+
+Exactly K Occurrences
+
+Smallest Repeated Value
+
+Character Frequency
+```
+
+Mental Rule:
+
+```text
+Need Count Per Value
++
+Range Manageable
+↓
+Frequency Array
+```
+
+---
+
+# 35. Sorting vs Frequency Decision Table
+
+| Problem Feature         |                 Sorting |                         Frequency Array |
+| ----------------------- | ----------------------: | --------------------------------------: |
+| Need sorted order       |                       ✅ |                                       ❌ |
+| Small value range       |                Possible |                                       ✅ |
+| Huge value range        |                       ✅ |                               Usually ❌ |
+| Negative values         |               ✅ Natural |                    Needs mapping/offset |
+| Many count queries      | Possible but not direct |                                       ✅ |
+| Duplicate detection     |                       ✅ |                                       ✅ |
+| Distinct count          |                       ✅ |                                       ✅ |
+| Mode                    |              ✅ Grouping |                                ✅ Direct |
+| Minimum difference      |                       ✅ |                 Usually Sorting Natural |
+| Original order question |  Sorting destroys order | Frequency + original traversal may help |
+
+---
+
+# 36. Same Problem, Different Representation
+
+Problem:
+
+> Count distinct values.
+
+Raw:
+
+```text
+7 2 7 5 2 9
+```
+
+---
+
+## Sorting View
+
+```text
+2 2 5 7 7 9
+```
+
+Think:
+
+```text
+How Many Groups?
+```
+
+---
+
+## Frequency View
+
+```text
+2 → 2
+5 → 1
+7 → 2
+9 → 1
+```
+
+Think:
+
+```text
+How Many Positive Frequencies?
+```
+
+Same answer।
+
+Different mental questions:
+
+```text
+Sorting View
+→ How many groups?
+```
+
+```text
+Frequency View
+→ How many present values?
+```
+
+এটাই representation thinking।
+
+---
+
+# 37. Problem Transformation Skill
+
+Beginner often sees:
+
+> Count distinct values.
+
+এবং immediately code লেখা শুরু করে।
+
+Professional habit:
+
+```text
+Problem Statement
+↓
+What Does the Answer Mean?
+↓
+Can I Transform the Data?
+↓
+Which Representation Makes the Answer Obvious?
+```
+
+Distinct count example:
+
+```text
+Raw Array
+↓
+Hard to See Groups
+```
+
+Option 1:
+
+```text
+Sort
+↓
+Count Boundaries
+```
+
+Option 2:
+
+```text
+Frequency
+↓
+Count Positive Entries
+```
+
+এই transformation skill CP-তে খুব important।
+
+---
+
+# 38. Common Bug — Sorting করে Original Order Question Solve করা
+
+Problem:
+
+> First repeated value by traversal order.
+
+Array:
+
+```text
+8 5 3 5 8
+```
+
+Original traversal:
+
+```text
+8
+5
+3
+5 ← First repeat event
+```
+
+Answer:
+
+```text
+5
+```
+
+Sort করলে:
+
+```text
+3 5 5 8 8
+```
+
+এখানে first adjacent duplicate:
+
+```text
+5
+```
+
+এই example-এ accidentally same answer।
+
+কিন্তু:
+
+```text
+8 8 3 3 1
+```
+
+Original first repeat event:
+
+```text
+8
+```
+
+Sort:
+
+```text
+1 3 3 8 8
+```
+
+First adjacent duplicate:
+
+```text
+3
+```
+
+Wrong answer।
+
+Lesson:
+
+```text
+Sorting Changes Original Order
+```
+
+তাই question যদি original order depend করে:
+
+```text
+Be Careful Before Sorting
+```
+
+---
+
+# 39. Common Bug — Distinct Count Initialization
+
+Sorted Array:
+
+```text
+2 2 3 5
+```
+
+Code:
+
+```c
+int distinct = 0;
+
+for (int i = 1; i < n; i++)
+{
+    if (arr[i] != arr[i - 1])
+    {
+        distinct++;
+    }
+}
+```
+
+Result:
+
+```text
+2
+```
+
+কিন্তু correct:
+
+```text
+3
+```
+
+কারণ first group count করা হয়নি।
+
+Correct:
+
+```c
+int distinct = 1;
+```
+
+যদি:
+
+```text
+n >= 1
+```
+
+guaranteed হয়।
+
+Otherwise:
+
+```c
+int distinct = 0;
+
+if (n > 0)
+{
+    distinct = 1;
+
+    // traversal
+}
+```
+
+---
+
+# 40. Common Bug — Frequency Range ভুল
+
+Constraint:
+
+```text
+1 ≤ arr[i] ≤ 1000
+```
+
+তুমি যদি traverse করো:
+
+```c
+for (int value = 0; value < 1000; value++)
+```
+
+তাহলে value:
+
+```text
+1000
+```
+
+miss হবে।
+
+Correct:
+
+```c
+for (int value = 0; value <= 1000; value++)
+```
+
+অথবা:
+
+```c
+for (int value = 1; value <= 1000; value++)
+```
+
+depending on valid range।
+
+---
+
+# 41. Common Bug — Frequency Count আর Value Confuse করা
+
+Suppose:
+
+```text
+freq[7] = 3
+```
+
+Meaning:
+
+```text
+Value 7 appears 3 times
+```
+
+Most frequent value search-এ compare করবে:
+
+```c
+freq[value]
+```
+
+not:
+
+```c
+value
+```
+
+Wrong mental question:
+
+```text
+Which Value is Largest?
+```
+
+Correct mode question:
+
+```text
+Which Frequency is Largest?
+```
+
+তারপর corresponding value remember করবে।
+
+---
+
+# 42. Common Bug — Tie Rule Ignore করা
+
+Array:
+
+```text
+2 2 5 5 8
+```
+
+Most frequent:
+
+```text
+2 → 2 times
+5 → 2 times
+```
+
+Tie আছে।
+
+Problem বলতে পারে:
+
+```text
+If tie, print smallest value
+```
+
+অথবা:
+
+```text
+If tie, print largest value
+```
+
+অথবা:
+
+```text
+Print first appearing value
+```
+
+প্রতিটি rule-এর code আলাদা হতে পারে।
+
+তাই:
+
+```text
+Find Maximum Frequency
+```
+
+শুধু enough নাও হতে পারে।
+
+Need:
+
+```text
+Maximum Frequency
++
+Tie-Breaking Rule
+```
+
+---
+
+# 43. Tie — Smallest Value
+
+Frequency array low to high traverse করলে:
+
+```c
+if (freq[value] > bestFrequency)
+```
+
+ব্যবহার করে smallest tied value preserve করা যায়।
+
+কারণ smaller value আগে আসে।
+
+Example:
+
+```text
+2 → 3
+5 → 3
+```
+
+At `2`:
+
+```text
+bestValue = 2
+```
+
+At `5`:
+
+```text
+3 > 3?
+No
+```
+
+তাই:
+
+```text
+bestValue = 2
+```
+
+---
+
+# 44. Tie — Largest Value
+
+Option:
+
+```c
+if (freq[value] >= bestFrequency)
+{
+    bestFrequency = freq[value];
+    bestValue = value;
+}
+```
+
+যদি low to high traverse করো, equal frequency-তেও later larger value replace করবে।
+
+তবে এই logic use করার আগে:
+
+```text
+Problem Tie Rule
+```
+
+confirm করবে।
+
+---
+
+# 45. Pattern Combination Map
+
+এই Chapter-এ আসলে নতুন isolated algorithm-এর চেয়ে বেশি important হলো pattern combination।
+
+## Duplicate Detection
+
+```text
+Sorting
++
+Adjacent Comparison
++
+Flag
++
+Early Exit
+```
+
+অথবা:
+
+```text
+Frequency
++
+Condition freq[x] > 1
+```
+
+---
+
+## Distinct Count
+
+```text
+Sorting
++
+Group Boundary
++
+Counter
+```
+
+অথবা:
+
+```text
+Frequency
++
+Positive Frequency Check
++
+Counter
+```
+
+---
+
+## Mode
+
+```text
+Frequency
++
+Maximum Tracking
++
+Candidate Value
+```
+
+অথবা:
+
+```text
+Sorting
++
+Group Count
++
+Maximum Tracking
+```
+
+---
+
+## First Repeat Event
+
+```text
+Original Traversal
++
+Seen/Frequency State
++
+Early Exit
+```
+
+---
+
+# 46. Recognition Signals
+
+Problem statement-এ দেখো:
+
+```text
+Duplicate
+
+Distinct
+
+Repeated
+
+Occurrence
+
+Frequency
+
+Exactly K Times
+
+Most Frequent
+
+Least Frequent
+
+Appears Once
+
+Appears More Than Once
+
+Count Each Value
+
+First Repeated
+
+Smallest Repeated
+```
+
+তারপর প্রশ্ন করো:
+
+```text
+Do I Need Count?
+```
+
+```text
+Do I Need Order?
+```
+
+```text
+Is the Value Range Small?
+```
+
+```text
+Does Original Order Matter?
+```
+
+এই চারটি question approach choose করতে সাহায্য করবে।
+
+---
+
+# 🧠 Chapter 6 Master Decision Model
+
+```text
+                        PROBLEM
+                           │
+                           ▼
+               What Information Is Needed?
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+        Count            Order        Original Position
+          │                │                │
+          ▼                ▼                ▼
+   Is Range Small?       Sorting      Preserve Original
+          │                               Traversal
+      ┌───┴───┐
+      │       │
+     Yes      No
+      │       │
+      ▼       ▼
+ Frequency  Sorting /
+  Array     Other Method
+      │
+      ▼
+  Query Frequency
+  Distinct Count
+  Mode
+  Repeated Values
+  Exactly K Times
+```
+
+---
+
+# 47. Problem Solving Framework
+
+এই Chapter-এর problems solve করার সময়:
+
+## Step 1 — Question Translate করো
+
+Example:
+
+> Count distinct values.
+
+Translate:
+
+```text
+How many different values are present?
+```
+
+---
+
+## Step 2 — Representation ভাবো
+
+```text
+Sorting?
+→ Count Groups
+```
+
+```text
+Frequency?
+→ Count Positive Entries
+```
+
+---
+
+## Step 3 — Constraint Check
+
+```text
+Value Range Small?
+```
+
+```text
+n Large?
+```
+
+```text
+Negative Values?
+```
+
+```text
+Original Order Needed?
+```
+
+---
+
+## Step 4 — Pattern Chain লেখো
+
+Example:
+
+```text
+Frequency
+↓
+Traverse Values
+↓
+freq[value] > 0
+↓
+Counter++
+```
+
+---
+
+## Step 5 — তারপর Code
+
+এটা তোমার Bootcamp-এর core habit:
+
+```text
+Problem
+↓
+Pattern
+↓
+State
+↓
+Traversal
+↓
+Condition
+↓
+Update
+↓
+Code
+```
+
+---
+
+# 🧪 Chapter 6 Practice
+
+## Task 1 — Duplicate Detection
+
+Input:
+
+```text
+7
+5 2 8 3 2 9 1
+```
+
+Output:
+
+```text
+Duplicate Found
+```
+
+দুইভাবে করবে:
+
+```text
+A. Sorting Approach
+B. Frequency Approach
+```
+
+---
+
+## Task 2 — Distinct Count
+
+Input:
+
+```text
+8
+5 2 5 3 2 8 8 1
+```
+
+Distinct values:
+
+```text
+1
+2
+3
+5
+8
+```
+
+Output:
+
+```text
+5
+```
+
+দুইভাবে করবে:
+
+```text
+A. Sort + Group Boundary
+B. Frequency + Positive Count
+```
+
+---
+
+## Task 3 — Count Repeated Values
+
+Input:
+
+```text
+9
+1 1 2 3 3 3 4 5 5
+```
+
+Repeated values:
+
+```text
+1
+3
+5
+```
+
+Output:
+
+```text
+3
+```
+
+Pattern:
+
+```text
+Frequency
++
+freq[value] > 1
++
+Counter
+```
+
+---
+
+## Task 4 — Count Extra Duplicate Copies
+
+Same Input:
+
+```text
+1 1 2 3 3 3 4 5 5
+```
+
+Groups:
+
+```text
+1 → 1 extra
+
+3 → 2 extra
+
+5 → 1 extra
+```
+
+Output:
+
+```text
+4
+```
+
+Formula:
+
+```text
+freq[value] - 1
+```
+
+for every repeated value।
+
+---
+
+## Task 5 — Most Frequent Value
+
+Input:
+
+```text
+10
+4 2 4 3 2 4 5 2 4 8
+```
+
+Frequency:
+
+```text
+2 → 3
+3 → 1
+4 → 4
+5 → 1
+8 → 1
+```
+
+Output:
+
+```text
+Value: 4
+Frequency: 4
+```
+
+---
+
+## Task 6 — Values Appearing Exactly K Times
+
+Input:
+
+```text
+8
+1 1 2 3 3 4 4 4
+
+2
+```
+
+Here:
+
+```text
+k = 2
+```
+
+Values:
+
+```text
+1
+3
+```
+
+Output:
+
+```text
+2
+```
+
+---
+
+## Task 7 — First Repeat Event
+
+Input:
+
+```text
+7
+5 2 8 3 2 5 8
+```
+
+Traversal:
+
+```text
+5
+2
+8
+3
+2 ← Seen Before
+```
+
+Output:
+
+```text
+2
+```
+
+Pattern:
+
+```text
+Original Traversal
++
+Seen State
++
+Early Exit
+```
+
+---
+
+# 🧠 Pattern Recognition Drill
+
+## Problem 1
+
+Problem:
+
+> Count distinct values.
+
+Complete:
+
+```text
+Sorting Approach
+↓
+Sort
+↓
+Count ______
+```
+
+And:
+
+```text
+Frequency Approach
+↓
+Build freq[]
+↓
+Count entries where ______
+```
+
+---
+
+## Problem 2
+
+If:
+
+```text
+freq[8] = 0
+```
+
+Meaning:
+
+```text
+...
+```
+
+If:
+
+```text
+freq[8] = 1
+```
+
+Meaning:
+
+```text
+...
+```
+
+If:
+
+```text
+freq[8] = 4
+```
+
+Meaning:
+
+```text
+...
+```
+
+---
+
+## Problem 3
+
+Problem:
+
+> Count values appearing exactly three times.
+
+Condition:
+
+```c
+if (________________)
+{
+    answer++;
+}
+```
+
+---
+
+## Problem 4
+
+Problem:
+
+> Find first repeated value by original traversal order.
+
+Which traversal?
+
+```text
+A. Frequency Table Traversal
+
+B. Original Array Traversal
+```
+
+Explain why।
+
+---
+
+## Problem 5
+
+Problem:
+
+> Find smallest repeated value.
+
+Possible chain:
+
+```text
+Build Frequency
+↓
+Traverse Values from ______ to ______
+↓
+First freq[value] ______
+↓
+Answer
+```
+
+---
+
+## Problem 6
+
+Array values:
+
+```text
+-1000000000 to 1000000000
+```
+
+Direct frequency array natural?
+
+```text
+Yes / No
+```
+
+Alternative from current knowledge:
+
+```text
+...
+```
+
+---
+
+# 📝 Chapter 6 Assignment
+
+এই assignment এমনভাবে রাখা হয়েছে যাতে Chapter-এর main goals cover হয়, কিন্তু Day 5 একদিনেই শেষ করা যায়।
+
+## Part A — Explain
+
+নিজের ভাষায় লিখবে:
+
+```text
+1. Sorting করলে equal values-এর কী হয়?
+
+2. Sorted Group কী?
+
+3. Group Boundary কী?
+
+4. Duplicate Detection sorting দিয়ে কীভাবে হয়?
+
+5. Duplicate Detection frequency দিয়ে কীভাবে হয়?
+
+6. Distinct Count-এর দুইটি approach কী?
+
+7. freq[value] > 0 এবং freq[value] > 1-এর difference কী?
+
+8. Repeated Value Count এবং Extra Duplicate Count-এর difference কী?
+
+9. Mode কী?
+
+10. Original Order matter করলে sorting কেন dangerous হতে পারে?
+
+11. Frequency Table Traversal এবং Original Array Traversal-এর difference কী?
+
+12. Sorting এবং Frequency Array-এর মধ্যে approach কীভাবে choose করবে?
+```
+
+---
+
+## Part B — Mandatory Coding
+
+নিজে করবে:
+
+```text
+1. Duplicate Detection — Sorting Version
+
+2. Duplicate Detection — Frequency Version
+
+3. Distinct Count — Sorting Version
+
+4. Distinct Count — Frequency Version
+
+5. Count Repeated Values
+
+6. Find Most Frequent Value
+
+7. Find First Repeat Event
+```
+
+---
+
+## Part C — Dry Run
+
+Array:
+
+```text
+4 2 4 3 2 4 5
+```
+
+### Frequency Table পূরণ করো:
+
+```text
+2 → ?
+
+3 → ?
+
+4 → ?
+
+5 → ?
+```
+
+তারপর answer:
+
+```text
+Distinct Count = ?
+
+Repeated Value Count = ?
+
+Extra Duplicate Copies = ?
+
+Most Frequent Value = ?
+
+Maximum Frequency = ?
+```
+
+---
+
+## Part D — Sorting Dry Run
+
+Array:
+
+```text
+5 2 5 3 2 8
+```
+
+### Step 1
+
+Sorted Array:
+
+```text
+____________________
+```
+
+### Step 2
+
+Group Representation:
+
+```text
+__ __ | __ | __ __ | __
+```
+
+### Step 3
+
+Answer:
+
+```text
+Number of Groups = ?
+
+Distinct Count = ?
+
+Repeated Groups = ?
+```
+
+---
+
+## Part E — Debugging
+
+এই code দেখো:
+
+```c
+int distinct = 0;
+
+qsort(arr, n, sizeof(arr[0]), compareAscending);
+
+for (int i = 1; i < n; i++)
+{
+    if (arr[i] != arr[i - 1])
+    {
+        distinct++;
+    }
+}
+
+printf("%d\n", distinct);
+```
+
+Question:
+
+```text
+Problem:
+
+Why is the first group missing?
+
+Correct Initialization:
+
+What if n = 0?
+```
+
+---
+
+# 📚 Glossary Update
+
+`CP_Dictionary.md`-এ add করবে:
+
+```text
+Representation
+Sorted Group
+Group Boundary
+Duplicate
+Distinct Value
+Repeated Value
+Extra Duplicate
+Mode
+Group Size
+Tie-Breaking
+Original Order
+Value Order
+```
+
+Format:
+
+```text
+Term:
+
+Simple Meaning:
+
+Small Example:
+```
+
+---
+
+# 📚 Pattern Library Update
+
+`core_pattern.md`-এ add করবে:
+
+````md
+## Sorted Group Pattern
+
+### Recognition
+
+Use after sorting when equal values need to be processed together.
+
+### Mental Model
+
+```text
+Sort
+↓
+Equal Values Become Adjacent
+↓
+Traverse
+↓
+Same as Previous?
+├── Yes → Same Group
+└── No  → New Group
+````
+
+### Core Condition
+
+```c
+if (arr[i] != arr[i - 1])
+{
+    // new group
+}
+```
+
+### Common Uses
+
+* Distinct Count
+* Duplicate Detection
+* Group Frequency
+* Mode
+* Repeated Value Processing
+
+---
+
+## Frequency Condition Pattern
+
+```text
+freq[x] == 0
+→ Absent
+
+freq[x] == 1
+→ Appears Once
+
+freq[x] > 1
+→ Repeated
+
+freq[x] == k
+→ Appears Exactly K Times
+
+freq[x] > 0
+→ Present
+```
+
+````
+
+---
+
+# 🔥 Chapter 6 Key Lesson
+
+এই Chapter-এর সবচেয়ে বড় lesson কোনো single code না।
+
+বরং:
+
+```text
+Same Problem
+Can Look Different
+Under Different Representations
+````
+
+Example:
+
+```text
+Count Distinct Values
+```
+
+Sorting View:
+
+```text
+Sort
+↓
+How Many Groups?
+```
+
+Frequency View:
+
+```text
+Build Frequency
+↓
+How Many Positive Counts?
+```
+
+Duplicate Detection:
+
+Sorting View:
+
+```text
+Sort
+↓
+Any Equal Neighbor?
+```
+
+Frequency View:
+
+```text
+Any Count > 1?
+```
+
+Mode:
+
+Sorting View:
+
+```text
+Largest Group
+```
+
+Frequency View:
+
+```text
+Largest Frequency
+```
+
+এই mental flexibility-ই Chapter 6-এর আসল goal।
+
+---
+
+# 🔗 Pattern Evolution
+
+তোমার শেখা patterns এখন connect হচ্ছে:
+
+```text
+Day 2
+Traversal
++
+Counting
++
+Maximum Tracking
++
+Flag
++
+Early Exit
+```
+
+তারপর:
+
+```text
+Day 5 Chapter 1–4
+Sorting
++
+Adjacent Relationship
++
+Comparator
+```
+
+তারপর:
+
+```text
+Day 5 Chapter 5
+Frequency Counting
++
+Preprocessing
++
+Direct Lookup
+```
+
+এখন Chapter 6:
+
+```text
+Sorting
++
+Group Boundary
++
+Counting
+```
+
+```text
+Frequency
++
+Maximum Tracking
++
+Candidate Value
+```
+
+```text
+Original Traversal
++
+Seen State
++
+Early Exit
+```
+
+এটাই Pattern Combination।
+
+---
+
+# ✅ Chapter 6 Completion Checklist
+
+```text
+[ ] Representation কী বুঝি
+
+[ ] Sorting-এর পরে equal values adjacent হয় বুঝি
+
+[ ] Sorted Group বুঝি
+
+[ ] Group Boundary বুঝি
+
+[ ] Duplicate Detection sorting দিয়ে করতে পারি
+
+[ ] Duplicate Detection frequency দিয়ে করতে পারি
+
+[ ] Distinct Count sorting দিয়ে করতে পারি
+
+[ ] Distinct Count frequency দিয়ে করতে পারি
+
+[ ] freq[x] == 0 meaning বুঝি
+
+[ ] freq[x] == 1 meaning বুঝি
+
+[ ] freq[x] > 1 meaning বুঝি
+
+[ ] freq[x] == k condition ব্যবহার করতে পারি
+
+[ ] Repeated Value Count করতে পারি
+
+[ ] Extra Duplicate Count করতে পারি
+
+[ ] Repeated Values এবং Extra Copies-এর difference বুঝি
+
+[ ] Mode বের করতে পারি
+
+[ ] Frequency + Maximum Tracking combine করতে পারি
+
+[ ] Sorted Group Count করতে পারি
+
+[ ] Last Group Problem বুঝি
+
+[ ] Original Order এবং Value Order-এর difference বুঝি
+
+[ ] First Repeat Event বের করতে পারি
+
+[ ] Smallest Repeated Value বের করার logic বুঝি
+
+[ ] Tie-Breaking সম্পর্কে সচেতন
+
+[ ] Sorting কখন natural বুঝি
+
+[ ] Frequency Array কখন natural বুঝি
+
+[ ] Same Problem-এর multiple approach চিন্তা করতে পারি
+
+[ ] Practice complete করেছি
+
+[ ] Assignment complete করেছি
+
+[ ] Glossary update করেছি
+
+[ ] Pattern Library update করেছি
+```
+
+---
+
+# 🎯 Day 5 Progress
+
+```text
+Day 5
+│
+├── ✅ Chapter 1 — Sorting Mental Model
+│
+├── ✅ Chapter 2 — Bubble Sort
+│
+├── ✅ Chapter 3 — Selection Sort
+│
+├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+│
+├── ✅ Chapter 5 — Frequency Counting Pattern
+│
+├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+│
+├── ⬜ Chapter 7 — Pair Thinking Foundation
+│
+└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+                  Mini Contest & Reflection
+```
+
+# 🏁 Chapter 6 Final Position
+
+এখন পর্যন্ত Day 5-এ তোমার problem-solving progression:
+
+```text
+Unsorted Data
+        ↓
+Can Sorting Reveal Structure?
+        ↓
+Equal Values Become Neighbors
+        ↓
+Groups and Boundaries
+```
+
+অথবা:
+
+```text
+Need Count Information
+        ↓
+Can Values Become Small Array Indices?
+        ↓
+Frequency Table
+        ↓
+Direct Count Information
+```
+
+সবচেয়ে important decision chain:
+
+```text
+Problem
+   ↓
+Need Original Order?
+   │
+   ├── Yes
+   │    ↓
+   │ Preserve Original Traversal
+   │
+   └── No
+        ↓
+   Need Ordered Relationship?
+        │
+        ├── Yes → Sorting
+        │
+        └── Need Counts?
+                 ↓
+            Small Range?
+                 ↓
+             Frequency
+```
+
+পরবর্তী **Day 5 — Chapter 7: Pair Thinking Foundation**-এ focus থাকবে:
+
+```text
+One Element
++
+Another Element
+↓
+Pair
+```
+
+তারপর:
+
+```text
+Find Pair with Target Sum
+```
+
+```text
+Check All Pairs
+```
+
+```text
+Nested Loop Pair Pattern
+```
+
+```text
+Duplicate Pair Problems
+```
+
+এবং সবচেয়ে গুরুত্বপূর্ণভাবে:
+
+```text
+Brute Force Pair Thinking
+        ↓
+Why O(n²)?
+        ↓
+How Sorting Changes Pair Problems
+        ↓
+Foundation for Future Two Pointer
+```
+
+Chapter 7-এ এখনই full advanced Two Pointer শেখানো হবে না; আগে **pair problem কীভাবে চিনবে এবং pair generate করার correct loop structure** solid করা হবে।
+
+---
+
+# 🚀 CP Bootcamp 2026 — Day 5
+
+# Chapter 7 — Pair Thinking Foundation
+
+> **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
+> **Chapter Goal:** Pair-based problem চিনতে শেখা, সব unique pair generate করার correct loop pattern বোঝা, `O(n²)` pair search করা এবং sorting কীভাবে future optimization-এর foundation তৈরি করে সেটা বোঝা।
+> **Estimated Time:** 60–75 minutes
+
+---
+
+# 🎯 Chapter Mission
+
+Day 5-এ এখন পর্যন্ত:
+
+```text
+Chapter 1
+Sorting Mental Model
+        ↓
+Chapter 2
+Bubble Sort
+        ↓
+Chapter 3
+Selection Sort
+        ↓
+Chapter 4
+qsort()
+        ↓
+Chapter 5
+Frequency Counting
+        ↓
+Chapter 6
+Sorted Array & Frequency Problems
+        ↓
+Chapter 7
+Pair Thinking Foundation
+```
+
+এখন পর্যন্ত আমরা বেশিরভাগ problem-এ একটি element নিয়ে চিন্তা করেছি।
+
+যেমন:
+
+```text
+Current Element
+↓
+Check Condition
+↓
+Update State
+```
+
+Example:
+
+```c
+if (arr[i] > maximum)
+{
+    maximum = arr[i];
+}
+```
+
+এখানে decision depend করছে:
+
+```text
+One Element
+```
+
+কিন্তু অনেক problem-এ প্রশ্ন হবে:
+
+```text
+Can two elements together satisfy something?
+```
+
+যেমন:
+
+```text
+Do any two numbers sum to 10?
+```
+
+অথবা:
+
+```text
+Which two elements have minimum difference?
+```
+
+অথবা:
+
+```text
+How many pairs have equal values?
+```
+
+এখানে চিন্তার unit:
+
+```text
+One Element
++
+Another Element
+=
+Pair
+```
+
+এই Chapter-এর core mental shift:
+
+```text
+Single Element Thinking
+        ↓
+Pair Thinking
+```
+
+---
+
+# 1. Pair কী?
+
+ধরো Array:
+
+```text
+2 5 7
+```
+
+Elements:
+
+```text
+2
+5
+7
+```
+
+Possible pairs:
+
+```text
+(2, 5)
+
+(2, 7)
+
+(5, 7)
+```
+
+মোট:
+
+```text
+3 pairs
+```
+
+এখানে:
+
+```text
+(2, 5)
+```
+
+এবং:
+
+```text
+(5, 2)
+```
+
+সাধারণ unordered pair problem-এ একই pair হিসেবে ধরা হয়।
+
+অর্থাৎ:
+
+```text
+(2, 5) = (5, 2)
+```
+
+তাই pair generation-এর সময় duplicate pair generate করা উচিত না।
+
+---
+
+# 2. Index Pair vs Value Pair
+
+এটা শুরুতেই পরিষ্কার করা জরুরি।
+
+Array:
+
+```text
+5 5 2
+```
+
+Indexes:
+
+```text
+Index:  0  1  2
+Value:  5  5  2
+```
+
+Index pairs:
+
+```text
+(0, 1)
+(0, 2)
+(1, 2)
+```
+
+Corresponding value pairs:
+
+```text
+(5, 5)
+(5, 2)
+(5, 2)
+```
+
+দেখো:
+
+```text
+Value Pair (5, 2)
+```
+
+দুইবার এসেছে।
+
+কিন্তু index pairs আলাদা:
+
+```text
+(0, 2)
+
+(1, 2)
+```
+
+তাই problem statement-এ বুঝতে হবে:
+
+```text
+Count Index Pairs?
+```
+
+নাকি:
+
+```text
+Count Distinct Value Pairs?
+```
+
+এগুলো সবসময় একই answer দেয় না।
+
+---
+
+# 3. Pair Problem Recognition
+
+Problem statement-এ এমন signal থাকতে পারে:
+
+```text
+two elements
+
+two numbers
+
+pair of elements
+
+find a pair
+
+count pairs
+
+sum of two elements
+
+difference between two elements
+
+equal pair
+
+closest pair
+```
+
+Mental Trigger:
+
+```text
+Question talks about
+Two Elements Together
+        ↓
+Think Pair Pattern
+```
+
+---
+
+# 4. সব Pair কীভাবে Generate করব?
+
+ধরো:
+
+```text
+10 20 30 40
+```
+
+Indexes:
+
+```text
+0 1 2 3
+```
+
+Unique index pairs:
+
+```text
+(0, 1)
+(0, 2)
+(0, 3)
+
+(1, 2)
+(1, 3)
+
+(2, 3)
+```
+
+Notice pattern:
+
+```text
+First Index < Second Index
+```
+
+অর্থাৎ:
+
+```text
+i < j
+```
+
+এটাই pair generation-এর foundation।
+
+---
+
+# 5. Pair Generation Loop
+
+Core pattern:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        // pair: arr[i], arr[j]
+    }
+}
+```
+
+এই pattern খুব গুরুত্বপূর্ণ।
+
+Mental Model:
+
+```text
+Choose First Element
+        ↓
+Choose Every Element After It
+        ↓
+Process Pair
+```
+
+অর্থাৎ:
+
+```text
+i = First Element
+
+j = Second Element
+```
+
+এবং:
+
+```text
+j starts from i + 1
+```
+
+---
+
+# 6. কেন `j = i + 1`?
+
+ধরো:
+
+```text
+10 20 30
+```
+
+Indexes:
+
+```text
+0 1 2
+```
+
+যখন:
+
+```text
+i = 0
+```
+
+তখন:
+
+```text
+j = 1
+j = 2
+```
+
+Pairs:
+
+```text
+(0, 1)
+(0, 2)
+```
+
+যখন:
+
+```text
+i = 1
+```
+
+তখন:
+
+```text
+j = 2
+```
+
+Pair:
+
+```text
+(1, 2)
+```
+
+যখন:
+
+```text
+i = 2
+```
+
+তখন:
+
+```text
+j = 3
+```
+
+কিন্তু:
+
+```text
+j < n
+```
+
+false।
+
+তাই শেষ।
+
+Generated:
+
+```text
+(0, 1)
+(0, 2)
+(1, 2)
+```
+
+Exactly all unique pairs।
+
+---
+
+# 7. Pair Generation Dry Run
+
+Array:
+
+```text
+4 7 9 2
+```
+
+Indexes:
+
+```text
+0 1 2 3
+```
+
+Code:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        printf("(%d, %d)\n", arr[i], arr[j]);
+    }
+}
+```
+
+Output:
+
+```text
+(4, 7)
+(4, 9)
+(4, 2)
+
+(7, 9)
+(7, 2)
+
+(9, 2)
+```
+
+Visual Pattern:
+
+```text
+4 → pair with 7, 9, 2
+
+7 → pair with 9, 2
+
+9 → pair with 2
+
+2 → nothing left
+```
+
+Mental Model:
+
+```text
+Each Element
+        ↓
+Pairs With
+        ↓
+All Elements After It
+```
+
+---
+
+# 8. Wrong Pair Loop — `j = 0`
+
+Suppose:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        printf("%d %d\n", arr[i], arr[j]);
+    }
+}
+```
+
+Array:
+
+```text
+2 5 7
+```
+
+এটা generate করবে:
+
+```text
+(2, 2)
+(2, 5)
+(2, 7)
+
+(5, 2)
+(5, 5)
+(5, 7)
+
+(7, 2)
+(7, 5)
+(7, 7)
+```
+
+Problems:
+
+```text
+Self Pair:
+(2, 2)
+(5, 5)
+(7, 7)
+```
+
+এবং:
+
+```text
+Duplicate Direction:
+(2, 5)
+(5, 2)
+```
+
+সাধারণ unordered pair problem-এর জন্য এটা wrong।
+
+Correct:
+
+```c
+for (int j = i + 1; j < n; j++)
+```
+
+---
+
+# 9. Pair Loop-এর তিনটি Rule
+
+সাধারণ unique unordered index pair-এর জন্য:
+
+```text
+Rule 1
+i starts from 0
+```
+
+```text
+Rule 2
+j starts from i + 1
+```
+
+```text
+Rule 3
+Both stay below n
+```
+
+Code:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        // process pair
+    }
+}
+```
+
+এই structure এখন থেকেই চিনে রাখবে।
+
+---
+
+# 10. Pair Sum Problem
+
+Problem:
+
+> Array-তে এমন দুইটি element আছে কি যাদের sum target-এর সমান?
+
+Array:
+
+```text
+2 7 4 5
+```
+
+Target:
+
+```text
+9
+```
+
+Possible pairs:
+
+```text
+2 + 7 = 9   ← Found
+
+2 + 4 = 6
+
+2 + 5 = 7
+
+7 + 4 = 11
+
+7 + 5 = 12
+
+4 + 5 = 9   ← Found
+```
+
+এখানে দুইটি valid index pair আছে:
+
+```text
+(2, 7)
+
+(4, 5)
+```
+
+Core condition:
+
+```c
+arr[i] + arr[j] == target
+```
+
+Pattern:
+
+```text
+Generate Pair
+↓
+Calculate Pair Sum
+↓
+Compare with Target
+```
+
+---
+
+# 11. Pair Sum Existence — Brute Force
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int target;
+
+    scanf("%d", &target);
+
+    int found = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[i] + arr[j] == target)
+            {
+                found = 1;
+                break;
+            }
+        }
+
+        if (found)
+        {
+            break;
+        }
+    }
+
+    if (found)
+    {
+        printf("Pair Found\n");
+    }
+    else
+    {
+        printf("Pair Not Found\n");
+    }
+
+    return 0;
+}
+```
+
+Pattern Combination:
+
+```text
+Pair Generation
++
+Condition Check
++
+Flag
++
+Early Exit
+```
+
+---
+
+# 12. কেন দুই জায়গায় `break`?
+
+Code:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        if (arr[i] + arr[j] == target)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+    {
+        break;
+    }
+}
+```
+
+প্রথম `break`:
+
+```text
+Inner Loop
+থেকে বের হয়
+```
+
+কিন্তু outer loop তখনও চলতে পারে।
+
+তাই:
+
+```c
+if (found)
+{
+    break;
+}
+```
+
+দিয়ে outer loop-ও stop করছি।
+
+Mental Model:
+
+```text
+Nested Loop
+↓
+Inner break
+↓
+Only Inner Loop Stops
+```
+
+এটা C programming-এর important behavior।
+
+---
+
+# 13. Pair Sum Dry Run
+
+Array:
+
+```text
+3 8 4 6
+```
+
+Target:
+
+```text
+10
+```
+
+Start:
+
+```text
+i = 0
+arr[i] = 3
+```
+
+### Pair 1
+
+```text
+j = 1
+arr[j] = 8
+
+3 + 8 = 11
+```
+
+Not match।
+
+### Pair 2
+
+```text
+j = 2
+arr[j] = 4
+
+3 + 4 = 7
+```
+
+Not match।
+
+### Pair 3
+
+```text
+j = 3
+arr[j] = 6
+
+3 + 6 = 9
+```
+
+Not match।
+
+Now:
+
+```text
+i = 1
+arr[i] = 8
+```
+
+### Pair 4
+
+```text
+j = 2
+arr[j] = 4
+
+8 + 4 = 12
+```
+
+Not match।
+
+### Pair 5
+
+```text
+j = 3
+arr[j] = 6
+
+8 + 6 = 14
+```
+
+Not match।
+
+Now:
+
+```text
+i = 2
+arr[i] = 4
+```
+
+### Pair 6
+
+```text
+j = 3
+arr[j] = 6
+
+4 + 6 = 10
+```
+
+Found।
+
+Mental Flow:
+
+```text
+Try Pair
+↓
+Check Sum
+↓
+Not Match?
+Continue
+↓
+Match?
+Stop
+```
+
+---
+
+# 14. Print the Pair
+
+শুধু existence না, pair-টাও print করতে চাইলে:
+
+```c
+if (arr[i] + arr[j] == target)
+{
+    printf("%d %d\n", arr[i], arr[j]);
+
+    found = 1;
+    break;
+}
+```
+
+Example:
+
+```text
+Input Array:
+3 8 4 6
+
+Target:
+10
+```
+
+Output:
+
+```text
+4 6
+```
+
+---
+
+# 15. Count All Valid Pairs
+
+এবার question:
+
+> কয়টি index pair-এর sum target-এর সমান?
+
+Array:
+
+```text
+1 2 3 4 5
+```
+
+Target:
+
+```text
+6
+```
+
+Valid pairs:
+
+```text
+1 + 5 = 6
+
+2 + 4 = 6
+```
+
+Answer:
+
+```text
+2
+```
+
+এখানে first match-এর পর stop করা যাবে না।
+
+Need:
+
+```text
+Counter
+```
+
+Code:
+
+```c
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        if (arr[i] + arr[j] == target)
+        {
+            count++;
+        }
+    }
+}
+```
+
+Pattern:
+
+```text
+Generate All Pairs
+↓
+Condition Match?
+↓
+count++
+```
+
+---
+
+# 16. Existence vs Count
+
+এই distinction খুব important।
+
+## Question A
+
+> কোনো valid pair আছে?
+
+State:
+
+```c
+int found = 0;
+```
+
+Pattern:
+
+```text
+Find One
+↓
+Set Flag
+↓
+Stop
+```
+
+---
+
+## Question B
+
+> মোট কয়টি valid pair আছে?
+
+State:
+
+```c
+int count = 0;
+```
+
+Pattern:
+
+```text
+Check Every Pair
+↓
+Match?
+↓
+count++
+```
+
+Mental Rule:
+
+```text
+Need Existence?
+→ Flag + Early Exit
+```
+
+```text
+Need Total Number?
+→ Counter + Full Traversal
+```
+
+---
+
+# 17. Important Duplicate Example
+
+Array:
+
+```text
+1 1 1 1
+```
+
+Target:
+
+```text
+2
+```
+
+Every pair of indices works।
+
+Index pairs:
+
+```text
+(0, 1)
+(0, 2)
+(0, 3)
+
+(1, 2)
+(1, 3)
+
+(2, 3)
+```
+
+Answer:
+
+```text
+6
+```
+
+Even though value pair always:
+
+```text
+(1, 1)
+```
+
+Index pair count:
+
+```text
+6
+```
+
+এটাই:
+
+```text
+Index Pair
+vs
+Distinct Value Pair
+```
+
+difference।
+
+---
+
+# 18. How Many Total Pairs?
+
+যদি `n` elements থাকে, unique unordered index pairs:
+
+[
+\frac{n(n-1)}{2}
+]
+
+Example:
+
+```text
+n = 4
+```
+
+[
+\frac{4(4-1)}{2}
+================
+
+# \frac{4 \times 3}{2}
+
+6
+]
+
+Pairs:
+
+```text
+(0,1)
+(0,2)
+(0,3)
+(1,2)
+(1,3)
+(2,3)
+```
+
+Total:
+
+```text
+6
+```
+
+তোমাকে এখন formula-based combinatorics solve করতে হবে না।
+
+শুধু relationship বুঝো:
+
+```text
+Pair Count grows roughly like n²
+```
+
+---
+
+# 19. কেন Pair Brute Force `O(n²)`?
+
+Loop:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+    }
+}
+```
+
+প্রথম element প্রায়:
+
+```text
+n - 1
+```
+
+pair check করে।
+
+দ্বিতীয়:
+
+```text
+n - 2
+```
+
+তারপর:
+
+```text
+n - 3
+```
+
+এভাবে:
+
+```text
+(n - 1) + (n - 2) + ... + 1
+```
+
+Total:
+
+[
+\frac{n(n-1)}{2}
+]
+
+Big-O:
+
+[
+O(n^2)
+]
+
+কারণ dominant growth:
+
+```text
+n²
+```
+
+Mental Model:
+
+```text
+Each Element
+↓
+Compared with Many Other Elements
+↓
+Quadratic Work
+```
+
+---
+
+# 20. `O(n²)` সবসময় খারাপ?
+
+না।
+
+Constraint দেখতে হবে।
+
+ধরো:
+
+```text
+n = 100
+```
+
+Approximate pair checks:
+
+[
+\frac{100 \times 99}{2}
+=======================
+
+4950
+]
+
+খুব ছোট।
+
+কিন্তু:
+
+```text
+n = 100000
+```
+
+Approximate pair count:
+
+[
+\frac{100000 \times 99999}{2}
+]
+
+প্রায়:
+
+```text
+5,000,000,000
+```
+
+অর্থাৎ প্রায় 5 billion pair।
+
+এটা সাধারণ contest time limit-এর জন্য practical না।
+
+Lesson:
+
+```text
+Brute Force Pair
+        ↓
+Correct?
+        ↓
+Yes
+        ↓
+But Check Constraint
+```
+
+---
+
+# 21. Brute Force-এর Value
+
+Brute force শেখা waste না।
+
+কারণ:
+
+```text
+Brute Force
+↓
+Shows Complete Search Space
+↓
+Shows What Work Is Repeated
+↓
+Creates Foundation for Optimization
+```
+
+Pair Sum example:
+
+```text
+Check Every Pair
+↓
+O(n²)
+```
+
+তারপর future-এ তুমি শিখবে:
+
+```text
+Sorting
++
+Two Pointers
+↓
+Faster Pair Search
+```
+
+কিন্তু optimization বোঝার আগে pair search space বোঝা দরকার।
+
+---
+
+# 22. Problem — Minimum Pair Difference
+
+Array:
+
+```text
+8 3 15 6
+```
+
+Question:
+
+> দুইটি different element-এর minimum absolute difference কত?
+
+All pairs:
+
+```text
+|8 - 3|  = 5
+
+|8 - 15| = 7
+
+|8 - 6|  = 2
+
+|3 - 15| = 12
+
+|3 - 6|  = 3
+
+|15 - 6| = 9
+```
+
+Minimum:
+
+```text
+2
+```
+
+Pair:
+
+```text
+(8, 6)
+```
+
+Brute Force Pattern:
+
+```text
+Generate Every Pair
+↓
+Calculate Difference
+↓
+Track Minimum
+```
+
+Pattern Combination:
+
+```text
+Pair Generation
++
+Transformation
++
+Minimum Tracking
+```
+
+---
+
+# 23. Absolute Difference
+
+Difference:
+
+```text
+arr[i] - arr[j]
+```
+
+negative হতে পারে।
+
+Example:
+
+```text
+3 - 8 = -5
+```
+
+কিন্তু distance-like difference চাইলে:
+
+```text
+5
+```
+
+তাই:
+
+```c
+abs(arr[i] - arr[j])
+```
+
+এর জন্য:
+
+```c
+#include <stdlib.h>
+```
+
+Example:
+
+```c
+int difference = abs(arr[i] - arr[j]);
+```
+
+---
+
+# 24. Minimum Pair Difference — Brute Force Code
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int minimumDifference = INT_MAX;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            int difference = abs(arr[i] - arr[j]);
+
+            if (difference < minimumDifference)
+            {
+                minimumDifference = difference;
+            }
+        }
+    }
+
+    printf("%d\n", minimumDifference);
+
+    return 0;
+}
+```
+
+Assumption:
+
+```text
+n >= 2
+```
+
+কারণ minimum pair difference-এর জন্য অন্তত দুইটি element দরকার।
+
+---
+
+# 25. Pair Pattern-এর State চিনো
+
+Pair problem-এ শুধু nested loop দেখলেই হবে না।
+
+Question অনুযায়ী state আলাদা হবে।
+
+## Existence
+
+```c
+int found = 0;
+```
+
+Role:
+
+```text
+Flag
+```
+
+---
+
+## Count Pairs
+
+```c
+int count = 0;
+```
+
+Role:
+
+```text
+Counter
+```
+
+---
+
+## Minimum Difference
+
+```c
+int minimumDifference = INT_MAX;
+```
+
+Role:
+
+```text
+Minimum Candidate
+```
+
+---
+
+## Maximum Pair Sum
+
+```c
+int maximumSum = INT_MIN;
+```
+
+Role:
+
+```text
+Maximum Candidate
+```
+
+Core skill:
+
+```text
+Pair Generation
++
+Correct State
+```
+
+---
+
+# 26. Maximum Pair Sum — Brute Force Thinking
+
+Array:
+
+```text
+3 8 2 10
+```
+
+Question:
+
+> Maximum sum of any pair?
+
+Possible:
+
+```text
+3 + 8  = 11
+3 + 2  = 5
+3 + 10 = 13
+8 + 2  = 10
+8 + 10 = 18
+2 + 10 = 12
+```
+
+Answer:
+
+```text
+18
+```
+
+Pair:
+
+```text
+8 and 10
+```
+
+Pattern:
+
+```text
+Generate Pair
+↓
+Calculate Pair Sum
+↓
+Track Maximum
+```
+
+Code core:
+
+```c
+int maximumSum = INT_MIN;
+
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        int sum = arr[i] + arr[j];
+
+        if (sum > maximumSum)
+        {
+            maximumSum = sum;
+        }
+    }
+}
+```
+
+---
+
+# 27. Pair Generation vs Adjacent Pair
+
+এই দুইটি confuse করবে না।
+
+## All Pairs
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+    }
+}
+```
+
+Checks:
+
+```text
+Every i < j pair
+```
+
+Complexity:
+
+```text
+O(n²)
+```
+
+---
+
+## Adjacent Pairs Only
+
+```c
+for (int i = 1; i < n; i++)
+{
+    // arr[i - 1], arr[i]
+}
+```
+
+Checks:
+
+```text
+(0,1)
+(1,2)
+(2,3)
+...
+```
+
+Complexity:
+
+```text
+O(n)
+```
+
+Example Array:
+
+```text
+5 2 9 1
+```
+
+Adjacent pairs:
+
+```text
+(5,2)
+(2,9)
+(9,1)
+```
+
+All pairs:
+
+```text
+(5,2)
+(5,9)
+(5,1)
+(2,9)
+(2,1)
+(9,1)
+```
+
+এগুলো এক না।
+
+---
+
+# 28. Sorting কেন Pair Problem-এ Powerful?
+
+ধরো:
+
+```text
+8 1 6 3
+```
+
+Sort:
+
+```text
+1 3 6 8
+```
+
+এখন values-এর relationship structured।
+
+Example:
+
+```text
+Smallest Values
+← Left Side
+```
+
+```text
+Largest Values
+→ Right Side
+```
+
+এই structure future-এ pair search optimize করতে সাহায্য করবে।
+
+Mental Evolution:
+
+```text
+Unsorted Pair Search
+↓
+Try Every Pair
+↓
+O(n²)
+```
+
+Future:
+
+```text
+Sort
+↓
+Use Order Information
+↓
+Avoid Useless Pair Checks
+```
+
+এটাই future Two Pointer technique-এর foundation।
+
+---
+
+# 29. Pair Sum-এর Sorted View
+
+Array:
+
+```text
+8 1 6 3 4
+```
+
+Target:
+
+```text
+10
+```
+
+Sort:
+
+```text
+1 3 4 6 8
+```
+
+এখন valid pairs:
+
+```text
+4 + 6 = 10
+
+2 নেই
+
+1 + 9 নেই
+
+3 + 7 নেই
+```
+
+Sorted structure দেখে আমরা future-এ smart movement করতে পারব।
+
+Conceptual idea:
+
+```text
+Small Value + Large Value
+```
+
+Sum too small হলে:
+
+```text
+Need Larger Sum
+```
+
+Sum too large হলে:
+
+```text
+Need Smaller Sum
+```
+
+এই Chapter-এ full Two Pointer implement করা mandatory না।
+
+এখন শুধু বুঝবে:
+
+```text
+Sorting
+Creates Direction
+```
+
+আর:
+
+```text
+Direction
+Can Reduce Search
+```
+
+---
+
+# 30. কেন এখনই Full Two Pointer না?
+
+কারণ তোমাকে আগে solid করতে হবে:
+
+```text
+What is a Pair?
+```
+
+```text
+How are All Pairs Generated?
+```
+
+```text
+Why Brute Force is O(n²)?
+```
+
+```text
+What Information Does Sorting Add?
+```
+
+এই foundation ছাড়া:
+
+```text
+left++
+```
+
+বা:
+
+```text
+right--
+```
+
+মুখস্থ হয়ে যাবে।
+
+আমাদের goal:
+
+```text
+Understand Search Space
+        ↓
+Understand Waste
+        ↓
+Understand Structure
+        ↓
+Then Optimize
+```
+
+---
+
+# 31. Equal Pair Problem
+
+Problem:
+
+> কতটি index pair `(i, j)` আছে যেখানে:
+
+[
+arr[i] = arr[j]
+]
+
+Array:
+
+```text
+1 2 1 3 1
+```
+
+Equal pairs:
+
+```text
+Index (0,2)
+
+Index (0,4)
+
+Index (2,4)
+```
+
+Answer:
+
+```text
+3
+```
+
+Brute force:
+
+```c
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        if (arr[i] == arr[j])
+        {
+            count++;
+        }
+    }
+}
+```
+
+Pattern:
+
+```text
+Generate All Index Pairs
+↓
+Compare Values
+↓
+Equal?
+↓
+count++
+```
+
+---
+
+# 32. Frequency Connection to Equal Pairs
+
+ধরো একটি value:
+
+```text
+5
+```
+
+appears:
+
+```text
+3 times
+```
+
+Positions:
+
+```text
+5₁
+5₂
+5₃
+```
+
+Possible equal index pairs:
+
+```text
+(5₁, 5₂)
+
+(5₁, 5₃)
+
+(5₂, 5₃)
+```
+
+Total:
+
+```text
+3
+```
+
+Formula:
+
+[
+\frac{f(f-1)}{2}
+]
+
+যেখানে:
+
+```text
+f = frequency
+```
+
+If:
+
+```text
+f = 3
+```
+
+Then:
+
+[
+\frac{3(3-1)}{2}
+================
+
+3
+]
+
+এই formula এখন optional concept হিসেবে বুঝবে।
+
+Mandatory goal:
+
+```text
+Frequency
+Can Sometimes Replace Pair-by-Pair Checking
+```
+
+---
+
+# 33. Frequency + Pair Thinking Connection
+
+Array:
+
+```text
+1 1 1 2 2
+```
+
+Frequency:
+
+```text
+1 → 3
+
+2 → 2
+```
+
+Equal pairs for `1`:
+
+[
+\frac{3 \times 2}{2} = 3
+]
+
+Equal pairs for `2`:
+
+[
+\frac{2 \times 1}{2} = 1
+]
+
+Total:
+
+```text
+4
+```
+
+Brute force would inspect all pairs।
+
+Frequency view says:
+
+```text
+Group Size
+↓
+How Many Internal Pairs?
+```
+
+এই connection future combinatorics এবং optimization-এর foundation।
+
+---
+
+# 34. Pair Sum Count with Duplicates
+
+Array:
+
+```text
+1 1 2 2
+```
+
+Target:
+
+```text
+3
+```
+
+Valid index pairs:
+
+```text
+Index 0 + Index 2
+
+Index 0 + Index 3
+
+Index 1 + Index 2
+
+Index 1 + Index 3
+```
+
+Total:
+
+```text
+4
+```
+
+যদিও distinct value pair:
+
+```text
+(1, 2)
+```
+
+মাত্র একটি।
+
+আবার distinction:
+
+```text
+Index Pair Count = 4
+```
+
+```text
+Distinct Value Pair Count = 1
+```
+
+Problem statement carefully পড়বে।
+
+---
+
+# 35. Common Bug — `j = i`
+
+Wrong:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i; j < n; j++)
+    {
+    }
+}
+```
+
+এখানে first generated pair:
+
+```text
+(i, i)
+```
+
+অর্থাৎ element নিজের সাথেই pair হচ্ছে।
+
+Example:
+
+```text
+arr[i] = 5
+```
+
+Then:
+
+```text
+5 + 5
+```
+
+কিন্তু যদি problem দুইটি different indices চায়, এটা invalid।
+
+Correct:
+
+```c
+j = i + 1
+```
+
+---
+
+# 36. Common Bug — Double Counting
+
+Wrong:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        if (i != j)
+        {
+            // process
+        }
+    }
+}
+```
+
+এখানে:
+
+```text
+(0,1)
+```
+
+এবং:
+
+```text
+(1,0)
+```
+
+দুটোই count হবে।
+
+Unordered pair problem-এ double counting।
+
+Correct invariant:
+
+```text
+i < j
+```
+
+Achieved by:
+
+```c
+j = i + 1
+```
+
+---
+
+# 37. Common Bug — Existence Problem-এ সব Pair Check করা
+
+Suppose first pair-এই answer পাওয়া গেছে।
+
+Question:
+
+```text
+Does any valid pair exist?
+```
+
+তারপরও পুরো loop চালালে answer ভুল হবে না।
+
+কিন্তু unnecessary work হবে।
+
+Better pattern:
+
+```text
+Found?
+↓
+Stop Search
+```
+
+Use:
+
+```text
+Flag
++
+Early Exit
+```
+
+তবে beginner হিসেবে correctness আগে।
+
+তারপর efficiency habit।
+
+---
+
+# 38. Common Bug — Count Problem-এ `break`
+
+Question:
+
+> মোট কয়টি pair valid?
+
+Wrong:
+
+```c
+if (arr[i] + arr[j] == target)
+{
+    count++;
+    break;
+}
+```
+
+এতে একই `i`-এর জন্য পরের valid pairs miss হতে পারে।
+
+Count problem:
+
+```text
+Need All Matches
+↓
+Do Not Stop at First Match
+```
+
+Existence problem:
+
+```text
+Need One Match
+↓
+Can Stop
+```
+
+---
+
+# 39. Common Bug — Value Pair এবং Index Pair Confusion
+
+Array:
+
+```text
+2 2 2
+```
+
+Equal index pairs:
+
+```text
+(0,1)
+(0,2)
+(1,2)
+```
+
+Count:
+
+```text
+3
+```
+
+কিন্তু distinct value pair:
+
+```text
+(2,2)
+```
+
+Count:
+
+```text
+1
+```
+
+তাই question translate করবে:
+
+```text
+What Exactly Am I Counting?
+```
+
+Possible answers:
+
+```text
+Index Pairs
+
+Value Pairs
+
+Distinct Value Pairs
+
+Occurrences
+```
+
+---
+
+# 40. Common Bug — Integer Overflow in Pair Sum
+
+Suppose:
+
+```text
+arr[i] = 2000000000
+arr[j] = 2000000000
+```
+
+Then:
+
+```c
+int sum = arr[i] + arr[j];
+```
+
+32-bit `int` overflow করতে পারে।
+
+Safer:
+
+```c
+long long sum =
+    (long long)arr[i] + arr[j];
+```
+
+Mental Rule:
+
+```text
+Large Values
++
+Addition / Multiplication
+↓
+Think About Overflow
+```
+
+এখন সব code-এ `long long` mandatory না।
+
+Constraint দেখে decision নেবে।
+
+---
+
+# 41. Pair Problem Code Derivation
+
+Pair problem দেখলে code মুখস্থ না করে derive করবে।
+
+## Step 1 — Need Two Different Indices
+
+```text
+i
+j
+```
+
+---
+
+## Step 2 — Avoid Self Pair and Duplicate Direction
+
+Need:
+
+```text
+i < j
+```
+
+---
+
+## Step 3 — Generate
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+    }
+}
+```
+
+---
+
+## Step 4 — Compute Pair Property
+
+Example Sum:
+
+```c
+int sum = arr[i] + arr[j];
+```
+
+Difference:
+
+```c
+int difference = abs(arr[i] - arr[j]);
+```
+
+Equality:
+
+```c
+arr[i] == arr[j]
+```
+
+---
+
+## Step 5 — Update Correct State
+
+Existence:
+
+```c
+found = 1;
+```
+
+Count:
+
+```c
+count++;
+```
+
+Minimum:
+
+```c
+minimum = difference;
+```
+
+Maximum:
+
+```c
+maximum = sum;
+```
+
+Mental Derivation:
+
+```text
+Need Two Elements
+↓
+Need Two Indices
+↓
+Need Unique Pair Rule
+↓
+i < j
+↓
+Nested Loop
+↓
+Pair Condition
+↓
+State Update
+```
+
+---
+
+# 42. Pair Pattern Family
+
+একই pair generator থেকে অনেক problem solve করা যায়।
+
+Core:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        // different condition
+    }
+}
+```
+
+### Target Sum
+
+```c
+arr[i] + arr[j] == target
+```
+
+### Equal Pair
+
+```c
+arr[i] == arr[j]
+```
+
+### Difference K
+
+```c
+abs(arr[i] - arr[j]) == k
+```
+
+### Minimum Difference
+
+```c
+difference < minimumDifference
+```
+
+### Maximum Sum
+
+```c
+sum > maximumSum
+```
+
+Lesson:
+
+```text
+Same Traversal Pattern
++
+Different Pair Property
++
+Different State
+=
+Different Problem
+```
+
+---
+
+# 43. Recognition Drill — State Selection
+
+## Problem
+
+> Does a pair exist with sum target?
+
+Need:
+
+```text
+Flag
+```
+
+---
+
+## Problem
+
+> Count pairs with sum target.
+
+Need:
+
+```text
+Counter
+```
+
+---
+
+## Problem
+
+> Find minimum difference between any pair.
+
+Need:
+
+```text
+Minimum Candidate
+```
+
+---
+
+## Problem
+
+> Find maximum pair sum.
+
+Need:
+
+```text
+Maximum Candidate
+```
+
+---
+
+## Problem
+
+> Print first valid pair.
+
+Need:
+
+```text
+Pair Search
++
+Early Exit
+```
+
+State selection problem-solving-এর গুরুত্বপূর্ণ অংশ।
+
+---
+
+# 44. Pair Search Space Visualization
+
+Array:
+
+```text
+A B C D
+```
+
+Pair matrix ভাবো:
+
+```text
+      A   B   C   D
+
+A     X  AB  AC  AD
+
+B     X   X  BC  BD
+
+C     X   X   X  CD
+
+D     X   X   X   X
+```
+
+আমরা শুধু upper triangle process করছি।
+
+কারণ:
+
+```text
+AA
+BB
+CC
+DD
+```
+
+self-pair বাদ।
+
+এবং:
+
+```text
+BA
+```
+
+already represented by:
+
+```text
+AB
+```
+
+তাই pair loop:
+
+```text
+j = i + 1
+```
+
+এই upper triangle generate করে।
+
+---
+
+# 45. Sorting + Minimum Difference Insight
+
+Brute Force:
+
+```text
+Every Pair
+↓
+Find Minimum Difference
+↓
+O(n²)
+```
+
+কিন্তু sort করলে:
+
+```text
+1 4 8 10 20
+```
+
+Minimum difference candidate logically কাছাকাছি values-এর মধ্যে পাওয়া যায়।
+
+Adjacent differences:
+
+```text
+4 - 1  = 3
+
+8 - 4  = 4
+
+10 - 8 = 2
+
+20 - 10 = 10
+```
+
+Minimum:
+
+```text
+2
+```
+
+এখানে sorting pair search reduce করতে পারে।
+
+Mental Evolution:
+
+```text
+All Pairs
+↓
+Sort
+↓
+Relevant Neighbor Pairs
+```
+
+এই Chapter-এর জন্য important insight:
+
+> **Sorting শুধু array সুন্দরভাবে সাজায় না; sorting search space-এর structure expose করতে পারে।**
+
+---
+
+# 46. Pair Thinking এবং Day 5 Connection
+
+Day 5-এর concepts এখন connect হচ্ছে।
+
+## Sorting
+
+```text
+Values Gain Order
+```
+
+## Frequency
+
+```text
+Values Gain Counts
+```
+
+## Sorted Groups
+
+```text
+Equal Values Become Consecutive
+```
+
+## Pair Thinking
+
+```text
+Two Elements Form a Search Unit
+```
+
+Combined:
+
+```text
+Pair Problem
+        ↓
+Brute Force All Pairs
+        ↓
+Can Sorting Add Useful Order?
+        ↓
+Can Frequency Replace Repeated Pair Checks?
+```
+
+এটাই future optimization thinking।
+
+---
+
+# 🧠 Pair Thinking Master Pattern Map
+
+```text
+                         PROBLEM
+                            │
+                            ▼
+                  Involves Two Elements?
+                            │
+                            ▼
+                         PAIR
+                            │
+                            ▼
+                     Need All Pairs?
+                            │
+                            ▼
+                        i < j
+                            │
+                            ▼
+             ┌──────── Pair Property ────────┐
+             │              │                │
+             ▼              ▼                ▼
+            Sum         Difference         Equality
+             │              │                │
+             ▼              ▼                ▼
+          Target?         Minimum?          Count?
+             │              │                │
+             ▼              ▼                ▼
+           Flag /         Minimum          Counter
+           Counter        Tracking
+```
+
+---
+
+# 47. Problem Solving Framework
+
+Pair problem দেখলে:
+
+## Step 1 — Translate
+
+Example:
+
+> Count pairs whose sum is 10.
+
+Translate:
+
+```text
+Need Two Different Indices
+↓
+Need arr[i] + arr[j] == 10
+↓
+Need Count of All Matches
+```
+
+---
+
+## Step 2 — Choose State
+
+```text
+Need Total Count
+↓
+Counter
+```
+
+```c
+int count = 0;
+```
+
+---
+
+## Step 3 — Generate Unique Pairs
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+```
+
+---
+
+## Step 4 — Check Condition
+
+```c
+if (arr[i] + arr[j] == target)
+```
+
+---
+
+## Step 5 — Update
+
+```c
+count++;
+```
+
+Full mental chain:
+
+```text
+Question
+↓
+Pair
+↓
+Unique Pair Generation
+↓
+Condition
+↓
+State Update
+↓
+Answer
+```
+
+---
+
+# 🧪 Chapter 7 Practice
+
+## Task 1 — Print All Unique Pairs
+
+Input:
+
+```text
+4
+10 20 30 40
+```
+
+Expected:
+
+```text
+10 20
+10 30
+10 40
+20 30
+20 40
+30 40
+```
+
+Pattern:
+
+```text
+Pair Generation
+```
+
+---
+
+## Task 2 — Pair Sum Existence
+
+Input:
+
+```text
+5
+2 8 4 7 1
+
+10
+```
+
+Possible valid pair:
+
+```text
+2 + 8 = 10
+```
+
+Output:
+
+```text
+Pair Found
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Condition
++
+Flag
++
+Early Exit
+```
+
+---
+
+## Task 3 — Count Target Sum Pairs
+
+Input:
+
+```text
+5
+1 2 3 4 5
+
+6
+```
+
+Valid:
+
+```text
+1 + 5
+2 + 4
+```
+
+Output:
+
+```text
+2
+```
+
+---
+
+## Task 4 — Count Equal Index Pairs
+
+Input:
+
+```text
+5
+1 2 1 3 1
+```
+
+Valid index pairs:
+
+```text
+(0,2)
+(0,4)
+(2,4)
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## Task 5 — Minimum Pair Difference
+
+Input:
+
+```text
+4
+8 3 15 6
+```
+
+Output:
+
+```text
+2
+```
+
+Because:
+
+```text
+|8 - 6| = 2
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Difference
++
+Minimum Tracking
+```
+
+---
+
+## Task 6 — Maximum Pair Sum
+
+Input:
+
+```text
+4
+3 8 2 10
+```
+
+Output:
+
+```text
+18
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Sum
++
+Maximum Tracking
+```
+
+---
+
+# 🧠 Pattern Recognition Drill
+
+## Problem 1
+
+Complete:
+
+```text
+Need Unique Unordered Index Pairs
+↓
+Maintain ______ < ______
+```
+
+---
+
+## Problem 2
+
+Complete loop:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = ______; j < n; j++)
+    {
+    }
+}
+```
+
+---
+
+## Problem 3
+
+Question:
+
+> Does any pair sum to target?
+
+State:
+
+```text
+Counter / Flag / Maximum?
+```
+
+Answer:
+
+```text
+...
+```
+
+---
+
+## Problem 4
+
+Question:
+
+> How many pairs sum to target?
+
+Should you stop after first match?
+
+```text
+Yes / No
+
+Reason:
+...
+```
+
+---
+
+## Problem 5
+
+Array:
+
+```text
+1 1 1 1
+```
+
+How many unique unordered index pairs?
+
+Use:
+
+[
+\frac{n(n-1)}{2}
+]
+
+Answer:
+
+```text
+...
+```
+
+---
+
+## Problem 6
+
+Why is this wrong for unordered pair counting?
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        if (i != j)
+        {
+            count++;
+        }
+    }
+}
+```
+
+Explain:
+
+```text
+...
+```
+
+---
+
+## Problem 7
+
+Problem:
+
+> Minimum difference between any two elements.
+
+Pattern chain:
+
+```text
+Generate ______
+↓
+Calculate ______
+↓
+Track ______
+```
+
+---
+
+# 📝 Chapter 7 Assignment
+
+Assignment focused রাখা হয়েছে যাতে Day 5 একই দিনে finish করা যায়।
+
+## Part A — Explain
+
+নিজের ভাষায় লিখবে:
+
+```text
+1. Pair কী?
+
+2. Index Pair এবং Value Pair-এর difference কী?
+
+3. কেন pair loop-এ j = i + 1 ব্যবহার করি?
+
+4. i < j condition-এর meaning কী?
+
+5. Pair brute force কেন O(n²)?
+
+6. Existence problem এবং Count problem-এর state কীভাবে আলাদা?
+
+7. Inner loop-এর break outer loop বন্ধ করে কি?
+
+8. All Pairs এবং Adjacent Pairs-এর difference কী?
+
+9. Sorting pair problem-এ কীভাবে সাহায্য করতে পারে?
+
+10. Index Pair Count এবং Distinct Value Pair Count কেন আলাদা হতে পারে?
+
+11. Pair problem-এ constraint check করা কেন জরুরি?
+
+12. Frequency কীভাবে কিছু pair problem optimize করতে সাহায্য করতে পারে?
+```
+
+---
+
+## Part B — Mandatory Coding
+
+নিজে করবে:
+
+```text
+1. Print All Unique Pairs
+
+2. Pair Sum Existence
+
+3. Print First Pair with Target Sum
+
+4. Count All Pairs with Target Sum
+
+5. Count Equal Index Pairs
+
+6. Find Minimum Pair Difference
+
+7. Find Maximum Pair Sum
+```
+
+---
+
+## Part C — Pair Dry Run
+
+Array:
+
+```text
+3 7 2 8
+```
+
+সব unique pairs লিখবে:
+
+```text
+(3, ?)
+
+(3, ?)
+
+(3, ?)
+
+(7, ?)
+
+(7, ?)
+
+(2, ?)
+```
+
+তারপর লিখবে:
+
+```text
+Total Pair Count = ?
+```
+
+Formula দিয়েও verify করবে:
+
+[
+\frac{n(n-1)}{2}
+]
+
+---
+
+## Part D — Target Sum Dry Run
+
+Array:
+
+```text
+2 4 6 8
+```
+
+Target:
+
+```text
+10
+```
+
+Table complete করবে:
+
+| Pair    |  Sum | Valid? |
+| ------- | ---: | ------ |
+| `(2,4)` |    ? | ?      |
+| `(2,6)` |    ? | ?      |
+| `(2,8)` |    ? | ?      |
+| `(4,6)` |    ? | ?      |
+| `(4,8)` |    ? | ?      |
+| `(6,8)` |    ? | ?      |
+
+তারপর:
+
+```text
+Valid Pair Count = ?
+```
+
+---
+
+## Part E — Debugging
+
+এই code দেখো:
+
+```c
+int count = 0;
+
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        if (arr[i] + arr[j] == target)
+        {
+            count++;
+        }
+    }
+}
+```
+
+Find:
+
+```text
+Problem 1:
+Self Pair:
+
+Problem 2:
+Double Counting:
+
+Correct Inner Loop Start:
+
+Correct Pair Invariant:
+```
+
+---
+
+# 📚 Glossary Update
+
+`CP_Dictionary.md`-এ add করবে:
+
+```text
+Pair
+Index Pair
+Value Pair
+Unordered Pair
+Pair Generation
+Pair Search Space
+Self Pair
+Double Counting
+Pair Sum
+Target Sum
+Pair Difference
+Quadratic Search
+Search Space
+```
+
+Format:
+
+```text
+Term:
+
+Simple Meaning:
+
+Small Example:
+```
+
+---
+
+# 📚 Pattern Library Update
+
+`core_pattern.md`-এ add করবে:
+
+````md
+## Unique Pair Generation Pattern
+
+### Recognition
+
+Use when a problem requires checking two different elements together.
+
+### Core Pattern
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        // process arr[i] and arr[j]
+    }
+}
+````
+
+### Invariant
+
+```text
+i < j
+```
+
+### Mental Model
+
+```text
+Choose First Element
+↓
+Pair With Every Element After It
+↓
+Process Each Unique Pair Once
+```
+
+### Common Uses
+
+* Target Sum Pair
+* Equal Pair Count
+* Minimum Pair Difference
+* Maximum Pair Sum
+* Pair Condition Checking
+
+### Complexity
+
+```text
+O(n²)
+```
+
+---
+
+## Pair Sum Existence Pattern
+
+```c
+int found = 0;
+
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        if (arr[i] + arr[j] == target)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+    {
+        break;
+    }
+}
+```
+
+### Pattern Combination
+
+```text
+Pair Generation
++
+Condition Check
++
+Flag
++
+Early Exit
+```
+
+````
+
+---
+
+# 🔥 Chapter 7 Key Lesson
+
+এই Chapter-এর সবচেয়ে important code:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+    {
+        // process pair
+    }
+}
+````
+
+কিন্তু শুধু nested loop মুখস্থ করলে হবে না।
+
+Mental Model:
+
+```text
+Problem Talks About Two Elements
+        ↓
+Need Pair Thinking
+        ↓
+Need Two Different Indices
+        ↓
+Avoid Self Pair
+        ↓
+Avoid Duplicate Direction
+        ↓
+Maintain i < j
+        ↓
+Generate Each Pair Once
+```
+
+তারপর:
+
+```text
+What Does the Problem Ask?
+        │
+        ├── Exists?
+        │      ↓
+        │   Flag
+        │
+        ├── How Many?
+        │      ↓
+        │   Counter
+        │
+        ├── Minimum?
+        │      ↓
+        │   Min Tracking
+        │
+        └── Maximum?
+               ↓
+            Max Tracking
+```
+
+---
+
+# 🔗 Previous Pattern Connection
+
+Day 2:
+
+```text
+Traversal
+↓
+One Element at a Time
+```
+
+Day 5 Chapter 5:
+
+```text
+Frequency
+↓
+One Counter Per Value
+```
+
+Day 5 Chapter 6:
+
+```text
+Sorting
+↓
+Groups and Boundaries
+```
+
+এখন:
+
+```text
+Pair Generation
+↓
+Two Elements at a Time
+```
+
+Pattern combination:
+
+```text
+Pair Generation
++
+Flag
+→ Pair Existence
+```
+
+```text
+Pair Generation
++
+Counter
+→ Pair Count
+```
+
+```text
+Pair Generation
++
+Minimum Tracking
+→ Minimum Pair Difference
+```
+
+```text
+Pair Generation
++
+Maximum Tracking
+→ Maximum Pair Value
+```
+
+```text
+Sorting
++
+Pair Thinking
+→ Foundation for Two Pointers
+```
+
+```text
+Frequency
++
+Pair Counting
+→ Foundation for Faster Counting Problems
+```
+
+---
+
+# ✅ Chapter 7 Completion Checklist
+
+```text
+[ ] Pair কী বুঝি
+
+[ ] Index Pair এবং Value Pair-এর difference বুঝি
+
+[ ] Unique unordered pair কী বুঝি
+
+[ ] i < j invariant বুঝি
+
+[ ] j = i + 1 কেন বুঝি
+
+[ ] সব unique pairs print করতে পারি
+
+[ ] Self Pair problem বুঝি
+
+[ ] Double Counting problem বুঝি
+
+[ ] Pair Sum existence check করতে পারি
+
+[ ] Pair Sum count করতে পারি
+
+[ ] Existence এবং Count problem-এর difference বুঝি
+
+[ ] Flag ব্যবহার করতে পারি
+
+[ ] Nested loop-এর break behavior বুঝি
+
+[ ] Equal Index Pair count করতে পারি
+
+[ ] Minimum Pair Difference বের করতে পারি
+
+[ ] Maximum Pair Sum বের করতে পারি
+
+[ ] Pair brute force কেন O(n²) বুঝি
+
+[ ] n(n-1)/2 pair count formula-এর basic meaning বুঝি
+
+[ ] Constraint দেখে O(n²) judge করার habit তৈরি করছি
+
+[ ] All Pairs এবং Adjacent Pairs-এর difference বুঝি
+
+[ ] Sorting pair search-এ কেন useful হতে পারে বুঝি
+
+[ ] Frequency এবং Pair Thinking-এর connection বুঝি
+
+[ ] Index Pair Count এবং Distinct Value Pair Count confuse করি না
+
+[ ] Large pair sum-এ overflow হতে পারে জানি
+
+[ ] Practice complete করেছি
+
+[ ] Assignment complete করেছি
+
+[ ] Glossary update করেছি
+
+[ ] Pattern Library update করেছি
+```
+
+---
+
+# 🎯 Day 5 Progress
+
+```text
+Day 5
+│
+├── ✅ Chapter 1 — Sorting Mental Model
+│
+├── ✅ Chapter 2 — Bubble Sort
+│
+├── ✅ Chapter 3 — Selection Sort
+│
+├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+│
+├── ✅ Chapter 5 — Frequency Counting Pattern
+│
+├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+│
+├── ✅ Chapter 7 — Pair Thinking Foundation
+│
+└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+                  Mini Contest & Reflection
+```
+
+# 🏁 Chapter 7 Final Position
+
+এখন তোমার problem-solving mental model আরও expand হয়েছে:
+
+```text
+One Element Problem
+↓
+Traversal
+```
+
+```text
+Many Count Problem
+↓
+Frequency
+```
+
+```text
+Need Order Problem
+↓
+Sorting
+```
+
+```text
+Two Element Relationship
+↓
+Pair Thinking
+```
+
+সবচেয়ে important decision chain:
+
+```text
+Problem
+   ↓
+Does It Involve Two Elements Together?
+   │
+   ├── No
+   │    ↓
+   │ Other Known Pattern
+   │
+   └── Yes
+        ↓
+      Pair Problem
+        ↓
+   Need One Match or All?
+        │
+    ┌───┴────┐
+    │        │
+   One       All
+    │        │
+    ▼        ▼
+  Flag     Counter /
+  Early    Min / Max
+  Exit     Tracking
+```
+
+আর optimization thinking-এর foundation:
+
+```text
+Pair Problem
+↓
+First Build Correct Brute Force
+↓
+Understand O(n²) Search Space
+↓
+Check Constraints
+↓
+Can Sorting Add Order?
+↓
+Can Frequency Store Useful Information?
+↓
+Future Optimization
+```
+
+পরবর্তী **Day 5 — Chapter 8** হবে Day 5-এর final integration chapter। সেখানে নতুন বড় topic ঢোকানোর বদলে focus থাকবে:
+
+```text
+Sorting
++
+Frequency
++
+Sorted Groups
++
+Pair Thinking
++
+Pattern Selection
+```
+
+তারপর:
+
+```text
+Mixed Problem Solving
+↓
+Approach Selection Drill
+↓
+Day 5 Final Assignment
+↓
+Mini Contest
+↓
+Mistake Review
+↓
+Pattern Library Update
+↓
+Day 5 Reflection
+```
+
+এতে Day 5-এর সব concept একসঙ্গে consolidate হবে এবং Day 6-এ যাওয়ার আগে sorting, frequency ও pair foundation solid করা যাবে।
+
+---
+
+# 🚀 CP Bootcamp 2026 — Day 5
+
+# Chapter 8 — Pattern Combination, Final Assignment, Mini Contest & Reflection
+
+> **Day 5 Final Chapter**
+> **Main Goal:** Sorting, Frequency Counting, Sorted Group এবং Pair Thinking—এই চারটি concept আলাদা আলাদা জানার পর problem দেখে সঠিক pattern choose এবং combine করতে শেখা।
+> **Estimated Time:** 90–120 minutes
+
+---
+
+# 🎯 Chapter Mission
+
+Day 5-এ তুমি শিখেছ:
+
+```text
+Chapter 1
+Sorting Mental Model
+        ↓
+Chapter 2
+Bubble Sort
+        ↓
+Chapter 3
+Selection Sort
+        ↓
+Chapter 4
+qsort()
+        ↓
+Chapter 5
+Frequency Counting
+        ↓
+Chapter 6
+Sorted Array & Frequency Problems
+        ↓
+Chapter 7
+Pair Thinking Foundation
+        ↓
+Chapter 8
+Pattern Selection
++
+Pattern Combination
++
+Mini Contest
++
+Final Assignment
++
+Reflection
+```
+
+আজকের final goal:
+
+```text
+Problem দেখলাম
+        ↓
+সাথে সাথে Code লেখা শুরু করলাম
+```
+
+এই habit থেকে বের হয়ে:
+
+```text
+Problem
+   ↓
+Question Translate
+   ↓
+Constraint Check
+   ↓
+Pattern Recognition
+   ↓
+Choose Representation
+   ↓
+Choose State
+   ↓
+Build Pattern Chain
+   ↓
+Code
+   ↓
+Test
+   ↓
+Review
+```
+
+এই process follow করা।
+
+---
+
+# 1. Day 5-এর আসল শিক্ষা কী?
+
+Day 5 শুধু Sorting শেখার দিন না।
+
+শুধু:
+
+```c
+qsort()
+```
+
+শেখাও Day 5-এর goal না।
+
+শুধু:
+
+```c
+freq[x]++;
+```
+
+শেখাও goal না।
+
+শুধু:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    for (int j = i + 1; j < n; j++)
+```
+
+শেখাও goal না।
+
+আসল goal:
+
+> **Problem-এর structure দেখে data-কে কোন view-তে দেখলে problem সহজ হবে, সেটা চিনতে শেখা।**
+
+একই array:
+
+```text
+5 2 5 3 2 8
+```
+
+চারভাবে দেখা যায়।
+
+---
+
+## Raw Array View
+
+```text
+5 2 5 3 2 8
+```
+
+Useful when:
+
+```text
+Original Order Matters
+```
+
+---
+
+## Sorted View
+
+```text
+2 2 3 5 5 8
+```
+
+Useful when:
+
+```text
+Order Matters
+```
+
+বা:
+
+```text
+Equal Values Need Grouping
+```
+
+---
+
+## Frequency View
+
+```text
+2 → 2
+3 → 1
+5 → 2
+8 → 1
+```
+
+Useful when:
+
+```text
+Count Per Value Matters
+```
+
+---
+
+## Pair View
+
+```text
+(5,2)
+(5,5)
+(5,3)
+...
+```
+
+Useful when:
+
+```text
+Relationship Between Two Elements Matters
+```
+
+---
+
+# 2. Representation Selection
+
+Problem solving-এর আগে প্রশ্ন:
+
+```text
+How Should I Look at the Data?
+```
+
+Decision model:
+
+```text
+                    ARRAY PROBLEM
+                          │
+                          ▼
+               What does answer depend on?
+                          │
+        ┌─────────────────┼─────────────────┐
+        │                 │                 │
+        ▼                 ▼                 ▼
+ Original Order         Counts        Relative Order
+        │                 │                 │
+        ▼                 ▼                 ▼
+Raw Traversal        Frequency           Sorting
+                          │
+                          │
+                          ▼
+                   Small Range?
+                          │
+                     ┌────┴────┐
+                     │         │
+                    Yes        No
+                     │         │
+                     ▼         ▼
+                 freq[]      Sorting /
+                             Other Method
+```
+
+আর যদি problem বলে:
+
+```text
+Two Elements Together
+```
+
+তাহলে:
+
+```text
+Pair Thinking
+```
+
+---
+
+# 3. Pattern Selection-এর ৫টি Question
+
+Problem পড়ার পর code লেখার আগে নিজেকে এই ৫টি প্রশ্ন করবে।
+
+## Question 1
+
+```text
+Original Order Matter করে?
+```
+
+যদি করে:
+
+```text
+Do Not Sort Blindly
+```
+
+---
+
+## Question 2
+
+```text
+Count Per Value দরকার?
+```
+
+যদি দরকার হয়:
+
+```text
+Can Frequency Help?
+```
+
+---
+
+## Question 3
+
+```text
+Sorted Order problem সহজ করবে?
+```
+
+যদি করে:
+
+```text
+Sort
+↓
+Use Order
+```
+
+---
+
+## Question 4
+
+```text
+দুইটি Element-এর Relationship দরকার?
+```
+
+যদি দরকার হয়:
+
+```text
+Think Pair
+```
+
+---
+
+## Question 5
+
+```text
+Answer কী ধরনের State চায়?
+```
+
+Possible:
+
+```text
+Existence
+→ Flag
+```
+
+```text
+How Many
+→ Counter
+```
+
+```text
+Total
+→ Accumulator
+```
+
+```text
+Largest
+→ Maximum Tracking
+```
+
+```text
+Smallest
+→ Minimum Tracking
+```
+
+```text
+Remember Answer
+→ Candidate Variable
+```
+
+---
+
+# 4. Pattern Combination কী?
+
+একটি problem সবসময় একটি pattern দিয়ে solve হয় না।
+
+Example:
+
+> Array-তে smallest repeated value বের করো।
+
+Need:
+
+```text
+Frequency Counting
++
+Ascending Frequency Traversal
++
+Condition Check
++
+Early Exit
+```
+
+আরেকটি:
+
+> কোনো pair target sum তৈরি করে কি না।
+
+Need:
+
+```text
+Pair Generation
++
+Condition Check
++
+Flag
++
+Early Exit
+```
+
+আরেকটি:
+
+> Most frequent value বের করো।
+
+Need:
+
+```text
+Frequency Counting
++
+Frequency Traversal
++
+Maximum Tracking
++
+Candidate Value
+```
+
+এটাই:
+
+```text
+Pattern Combination
+```
+
+---
+
+# 5. Pattern Chain লেখার Habit
+
+Code-এর আগে ছোট pattern chain লেখো।
+
+Example Problem:
+
+> Count distinct values.
+
+Approach A:
+
+```text
+Sort
+↓
+Traverse from Index 1
+↓
+Current != Previous?
+↓
+New Group
+↓
+Count++
+```
+
+Approach B:
+
+```text
+Build Frequency
+↓
+Traverse Possible Values
+↓
+freq[value] > 0?
+↓
+Count++
+```
+
+এই chain যদি clear হয়, code অনেক সহজ হবে।
+
+---
+
+# 6. Problem 1 — Count Distinct Values
+
+Input:
+
+```text
+8
+
+5 2 5 3 2 8 8 1
+```
+
+Answer:
+
+```text
+5
+```
+
+Possible patterns:
+
+```text
+Sorting
++
+Group Boundary
++
+Counter
+```
+
+অথবা:
+
+```text
+Frequency
++
+Presence Check
++
+Counter
+```
+
+Question:
+
+> কোনটা choose করব?
+
+Constraint:
+
+```text
+0 ≤ arr[i] ≤ 100
+```
+
+তাহলে:
+
+```text
+Frequency
+```
+
+খুব natural।
+
+Constraint:
+
+```text
+-10^9 ≤ arr[i] ≤ 10^9
+```
+
+তাহলে direct frequency array natural না।
+
+Current knowledge অনুযায়ী:
+
+```text
+Sorting
++
+Group Boundary
+```
+
+natural।
+
+---
+
+# 7. Problem 2 — First Repeated Value
+
+Array:
+
+```text
+8 8 3 3 1
+```
+
+Question:
+
+> Traversal-এর সময় প্রথম কোন value দ্বিতীয়বার দেখা যায়?
+
+Answer:
+
+```text
+8
+```
+
+Wrong approach:
+
+```text
+Sort
+↓
+Find First Adjacent Duplicate
+```
+
+Sort:
+
+```text
+1 3 3 8 8
+```
+
+এখানে first duplicate:
+
+```text
+3
+```
+
+Wrong answer।
+
+Correct:
+
+```text
+Original Traversal
++
+Seen/Frequency State
++
+Early Exit
+```
+
+Code core:
+
+```c
+for (int i = 0; i < n; i++)
+{
+    int x = arr[i];
+
+    if (freq[x] > 0)
+    {
+        printf("%d\n", x);
+        break;
+    }
+
+    freq[x]++;
+}
+```
+
+Lesson:
+
+```text
+Pattern must match
+the exact question
+```
+
+---
+
+# 8. Problem 3 — Smallest Repeated Value
+
+Same array:
+
+```text
+8 8 3 3 1
+```
+
+Repeated values:
+
+```text
+3
+8
+```
+
+Smallest:
+
+```text
+3
+```
+
+এবার original order important না।
+
+Pattern:
+
+```text
+Build Frequency
+↓
+Traverse Values Small to Large
+↓
+First freq[value] > 1
+↓
+Answer
+```
+
+Notice:
+
+```text
+First Repeated by Input Order
+```
+
+এবং:
+
+```text
+Smallest Repeated Value
+```
+
+দুইটি different problem।
+
+---
+
+# 9. Exact Question Translation
+
+Problem statement:
+
+> Find the first repeating element.
+
+এই phrase কখনো ambiguous হতে পারে।
+
+Possible meaning:
+
+### Meaning A
+
+```text
+First value whose second occurrence appears first
+```
+
+Example:
+
+```text
+5 2 3 2 5
+```
+
+Answer:
+
+```text
+2
+```
+
+---
+
+### Meaning B
+
+```text
+First element in original array
+that appears more than once anywhere
+```
+
+Same array:
+
+```text
+5 2 3 2 5
+```
+
+Answer:
+
+```text
+5
+```
+
+কারণ original array-এর first element `5`, এবং পরে আবার এসেছে।
+
+Lesson:
+
+> শুধু keyword দেখে code লিখবে না। Exact definition, examples এবং expected output দেখবে।
+
+---
+
+# 10. Problem 4 — Mode
+
+Array:
+
+```text
+4 2 4 3 2 4 5
+```
+
+Frequency:
+
+```text
+2 → 2
+3 → 1
+4 → 3
+5 → 1
+```
+
+Answer:
+
+```text
+4
+```
+
+Pattern Chain:
+
+```text
+Frequency Counting
+↓
+Traverse Frequency Table
+↓
+Track Maximum Frequency
+↓
+Remember Corresponding Value
+```
+
+State:
+
+```c
+int bestFrequency = 0;
+int bestValue = 0;
+```
+
+Core:
+
+```c
+for (int value = 0; value <= MAX_VALUE; value++)
+{
+    if (freq[value] > bestFrequency)
+    {
+        bestFrequency = freq[value];
+        bestValue = value;
+    }
+}
+```
+
+Pattern combination:
+
+```text
+Frequency
++
+Maximum Tracking
++
+Candidate Value
+```
+
+---
+
+# 11. Problem 5 — Pair Sum Existence
+
+Array:
+
+```text
+2 8 4 7 1
+```
+
+Target:
+
+```text
+10
+```
+
+Question:
+
+> কোনো pair আছে?
+
+Need:
+
+```text
+Pair Generation
++
+Condition
++
+Flag
++
+Early Exit
+```
+
+State:
+
+```c
+int found = 0;
+```
+
+Condition:
+
+```c
+arr[i] + arr[j] == target
+```
+
+Important:
+
+```text
+Need One Match
+↓
+Stop When Found
+```
+
+---
+
+# 12. Problem 6 — Pair Sum Count
+
+Same Array:
+
+```text
+2 8 4 6 1 9
+```
+
+Target:
+
+```text
+10
+```
+
+Valid index pairs:
+
+```text
+2 + 8
+
+4 + 6
+
+1 + 9
+```
+
+Answer:
+
+```text
+3
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Condition
++
+Counter
++
+Full Pair Traversal
+```
+
+State:
+
+```c
+int count = 0;
+```
+
+Difference from existence problem:
+
+```text
+Existence
+→ Stop after first match
+```
+
+```text
+Count
+→ Check every pair
+```
+
+---
+
+# 13. Problem 7 — Minimum Difference
+
+Array:
+
+```text
+8 3 15 6
+```
+
+Brute Force Pattern:
+
+```text
+Generate Every Pair
+↓
+Calculate Absolute Difference
+↓
+Minimum Tracking
+```
+
+Complexity:
+
+```text
+O(n²)
+```
+
+Alternative insight:
+
+```text
+Sort
+↓
+Check Adjacent Differences
+↓
+Minimum Tracking
+```
+
+Sorted:
+
+```text
+3 6 8 15
+```
+
+Adjacent differences:
+
+```text
+6 - 3 = 3
+
+8 - 6 = 2
+
+15 - 8 = 7
+```
+
+Answer:
+
+```text
+2
+```
+
+Pattern:
+
+```text
+Sorting
++
+Adjacent Comparison
++
+Minimum Tracking
+```
+
+এই example খুব important।
+
+একই problem:
+
+```text
+Brute Force Pair View
+```
+
+থেকে:
+
+```text
+Sorted Neighbor View
+```
+
+তে transform হয়েছে।
+
+---
+
+# 14. Why Sorting Helps Minimum Difference
+
+Suppose sorted:
+
+```text
+2 5 9 20
+```
+
+`2` এবং `20`-এর difference:
+
+```text
+18
+```
+
+কিন্তু তাদের মাঝখানে values আছে।
+
+Minimum difference পেতে distant sorted positions check করার দরকার নেই।
+
+কারণ sorted order-এ closest numeric values adjacent হবে।
+
+তাই:
+
+```text
+All Pairs
+        ↓
+Sort
+        ↓
+Adjacent Pairs Only
+```
+
+Complexity idea:
+
+```text
+Brute Force:
+O(n²)
+```
+
+versus:
+
+```text
+Sorting:
+O(n log n)
+
+Adjacent Traversal:
+O(n)
+```
+
+Overall:
+
+```text
+O(n log n)
+```
+
+এখন তোমার goal complexity proof না।
+
+Goal:
+
+```text
+Sorting Can Reduce Search Space
+```
+
+এই insight বোঝা।
+
+---
+
+# 15. Problem 8 — Equal Pair Count
+
+Array:
+
+```text
+1 1 1 2 2
+```
+
+Brute Force:
+
+```text
+Generate All Pairs
+↓
+arr[i] == arr[j]?
+↓
+count++
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Equality Check
++
+Counter
+```
+
+Complexity:
+
+```text
+O(n²)
+```
+
+Frequency View:
+
+```text
+1 → 3 times
+2 → 2 times
+```
+
+For frequency `f`:
+
+[
+\text{Pairs} = \frac{f(f-1)}{2}
+]
+
+For `1`:
+
+[
+\frac{3(3-1)}{2} = 3
+]
+
+For `2`:
+
+[
+\frac{2(2-1)}{2} = 1
+]
+
+Total:
+
+[
+3 + 1 = 4
+]
+
+Pattern:
+
+```text
+Frequency Counting
++
+Combination Formula
++
+Accumulator
+```
+
+এই example দেখায়:
+
+```text
+Brute Force Pair Thinking
+        ↓
+Understand What Is Being Counted
+        ↓
+Frequency Representation
+        ↓
+Avoid Rechecking Every Pair
+```
+
+---
+
+# 16. Pattern Combination Table
+
+| Problem                 | Main Pattern        | Supporting Pattern    |
+| ----------------------- | ------------------- | --------------------- |
+| Distinct Count          | Frequency / Sorting | Counter               |
+| Duplicate Exists        | Frequency / Sorting | Flag                  |
+| Smallest Repeated       | Frequency           | Early Exit            |
+| Mode                    | Frequency           | Maximum Tracking      |
+| Pair Sum Exists         | Pair Generation     | Flag + Early Exit     |
+| Pair Sum Count          | Pair Generation     | Counter               |
+| Minimum Pair Difference | Pair / Sorting      | Minimum Tracking      |
+| Equal Pair Count        | Pair / Frequency    | Counter / Accumulator |
+
+---
+
+# 17. Pattern Selection Drill
+
+এখন problem দেখো এবং code না লিখে শুধু pattern choose করো।
+
+---
+
+## Problem A
+
+> Array-তে কয়টি different value আছে?
+
+Possible:
+
+```text
+Frequency + Counter
+```
+
+অথবা:
+
+```text
+Sorting + Group Boundary + Counter
+```
+
+---
+
+## Problem B
+
+> Array-তে কোনো duplicate আছে কি?
+
+Possible:
+
+```text
+Frequency + Condition + Flag
+```
+
+অথবা:
+
+```text
+Sorting + Adjacent Comparison + Flag
+```
+
+---
+
+## Problem C
+
+> Input order অনুযায়ী first repeat event কোনটি?
+
+Pattern:
+
+```text
+Original Traversal
++
+Seen State
++
+Early Exit
+```
+
+---
+
+## Problem D
+
+> Most frequent value কোনটি?
+
+Pattern:
+
+```text
+Frequency
++
+Maximum Tracking
++
+Candidate Value
+```
+
+---
+
+## Problem E
+
+> দুইটি element-এর sum target হয় কি?
+
+Pattern:
+
+```text
+Pair Generation
++
+Condition
++
+Flag
++
+Early Exit
+```
+
+---
+
+## Problem F
+
+> দুইটি element-এর minimum difference কত?
+
+Brute force:
+
+```text
+Pair Generation
++
+Difference
++
+Minimum Tracking
+```
+
+Better sorted approach:
+
+```text
+Sorting
++
+Adjacent Difference
++
+Minimum Tracking
+```
+
+---
+
+# 18. Constraint-Based Thinking
+
+Problem:
+
+> Find duplicate.
+
+Approach choose করার আগে constraint দেখো।
+
+---
+
+## Case 1
+
+```text
+1 ≤ n ≤ 100000
+
+0 ≤ arr[i] ≤ 1000
+```
+
+Natural:
+
+```text
+Frequency Array
+```
+
+কারণ range ছোট।
+
+---
+
+## Case 2
+
+```text
+1 ≤ n ≤ 100000
+
+-10^9 ≤ arr[i] ≤ 10^9
+```
+
+Direct frequency array:
+
+```text
+Not Practical
+```
+
+Current Day 5 knowledge:
+
+```text
+Sorting
++
+Adjacent Comparison
+```
+
+---
+
+## Case 3
+
+```text
+n ≤ 100
+```
+
+Pair brute force:
+
+```text
+O(n²)
+```
+
+Approx pair checks:
+
+[
+\frac{100 \times 99}{2} = 4950
+]
+
+Fine।
+
+---
+
+## Case 4
+
+```text
+n ≤ 100000
+```
+
+Pair brute force:
+
+```text
+O(n²)
+```
+
+Potentially billions of checks।
+
+Need:
+
+```text
+Better Approach
+```
+
+Lesson:
+
+```text
+Correct Algorithm
++
+Constraint Compatibility
+=
+Accepted Solution
+```
+
+---
+
+# 19. Pattern Conflict
+
+কখনো দুইটি pattern possible হবে।
+
+Example:
+
+> Count distinct values.
+
+Possible:
+
+```text
+Sorting
+```
+
+এবং:
+
+```text
+Frequency
+```
+
+তখন প্রশ্ন:
+
+```text
+What are the constraints?
+```
+
+```text
+Do I need original order later?
+```
+
+```text
+Is value range manageable?
+```
+
+```text
+Do I already need sorted data?
+```
+
+Example:
+
+যদি problem পরে বলে:
+
+> Distinct count বের করার পর sorted unique values print করো।
+
+Sorting natural হতে পারে।
+
+যদি problem বলে:
+
+> `0 ≤ value ≤ 100` এবং 1000 frequency queries answer করো।
+
+Frequency natural।
+
+---
+
+# 20. Don't Force Your Favorite Pattern
+
+একটি common beginner mistake:
+
+```text
+Recently Learned Sorting
+↓
+Try Sorting Everywhere
+```
+
+অথবা:
+
+```text
+Recently Learned Frequency
+↓
+Use Frequency Everywhere
+```
+
+অথবা:
+
+```text
+Recently Learned Pair Loop
+↓
+Try O(n²) Everywhere
+```
+
+Better habit:
+
+```text
+Problem
+↓
+Requirements
+↓
+Constraints
+↓
+Representation
+↓
+Pattern
+```
+
+Algorithm problem-এর জন্য।
+
+Problem algorithm-এর জন্য না।
+
+---
+
+# 21. Day 5 Master Pattern Map
+
+```text
+                         ARRAY PROBLEM
+                               │
+                               ▼
+                      What is being asked?
+                               │
+          ┌────────────────────┼────────────────────┐
+          │                    │                    │
+          ▼                    ▼                    ▼
+      Value Counts         Value Order        Two Elements
+          │                    │                    │
+          ▼                    ▼                    ▼
+      Frequency             Sorting              Pair
+          │                    │                    │
+    ┌─────┼─────┐       ┌──────┼──────┐      ┌─────┼─────┐
+    │     │     │       │      │      │      │     │     │
+    ▼     ▼     ▼       ▼      ▼      ▼      ▼     ▼     ▼
+Distinct Mode Repeat   Group Adjacent Min    Sum   Diff  Equal
+    │     │     │       │      │      │      │     │     │
+    ▼     ▼     ▼       ▼      ▼      ▼      ▼     ▼     ▼
+Counter Max   Flag    Counter Compare Min   Flag  Min   Counter
+        Track                                  /
+                                             Count
+```
+
+---
+
+# 22. Day 5 Problem-Solving Protocol
+
+আজকের পর Array problem দেখলে এই protocol follow করবে।
+
+## Phase 1 — Understand
+
+```text
+Input কী?
+
+Output কী?
+
+Exactly কী count/find/check করতে হবে?
+```
+
+---
+
+## Phase 2 — Constraint
+
+```text
+n কত বড়?
+
+Value range কত?
+
+Negative আছে?
+
+Original order matter করে?
+```
+
+---
+
+## Phase 3 — Recognition
+
+```text
+Need Order?
+→ Sorting
+```
+
+```text
+Need Counts?
+→ Frequency
+```
+
+```text
+Need Equal Groups?
+→ Sort + Group
+```
+
+```text
+Need Two Elements?
+→ Pair
+```
+
+---
+
+## Phase 4 — State
+
+```text
+Exists?
+→ Flag
+```
+
+```text
+Count?
+→ Counter
+```
+
+```text
+Total?
+→ Accumulator
+```
+
+```text
+Minimum?
+→ Min Tracking
+```
+
+```text
+Maximum?
+→ Max Tracking
+```
+
+---
+
+## Phase 5 — Pattern Chain
+
+Example:
+
+```text
+Sort
+↓
+Traverse Adjacent
+↓
+Difference
+↓
+Minimum Tracking
+```
+
+---
+
+## Phase 6 — Code
+
+এখন code লিখবে।
+
+---
+
+## Phase 7 — Test
+
+At least:
+
+```text
+Smallest Case
+
+Normal Case
+
+Duplicate Case
+
+All Same
+
+Already Sorted
+
+Reverse Sorted
+
+Negative Case
+(if allowed)
+
+Large Boundary Values
+```
+
+সব problem-এ সব case দরকার হবে না।
+
+Relevant case choose করবে।
+
+---
+
+# 23. Mini Problem Solving Session
+
+এখন কয়েকটি problem mentally solve করি।
+
+---
+
+## Problem 1 — Appears Once
+
+Input:
+
+```text
+8
+
+1 1 2 3 3 4 5 5
+```
+
+Question:
+
+> কয়টি value exactly once এসেছে?
+
+Translate:
+
+```text
+Need Count Per Value
+```
+
+Pattern:
+
+```text
+Frequency
+↓
+freq[value] == 1
+↓
+Counter
+```
+
+Answer:
+
+```text
+2
+```
+
+Values:
+
+```text
+2
+4
+```
+
+---
+
+## Problem 2 — Largest Repeated Value
+
+Input:
+
+```text
+8
+
+2 7 3 7 5 3 9 9
+```
+
+Repeated:
+
+```text
+3
+7
+9
+```
+
+Largest:
+
+```text
+9
+```
+
+Pattern:
+
+```text
+Frequency
+↓
+Traverse High to Low
+↓
+First freq[value] > 1
+↓
+Answer
+```
+
+---
+
+## Problem 3 — Closest Pair
+
+Input:
+
+```text
+5
+
+20 3 8 10 1
+```
+
+Sort:
+
+```text
+1 3 8 10 20
+```
+
+Adjacent differences:
+
+```text
+2
+5
+2
+10
+```
+
+Minimum:
+
+```text
+2
+```
+
+Pattern:
+
+```text
+Sorting
++
+Adjacent Difference
++
+Minimum Tracking
+```
+
+---
+
+## Problem 4 — Count Pair Sum
+
+Input:
+
+```text
+5
+
+1 2 3 4 5
+
+6
+```
+
+Pattern:
+
+```text
+Pair Generation
++
+Target Sum Condition
++
+Counter
+```
+
+Answer:
+
+```text
+2
+```
+
+Pairs:
+
+```text
+1 + 5
+
+2 + 4
+```
+
+---
+
+# 24. Common Mistake Review
+
+Day 5-এর সবচেয়ে important mistakes একসঙ্গে দেখি।
+
+---
+
+## Mistake 1 — Comparator Overflow
+
+Risky:
+
+```c
+return x - y;
+```
+
+Safer:
+
+```c
+return (x > y) - (x < y);
+```
+
+---
+
+## Mistake 2 — Frequency Array Uninitialized
+
+Wrong:
+
+```c
+int freq[101];
+```
+
+তারপর:
+
+```c
+freq[x]++;
+```
+
+Problem:
+
+```text
+Garbage Initial Values
+```
+
+Correct:
+
+```c
+int freq[101] = {0};
+```
+
+---
+
+## Mistake 3 — Wrong Frequency Range
+
+Constraint:
+
+```text
+0 ≤ value ≤ 100
+```
+
+Correct traversal:
+
+```c
+for (int value = 0; value <= 100; value++)
+```
+
+---
+
+## Mistake 4 — Sorting Original Order Problem
+
+Question original order dependent হলে:
+
+```text
+Sort
+```
+
+করার আগে ভাববে।
+
+Sorting:
+
+```text
+Changes Positions
+```
+
+---
+
+## Mistake 5 — Missing First Sorted Group
+
+Distinct count:
+
+```c
+int distinct = 1;
+```
+
+যদি:
+
+```text
+n >= 1
+```
+
+guaranteed হয়।
+
+---
+
+## Mistake 6 — Missing Last Group
+
+Sorted group processing-এ loop শেষে final group handle করতে হবে।
+
+---
+
+## Mistake 7 — Pair Loop Starts at `j = 0`
+
+এতে:
+
+```text
+Self Pair
++
+Double Counting
+```
+
+হতে পারে।
+
+Correct:
+
+```c
+j = i + 1;
+```
+
+---
+
+## Mistake 8 — Count Problem-এ Early Exit
+
+Need total count হলে:
+
+```text
+Do Not Stop After First Match
+```
+
+---
+
+## Mistake 9 — Existence Problem-এ Unnecessary Full Search
+
+Need only yes/no হলে:
+
+```text
+Flag
++
+Early Exit
+```
+
+use করা যায়।
+
+---
+
+## Mistake 10 — Ignoring Overflow
+
+Large values হলে:
+
+```c
+long long sum =
+    (long long)arr[i] + arr[j];
+```
+
+consider করবে।
+
+---
+
+# 25. Edge Case Review
+
+## Case 1 — Single Element
+
+```text
+1
+
+5
+```
+
+Possible:
+
+```text
+Distinct = 1
+
+Duplicate = No
+
+Pair Count = 0
+```
+
+---
+
+## Case 2 — All Same
+
+```text
+5
+
+7 7 7 7 7
+```
+
+Possible:
+
+```text
+Distinct = 1
+
+Repeated Values = 1
+
+Mode = 7
+
+Frequency = 5
+```
+
+Index pair count:
+
+[
+\frac{5 \times 4}{2} = 10
+]
+
+---
+
+## Case 3 — All Different
+
+```text
+5
+
+1 2 3 4 5
+```
+
+Possible:
+
+```text
+Distinct = 5
+
+Duplicate = No
+
+Repeated Value Count = 0
+```
+
+---
+
+## Case 4 — Negative Values
+
+```text
+-5 -2 -8 -1
+```
+
+Direct frequency array:
+
+```text
+freq[x]
+```
+
+cannot directly use negative index।
+
+Sorting works naturally।
+
+---
+
+## Case 5 — Duplicate Pair Values
+
+```text
+1 1 2 2
+```
+
+Target:
+
+```text
+3
+```
+
+Index pair count:
+
+```text
+4
+```
+
+Distinct value pair:
+
+```text
+(1,2)
+```
+
+Count:
+
+```text
+1
+```
+
+Question wording matters।
+
+---
+
+# 🏆 Day 5 Mini Contest
+
+> **Time Limit for Yourself:** 75 minutes
+> **Rule:** প্রথমে paper/markdown-এ pattern লিখবে, তারপর code করবে।
+> **Goal:** সব solve না হলেও problem recognition practice complete করতে হবে।
+
+---
+
+## Problem 1 — Distinct Counter
+
+### Difficulty
+
+⭐☆☆☆☆
+
+### Input
+
+```text
+8
+
+5 2 5 3 2 8 8 1
+```
+
+### Output
+
+```text
+5
+```
+
+### Constraint
+
+```text
+0 ≤ arr[i] ≤ 100
+```
+
+### Required Pattern
+
+নিজে identify করবে।
+
+---
+
+## Problem 2 — Duplicate Detector
+
+### Difficulty
+
+⭐☆☆☆☆
+
+### Input
+
+```text
+6
+
+4 7 2 9 7 1
+```
+
+### Output
+
+```text
+YES
+```
+
+### Requirement
+
+দুইটি solution ভাববে:
+
+```text
+Approach A
+```
+
+এবং:
+
+```text
+Approach B
+```
+
+তারপর একটি code করবে।
+
+---
+
+## Problem 3 — Frequency Champion
+
+### Difficulty
+
+⭐⭐☆☆☆
+
+### Input
+
+```text
+10
+
+4 2 4 3 2 4 5 2 4 8
+```
+
+### Output
+
+```text
+4 4
+```
+
+Meaning:
+
+```text
+Value = 4
+
+Frequency = 4
+```
+
+### Tie Rule
+
+```text
+If multiple values have the same maximum frequency,
+print the smallest value.
+```
+
+---
+
+## Problem 4 — First Repeat Event
+
+### Difficulty
+
+⭐⭐☆☆☆
+
+### Input
+
+```text
+7
+
+5 2 8 3 2 5 8
+```
+
+### Output
+
+```text
+2
+```
+
+Important:
+
+```text
+Original Traversal Order Matters
+```
+
+---
+
+## Problem 5 — Target Pair Counter
+
+### Difficulty
+
+⭐⭐☆☆☆
+
+### Input
+
+```text
+6
+
+1 2 3 4 5 6
+
+7
+```
+
+Valid pairs:
+
+```text
+1 + 6
+
+2 + 5
+
+3 + 4
+```
+
+### Output
+
+```text
+3
+```
+
+---
+
+## Problem 6 — Closest Numbers
+
+### Difficulty
+
+⭐⭐⭐☆☆
+
+### Input
+
+```text
+5
+
+20 3 8 10 1
+```
+
+### Output
+
+```text
+2
+```
+
+Requirement:
+
+```text
+Do Not Use All-Pair Brute Force
+```
+
+Think:
+
+```text
+Can Sorting Change the Problem?
+```
+
+---
+
+# 26. Mini Contest Workflow
+
+প্রতিটি problem-এর আগে এই template fill করবে:
+
+```text
+Problem Name:
+
+What is being asked?
+
+Does original order matter?
+
+Need Count / Order / Pair?
+
+Constraint Observation:
+
+Chosen Representation:
+
+Chosen Pattern:
+
+State Variables:
+
+Pattern Chain:
+
+Complexity:
+
+Edge Cases:
+```
+
+Example:
+
+```text
+Problem Name:
+Target Pair Counter
+
+What is being asked?
+Count all index pairs whose sum equals target.
+
+Does original order matter?
+No.
+
+Need Count / Order / Pair?
+Pair + Count.
+
+Chosen Pattern:
+Pair Generation + Counter.
+
+State Variables:
+count
+
+Pattern Chain:
+Generate Unique Pairs
+↓
+Check Sum
+↓
+Match?
+↓
+count++
+
+Complexity:
+O(n²)
+
+Edge Cases:
+No valid pair
+Multiple valid pairs
+Duplicate values
+```
+
+---
+
+# 📝 Day 5 Final Assignment
+
+এই assignment complete করলে Day 5 officially finished।
+
+---
+
+## Part A — Concept Questions
+
+নিজের ভাষায় answer করবে:
+
+```text
+1. Sorting problem solving-এ কী ধরনের information expose করে?
+
+2. Frequency Array কী information store করে?
+
+3. Sorted Group কী?
+
+4. Group Boundary কীভাবে detect করি?
+
+5. Pair Problem চিনব কীভাবে?
+
+6. কেন j = i + 1 ব্যবহার করি?
+
+7. Original Order এবং Value Order-এর difference কী?
+
+8. Distinct Count-এর দুইটি approach explain করো।
+
+9. Duplicate Detection-এর দুইটি approach explain করো।
+
+10. Mode বের করতে কোন patterns combine হয়?
+
+11. Pair Sum Existence এবং Pair Sum Count-এর difference কী?
+
+12. Minimum Pair Difference sorting-এর পরে কেন সহজ হয়?
+
+13. Small Value Range হলে Frequency কেন useful?
+
+14. Huge Value Range হলে direct Frequency Array কেন problematic?
+
+15. Pattern Combination বলতে কী বোঝো?
+
+16. Constraint algorithm selection-এ কেন important?
+
+17. Flag, Counter, Accumulator, Min Tracking এবং Max Tracking-এর role কী?
+
+18. Sorting করার আগে original order নিয়ে কেন ভাবতে হবে?
+```
+
+---
+
+## Part B — Mandatory Coding
+
+নিজে code করবে:
+
+```text
+1. Sort Array Ascending
+
+2. Sort Array Descending
+
+3. Frequency of Every Present Value
+
+4. Count Distinct Values
+
+5. Detect Duplicate
+
+6. Count Repeated Values
+
+7. Find Most Frequent Value
+
+8. Find First Repeat Event
+
+9. Print All Unique Pairs
+
+10. Pair Sum Existence
+
+11. Count Target Sum Pairs
+
+12. Minimum Pair Difference Using Sorting
+```
+
+---
+
+## Part C — Approach Comparison
+
+Problem:
+
+> Count distinct values.
+
+দুইটি approach লিখবে:
+
+```text
+Approach 1:
+Sorting
+
+Pattern Chain:
+
+Complexity:
+
+Advantage:
+
+Limitation:
+```
+
+এবং:
+
+```text
+Approach 2:
+Frequency
+
+Pattern Chain:
+
+Complexity:
+
+Advantage:
+
+Limitation:
+```
+
+তারপর লিখবে:
+
+```text
+When would I choose Sorting?
+
+When would I choose Frequency?
+```
+
+---
+
+## Part D — Dry Run
+
+Array:
+
+```text
+5 2 5 3 2 8 5
+```
+
+Frequency Table:
+
+```text
+2 → ?
+
+3 → ?
+
+5 → ?
+
+8 → ?
+```
+
+Find:
+
+```text
+Distinct Count = ?
+
+Repeated Value Count = ?
+
+Extra Duplicate Copies = ?
+
+Mode = ?
+
+Maximum Frequency = ?
+```
+
+---
+
+## Part E — Sorted Group Dry Run
+
+Original:
+
+```text
+7 2 7 3 2 2 9
+```
+
+Complete:
+
+```text
+Sorted:
+
+____________________
+```
+
+Group representation:
+
+```text
+____________________
+```
+
+Then:
+
+```text
+Number of Groups = ?
+
+Distinct Count = ?
+
+Repeated Group Count = ?
+
+Largest Group Size = ?
+
+Mode = ?
+```
+
+---
+
+## Part F — Pair Dry Run
+
+Array:
+
+```text
+2 4 6 8
+```
+
+Write all pairs:
+
+```text
+(?, ?)
+
+(?, ?)
+
+(?, ?)
+
+(?, ?)
+
+(?, ?)
+
+(?, ?)
+```
+
+Target:
+
+```text
+10
+```
+
+Find:
+
+```text
+Valid Pair Count = ?
+
+Valid Pairs:
+...
+```
+
+---
+
+## Part G — Pattern Selection
+
+শুধু pattern লিখবে, code না।
+
+### 1
+
+> Find smallest repeated value.
+
+```text
+Pattern:
+...
+```
+
+### 2
+
+> Find first repeat event.
+
+```text
+Pattern:
+...
+```
+
+### 3
+
+> Count values appearing exactly `k` times.
+
+```text
+Pattern:
+...
+```
+
+### 4
+
+> Check whether any pair sums to target.
+
+```text
+Pattern:
+...
+```
+
+### 5
+
+> Find minimum difference between any two values.
+
+```text
+Pattern:
+...
+```
+
+### 6
+
+> Find most frequent value.
+
+```text
+Pattern:
+...
+```
+
+---
+
+# 📚 Glossary Final Update
+
+`CP_Dictionary.md`-এ Day 5 শেষে ensure করবে এই terms আছে:
+
+```text
+Sorting
+Ascending Order
+Descending Order
+Comparator
+Frequency
+Frequency Array
+Value Range
+Representation
+Sorted Group
+Group Boundary
+Duplicate
+Distinct Value
+Repeated Value
+Extra Duplicate
+Mode
+Tie-Breaking
+Original Order
+Value Order
+Pair
+Index Pair
+Value Pair
+Unordered Pair
+Self Pair
+Double Counting
+Pair Sum
+Target Sum
+Pair Difference
+Search Space
+Quadratic Time
+Pattern Combination
+```
+
+প্রতিটি:
+
+```text
+Term:
+
+Simple Meaning:
+
+Small Example:
+```
+
+---
+
+# 📚 Pattern Library Final Update
+
+`core_pattern.md`-এ Day 5 শেষে minimum এই sections থাকা উচিত:
+
+```text
+1. Traversal Pattern
+
+2. Accumulation Pattern
+
+3. Counting Pattern
+
+4. Maximum Tracking Pattern
+
+5. Minimum Tracking Pattern
+
+6. Search Pattern
+
+7. Flag Pattern
+
+8. Early Exit Pattern
+
+9. Sorting Pattern
+
+10. Frequency Counting Pattern
+
+11. Sorted Group Pattern
+
+12. Group Boundary Pattern
+
+13. Unique Pair Generation Pattern
+
+14. Pair Sum Existence Pattern
+
+15. Pair Counting Pattern
+```
+
+---
+
+# 27. Day 5 Reflection
+
+নিজের `Day_5_assignment.md` বা reflection section-এ লিখবে:
+
+```text
+1. আজকের সবচেয়ে important concept কী ছিল?
+
+2. Sorting-এর কোন অংশ এখনও confusing?
+
+3. Frequency Array নিজে লিখতে পারি কি?
+
+4. Sorted Group বুঝতে পারছি কি?
+
+5. Pair loop নিজে derive করতে পারি কি?
+
+6. j = i + 1 কেন, নিজের ভাষায় explain করতে পারি কি?
+
+7. কোন problem-এ original order matter করে বুঝতে পারছি কি?
+
+8. Problem দেখে Sorting এবং Frequency-এর মধ্যে choose করতে পারি কি?
+
+9. O(n²) pair brute force কখন dangerous হতে পারে বুঝি কি?
+
+10. Day 5-এর কোন problem আবার practice করা দরকার?
+```
+
+---
+
+# 28. Self-Evaluation Score
+
+নিজেকে score দাও:
+
+| Skill                        | Score |
+| ---------------------------- | ----: |
+| Sorting Mental Model         | `/10` |
+| Bubble Sort Understanding    | `/10` |
+| Selection Sort Understanding | `/10` |
+| `qsort()` Usage              | `/10` |
+| Frequency Counting           | `/10` |
+| Sorted Group Thinking        | `/10` |
+| Duplicate Problems           | `/10` |
+| Distinct Count               | `/10` |
+| Mode / Frequency Max         | `/10` |
+| Pair Generation              | `/10` |
+| Pair Sum Problems            | `/10` |
+| Pattern Selection            | `/10` |
+
+Rule:
+
+```text
+8–10
+→ Strong Enough to Continue
+```
+
+```text
+6–7
+→ Continue, but keep revising
+```
+
+```text
+Below 6
+→ Revisit that specific topic
+```
+
+সবকিছু perfect হওয়ার জন্য Day 5 repeat করার দরকার নেই।
+
+Specific weak topic identify করে পরে revise করবে।
+
+---
+
+# 29. Day 5 Final Mental Model
+
+আজকের পুরো Day 5 এক diagram-এ:
+
+```text
+                         PROBLEM
+                            │
+                            ▼
+                     Understand Question
+                            │
+                            ▼
+                     Check Constraints
+                            │
+                            ▼
+                  What Information Is Needed?
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+        ▼                   ▼                   ▼
+   Original Order        Counts              Order
+        │                   │                   │
+        ▼                   ▼                   ▼
+ Raw Traversal         Frequency             Sorting
+        │                   │                   │
+        │             ┌─────┼─────┐       ┌────┼────┐
+        │             │     │     │       │    │    │
+        │             ▼     ▼     ▼       ▼    ▼    ▼
+        │          Distinct Mode Repeat  Group Adjacent Difference
+        │
+        └──────────────────────┐
+                               │
+                               ▼
+                      Two Elements Together?
+                               │
+                               ▼
+                              Pair
+                               │
+                   ┌───────────┼───────────┐
+                   │           │           │
+                   ▼           ▼           ▼
+                  Sum       Difference    Equality
+                   │           │           │
+                   ▼           ▼           ▼
+              Flag/Count    Min Track    Counter
+```
+
+---
+
+# 🔥 Day 5 Core Lessons
+
+## Lesson 1
+
+```text
+Sorting is not only rearranging data.
+
+Sorting reveals structure.
+```
+
+---
+
+## Lesson 2
+
+```text
+Frequency Array transforms:
+
+Value
+↓
+Index
+
+Occurrence Count
+↓
+Stored State
+```
+
+---
+
+## Lesson 3
+
+```text
+Sorted Array
+↓
+Equal Values Become Groups
+↓
+Group Boundary Becomes Detectable
+```
+
+---
+
+## Lesson 4
+
+```text
+Two Elements Together
+↓
+Pair Thinking
+```
+
+---
+
+## Lesson 5
+
+```text
+Pair Problem
+↓
+First Understand Brute Force
+↓
+Understand Search Space
+↓
+Then Think About Optimization
+```
+
+---
+
+## Lesson 6
+
+```text
+Same Problem
+Can Have Multiple Correct Approaches
+```
+
+---
+
+## Lesson 7
+
+```text
+Approach Selection
+Depends on:
+
+Question
++
+Constraint
++
+Required Information
+```
+
+---
+
+# 🧠 Pattern Evolution — Day 1 to Day 5
+
+তোমার pattern knowledge এখন এই stage-এ:
+
+```text
+Day 1
+Basic Problem Solving Habit
+        ↓
+Input / Output
+Dry Run
+Edge Case
+Test Case
+```
+
+```text
+Day 2
+Array Traversal
+        ↓
+Accumulator
+Counter
+Maximum
+Minimum
+Search
+Flag
+Early Exit
+```
+
+```text
+Day 3
+Digit and Number Patterns
+        ↓
+Extraction
+Construction
+Reverse
+Palindrome
+```
+
+```text
+Day 4
+Nested Loop and Pattern Thinking
+        ↓
+Outer Loop
+Inner Loop
+Grid Thinking
+Repeated Work
+```
+
+```text
+Day 5
+Data Representation
+        ↓
+Sorting
+Frequency
+Sorted Groups
+Pair Thinking
+Pattern Selection
+Pattern Combination
+```
+
+এখন আর শুধু:
+
+```text
+Syntax Learning
+```
+
+করছো না।
+
+তুমি ধীরে ধীরে শিখছো:
+
+```text
+How to Look at a Problem
+        ↓
+How to Recognize Structure
+        ↓
+How to Select a Pattern
+        ↓
+How to Combine Patterns
+        ↓
+How to Build a Solution
+```
+
+---
+
+# ✅ Day 5 Final Completion Checklist
+
+```text
+[ ] Sorting-এর purpose বুঝি
+
+[ ] Ascending এবং Descending sorting করতে পারি
+
+[ ] Bubble Sort বুঝি
+
+[ ] Selection Sort বুঝি
+
+[ ] qsort() ব্যবহার করতে পারি
+
+[ ] Comparator-এর role বুঝি
+
+[ ] Frequency Array বানাতে পারি
+
+[ ] freq[x]++ meaning বুঝি
+
+[ ] Value Range check করি
+
+[ ] Distinct Count করতে পারি
+
+[ ] Duplicate detect করতে পারি
+
+[ ] Repeated Values count করতে পারি
+
+[ ] Extra Duplicate Copies count করতে পারি
+
+[ ] Mode বের করতে পারি
+
+[ ] Tie-Breaking rule notice করি
+
+[ ] Sorted Group বুঝি
+
+[ ] Group Boundary detect করতে পারি
+
+[ ] Last Group Problem বুঝি
+
+[ ] Original Order vs Value Order বুঝি
+
+[ ] Pair কী বুঝি
+
+[ ] Index Pair vs Value Pair বুঝি
+
+[ ] i < j invariant বুঝি
+
+[ ] j = i + 1 নিজে explain করতে পারি
+
+[ ] সব unique pair generate করতে পারি
+
+[ ] Self Pair avoid করতে পারি
+
+[ ] Double Counting avoid করতে পারি
+
+[ ] Pair Sum existence solve করতে পারি
+
+[ ] Pair Sum count করতে পারি
+
+[ ] Minimum Pair Difference solve করতে পারি
+
+[ ] Pair brute force O(n²) বুঝি
+
+[ ] Constraint দেখে approach judge করার habit তৈরি করছি
+
+[ ] Sorting vs Frequency choose করতে পারি
+
+[ ] Pattern Chain লিখতে পারি
+
+[ ] Pattern Combination বুঝি
+
+[ ] Mini Contest complete করেছি
+
+[ ] Final Assignment complete করেছি
+
+[ ] Glossary update করেছি
+
+[ ] Pattern Library update করেছি
+
+[ ] Reflection লিখেছি
+```
+
+---
+
+# 🏁 Day 5 Complete
+
+```text
+Day 5
+│
+├── ✅ Chapter 1 — Sorting Mental Model
+│
+├── ✅ Chapter 2 — Bubble Sort
+│
+├── ✅ Chapter 3 — Selection Sort
+│
+├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+│
+├── ✅ Chapter 5 — Frequency Counting Pattern
+│
+├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+│
+├── ✅ Chapter 7 — Pair Thinking Foundation
+│
+└── ✅ Chapter 8 — Pattern Combination, Final Assignment,
+                  Mini Contest & Reflection
+```
+
+## 🎯 Day 5 Final Status
+
+```text
+Sorting Foundation       → Complete
+Frequency Foundation     → Complete
+Sorted Group Foundation  → Complete
+Pair Thinking Foundation → Complete
+Pattern Selection        → Introduced
+Pattern Combination      → Introduced
+```
+
+Day 5 শেষে তোমার মাথায় এই decision chain থাকা উচিত:
+
+```text
+Problem
+   ↓
+What exactly is being asked?
+   ↓
+What are the constraints?
+   ↓
+Does original order matter?
+   ↓
+Do I need counts?
+   ↓
+Do I need sorted order?
+   ↓
+Does the problem involve two elements?
+   ↓
+Which representation makes the problem easiest?
+   ↓
+Which state do I need?
+   ↓
+Build Pattern Chain
+   ↓
+Code
+   ↓
+Test
+   ↓
+Review
+```
+
+**Day 5 এখানেই সম্পূর্ণ শেষ।** Day 6-এ যাওয়ার আগে Chapter 8-এর পুরো assignment এক বসায় শেষ করার দরকার নেই; **Mandatory Coding + Mini Contest + Pattern Selection** অংশ complete করলেই Day 5-এর practical objective পূরণ হবে, আর Glossary/Reflection একই দিনের শেষে সংক্ষিপ্তভাবে update করা যাবে।
