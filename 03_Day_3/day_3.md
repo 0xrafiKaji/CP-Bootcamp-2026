@@ -14931,7 +14931,2835 @@ Final Frequency / Count
 
 সেখান থেকে শুরু হবে **Day 3 — Chapter 5: Counting Patterns on Strings**।
 
---- 
+---
+
+# 🚀 CP Bootcamp 2026 — Day 3
+
+# Chapter 5 — Counting Patterns on Strings
+
+> **Day 3 Theme:** String Traversal → Character Classification → Counting → Search → Transformation  
+> **Chapter Goal:** String traverse করার সময় বিভিন্ন ধরনের character count করা এবং **Traversal + Classification + Counter** pattern combine করতে শেখা।  
+> **Estimated Time:** 45–60 minutes
+
+---
+
+# 🎯 Chapter Mission
+
+আগের Chapter-গুলোতে আমরা শিখেছি:
+
+```text
+String
+↓
+Character Array
+↓
+Index
+↓
+Traversal
+↓
+Character Classification
+```
+
+এখন আমরা শিখব:
+
+```text
+String Traversal
++
+Character Classification
++
+Counter
+```
+
+এই তিনটি combine করে solve করা যায়:
+
+```text
+Count Vowels
+
+Count Consonants
+
+Count Digits
+
+Count Spaces
+
+Count Uppercase Letters
+
+Count Lowercase Letters
+
+Count Words
+
+Count Specific Characters
+```
+
+এই Chapter-এর মূল mental model:
+
+```text
+Traverse Character
+        ↓
+Classify Character
+        ↓
+Condition Match?
+        │
+     ┌──┴──┐
+     │     │
+    Yes    No
+     │     │
+     ▼     ▼
+ Counter++ Continue
+```
+
+---
+
+# 1. String Counting Pattern কী?
+
+ধরো string:
+
+```text
+Hello World
+```
+
+আমরা জানতে চাই:
+
+```text
+কতটি vowel আছে?
+```
+
+আমাদের process:
+
+```text
+H → vowel? No
+
+e → vowel? Yes → count++
+
+l → vowel? No
+
+l → vowel? No
+
+o → vowel? Yes → count++
+
+(space) → vowel? No
+
+W → vowel? No
+
+o → vowel? Yes → count++
+
+r → vowel? No
+
+l → vowel? No
+
+d → vowel? No
+```
+
+Final:
+
+```text
+Vowel Count = 3
+```
+
+এখানে pattern:
+
+```text
+Traversal
++
+Condition
++
+Counter
+```
+
+---
+
+# 2. Basic Counting Template
+
+General template:
+
+```c
+int count = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (condition)
+    {
+        count++;
+    }
+}
+```
+
+Mental Model:
+
+```text
+Start Counter
+↓
+Visit Every Character
+↓
+Check Condition
+↓
+Match?
+↓
+Increase Counter
+```
+
+এই template অনেক string problem-এর foundation।
+
+---
+
+# 3. Count Vowels
+
+Problem:
+
+> একটি string-এ মোট কতটি vowel আছে?
+
+Vowels:
+
+```text
+a e i o u
+```
+
+এবং uppercase:
+
+```text
+A E I O U
+```
+
+Example:
+
+```text
+Programming
+```
+
+Characters:
+
+```text
+P r o g r a m m i n g
+```
+
+Vowels:
+
+```text
+o
+a
+i
+```
+
+Answer:
+
+```text
+3
+```
+
+---
+
+## Code
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+
+    fgets(str, sizeof(str), stdin);
+
+    int vowelCount = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        char ch = str[i];
+
+        if (ch == 'a' || ch == 'e' ||
+            ch == 'i' || ch == 'o' ||
+            ch == 'u' || ch == 'A' ||
+            ch == 'E' || ch == 'I' ||
+            ch == 'O' || ch == 'U')
+        {
+            vowelCount++;
+        }
+    }
+
+    printf("%d\n", vowelCount);
+
+    return 0;
+}
+```
+
+Pattern:
+
+```text
+String Traversal
++
+Vowel Condition
++
+Counter
+```
+
+---
+
+# 4. Why Use `char ch = str[i]`?
+
+আমরা সরাসরি লিখতে পারি:
+
+```c
+if (str[i] == 'a' || str[i] == 'e' ...)
+```
+
+কিন্তু:
+
+```c
+char ch = str[i];
+```
+
+লিখলে code readable হয়।
+
+Mental Meaning:
+
+```text
+str[i]
+↓
+Current Character
+↓
+Store in ch
+↓
+Test ch
+```
+
+Example:
+
+```c
+char ch = str[i];
+
+if (ch == 'a')
+{
+    // current character is 'a'
+}
+```
+
+এটা mandatory না।
+
+কিন্তু complex condition readable করতে useful।
+
+---
+
+# 5. Count Digits
+
+Problem:
+
+> String-এর মধ্যে কয়টি digit আছে?
+
+Input:
+
+```text
+Room 204, Floor 5
+```
+
+Digits:
+
+```text
+2
+0
+4
+5
+```
+
+Answer:
+
+```text
+4
+```
+
+---
+
+## Manual Condition
+
+```c
+if (str[i] >= '0' && str[i] <= '9')
+{
+    digitCount++;
+}
+```
+
+Full Pattern:
+
+```c
+int digitCount = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (str[i] >= '0' && str[i] <= '9')
+    {
+        digitCount++;
+    }
+}
+```
+
+Mental Model:
+
+```text
+Current Character
+↓
+Between '0' and '9'?
+↓
+Yes
+↓
+digitCount++
+```
+
+---
+
+# 6. Count Digits with `isdigit()`
+
+Using:
+
+```c
+#include <ctype.h>
+```
+
+Code:
+
+```c
+if (isdigit((unsigned char)str[i]))
+{
+    digitCount++;
+}
+```
+
+Full example:
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char str[100];
+
+    fgets(str, sizeof(str), stdin);
+
+    int digitCount = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (isdigit((unsigned char)str[i]))
+        {
+            digitCount++;
+        }
+    }
+
+    printf("%d\n", digitCount);
+
+    return 0;
+}
+```
+
+Mental Pattern:
+
+```text
+Traverse
+↓
+isdigit()
+↓
+True?
+↓
+digitCount++
+```
+
+---
+
+# 7. Count Uppercase Letters
+
+Input:
+
+```text
+Hello CP World
+```
+
+Uppercase:
+
+```text
+H
+C
+P
+W
+```
+
+Answer:
+
+```text
+4
+```
+
+Code:
+
+```c
+int uppercaseCount = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (str[i] >= 'A' && str[i] <= 'Z')
+    {
+        uppercaseCount++;
+    }
+}
+```
+
+অথবা:
+
+```c
+if (isupper((unsigned char)str[i]))
+{
+    uppercaseCount++;
+}
+```
+
+Pattern:
+
+```text
+Traversal
++
+Uppercase Classification
++
+Counter
+```
+
+---
+
+# 8. Count Lowercase Letters
+
+Input:
+
+```text
+Hello CP
+```
+
+Lowercase:
+
+```text
+e
+l
+l
+o
+```
+
+Answer:
+
+```text
+4
+```
+
+Code:
+
+```c
+int lowercaseCount = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (islower((unsigned char)str[i]))
+    {
+        lowercaseCount++;
+    }
+}
+```
+
+---
+
+# 9. Count Spaces
+
+Input:
+
+```text
+I love competitive programming
+```
+
+Spaces:
+
+```text
+I_love_competitive_programming
+ ↑    ↑           ↑
+```
+
+Total:
+
+```text
+3
+```
+
+Code:
+
+```c
+int spaceCount = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (str[i] == ' ')
+    {
+        spaceCount++;
+    }
+}
+```
+
+Pattern:
+
+```text
+Traversal
++
+Exact Character Match
++
+Counter
+```
+
+---
+
+# 10. Multiple Counters in One Traversal
+
+ধরো problem বলল:
+
+> একটি string-এ uppercase, lowercase, digit এবং space count করো।
+
+Beginner approach হতে পারে:
+
+```text
+Loop 1 → Uppercase Count
+
+Loop 2 → Lowercase Count
+
+Loop 3 → Digit Count
+
+Loop 4 → Space Count
+```
+
+এটা কাজ করবে।
+
+কিন্তু একই traversal-এ সব count করা যায়।
+
+State:
+
+```c
+int uppercaseCount = 0;
+int lowercaseCount = 0;
+int digitCount = 0;
+int spaceCount = 0;
+```
+
+Traversal:
+
+```c
+for (int i = 0; str[i] != '\0'; i++)
+{
+    unsigned char ch = (unsigned char)str[i];
+
+    if (isupper(ch))
+    {
+        uppercaseCount++;
+    }
+    else if (islower(ch))
+    {
+        lowercaseCount++;
+    }
+    else if (isdigit(ch))
+    {
+        digitCount++;
+    }
+    else if (ch == ' ')
+    {
+        spaceCount++;
+    }
+}
+```
+
+Mental Model:
+
+```text
+One Traversal
+        ↓
+Current Character
+        ↓
+Classify
+        │
+   ┌────┼────┬──────┐
+   │    │    │      │
+ Upper Lower Digit Space
+   │    │    │      │
+   ▼    ▼    ▼      ▼
+  ++   ++   ++     ++
+```
+
+এটা খুব important pattern।
+
+---
+
+# 11. `if` vs `else if` in Counting
+
+ধরো categories mutually exclusive:
+
+```text
+Uppercase
+Lowercase
+Digit
+Space
+```
+
+একটি character একই সাথে:
+
+```text
+Uppercase এবং Digit
+```
+
+হতে পারে না।
+
+তাই:
+
+```c
+if (...)
+{
+}
+else if (...)
+{
+}
+else if (...)
+{
+}
+```
+
+natural।
+
+কিন্তু conditions overlap করতে পারে এমন problem-এ independent `if` দরকার হতে পারে।
+
+Example:
+
+```text
+Character is alphabetic?
+
+Character is vowel?
+```
+
+একটি vowel একই সাথে:
+
+```text
+Alphabet
++
+Vowel
+```
+
+দুইটাই হতে পারে।
+
+তাই problem অনুযায়ী condition structure choose করতে হবে।
+
+---
+
+# 12. Count Vowels and Consonants
+
+Input:
+
+```text
+Hello World
+```
+
+Letters:
+
+```text
+H e l l o W o r l d
+```
+
+Vowels:
+
+```text
+e o o
+```
+
+Count:
+
+```text
+3
+```
+
+Consonants:
+
+```text
+H l l W r l d
+```
+
+Count:
+
+```text
+7
+```
+
+Space consonant না।
+
+Newline consonant না।
+
+Digit consonant না।
+
+তাই logic:
+
+```text
+Is Alphabet?
+        │
+     ┌──┴──┐
+     │     │
+    No    Yes
+     │     │
+   Ignore  ▼
+         Is Vowel?
+          │
+       ┌──┴──┐
+       │     │
+      Yes    No
+       │     │
+       ▼     ▼
+    vowel++ consonant++
+```
+
+---
+
+# 13. Vowel and Consonant Code
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char str[100];
+
+    fgets(str, sizeof(str), stdin);
+
+    int vowelCount = 0;
+    int consonantCount = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        unsigned char ch = (unsigned char)str[i];
+
+        if (isalpha(ch))
+        {
+            char lower = (char)tolower(ch);
+
+            if (lower == 'a' ||
+                lower == 'e' ||
+                lower == 'i' ||
+                lower == 'o' ||
+                lower == 'u')
+            {
+                vowelCount++;
+            }
+            else
+            {
+                consonantCount++;
+            }
+        }
+    }
+
+    printf("Vowels: %d\n", vowelCount);
+    printf("Consonants: %d\n", consonantCount);
+
+    return 0;
+}
+```
+
+Pattern Combination:
+
+```text
+Traversal
++
+Alphabet Classification
++
+Case Normalization
++
+Vowel Condition
++
+Multiple Counters
+```
+
+---
+
+# 14. Why Check `isalpha()` First?
+
+Wrong idea:
+
+```c
+if (vowel)
+{
+    vowelCount++;
+}
+else
+{
+    consonantCount++;
+}
+```
+
+Problem:
+
+Input:
+
+```text
+Hi 123!
+```
+
+Then:
+
+```text
+1
+2
+3
+!
+space
+newline
+```
+
+সব consonant হিসেবে count হয়ে যেতে পারে।
+
+Correct:
+
+```text
+Character
+↓
+Is Alphabet?
+        │
+    ┌───┴───┐
+    │       │
+   No      Yes
+    │       │
+ Ignore     ▼
+         Vowel?
+        ┌───┴───┐
+        │       │
+       Yes      No
+        │       │
+        ▼       ▼
+     Vowel   Consonant
+```
+
+Lesson:
+
+> **Classification-এর order গুরুত্বপূর্ণ।**
+
+---
+
+# 15. Count a Specific Character
+
+Problem:
+
+> String-এ character `'a'` কতবার এসেছে?
+
+Input:
+
+```text
+banana
+```
+
+Traversal:
+
+```text
+b → No
+
+a → count = 1
+
+n → No
+
+a → count = 2
+
+n → No
+
+a → count = 3
+```
+
+Answer:
+
+```text
+3
+```
+
+Code:
+
+```c
+int count = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (str[i] == 'a')
+    {
+        count++;
+    }
+}
+```
+
+Generic version:
+
+```c
+char target;
+
+scanf(" %c", &target);
+```
+
+তারপর:
+
+```c
+if (str[i] == target)
+{
+    count++;
+}
+```
+
+Pattern:
+
+```text
+Traversal
++
+Target Match
++
+Counter
+```
+
+---
+
+# 16. Case-Sensitive vs Case-Insensitive Count
+
+Input:
+
+```text
+BanAna
+```
+
+Target:
+
+```text
+a
+```
+
+Case-sensitive count:
+
+```text
+Only lowercase 'a'
+```
+
+Answer:
+
+```text
+1
+```
+
+Case-insensitive count:
+
+```text
+a
+A
+A
+```
+
+Answer:
+
+```text
+3
+```
+
+Case-insensitive logic:
+
+```c
+if (tolower((unsigned char)str[i]) ==
+    tolower((unsigned char)target))
+{
+    count++;
+}
+```
+
+Mental Model:
+
+```text
+Normalize Both Characters
+↓
+Compare
+```
+
+---
+
+# 17. Word Count — Basic Version
+
+Input:
+
+```text
+I love C
+```
+
+Words:
+
+```text
+I
+
+love
+
+C
+```
+
+Count:
+
+```text
+3
+```
+
+Beginner shortcut:
+
+```text
+Words = Spaces + 1
+```
+
+এটা শুধুমাত্র clean input-এর জন্য কাজ করতে পারে:
+
+```text
+I love C
+```
+
+কিন্তু fail করবে:
+
+```text
+  I   love   C
+```
+
+কারণ এখানে multiple spaces আছে।
+
+তাই professional mental model:
+
+```text
+Word starts when:
+
+Current Character is not whitespace
+
+AND
+
+Previous position was whitespace
+or
+Current index is the start
+```
+
+আরও সহজভাবে:
+
+```text
+Outside Word
+↓
+See Non-Space
+↓
+New Word Starts
+↓
+wordCount++
+↓
+Inside Word
+```
+
+---
+
+# 18. Word Boundary Pattern
+
+String:
+
+```text
+  I   love C
+```
+
+Visual:
+
+```text
+__I___love_C
+  ↑   ↑    ↑
+ New Word Starts
+```
+
+আমরা প্রতিটি non-space character count করছি না।
+
+আমরা count করছি:
+
+```text
+Transition
+```
+
+অর্থাৎ:
+
+```text
+Whitespace
+↓
+Non-Whitespace
+```
+
+এই transition মানে:
+
+```text
+New Word Started
+```
+
+---
+
+# 19. Word Count Using State
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char str[200];
+
+    fgets(str, sizeof(str), stdin);
+
+    int wordCount = 0;
+    int insideWord = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        unsigned char ch = (unsigned char)str[i];
+
+        if (!isspace(ch))
+        {
+            if (!insideWord)
+            {
+                wordCount++;
+                insideWord = 1;
+            }
+        }
+        else
+        {
+            insideWord = 0;
+        }
+    }
+
+    printf("%d\n", wordCount);
+
+    return 0;
+}
+```
+
+Pattern Combination:
+
+```text
+Traversal
++
+Character Classification
++
+State Flag
++
+Boundary Detection
++
+Counter
+```
+
+---
+
+# 20. Word Count Dry Run
+
+Input:
+
+```text
+I  love C
+```
+
+Start:
+
+```text
+wordCount = 0
+
+insideWord = 0
+```
+
+Character:
+
+```text
+'I'
+```
+
+Non-space।
+
+```text
+insideWord == 0
+```
+
+তাই:
+
+```text
+wordCount = 1
+
+insideWord = 1
+```
+
+Next:
+
+```text
+space
+```
+
+তাই:
+
+```text
+insideWord = 0
+```
+
+আরেকটি space:
+
+```text
+insideWord = 0
+```
+
+Then:
+
+```text
+'l'
+```
+
+Non-space এবং:
+
+```text
+insideWord == 0
+```
+
+তাই:
+
+```text
+wordCount = 2
+
+insideWord = 1
+```
+
+`o`, `v`, `e`:
+
+```text
+insideWord already 1
+```
+
+তাই count বাড়বে না।
+
+Next space:
+
+```text
+insideWord = 0
+```
+
+Then `C`:
+
+```text
+wordCount = 3
+```
+
+Final:
+
+```text
+3
+```
+
+---
+
+# 21. Counter vs Flag
+
+এই Chapter-এ দুই ধরনের state দেখলে confuse করবে না।
+
+## Counter
+
+Example:
+
+```c
+int vowelCount = 0;
+```
+
+Purpose:
+
+```text
+How Many?
+```
+
+Update:
+
+```c
+vowelCount++;
+```
+
+---
+
+## Flag / State
+
+Example:
+
+```c
+int insideWord = 0;
+```
+
+Purpose:
+
+```text
+What State Am I In?
+```
+
+Possible meaning:
+
+```text
+0 → Outside Word
+
+1 → Inside Word
+```
+
+এটা quantity count করছে না।
+
+এটা current state remember করছে।
+
+Mental Difference:
+
+```text
+Counter
+→ How Many?
+```
+
+```text
+Flag / State
+→ What Situation Am I In?
+```
+
+---
+
+# 22. Counting Multiple Categories
+
+Input:
+
+```text
+Hello 123 World!
+```
+
+Suppose count করতে হবে:
+
+```text
+Letters
+
+Digits
+
+Spaces
+
+Special Characters
+```
+
+Pattern:
+
+```text
+Traverse
+↓
+Classify
+        │
+   ┌────┼────┬─────────┐
+   │    │    │         │
+ Letter Digit Space  Special
+   │    │    │         │
+   ▼    ▼    ▼         ▼
+  ++   ++   ++        ++
+```
+
+Code core:
+
+```c
+int letterCount = 0;
+int digitCount = 0;
+int spaceCount = 0;
+int specialCount = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    unsigned char ch = (unsigned char)str[i];
+
+    if (isalpha(ch))
+    {
+        letterCount++;
+    }
+    else if (isdigit(ch))
+    {
+        digitCount++;
+    }
+    else if (isspace(ch))
+    {
+        spaceCount++;
+    }
+    else
+    {
+        specialCount++;
+    }
+}
+```
+
+Important:
+
+`fgets()` input-এর শেষে newline রাখতে পারে।
+
+তাই:
+
+```text
+'\n'
+```
+
+`isspace()` অনুযায়ী whitespace হিসেবে count হতে পারে।
+
+Problem যদি শুধু `' '` space count করতে বলে, তাহলে:
+
+```c
+ch == ' '
+```
+
+use করবে।
+
+---
+
+# 23. Space vs Whitespace
+
+এগুলো same না।
+
+## Space Character
+
+```c
+' '
+```
+
+শুধু normal space।
+
+---
+
+## Whitespace
+
+`isspace()` সাধারণত recognize করে:
+
+```text
+space
+
+newline
+
+tab
+
+carriage return
+
+form feed
+
+vertical tab
+```
+
+তাই:
+
+```c
+if (str[i] == ' ')
+```
+
+এবং:
+
+```c
+if (isspace((unsigned char)str[i]))
+```
+
+একই meaning না।
+
+Problem statement দেখে choose করবে।
+
+---
+
+# 24. Counting Pattern Family
+
+String counting problem-এ basic structure একই থাকে।
+
+```c
+int count = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (condition)
+    {
+        count++;
+    }
+}
+```
+
+শুধু condition change হয়।
+
+### Vowel
+
+```c
+if (isVowel)
+```
+
+### Digit
+
+```c
+if (isdigit((unsigned char)str[i]))
+```
+
+### Uppercase
+
+```c
+if (isupper((unsigned char)str[i]))
+```
+
+### Lowercase
+
+```c
+if (islower((unsigned char)str[i]))
+```
+
+### Specific Character
+
+```c
+if (str[i] == target)
+```
+
+### Space
+
+```c
+if (str[i] == ' ')
+```
+
+Mental Lesson:
+
+```text
+Same Traversal
++
+Different Condition
+=
+Different Counting Problem
+```
+
+---
+
+# 25. Pattern Combination Map
+
+এই Chapter-এর problems আসলে আগের patterns-এর combination।
+
+## Count Vowels
+
+```text
+String Traversal
++
+Character Condition
++
+Counter
+```
+
+---
+
+## Count Digits
+
+```text
+String Traversal
++
+Character Classification
++
+Counter
+```
+
+---
+
+## Count Multiple Categories
+
+```text
+String Traversal
++
+Classification
++
+Multiple Counters
+```
+
+---
+
+## Word Count
+
+```text
+String Traversal
++
+Whitespace Classification
++
+State Flag
++
+Boundary Detection
++
+Counter
+```
+
+---
+
+## Case-Insensitive Target Count
+
+```text
+String Traversal
++
+Case Normalization
++
+Comparison
++
+Counter
+```
+
+---
+
+# 26. Common Bug — Counting `'\n'`
+
+Input:
+
+```c
+fgets(str, sizeof(str), stdin);
+```
+
+User enters:
+
+```text
+Hello
+```
+
+Memory may contain:
+
+```text
+H e l l o \n \0
+```
+
+যদি count করো:
+
+```c
+if (isspace((unsigned char)str[i]))
+{
+    whitespaceCount++;
+}
+```
+
+তাহলে newline-ও count হবে।
+
+এটা bug কিনা depends on problem।
+
+Possible solution:
+
+```c
+str[strcspn(str, "\n")] = '\0';
+```
+
+এর জন্য:
+
+```c
+#include <string.h>
+```
+
+তারপর counting শুরু করা যায়।
+
+---
+
+# 27. Common Bug — Consonant Logic
+
+Wrong:
+
+```c
+if (ch == 'a' ||
+    ch == 'e' ||
+    ch == 'i' ||
+    ch == 'o' ||
+    ch == 'u')
+{
+    vowelCount++;
+}
+else
+{
+    consonantCount++;
+}
+```
+
+Input:
+
+```text
+abc 123!
+```
+
+Problem:
+
+```text
+space
+1
+2
+3
+!
+```
+
+সব consonant count হতে পারে।
+
+Correct mental model:
+
+```text
+Is Alphabet?
+        │
+     ┌──┴──┐
+     │     │
+    No    Yes
+     │     │
+ Ignore    ▼
+         Vowel?
+```
+
+---
+
+# 28. Common Bug — Uppercase Vowel Miss করা
+
+Condition:
+
+```c
+if (ch == 'a' ||
+    ch == 'e' ||
+    ch == 'i' ||
+    ch == 'o' ||
+    ch == 'u')
+```
+
+Input:
+
+```text
+APPLE
+```
+
+এখানে uppercase vowel count হবে না।
+
+Solutions:
+
+```text
+Approach 1
+Check both uppercase and lowercase
+```
+
+অথবা:
+
+```text
+Approach 2
+Convert current character to lowercase
+then compare
+```
+
+Example:
+
+```c
+char lower = (char)tolower((unsigned char)ch);
+```
+
+তারপর:
+
+```c
+if (lower == 'a' ||
+    lower == 'e' ||
+    lower == 'i' ||
+    lower == 'o' ||
+    lower == 'u')
+```
+
+---
+
+# 29. Common Bug — Word Count = Spaces + 1
+
+Input:
+
+```text
+I   love C
+```
+
+Spaces:
+
+```text
+multiple
+```
+
+তাই:
+
+```text
+spaces + 1
+```
+
+wrong answer দিতে পারে।
+
+Better:
+
+```text
+Count Word Starts
+```
+
+Mental Model:
+
+```text
+Outside Word
+↓
+Enter Word
+↓
+Count++
+```
+
+---
+
+# 30. Edge Cases
+
+## Empty String
+
+```text
+
+```
+
+Expected counts:
+
+```text
+Vowels = 0
+
+Digits = 0
+
+Words = 0
+```
+
+---
+
+## All Spaces
+
+```text
+     
+```
+
+Word count:
+
+```text
+0
+```
+
+---
+
+## One Word
+
+```text
+Hello
+```
+
+Word count:
+
+```text
+1
+```
+
+---
+
+## Multiple Spaces
+
+```text
+I    love    C
+```
+
+Word count:
+
+```text
+3
+```
+
+---
+
+## Mixed Characters
+
+```text
+AbC123! @
+```
+
+Need careful classification।
+
+---
+
+## Only Digits
+
+```text
+12345
+```
+
+Possible:
+
+```text
+Digit Count = 5
+
+Letter Count = 0
+```
+
+---
+
+# 31. Recognition Signals
+
+Problem statement-এ দেখলে:
+
+```text
+count vowels
+
+count consonants
+
+count digits
+
+count uppercase letters
+
+count lowercase letters
+
+count spaces
+
+count words
+
+how many times character appears
+
+number of letters
+```
+
+Mental trigger:
+
+```text
+String
++
+How Many?
+        ↓
+Traversal
++
+Condition / Classification
++
+Counter
+```
+
+যদি:
+
+```text
+Count Several Categories
+```
+
+তাহলে:
+
+```text
+One Traversal
++
+Multiple Counters
+```
+
+যদি:
+
+```text
+Count Words
+```
+
+তাহলে:
+
+```text
+Boundary / Transition
++
+State
++
+Counter
+```
+
+---
+
+# 🧠 Chapter 5 Master Mental Model
+
+```text
+                         STRING
+                            │
+                            ▼
+                         Traverse
+                            │
+                            ▼
+                   Current Character
+                            │
+                            ▼
+                         Classify
+                            │
+          ┌─────────────────┼─────────────────┐
+          │                 │                 │
+          ▼                 ▼                 ▼
+        Letter            Digit          Whitespace
+          │
+     ┌────┴────┐
+     │         │
+     ▼         ▼
+   Vowel    Consonant
+     │         │
+     ▼         ▼
+ Counter++  Counter++
+```
+
+আর word counting-এর জন্য:
+
+```text
+Character Stream
+        ↓
+Whitespace?
+        │
+    ┌───┴───┐
+    │       │
+   Yes      No
+    │       │
+    ▼       ▼
+Outside   Already Inside?
+ Word         │
+           ┌──┴──┐
+           │     │
+          Yes    No
+           │     │
+           ▼     ▼
+        Continue New Word
+                    ↓
+               wordCount++
+```
+
+---
+
+# 🧪 Chapter 5 Practice
+
+## Task 1 — Count Vowels
+
+Input:
+
+```text
+Competitive Programming
+```
+
+Find:
+
+```text
+Vowel Count = ?
+```
+
+---
+
+## Task 2 — Count Digits
+
+Input:
+
+```text
+Room 204 Floor 5
+```
+
+Find:
+
+```text
+Digit Count = ?
+```
+
+---
+
+## Task 3 — Count Character Types
+
+Input:
+
+```text
+Hello123 World!
+```
+
+Find:
+
+```text
+Uppercase = ?
+
+Lowercase = ?
+
+Digits = ?
+
+Spaces = ?
+
+Special Characters = ?
+```
+
+---
+
+## Task 4 — Count Specific Character
+
+Input:
+
+```text
+banana
+```
+
+Target:
+
+```text
+a
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## Task 5 — Count Words
+
+Input:
+
+```text
+  I   love   competitive programming
+```
+
+Expected:
+
+```text
+4
+```
+
+Important:
+
+```text
+Do not use:
+
+spaces + 1
+```
+
+Use:
+
+```text
+Word Boundary
++
+State Flag
++
+Counter
+```
+
+---
+
+## Task 6 — Vowel and Consonant Count
+
+Input:
+
+```text
+Hello World 123!
+```
+
+Find:
+
+```text
+Vowels = ?
+
+Consonants = ?
+```
+
+Digits, spaces এবং special characters ignore করবে।
+
+---
+
+# 🧠 Pattern Recognition Drill
+
+## Problem 1
+
+Problem:
+
+> Count lowercase letters.
+
+Complete:
+
+```text
+String Traversal
+↓
+________________
+↓
+Counter
+```
+
+---
+
+## Problem 2
+
+Problem:
+
+> Count how many times `'x'` appears.
+
+Complete:
+
+```text
+Traversal
+↓
+Current Character == ______?
+↓
+count++
+```
+
+---
+
+## Problem 3
+
+Problem:
+
+> Count words even if multiple spaces exist.
+
+Need:
+
+```text
+Traversal
++
+Whitespace Classification
++
+________ State
++
+Boundary Detection
++
+Counter
+```
+
+---
+
+## Problem 4
+
+What is the difference?
+
+```c
+str[i] == ' '
+```
+
+vs
+
+```c
+isspace((unsigned char)str[i])
+```
+
+নিজের ভাষায় explain করবে।
+
+---
+
+## Problem 5
+
+Why is this dangerous?
+
+```c
+if (isVowel)
+{
+    vowelCount++;
+}
+else
+{
+    consonantCount++;
+}
+```
+
+Hint:
+
+```text
+What about digits, spaces and punctuation?
+```
+
+---
+
+# 📝 Chapter 5 Assignment
+
+## Part A — Explain
+
+নিজের ভাষায় লিখবে:
+
+```text
+1. String Counting Pattern কী?
+
+2. Traversal + Condition + Counter কীভাবে কাজ করে?
+
+3. Character Classification কী?
+
+4. Multiple Counters কখন use করব?
+
+5. Counter এবং State Flag-এর difference কী?
+
+6. Word Boundary কী?
+
+7. spaces + 1 দিয়ে word count সবসময় correct না কেন?
+
+8. isspace() এবং ch == ' ' এর difference কী?
+
+9. Vowel/Consonant counting-এর আগে alphabet check করা দরকার কেন?
+
+10. fgets() এর newline counting problem কী?
+```
+
+---
+
+## Part B — Mandatory Coding
+
+নিজে code করবে:
+
+```text
+1. Count Vowels
+
+2. Count Digits
+
+3. Count Uppercase and Lowercase Letters
+
+4. Count Letters, Digits, Spaces and Special Characters
+
+5. Count a Specific Character
+
+6. Count Vowels and Consonants
+
+7. Count Words with Multiple Spaces
+```
+
+---
+
+## Part C — Dry Run
+
+String:
+
+```text
+Abc 12 E!
+```
+
+Table complete করো:
+
+| Character | Type | Which Counter Changes? |
+| --------- | ---- | ---------------------- |
+| `A`       | ?    | ?                      |
+| `b`       | ?    | ?                      |
+| `c`       | ?    | ?                      |
+| ` `       | ?    | ?                      |
+| `1`       | ?    | ?                      |
+| `2`       | ?    | ?                      |
+| ` `       | ?    | ?                      |
+| `E`       | ?    | ?                      |
+| `!`       | ?    | ?                      |
+
+Final:
+
+```text
+Uppercase = ?
+
+Lowercase = ?
+
+Digits = ?
+
+Spaces = ?
+
+Special = ?
+```
+
+---
+
+## Part D — Word Count Dry Run
+
+String:
+
+```text
+  C   is fun
+```
+
+Initial:
+
+```text
+wordCount = 0
+
+insideWord = 0
+```
+
+প্রতিটি character-এর পরে লিখবে:
+
+```text
+Character:
+
+Whitespace?
+
+insideWord Before:
+
+Action:
+
+insideWord After:
+
+wordCount:
+```
+
+---
+
+## Part E — Debugging
+
+এই code দেখো:
+
+```c
+int vowel = 0;
+int consonant = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    char ch = str[i];
+
+    if (ch == 'a' ||
+        ch == 'e' ||
+        ch == 'i' ||
+        ch == 'o' ||
+        ch == 'u')
+    {
+        vowel++;
+    }
+    else
+    {
+        consonant++;
+    }
+}
+```
+
+Find:
+
+```text
+Bug 1:
+Uppercase vowels?
+
+Bug 2:
+Spaces?
+
+Bug 3:
+Digits?
+
+Bug 4:
+Punctuation?
+
+Correct Mental Flow:
+...
+```
+
+---
+
+# 📚 Glossary Update
+
+`CP_Dictionary.md`-এ add করবে:
+
+```text
+String Counting Pattern
+Character Classification
+Character Category
+Multiple Counters
+Word Boundary
+Transition
+Inside Word
+Outside Word
+Whitespace
+Case-Sensitive
+Case-Insensitive
+Normalization
+```
+
+Format:
+
+```text
+Term:
+
+Simple Meaning:
+
+Small Example:
+```
+
+---
+
+# 📚 Pattern Library Update
+
+`core_pattern.md`-এ add করবে:
+
+```md
+## String Counting Pattern
+
+### Recognition
+
+Use when a problem asks:
+
+- How many vowels?
+- How many digits?
+- How many uppercase letters?
+- How many spaces?
+- How many times does a character appear?
+
+### Mental Model
+
+```text
+Traverse String
+↓
+Check Current Character
+↓
+Condition Match?
+├── Yes → Counter++
+└── No  → Continue
+```
+
+### Core Template
+
+```c
+int count = 0;
+
+for (int i = 0; str[i] != '\0'; i++)
+{
+    if (condition)
+    {
+        count++;
+    }
+}
+```
+
+### Pattern Combination
+
+```text
+String Traversal
++
+Character Classification
++
+Counter
+```
+
+---
+
+## Word Boundary Counting Pattern
+
+### Mental Model
+
+```text
+Outside Word
+↓
+See Non-Whitespace
+↓
+New Word Starts
+↓
+wordCount++
+↓
+Inside Word
+```
+
+### State
+
+```text
+insideWord = 0
+→ Currently outside a word
+
+insideWord = 1
+→ Currently inside a word
+```
+
+### Pattern Combination
+
+```text
+String Traversal
++
+Whitespace Classification
++
+State Flag
++
+Boundary Detection
++
+Counter
+```
+```
+
+---
+
+# 🔥 Chapter 5 Key Lesson
+
+এই Chapter-এর main lesson:
+
+```text
+String Counting Problem
+        ↓
+Do Not Think About Whole String at Once
+        ↓
+Visit One Character
+        ↓
+Classify It
+        ↓
+Update the Correct Counter
+```
+
+Basic pattern:
+
+```text
+Traversal
++
+Condition
++
+Counter
+```
+
+More advanced version:
+
+```text
+Traversal
++
+Classification
++
+Multiple Counters
+```
+
+আর word counting:
+
+```text
+Traversal
++
+State
++
+Boundary Detection
++
+Counter
+```
+
+---
+
+# 🔗 Pattern Evolution
+
+আগে:
+
+```text
+Array Traversal
+↓
+Visit Every Element
+```
+
+তারপর:
+
+```text
+String Traversal
+↓
+Visit Every Character
+```
+
+এখন:
+
+```text
+String Traversal
++
+Character Classification
++
+Counter
+```
+
+এবং:
+
+```text
+String Traversal
++
+State Flag
++
+Boundary Detection
++
+Counter
+```
+
+এই Chapter-এর পরে তুমি শুধু character দেখছো না।
+
+তুমি শিখছো:
+
+```text
+Current Character
+↓
+What Category?
+↓
+What State Change?
+↓
+Which Counter Updates?
+```
+
+---
+
+# ✅ Chapter 5 Completion Checklist
+
+```text
+[ ] String Counting Pattern বুঝি
+
+[ ] Traversal + Condition + Counter combine করতে পারি
+
+[ ] Vowel count করতে পারি
+
+[ ] Digit count করতে পারি
+
+[ ] Uppercase count করতে পারি
+
+[ ] Lowercase count করতে পারি
+
+[ ] Space count করতে পারি
+
+[ ] Specific character count করতে পারি
+
+[ ] Case-sensitive এবং case-insensitive count-এর difference বুঝি
+
+[ ] Multiple counters এক traversal-এ ব্যবহার করতে পারি
+
+[ ] if এবং else if কখন use করতে হয় বুঝি
+
+[ ] Vowel এবং consonant count করতে পারি
+
+[ ] isalpha() check কেন দরকার বুঝি
+
+[ ] Counter এবং State Flag-এর difference বুঝি
+
+[ ] Word Boundary বুঝি
+
+[ ] Multiple spaces সহ word count করতে পারি
+
+[ ] Space এবং Whitespace-এর difference বুঝি
+
+[ ] fgets() newline issue সম্পর্কে সচেতন
+
+[ ] Practice complete করেছি
+
+[ ] Assignment complete করেছি
+
+[ ] Glossary update করেছি
+
+[ ] Pattern Library update করেছি
+```
+
+---
+
+# 🎯 Day 3 Progress
+
+```text
+Day 3
+│
+├── ✅ Chapter 1 — String Mental Model
+│
+├── ✅ Chapter 2 — String Input & Output
+│
+├── ✅ Chapter 3 — String Traversal Pattern
+│
+├── ✅ Chapter 4 — Character Classification
+│
+├── ✅ Chapter 5 — Counting Patterns on Strings
+│
+├── ⬜ Chapter 6 — Character Search & Frequency
+│
+├── ⬜ Chapter 7 — String Transformation
+│
+├── ⬜ Chapter 8 — Reverse & Two-Pointer Mental Model
+│
+├── ⬜ Chapter 9 — Palindrome Pattern
+│
+├── ⬜ Chapter 10 — Common Bugs, Edge Cases & String Problem Solving Session
+│
+└── ⬜ Chapter 11 — Pattern Library Update, Final Assignment,
+                   Mini Contest Review & Day 3 Reflection
+```
+
+# 🏁 Chapter 5 Final Position
+
+Chapter 5 শেষে তোমার string problem-solving progression:
+
+```text
+String
+↓
+Character Array
+↓
+Index
+↓
+Traversal
+↓
+Current Character
+↓
+Classification
+↓
+Counter Update
+```
+
+আর একটু advanced problem-এ:
+
+```text
+String Traversal
+↓
+Current Character
+↓
+Previous State
+↓
+Transition Detected?
+↓
+Update Counter
+↓
+Update State
+```
+
+পরবর্তী **Chapter 6 — Character Search & Frequency**-তে progression হবে:
+
+```text
+Counting One Category
+        ↓
+Searching for Characters
+        ↓
+First Occurrence
+        ↓
+Last Occurrence
+        ↓
+Character Frequency
+        ↓
+Frequency Table Mental Model
+```
+
+---
 
 # 📘 Day 3 — Chapter 6
 
