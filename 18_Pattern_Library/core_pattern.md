@@ -578,7 +578,7 @@ Reverse Pattern
 
 # 🎯 ১৮ তারিখের Contest-এর জন্য কোনগুলো সবচেয়ে গুরুত্বপূর্ণ?
 
-যদি আমি Priority দিই—
+যদি আমি Priority দিই-
 
 | Pattern            | Priority |
 | ------------------ | :------: |

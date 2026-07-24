@@ -16,7 +16,7 @@ puppeteer:
     left: "1.8cm"
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 4
+# 🚀 CP Bootcamp 2026 - Day 4
 
 # **Functions, Problem Decomposition, Recursion Basics & Prefix Sum Foundation**
 > **Language:** C
@@ -78,25 +78,25 @@ Mixed Problem Solving
 ```text
 Day 4
 │
-├── Chapter 1 — Function Mental Model
+├── Chapter 1 - Function Mental Model
 │
-├── Chapter 2 — Parameters, Arguments & Return Values
+├── Chapter 2 - Parameters, Arguments & Return Values
 │
-├── Chapter 3 — Problem Decomposition with Functions
+├── Chapter 3 - Problem Decomposition with Functions
 │
-├── Chapter 4 — Arrays & Strings with Functions
+├── Chapter 4 - Arrays & Strings with Functions
 │
-├── Chapter 5 — Recursion Mental Model
+├── Chapter 5 - Recursion Mental Model
 │
-├── Chapter 6 — Base Case, Recursive Case & Call Flow
+├── Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── Chapter 7 — Prefix Sum Pattern
+├── Chapter 7 - Prefix Sum Pattern
 │
-├── Chapter 8 — Range Query & Prefix Sum Problems
+├── Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── Chapter 9 — Pattern Combination Session
+├── Chapter 9 - Pattern Combination Session
 │
-└── Chapter 10 — Assignment, Mini Contest & Reflection
+└── Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 এটা **10 Chapter**, কিন্তু Day 3-এর মতো বিশাল 11টা heavy chapter না।
@@ -115,7 +115,7 @@ Day 4
 
 ---
 
-# Chapter 1 — Function Mental Model
+# Chapter 1 - Function Mental Model
 
 ## 1.1 Function আসলে কী?
 
@@ -266,9 +266,9 @@ int add(int a, int b)
 
 # 1.4 চার ধরনের Basic Function
 
-এগুলো University exam এবং C foundation—দুই জায়গাতেই useful।
+এগুলো University exam এবং C foundation-দুই জায়গাতেই useful।
 
-## Type 1 — No Parameter, No Return
+## Type 1 - No Parameter, No Return
 
 ```c
 void greet()
@@ -295,7 +295,7 @@ No Result Returned
 
 ---
 
-## Type 2 — Parameter, No Return
+## Type 2 - Parameter, No Return
 
 ```c
 void printSquare(int n)
@@ -322,7 +322,7 @@ Direct Action
 
 ---
 
-## Type 3 — No Parameter, Return Value
+## Type 3 - No Parameter, Return Value
 
 ```c
 int getNumber()
@@ -342,7 +342,7 @@ int x = getNumber();
 
 ---
 
-## Type 4 — Parameter + Return Value
+## Type 4 - Parameter + Return Value
 
 CP-তে সবচেয়ে useful:
 
@@ -460,7 +460,7 @@ Expected signature নিজে লেখো।
 
 ---
 
-# Chapter 2 — Parameters, Arguments & Return Values
+# Chapter 2 - Parameters, Arguments & Return Values
 
 এখানে Beginner-দের terminology confusion হয়।
 
@@ -693,7 +693,7 @@ Counter
 
 ---
 
-# Chapter 3 — Problem Decomposition with Functions
+# Chapter 3 - Problem Decomposition with Functions
 
 এটা আজকের সবচেয়ে important Function chapter।
 
@@ -717,7 +717,7 @@ Problem Decomposition
 
 ---
 
-## 3.1 Example — Prime Numbers in Array
+## 3.1 Example - Prime Numbers in Array
 
 Problem:
 
@@ -793,7 +793,7 @@ Problem দেখলে জিজ্ঞেস করবে:
 
 ---
 
-## 3.3 Example — Palindrome Strings Count
+## 3.3 Example - Palindrome Strings Count
 
 ধরো একাধিক String আছে।
 
@@ -854,7 +854,7 @@ Problem
 
 ---
 
-# Chapter 4 — Arrays & Strings with Functions
+# Chapter 4 - Arrays & Strings with Functions
 
 এখানে একটা গুরুত্বপূর্ণ C concept আছে।
 
@@ -1034,7 +1034,7 @@ Return Value:
 
 ---
 
-# Chapter 5 — Recursion Mental Model
+# Chapter 5 - Recursion Mental Model
 
 এখন আজকের নতুন এবং একটু abstract topic।
 
@@ -1186,7 +1186,7 @@ Rule:
 
 ---
 
-# Chapter 6 — Recursion Call Flow
+# Chapter 6 - Recursion Call Flow
 
 এখানে শুধু Code দেখলে হবে না।
 
@@ -1478,7 +1478,7 @@ n / 10
 
 ---
 
-# Chapter 7 — Prefix Sum Pattern
+# Chapter 7 - Prefix Sum Pattern
 
 এখন Day 4-এর সবচেয়ে contest-useful নতুন Pattern।
 
@@ -1716,7 +1716,7 @@ prefix[4] - prefix[1]
 
 ---
 
-# Chapter 8 — Range Query & Prefix Sum Problems
+# Chapter 8 - Range Query & Prefix Sum Problems
 
 ## 8.1 Direct Range Sum
 
@@ -1826,13 +1826,13 @@ Range Query
 
 ---
 
-# Chapter 9 — Pattern Combination Session
+# Chapter 9 - Pattern Combination Session
 
 এখন Day 2 + Day 3 + Day 4 combine করব।
 
 ---
 
-## Problem Type 1 — Count Prime Numbers in Array
+## Problem Type 1 - Count Prime Numbers in Array
 
 ```text
 Array
@@ -1856,7 +1856,7 @@ Counter
 
 ---
 
-## Problem Type 2 — Count Palindrome Strings
+## Problem Type 2 - Count Palindrome Strings
 
 ```text
 Multiple Strings
@@ -1882,7 +1882,7 @@ Counter
 
 ---
 
-## Problem Type 3 — Multiple Range Sum Queries
+## Problem Type 3 - Multiple Range Sum Queries
 
 ```text
 Array
@@ -1896,7 +1896,7 @@ Range Query
 
 ---
 
-## Problem Type 4 — Number of Even Elements in Multiple Ranges
+## Problem Type 4 - Number of Even Elements in Multiple Ranges
 
 ```text
 Array
@@ -1912,7 +1912,7 @@ Range Query
 
 ---
 
-## Problem Type 5 — Recursive Digit Sum
+## Problem Type 5 - Recursive Digit Sum
 
 Example:
 
@@ -2014,9 +2014,9 @@ Combine Result
 
 ---
 
-# Chapter 10 — Day 4 Assignment, Mini Contest & Reflection
+# Chapter 10 - Day 4 Assignment, Mini Contest & Reflection
 
-## 📝 Task 1 — Function Foundation
+## 📝 Task 1 - Function Foundation
 
 নিজে লিখবে:
 
@@ -2043,7 +2043,7 @@ Return Value:
 
 ---
 
-## 📝 Task 2 — Array Functions
+## 📝 Task 2 - Array Functions
 
 নিজে implement করবে:
 
@@ -2059,7 +2059,7 @@ Return Value:
 
 ---
 
-## 📝 Task 3 — String Functions
+## 📝 Task 3 - String Functions
 
 Day 3 revision হিসেবে:
 
@@ -2074,7 +2074,7 @@ Day 3 revision হিসেবে:
 
 ---
 
-## 📝 Task 4 — Recursion Dry Run
+## 📝 Task 4 - Recursion Dry Run
 
 Code run করার আগে হাতে Dry Run:
 
@@ -2116,7 +2116,7 @@ void fun(int n)
 
 ---
 
-## 📝 Task 5 — Basic Recursion
+## 📝 Task 5 - Basic Recursion
 
 নিজে লিখবে:
 
@@ -2146,7 +2146,7 @@ solid করো।
 
 ---
 
-## 📝 Task 6 — Prefix Sum Build
+## 📝 Task 6 - Prefix Sum Build
 
 Input:
 
@@ -2166,7 +2166,7 @@ Input:
 
 ---
 
-## 📝 Task 7 — Range Queries
+## 📝 Task 7 - Range Queries
 
 Input:
 
@@ -2203,17 +2203,17 @@ Expected:
 ## Problems
 
 ```text
-A — Function Based Maximum
+A - Function Based Maximum
 
-B — Count Prime Numbers in Array
+B - Count Prime Numbers in Array
 
-C — Palindrome Checker Function
+C - Palindrome Checker Function
 
-D — Recursive Digit Sum
+D - Recursive Digit Sum
 
-E — Multiple Range Sum Queries
+E - Multiple Range Sum Queries
 
-F — Count Even Numbers in Multiple Ranges
+F - Count Even Numbers in Multiple Ranges
 ```
 
 Target:
@@ -2559,12 +2559,12 @@ Pair Thinking
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 2 — Parameters, Arguments, Return Values & Function Design
+# Chapter 2 - Parameters, Arguments, Return Values & Function Design
 
 > **Day 4 Theme:** Functions → Problem Decomposition → Recursion Basics → Prefix Sum
-> **Chapter Goal:** Function-এ data কীভাবে যায়, result কীভাবে ফিরে আসে, এবং CP problem-এ function কীভাবে design করতে হয়—এগুলো পরিষ্কারভাবে শেখা।
+> **Chapter Goal:** Function-এ data কীভাবে যায়, result কীভাবে ফিরে আসে, এবং CP problem-এ function কীভাবে design করতে হয়-এগুলো পরিষ্কারভাবে শেখা।
 
 ---
 
@@ -2700,7 +2700,7 @@ n * n
 
 ---
 
-# 2. Parameter vs Argument — আরেকটি Example
+# 2. Parameter vs Argument - আরেকটি Example
 
 ```c
 int maximum(int x, int y)
@@ -2829,7 +2829,7 @@ int ans = 25;
 
 এটা খুব গুরুত্বপূর্ণ।
 
-## Version A — Print
+## Version A - Print
 
 ```c
 void add(int a, int b)
@@ -2852,7 +2852,7 @@ Result caller-এর কাছে ফেরত যাচ্ছে না।
 
 ---
 
-## Version B — Return
+## Version B - Return
 
 ```c
 int add(int a, int b)
@@ -3158,7 +3158,7 @@ Function design করার সময় প্রথমে প্রশ্ন:
 
 ---
 
-## Case 1 — একটি Calculated Value দরকার
+## Case 1 - একটি Calculated Value দরকার
 
 Problem:
 
@@ -3178,7 +3178,7 @@ Maximum Value
 
 ---
 
-## Case 2 — Yes/No Answer দরকার
+## Case 2 - Yes/No Answer দরকার
 
 Problem:
 
@@ -3198,7 +3198,7 @@ Return:
 
 ---
 
-## Case 3 — কোনো Position দরকার
+## Case 3 - কোনো Position দরকার
 
 Problem:
 
@@ -3224,7 +3224,7 @@ Not Found
 
 ---
 
-## Case 4 — শুধু Action দরকার
+## Case 4 - শুধু Action দরকার
 
 Example:
 
@@ -3270,31 +3270,31 @@ void
 
 ---
 
-## Example — Count Vowels
+## Example - Count Vowels
 
 Problem:
 
 > একটি String-এ কয়টি vowel আছে?
 
-### Step 1 — Goal
+### Step 1 - Goal
 
 ```text
 Count Vowels
 ```
 
-### Step 2 — Input
+### Step 2 - Input
 
 ```text
 String
 ```
 
-### Step 3 — Result
+### Step 3 - Result
 
 ```text
 Count
 ```
 
-### Step 4 — Return Type
+### Step 4 - Return Type
 
 ```text
 int
@@ -3395,7 +3395,7 @@ searchTarget()
 
 ---
 
-# 12. Common Mistake — Return Type Mismatch
+# 12. Common Mistake - Return Type Mismatch
 
 Wrong:
 
@@ -3427,7 +3427,7 @@ int square(int n)
 
 ---
 
-# 13. Common Mistake — Missing Return
+# 13. Common Mistake - Missing Return
 
 Wrong:
 
@@ -3477,7 +3477,7 @@ Must Produce Correct Return Value
 
 ---
 
-# 14. Common Mistake — Print করে Return আশা করা
+# 14. Common Mistake - Print করে Return আশা করা
 
 ধরো:
 
@@ -3519,7 +3519,7 @@ int square(int n)
 
 ---
 
-# 15. Common Mistake — Wrong Argument Order
+# 15. Common Mistake - Wrong Argument Order
 
 Function:
 
@@ -3563,7 +3563,7 @@ Function Call Value Order
 
 ---
 
-# 16. Mini Problem — Maximum of Three Numbers
+# 16. Mini Problem - Maximum of Three Numbers
 
 আমরা একটি helper function ব্যবহার করতে পারি:
 
@@ -3688,7 +3688,7 @@ ans = 25
 
 ---
 
-## Task 1 — `isPositive()`
+## Task 1 - `isPositive()`
 
 Requirement:
 
@@ -3709,7 +3709,7 @@ int isPositive(int n)
 
 ---
 
-## Task 2 — `minimum()`
+## Task 2 - `minimum()`
 
 Requirement:
 
@@ -3729,7 +3729,7 @@ int minimum(int a, int b)
 
 ---
 
-## Task 3 — `isVowel()`
+## Task 3 - `isVowel()`
 
 Requirement:
 
@@ -3754,7 +3754,7 @@ Bonus হিসেবে uppercase support add করতে পারো।
 
 ---
 
-## Task 4 — `absoluteValue()`
+## Task 4 - `absoluteValue()`
 
 Examples:
 
@@ -3776,7 +3776,7 @@ int absoluteValue(int n)
 
 ---
 
-## Task 5 — `lastDigit()`
+## Task 5 - `lastDigit()`
 
 Example:
 
@@ -3900,7 +3900,7 @@ State:
 
 এই Chapter-এর assignment intentionally ছোট রাখা হলো, কারণ Day 4-এর পরের Chapterগুলোতেও coding থাকবে।
 
-## Assignment A — Implement
+## Assignment A - Implement
 
 নিজে লিখবে:
 
@@ -3915,7 +3915,7 @@ State:
 
 ---
 
-## Assignment B — Explain in Your Own Words
+## Assignment B - Explain in Your Own Words
 
 নিজের ভাষায় Answer করবে:
 
@@ -3943,7 +3943,7 @@ State:
 
 ---
 
-## Assignment C — Predict Before Running
+## Assignment C - Predict Before Running
 
 Code:
 
@@ -4113,28 +4113,28 @@ Main Logic Makes Decision
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments, Return Values & Function Design
+├── ✅ Chapter 2 - Parameters, Arguments, Return Values & Function Design
 │
-├── ⬜ Chapter 3 — Problem Decomposition with Functions
+├── ⬜ Chapter 3 - Problem Decomposition with Functions
 │
-├── ⬜ Chapter 4 — Arrays & Strings with Functions
+├── ⬜ Chapter 4 - Arrays & Strings with Functions
 │
-├── ⬜ Chapter 5 — Recursion Mental Model
+├── ⬜ Chapter 5 - Recursion Mental Model
 │
-├── ⬜ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ⬜ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ⬜ Chapter 7 — Prefix Sum Pattern
+├── ⬜ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
-**Chapter 2-এর মূল অর্জন:** এখন Function দেখলে শুধু syntax দেখবে না। চিন্তা করবে—
+**Chapter 2-এর মূল অর্জন:** এখন Function দেখলে শুধু syntax দেখবে না। চিন্তা করবে-
 
 ```text
 কী যাচ্ছে?
@@ -4154,13 +4154,13 @@ Return Value
 Specific Responsibility
 ```
 
-এই foundation-টাই **Chapter 3 — Problem Decomposition with Functions**-এ ব্যবহার হবে।
+এই foundation-টাই **Chapter 3 - Problem Decomposition with Functions**-এ ব্যবহার হবে।
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 3 — Problem Decomposition with Functions
+# Chapter 3 - Problem Decomposition with Functions
 
 > **Chapter Goal:** বড় Problem দেখে ভয় না পেয়ে সেটাকে ছোট ছোট কাজ বা **Subproblem**-এ ভাগ করতে শেখা।
 
@@ -4381,7 +4381,7 @@ Main Solution
 
 ---
 
-# 4. Example 1 — Count Even Numbers
+# 4. Example 1 - Count Even Numbers
 
 Problem:
 
@@ -4508,7 +4508,7 @@ isPrime()
 
 ---
 
-# 6. Example 2 — Count Prime Numbers in Array
+# 6. Example 2 - Count Prime Numbers in Array
 
 Problem:
 
@@ -4516,7 +4516,7 @@ Problem:
 
 ---
 
-## Step 1 — Core Goal
+## Step 1 - Core Goal
 
 ```text
 Count Prime Numbers
@@ -4524,7 +4524,7 @@ Count Prime Numbers
 
 ---
 
-## Step 2 — Required Operations
+## Step 2 - Required Operations
 
 ```text
 Traverse Array
@@ -4538,7 +4538,7 @@ Count
 
 ---
 
-## Step 3 — Identify Helper Logic
+## Step 3 - Identify Helper Logic
 
 Prime check একটি independent কাজ।
 
@@ -4550,7 +4550,7 @@ isPrime(n)
 
 ---
 
-## Step 4 — Pattern Chain
+## Step 4 - Pattern Chain
 
 ```text
 Traversal
@@ -4568,7 +4568,7 @@ isPrime()
 
 ---
 
-## Step 5 — Code Structure
+## Step 5 - Code Structure
 
 ```c
 #include <stdio.h>
@@ -4801,7 +4801,7 @@ Condition True
 
 ---
 
-# 10. Example 3 — Maximum Prime Number
+# 10. Example 3 - Maximum Prime Number
 
 Problem:
 
@@ -4940,7 +4940,7 @@ Accumulator
 
 ---
 
-# 12. Example 4 — String Problem Decomposition
+# 12. Example 4 - String Problem Decomposition
 
 Problem:
 
@@ -5101,7 +5101,7 @@ Divisor checking + Early exit
 
 ---
 
-# 15. Example 5 — First Vowel Position
+# 15. Example 5 - First Vowel Position
 
 Problem:
 
@@ -5158,7 +5158,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# 16. Example 6 — Count Palindrome Strings
+# 16. Example 6 - Count Palindrome Strings
 
 ধরো তোমাকে কয়েকটি word দেওয়া হলো।
 
@@ -5278,7 +5278,7 @@ Function makes simple logic harder to follow?
 
 ---
 
-# 18. Common Mistake — Code First, Think Later
+# 18. Common Mistake - Code First, Think Later
 
 Wrong workflow:
 
@@ -5328,7 +5328,7 @@ Array → Traverse → Prime Check → Count
 
 ---
 
-# 19. Common Mistake — Function আছে, Responsibility পরিষ্কার না
+# 19. Common Mistake - Function আছে, Responsibility পরিষ্কার না
 
 Bad idea:
 
@@ -5486,7 +5486,7 @@ Final Decision
 
 ---
 
-## Task 1 — Count Prime Numbers
+## Task 1 - Count Prime Numbers
 
 Input:
 
@@ -5513,7 +5513,7 @@ Counter
 
 ---
 
-## Task 2 — Sum of Even Numbers
+## Task 2 - Sum of Even Numbers
 
 Input:
 
@@ -5542,7 +5542,7 @@ Accumulator
 
 ---
 
-## Task 3 — First Vowel Position
+## Task 3 - First Vowel Position
 
 Input:
 
@@ -5575,7 +5575,7 @@ First Occurrence
 
 ---
 
-## Task 4 — Count Palindrome Numbers
+## Task 4 - Count Palindrome Numbers
 
 Input:
 
@@ -5616,7 +5616,7 @@ Counter
 
 Assignment ছোট কিন্তু important।
 
-## Assignment A — Decompose Before Coding
+## Assignment A - Decompose Before Coding
 
 নিচের তিনটি Problem-এর জন্য শুধু Analysis লিখবে:
 
@@ -5677,7 +5677,7 @@ Format:
 
 ---
 
-## Assignment B — Implement Two Problems
+## Assignment B - Implement Two Problems
 
 শুধু এই দুইটি mandatory:
 
@@ -5847,25 +5847,25 @@ Counter
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments, Return Values & Function Design
+├── ✅ Chapter 2 - Parameters, Arguments, Return Values & Function Design
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ⬜ Chapter 4 — Arrays & Strings with Functions
+├── ⬜ Chapter 4 - Arrays & Strings with Functions
 │
-├── ⬜ Chapter 5 — Recursion Mental Model
+├── ⬜ Chapter 5 - Recursion Mental Model
 │
-├── ⬜ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ⬜ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ⬜ Chapter 7 — Prefix Sum Pattern
+├── ⬜ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 **Chapter 3-এর পর তোমার নতুন চিন্তার নিয়ম:**
@@ -5882,13 +5882,13 @@ Don't Attack the Whole Problem
           Final Solution
 ```
 
-পরের **Day 4 — Chapter 4**-এ এই decomposition skill ব্যবহার করে **Array ও String-এর সঙ্গে Function কীভাবে কাজ করে**, array pass করা, size parameter, string function design এবং Day 2–3-এর pattern reuse শেখা হবে।
+পরের **Day 4 - Chapter 4**-এ এই decomposition skill ব্যবহার করে **Array ও String-এর সঙ্গে Function কীভাবে কাজ করে**, array pass করা, size parameter, string function design এবং Day 2–3-এর pattern reuse শেখা হবে।
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 4 — Arrays & Strings with Functions
+# Chapter 4 - Arrays & Strings with Functions
 
 > **Chapter Goal:** Day 2-এর Array এবং Day 3-এর String patterns-কে Function-এর সঙ্গে ব্যবহার করা।
 > **Estimated Time:** 45–60 minutes
@@ -7209,7 +7209,7 @@ Pointer Chapter-এ কারণ আরও deeply বুঝবে।
 
 # 20. Common Mistakes
 
-## Mistake 1 — Size Pass না করা
+## Mistake 1 - Size Pass না করা
 
 Wrong mental design:
 
@@ -7233,7 +7233,7 @@ int findMax(int arr[], int n)
 
 ---
 
-## Mistake 2 — Maximum `0` দিয়ে Initialize করা
+## Mistake 2 - Maximum `0` দিয়ে Initialize করা
 
 Wrong:
 
@@ -7251,7 +7251,7 @@ int maxValue = arr[0];
 
 ---
 
-## Mistake 3 — Search-এ Not Found Handle না করা
+## Mistake 3 - Search-এ Not Found Handle না করা
 
 Wrong:
 
@@ -7282,7 +7282,7 @@ return -1;
 
 ---
 
-## Mistake 4 — String Traversal-এ `'\0'` ভুলে যাওয়া
+## Mistake 4 - String Traversal-এ `'\0'` ভুলে যাওয়া
 
 Correct:
 
@@ -7292,7 +7292,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-## Mistake 5 — Function-এর Goal unclear রাখা
+## Mistake 5 - Function-এর Goal unclear রাখা
 
 এই ধরনের function avoid করো:
 
@@ -7322,7 +7322,7 @@ int searchTarget(int arr[], int n, int target);
 
 এই Chapter-এর practice intentionally focused রাখা হয়েছে।
 
-## Task 1 — `findMin()`
+## Task 1 - `findMin()`
 
 Signature:
 
@@ -7342,7 +7342,7 @@ Update
 
 ---
 
-## Task 2 — `countPositive()`
+## Task 2 - `countPositive()`
 
 Signature:
 
@@ -7362,7 +7362,7 @@ Counter
 
 ---
 
-## Task 3 — `searchTarget()`
+## Task 3 - `searchTarget()`
 
 Signature:
 
@@ -7382,7 +7382,7 @@ Not Found
 
 ---
 
-## Task 4 — `countDigits()`
+## Task 4 - `countDigits()`
 
 Signature:
 
@@ -7402,7 +7402,7 @@ Output:
 
 ---
 
-## Task 5 — `isPalindrome()`
+## Task 5 - `isPalindrome()`
 
 Signature:
 
@@ -7638,7 +7638,7 @@ Still Look for Patterns
 
 [ ] Array এবং String-এর মধ্যে Pattern reuse চিনতে পারি
 
-[ ] Array modify করলে original array change হতে পারে—এটা জানি
+[ ] Array modify করলে original array change হতে পারে-এটা জানি
 
 [ ] Mandatory Assignment শেষ করেছি
 ```
@@ -7650,25 +7650,25 @@ Still Look for Patterns
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ⬜ Chapter 5 — Recursion Mental Model
+├── ⬜ Chapter 5 - Recursion Mental Model
 │
-├── ⬜ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ⬜ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ⬜ Chapter 7 — Prefix Sum Pattern
+├── ⬜ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 ## Chapter 4-এর মূল শিক্ষা
@@ -7725,11 +7725,11 @@ Decision
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 5 — Recursion Mental Model
+# Chapter 5 - Recursion Mental Model
 
-> **Chapter Goal:** Recursion মুখস্থ করা নয়—একটি recursive function কীভাবে problem ছোট করে, কখন থামে এবং কেন নিজেকেই call করে সেটা বোঝা।
+> **Chapter Goal:** Recursion মুখস্থ করা নয়-একটি recursive function কীভাবে problem ছোট করে, কখন থামে এবং কেন নিজেকেই call করে সেটা বোঝা।
 > **Estimated Time:** 45–60 minutes
 > **Focus:** Recursion Idea → Smaller Problem → Base Case → Recursive Case → Basic Tracing
 
@@ -8480,7 +8480,7 @@ Smaller Input
 
 ---
 
-# 11. Example — Sum from 1 to n
+# 11. Example - Sum from 1 to n
 
 Problem:
 
@@ -8633,7 +8633,7 @@ Results Come Back Up
 
 ---
 
-# 13. Example — Factorial
+# 13. Example - Factorial
 
 Factorial:
 
@@ -8711,7 +8711,7 @@ Final:
 
 ---
 
-# 14. Example — Count Digits Recursively
+# 14. Example - Count Digits Recursively
 
 Number:
 
@@ -8908,7 +8908,7 @@ n + sumN(n - 1)
 
 ---
 
-# 17. Common Mistake — Base Case ভুল
+# 17. Common Mistake - Base Case ভুল
 
 Wrong:
 
@@ -8972,7 +8972,7 @@ if (n == 1)
 
 ---
 
-# 18. Common Mistake — Recursive Result ব্যবহার না করা
+# 18. Common Mistake - Recursive Result ব্যবহার না করা
 
 Wrong:
 
@@ -9016,7 +9016,7 @@ Combine with Current Part
 
 ---
 
-# 19. Common Mistake — Recursion Trace না করা
+# 19. Common Mistake - Recursion Trace না করা
 
 Beginner হিসেবে শুধু code দেখে:
 
@@ -9062,7 +9062,7 @@ Result:
 
 ---
 
-# 20. Loop vs Recursion — Quick Comparison
+# 20. Loop vs Recursion - Quick Comparison
 
 | Topic               | Loop            | Recursion          |
 | ------------------- | --------------- | ------------------ |
@@ -9093,7 +9093,7 @@ Consider Recursion
 
 এই Chapter-এ practice ছোট রাখা হচ্ছে। Chapter 6-এ call flow আরও detail-এ আসবে।
 
-## Task 1 — Print n to 1
+## Task 1 - Print n to 1
 
 Example:
 
@@ -9123,7 +9123,7 @@ Recursive Call
 
 ---
 
-## Task 2 — Sum 1 to n
+## Task 2 - Sum 1 to n
 
 Example:
 
@@ -9149,7 +9149,7 @@ Relation:
 
 ---
 
-## Task 3 — Factorial
+## Task 3 - Factorial
 
 Example:
 
@@ -9169,7 +9169,7 @@ long long factorial(int n)
 
 ---
 
-## Task 4 — Count Digits
+## Task 4 - Count Digits
 
 Example:
 
@@ -9261,7 +9261,7 @@ Final Answer:
 
 # 📝 Chapter 5 Assignment
 
-## Assignment A — নিজের ভাষায় Explain
+## Assignment A - নিজের ভাষায় Explain
 
 ```text
 1. Recursion কী?
@@ -9281,7 +9281,7 @@ Final Answer:
 
 ---
 
-## Assignment B — Mandatory Code
+## Assignment B - Mandatory Code
 
 শুধু এই ৪টি:
 
@@ -9492,25 +9492,25 @@ sumN(5)
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ✅ Chapter 5 — Recursion Mental Model
+├── ✅ Chapter 5 - Recursion Mental Model
 │
-├── ⬜ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ⬜ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ⬜ Chapter 7 — Prefix Sum Pattern
+├── ⬜ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 Chapter 5-এর পরে তোমার Recursion সম্পর্কে অন্তত এই চিন্তাটা পরিষ্কার থাকা উচিত:
@@ -9530,9 +9530,9 @@ Chapter 6-এ এর পরের সবচেয়ে গুরুত্বপূ
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 6 — Base Case, Recursive Case & Call Flow
+# Chapter 6 - Base Case, Recursive Case & Call Flow
 
 > **Chapter Goal:** Recursive function আসলে কোন order-এ execute হয়, Call Phase ও Return Phase কী, এবং recursive code হাতে ধরে trace করতে শেখা।
 > **Estimated Time:** 50–70 minutes
@@ -9886,7 +9886,7 @@ Returns:
 
 ---
 
-## Version A — Print Before Recursive Call
+## Version A - Print Before Recursive Call
 
 ```c
 void fun(int n)
@@ -9940,7 +9940,7 @@ Call fun(0)
 
 ---
 
-## Version B — Print After Recursive Call
+## Version B - Print After Recursive Call
 
 এখন শুধু দুইটি line-এর order change করি:
 
@@ -10543,7 +10543,7 @@ sumN(3) → 6
 
 ---
 
-# 13. Function Call Frame — Beginner Mental Model
+# 13. Function Call Frame - Beginner Mental Model
 
 প্রতিটি Function Call-কে আলাদা একটি ছোট box হিসেবে ভাবো।
 
@@ -11169,7 +11169,7 @@ A3 A2 A1 B1 B2 B3
 
 এখন থেকে recursive code দেখলে এই ৫ ধাপ follow করবে।
 
-## Step 1 — Function Meaning লেখো
+## Step 1 - Function Meaning লেখো
 
 Example:
 
@@ -11181,7 +11181,7 @@ sumN(n)
 
 ---
 
-## Step 2 — Base Case mark করো
+## Step 2 - Base Case mark করো
 
 ```text
 n == 0
@@ -11191,7 +11191,7 @@ return 0
 
 ---
 
-## Step 3 — Call Sequence লেখো
+## Step 3 - Call Sequence লেখো
 
 ```text
 sumN(3)
@@ -11205,7 +11205,7 @@ sumN(0)
 
 ---
 
-## Step 4 — Base Answer লেখো
+## Step 4 - Base Answer লেখো
 
 ```text
 sumN(0)
@@ -11215,7 +11215,7 @@ sumN(0)
 
 ---
 
-## Step 5 — Return Flow লেখো
+## Step 5 - Return Flow লেখো
 
 ```text
 sumN(1)
@@ -11241,7 +11241,7 @@ sumN(3)
 
 ---
 
-# 22. Common Mistake — শুধু Call Flow দেখা
+# 22. Common Mistake - শুধু Call Flow দেখা
 
 অনেকে Recursion দেখলে শুধু:
 
@@ -11285,7 +11285,7 @@ Answer Flow:
 
 ---
 
-# 23. Common Mistake — Call-এর পরে Code ভুলে যাওয়া
+# 23. Common Mistake - Call-এর পরে Code ভুলে যাওয়া
 
 Code:
 
@@ -11347,7 +11347,7 @@ Function Call শেষ
 
 ---
 
-# 24. Common Mistake — Base Case Hit মানেই পুরো Program শেষ ভাবা
+# 24. Common Mistake - Base Case Hit মানেই পুরো Program শেষ ভাবা
 
 Base Case:
 
@@ -11404,7 +11404,7 @@ Previous Calls Still Return Normally
 
 Basic recursive functions-এ কয়েকটি common structure চিনে রাখো।
 
-## Pattern A — Work Before Call
+## Pattern A - Work Before Call
 
 ```c
 work(n);
@@ -11426,7 +11426,7 @@ Example:
 
 ---
 
-## Pattern B — Work After Call
+## Pattern B - Work After Call
 
 ```c
 fun(n - 1);
@@ -11448,7 +11448,7 @@ Example:
 
 ---
 
-## Pattern C — Combine Return Value
+## Pattern C - Combine Return Value
 
 ```c
 return current + fun(smaller);
@@ -11475,7 +11475,7 @@ array sum
 
 ---
 
-## Pattern D — Work on Both Sides
+## Pattern D - Work on Both Sides
 
 ```c
 workBefore(n);
@@ -11505,7 +11505,7 @@ Ascending Work
 
 ---
 
-## Task 1 — Predict Output
+## Task 1 - Predict Output
 
 ```c
 void fun(int n)
@@ -11539,7 +11539,7 @@ Return Order:
 
 ---
 
-## Task 2 — Predict Output
+## Task 2 - Predict Output
 
 ```c
 void fun(int n)
@@ -11575,7 +11575,7 @@ Output:
 
 ---
 
-## Task 3 — Both Sides
+## Task 3 - Both Sides
 
 ```c
 void fun(int n)
@@ -11603,7 +11603,7 @@ Code run করার আগে output predict করবে।
 
 ---
 
-## Task 4 — Return Value Trace
+## Task 4 - Return Value Trace
 
 ```c
 int mystery(int n)
@@ -11641,7 +11641,7 @@ Final Answer:
 
 # 💻 Coding Practice
 
-## Problem 1 — Print 1 to n
+## Problem 1 - Print 1 to n
 
 Function:
 
@@ -11665,7 +11665,7 @@ Condition:
 
 ---
 
-## Problem 2 — Print n to 1
+## Problem 2 - Print n to 1
 
 Function:
 
@@ -11685,7 +11685,7 @@ Output:
 
 ---
 
-## Problem 3 — Recursive Array Sum
+## Problem 3 - Recursive Array Sum
 
 Function:
 
@@ -11711,7 +11711,7 @@ arraySum(arr, n, 0);
 
 ---
 
-## Problem 4 — Recursive String Length
+## Problem 4 - Recursive String Length
 
 Function:
 
@@ -11735,7 +11735,7 @@ Output:
 
 # 📝 Chapter 6 Assignment
 
-## Assignment A — Trace by Hand
+## Assignment A - Trace by Hand
 
 নিচের চারটি trace করবে:
 
@@ -11786,7 +11786,7 @@ Format:
 
 ---
 
-## Assignment B — Explain in Your Own Words
+## Assignment B - Explain in Your Own Words
 
 নিজের ভাষায় উত্তর লিখবে:
 
@@ -11810,7 +11810,7 @@ Format:
 
 ---
 
-## Assignment C — Mandatory Implementation
+## Assignment C - Mandatory Implementation
 
 নিজে লিখবে:
 
@@ -12034,25 +12034,25 @@ Finishing Pending Work
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ✅ Chapter 5 — Recursion Mental Model
+├── ✅ Chapter 5 - Recursion Mental Model
 │
-├── ✅ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ✅ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ⬜ Chapter 7 — Prefix Sum Pattern
+├── ⬜ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 ## Chapter 6-এর Final Rule
@@ -12071,13 +12071,13 @@ After Recursive Call
 Coming Back-এর সময় কাজ
 ```
 
-এখন Recursion-এর foundation অংশ শেষ। **Chapter 7 — Prefix Sum Pattern** থেকে Day 4-এর দ্বিতীয় বড় topic শুরু হবে: repeated range sum query কেন normal loop দিয়ে slow হয়, prefix array কীভাবে build করতে হয়, এবং কীভাবে (O(n)) preprocessing-এর পরে প্রতিটি range sum (O(1))-এ answer করা যায়।
+এখন Recursion-এর foundation অংশ শেষ। **Chapter 7 - Prefix Sum Pattern** থেকে Day 4-এর দ্বিতীয় বড় topic শুরু হবে: repeated range sum query কেন normal loop দিয়ে slow হয়, prefix array কীভাবে build করতে হয়, এবং কীভাবে (O(n)) preprocessing-এর পরে প্রতিটি range sum (O(1))-এ answer করা যায়।
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 7 — Prefix Sum Pattern
+# Chapter 7 - Prefix Sum Pattern
 
 > **Chapter Goal:** Repeated Range Sum Query-এর সমস্যা চিনতে শেখা এবং Prefix Sum ব্যবহার করে efficient solution তৈরি করা।
 > **Estimated Time:** 50–70 minutes
@@ -12812,7 +12812,7 @@ prefix[L - 1]
 
 ---
 
-# 11. Special Case — `L == 0`
+# 11. Special Case - `L == 0`
 
 Formula:
 
@@ -13309,7 +13309,7 @@ Consider long long
 
 ---
 
-# 18. Cleaner Prefix Sum Design — 1-Based Prefix Array
+# 18. Cleaner Prefix Sum Design - 1-Based Prefix Array
 
 এখন একটি alternative design দেখব।
 
@@ -13512,7 +13512,7 @@ Clean।
 
 # 21. দুইটি Prefix Style Compare
 
-## Style A — Same Size
+## Style A - Same Size
 
 ```text
 prefix[i]
@@ -13546,7 +13546,7 @@ else
 
 ---
 
-## Style B — Size `n + 1`
+## Style B - Size `n + 1`
 
 ```text
 prefix[i]
@@ -13695,7 +13695,7 @@ Store New Prefix
 
 ---
 
-# 24. Pattern Recognition — কখন Prefix Sum ভাবব?
+# 24. Pattern Recognition - কখন Prefix Sum ভাবব?
 
 Problem Statement-এ এই ধরনের language দেখলে alert হবে:
 
@@ -13784,11 +13784,11 @@ Repeated Static Range Queries
 
 > Query-এর মাঝে Array values change হচ্ছে না।
 
-Array update হলে situation বদলে যেতে পারে—সেটা future topic।
+Array update হলে situation বদলে যেতে পারে-সেটা future topic।
 
 ---
 
-# 26. Common Mistake — Formula মুখস্থ, Meaning না বোঝা
+# 26. Common Mistake - Formula মুখস্থ, Meaning না বোঝা
 
 শুধু এটা মুখস্থ করবে না:
 
@@ -13820,7 +13820,7 @@ Unwanted Left Part
 
 ---
 
-# 27. Common Mistake — `L` বাদ দেওয়া
+# 27. Common Mistake - `L` বাদ দেওয়া
 
 ধরো:
 
@@ -13859,7 +13859,7 @@ L-এর আগ পর্যন্ত
 
 ---
 
-# 28. Common Mistake — Indexing Styles Mix করা
+# 28. Common Mistake - Indexing Styles Mix করা
 
 এটা খুব common bug।
 
@@ -13903,7 +13903,7 @@ Then Derive Formula
 
 ---
 
-# 29. Common Mistake — Overflow
+# 29. Common Mistake - Overflow
 
 Wrong for large constraints:
 
@@ -13934,7 +13934,7 @@ Total:
 
 ---
 
-# 30. Common Mistake — Prefix Array Print করে Verify না করা
+# 30. Common Mistake - Prefix Array Print করে Verify না করা
 
 Learning phase-এ prefix build করার পর temporaryভাবে print করতে পারো:
 
@@ -13966,7 +13966,7 @@ Final submission-এর আগে debug print remove করবে।
 
 # 🧪 Guided Practice
 
-## Practice 1 — Build Prefix Manually
+## Practice 1 - Build Prefix Manually
 
 Array:
 
@@ -14006,7 +14006,7 @@ Expected process:
 
 ---
 
-## Practice 2 — Answer Query Manually
+## Practice 2 - Answer Query Manually
 
 Array:
 
@@ -14043,7 +14043,7 @@ Direct check:
 
 ---
 
-## Practice 3 — Multiple Queries
+## Practice 3 - Multiple Queries
 
 Array:
 
@@ -14074,7 +14074,7 @@ n + 1 Prefix Array
 
 # 💻 Coding Practice
 
-## Problem 1 — Build and Print Prefix
+## Problem 1 - Build and Print Prefix
 
 Input:
 
@@ -14097,7 +14097,7 @@ n + 1 style
 
 ---
 
-## Problem 2 — One Range Query
+## Problem 2 - One Range Query
 
 Input:
 
@@ -14121,7 +14121,7 @@ prefix[R + 1] - prefix[L]
 
 ---
 
-## Problem 3 — Multiple Range Queries
+## Problem 3 - Multiple Range Queries
 
 Input:
 
@@ -14143,7 +14143,7 @@ Output:
 
 ---
 
-## Problem 4 — Compare Normal vs Prefix
+## Problem 4 - Compare Normal vs Prefix
 
 একই Array এবং Query-এর জন্য দুইটি function বানাও:
 
@@ -14246,7 +14246,7 @@ Reason:
 
 # 📝 Chapter 7 Assignment
 
-## Assignment A — Concept Explanation
+## Assignment A - Concept Explanation
 
 নিজের ভাষায় লিখবে:
 
@@ -14274,7 +14274,7 @@ Reason:
 
 ---
 
-## Assignment B — Manual Work
+## Assignment B - Manual Work
 
 Array:
 
@@ -14308,7 +14308,7 @@ Answer
 
 ---
 
-## Assignment C — Mandatory Implementation
+## Assignment C - Mandatory Implementation
 
 নিজে code করবে:
 
@@ -14570,25 +14570,25 @@ Prefix Sum-এর থেকেও বড় lesson।
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ✅ Chapter 5 — Recursion Mental Model
+├── ✅ Chapter 5 - Recursion Mental Model
 │
-├── ✅ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ✅ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ✅ Chapter 7 — Prefix Sum Pattern
+├── ✅ Chapter 7 - Prefix Sum Pattern
 │
-├── ⬜ Chapter 8 — Range Query & Prefix Sum Problems
+├── ⬜ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 ## Chapter 7-এর Final Rule
@@ -14633,9 +14633,9 @@ First i Elements-এর Sum
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 8 — Range Query & Prefix Sum Problem Solving
+# Chapter 8 - Range Query & Prefix Sum Problem Solving
 
 > **Chapter Goal:** Prefix Sum formula জানার পর সেটাকে actual contest problem-এ সঠিকভাবে apply করা, input indexing বুঝে conversion করা, off-by-one error এড়ানো এবং Range Query problem step-by-step solve করা।
 > **Estimated Time:** 60–80 minutes
@@ -15075,7 +15075,7 @@ Read Statement Carefully
 
 ---
 
-# 7. সবচেয়ে গুরুত্বপূর্ণ Problem — Indexing
+# 7. সবচেয়ে গুরুত্বপূর্ণ Problem - Indexing
 
 এখন আমরা ৩ ধরনের situation দেখব:
 
@@ -15098,7 +15098,7 @@ Array 0-based, Prefix n+1 style
 
 ---
 
-# 8. Case A — Zero-Based Query
+# 8. Case A - Zero-Based Query
 
 Array:
 
@@ -15161,7 +15161,7 @@ long long answer = prefix[right + 1] - prefix[left];
 
 ---
 
-# 9. Case B — One-Based Query
+# 9. Case B - One-Based Query
 
 এখন একই Array problem statement-এ position দিয়ে দেখানো হলো:
 
@@ -15355,7 +15355,7 @@ Wanted Range
 
 ---
 
-# 13. Problem 1 — Basic Range Sum Queries
+# 13. Problem 1 - Basic Range Sum Queries
 
 ## Problem
 
@@ -15393,7 +15393,7 @@ Expected Output:
 
 ---
 
-## Step 1 — Pattern Recognition
+## Step 1 - Pattern Recognition
 
 Problem says:
 
@@ -15413,7 +15413,7 @@ Prefix Sum
 
 ---
 
-## Step 2 — Build Prefix
+## Step 2 - Build Prefix
 
 Array:
 
@@ -15429,7 +15429,7 @@ Prefix:
 
 ---
 
-## Step 3 — Query Formula
+## Step 3 - Query Formula
 
 Since Query is zero-based:
 
@@ -15439,7 +15439,7 @@ answer=prefix[R+1]-prefix[L]
 
 ---
 
-## Step 4 — Code
+## Step 4 - Code
 
 ```c
 #include <stdio.h>
@@ -15564,7 +15564,7 @@ prefix[5] - prefix[2]
 
 ---
 
-# 15. Problem 2 — One-Based Range Queries
+# 15. Problem 2 - One-Based Range Queries
 
 এবার Problem বলছে:
 
@@ -15706,7 +15706,7 @@ Clarity বেশি গুরুত্বপূর্ণ।
 
 ---
 
-# 17. Problem 3 — Single Element Query
+# 17. Problem 3 - Single Element Query
 
 Array:
 
@@ -15773,7 +15773,7 @@ Prefix formula এটাও automatically handle করে।
 
 ---
 
-# 18. Problem 4 — Entire Array Query
+# 18. Problem 4 - Entire Array Query
 
 Array:
 
@@ -15834,7 +15834,7 @@ prefix[n]
 
 ---
 
-# 19. Problem 5 — Negative Numbers
+# 19. Problem 5 - Negative Numbers
 
 অনেকে মনে করে Prefix Sum শুধু positive number-এর জন্য।
 
@@ -15937,7 +15937,7 @@ Submit
 
 ---
 
-## Step 1 — Data কী?
+## Step 1 - Data কী?
 
 ```text
 Array?
@@ -15953,7 +15953,7 @@ Array
 
 ---
 
-## Step 2 — Query কী চাইছে?
+## Step 2 - Query কী চাইছে?
 
 ```text
 Sum?
@@ -15970,7 +15970,7 @@ Range Sum
 
 ---
 
-## Step 3 — Query কতগুলো?
+## Step 3 - Query কতগুলো?
 
 ```text
 One Query
@@ -15986,7 +15986,7 @@ Many Queries
 
 ---
 
-## Step 4 — Array change হচ্ছে?
+## Step 4 - Array change হচ্ছে?
 
 যদি:
 
@@ -16142,7 +16142,7 @@ Prefix Sum
 
 ---
 
-# 23. Common Bug 1 — Wrong Prefix Size
+# 23. Common Bug 1 - Wrong Prefix Size
 
 যদি use করো:
 
@@ -16188,7 +16188,7 @@ Array Size n + 1
 
 ---
 
-# 24. Common Bug 2 — `prefix[0]` Initialize না করা
+# 24. Common Bug 2 - `prefix[0]` Initialize না করা
 
 Wrong:
 
@@ -16236,7 +16236,7 @@ prefix[0] = 0
 
 ---
 
-# 25. Common Bug 3 — `right + 1` ভুলে যাওয়া
+# 25. Common Bug 3 - `right + 1` ভুলে যাওয়া
 
 Zero-based inclusive query:
 
@@ -16306,7 +16306,7 @@ prefix[4] - prefix[1]
 
 ---
 
-# 26. Common Bug 4 — 1-Based Query-তে Zero-Based Formula Blindly ব্যবহার
+# 26. Common Bug 4 - 1-Based Query-তে Zero-Based Formula Blindly ব্যবহার
 
 Problem Query:
 
@@ -16344,7 +16344,7 @@ Determine Query Indexing
 
 ---
 
-# 27. Common Bug 5 — `int` Overflow
+# 27. Common Bug 5 - `int` Overflow
 
 ধরো:
 
@@ -16402,7 +16402,7 @@ Choose Data Type
 
 ---
 
-# 28. Common Bug 6 — `L > R`
+# 28. Common Bug 6 - `L > R`
 
 কিছু Problem guarantee করে:
 
@@ -16437,7 +16437,7 @@ if (left > right)
 
 ---
 
-# 29. Common Bug 7 — Debug Output রেখে Submit করা
+# 29. Common Bug 7 - Debug Output রেখে Submit করা
 
 Learning-এর সময়:
 
@@ -16561,7 +16561,7 @@ O(n + q)
 
 ---
 
-# 31. Full Contest Solution Template — 1-Based Queries
+# 31. Full Contest Solution Template - 1-Based Queries
 
 ```c
 #include <stdio.h>
@@ -16620,7 +16620,7 @@ Print
 
 ---
 
-# 32. Full Contest Solution Template — Zero-Based Queries
+# 32. Full Contest Solution Template - Zero-Based Queries
 
 ```c
 #include <stdio.h>
@@ -16751,7 +16751,7 @@ Prefix Sum
 
 ---
 
-# 34. Problem Variation — Range Sum Divisible by X
+# 34. Problem Variation - Range Sum Divisible by X
 
 এখন Pattern Combination-এর ছোট example দেখি।
 
@@ -16807,7 +16807,7 @@ Print Range Sum
 
 ---
 
-# 35. Problem Variation — Count Queries with Sum Greater Than X
+# 35. Problem Variation - Count Queries with Sum Greater Than X
 
 ধরো:
 
@@ -16841,7 +16841,7 @@ Print count
 
 ---
 
-# 36. Problem Variation — Maximum Query Sum
+# 36. Problem Variation - Maximum Query Sum
 
 ধরো:
 
@@ -16879,7 +16879,7 @@ Maximum Pattern
 
 ---
 
-# 37. Problem Variation — Query Sum Search
+# 37. Problem Variation - Query Sum Search
 
 ধরো:
 
@@ -17074,7 +17074,7 @@ Prefix Sum solution submit করার আগে test করবে:
 
 # 41. Edge Case Test Set
 
-## Test 1 — Single Element
+## Test 1 - Single Element
 
 Input:
 
@@ -17092,7 +17092,7 @@ Output:
 
 ---
 
-## Test 2 — Entire Array
+## Test 2 - Entire Array
 
 Input:
 
@@ -17110,7 +17110,7 @@ Output:
 
 ---
 
-## Test 3 — Single Position
+## Test 3 - Single Position
 
 Input:
 
@@ -17128,7 +17128,7 @@ Output:
 
 ---
 
-## Test 4 — Negative Numbers
+## Test 4 - Negative Numbers
 
 Input:
 
@@ -17156,7 +17156,7 @@ Expected:
 
 ---
 
-## Problem A — Zero-Based Queries
+## Problem A - Zero-Based Queries
 
 Array:
 
@@ -17204,7 +17204,7 @@ Answer:
 
 ---
 
-## Problem B — One-Based Queries
+## Problem B - One-Based Queries
 
 Array:
 
@@ -17243,7 +17243,7 @@ prefix[R] - prefix[L - 1]
 
 # 💻 Coding Practice
 
-## Problem 1 — Basic Zero-Based Range Sum
+## Problem 1 - Basic Zero-Based Range Sum
 
 Input Format:
 
@@ -17276,7 +17276,7 @@ long long
 
 ---
 
-## Problem 2 — One-Based Query Version
+## Problem 2 - One-Based Query Version
 
 Same problem।
 
@@ -17294,7 +17294,7 @@ Formula নিজে select করবে
 
 ---
 
-## Problem 3 — Count Large Range Sums
+## Problem 3 - Count Large Range Sums
 
 Problem:
 
@@ -17323,7 +17323,7 @@ Counting
 
 ---
 
-## Problem 4 — Maximum Range Sum Among Given Queries
+## Problem 4 - Maximum Range Sum Among Given Queries
 
 `q` Queries দেওয়া আছে।
 
@@ -17443,7 +17443,7 @@ Old Prefix Information May Become Invalid
 
 # 📝 Chapter 8 Assignment
 
-## Assignment A — Concept Questions
+## Assignment A - Concept Questions
 
 নিজের ভাষায় লিখবে:
 
@@ -17471,7 +17471,7 @@ Old Prefix Information May Become Invalid
 
 ---
 
-## Assignment B — Manual Calculation
+## Assignment B - Manual Calculation
 
 Array:
 
@@ -17517,7 +17517,7 @@ Answer:
 
 ---
 
-## Assignment C — Index Conversion Practice
+## Assignment C - Index Conversion Practice
 
 একই Range:
 
@@ -17541,7 +17541,7 @@ Do Both Give Same Answer?
 
 ---
 
-## Assignment D — Mandatory Coding
+## Assignment D - Mandatory Coding
 
 নিজে implement করবে:
 
@@ -17832,25 +17832,25 @@ Submit
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ✅ Chapter 5 — Recursion Mental Model
+├── ✅ Chapter 5 - Recursion Mental Model
 │
-├── ✅ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ✅ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ✅ Chapter 7 — Prefix Sum Pattern
+├── ✅ Chapter 7 - Prefix Sum Pattern
 │
-├── ✅ Chapter 8 — Range Query & Prefix Sum Problems
+├── ✅ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ⬜ Chapter 9 — Pattern Combination Session
+├── ⬜ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 ## Chapter 8 Final Rules
@@ -17908,13 +17908,13 @@ Check Boundaries
 Check Overflow
 ```
 
-Chapter 8 শেষ হওয়ার পর তুমি শুধু Prefix Sum build করতে জানো—এমন না; এখন তোমার লক্ষ্য হওয়া উচিত **problem statement থেকে Range Query pattern detect করা, indexing অনুযায়ী formula choose করা এবং Prefix Sum-কে Counting, Searching ও Maximum Tracking-এর মতো আগের pattern-এর সঙ্গে combine করা**।
+Chapter 8 শেষ হওয়ার পর তুমি শুধু Prefix Sum build করতে জানো-এমন না; এখন তোমার লক্ষ্য হওয়া উচিত **problem statement থেকে Range Query pattern detect করা, indexing অনুযায়ী formula choose করা এবং Prefix Sum-কে Counting, Searching ও Maximum Tracking-এর মতো আগের pattern-এর সঙ্গে combine করা**।
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 9 — Pattern Combination Session
+# Chapter 9 - Pattern Combination Session
 
 > **Chapter Goal:** একটি Problem-এ একাধিক পরিচিত Pattern একসাথে চিনতে এবং combine করতে শেখা।
 > **Estimated Time:** 60–90 minutes
@@ -17990,7 +17990,7 @@ Solution
 
 ধরো Problem:
 
-> একটি Array থেকে কতগুলো Even Number আছে এবং তাদের Sum কত—বের করো।
+> একটি Array থেকে কতগুলো Even Number আছে এবং তাদের Sum কত-বের করো।
 
 এখানে শুধু একটি Pattern নেই।
 
@@ -18240,7 +18240,7 @@ Problem-টাকে ভাঙো।
 
 ---
 
-## Step 1 — Range Sum কীভাবে বের হবে?
+## Step 1 - Range Sum কীভাবে বের হবে?
 
 ```text
 Many Range Queries
@@ -18252,7 +18252,7 @@ Prefix Sum
 
 ---
 
-## Step 2 — কোন Query Result দরকার?
+## Step 2 - কোন Query Result দরকার?
 
 শুধু:
 
@@ -18268,7 +18268,7 @@ sum % 2 == 0
 
 ---
 
-## Step 3 — Even Sum-এর মধ্যে কী চাই?
+## Step 3 - Even Sum-এর মধ্যে কী চাই?
 
 ```text
 Largest
@@ -18308,7 +18308,7 @@ For Each Query:
 
 ---
 
-# 6. Combination 1 — Traversal + Counting
+# 6. Combination 1 - Traversal + Counting
 
 ## Problem
 
@@ -18393,7 +18393,7 @@ count++
 
 ---
 
-# 7. Combination 2 — Traversal + Filtering + Accumulation
+# 7. Combination 2 - Traversal + Filtering + Accumulation
 
 ## Problem
 
@@ -18463,7 +18463,7 @@ Process
 
 ---
 
-# 8. Combination 3 — Searching + Counting
+# 8. Combination 3 - Searching + Counting
 
 ## Problem
 
@@ -18545,7 +18545,7 @@ Counting
 
 ---
 
-# 9. Combination 4 — Filtering + Maximum Tracking
+# 9. Combination 4 - Filtering + Maximum Tracking
 
 ## Problem
 
@@ -18668,7 +18668,7 @@ Maximum Tracking
 
 ---
 
-# 10. Combination 5 — Prefix Sum + Counting
+# 10. Combination 5 - Prefix Sum + Counting
 
 এখন Chapter 7 এবং Chapter 8-এর Pattern combine করি।
 
@@ -18830,7 +18830,7 @@ count++
 
 ---
 
-# 12. Combination 6 — Prefix Sum + Maximum
+# 12. Combination 6 - Prefix Sum + Maximum
 
 ## Problem
 
@@ -18934,7 +18934,7 @@ Query Sums সব negative হলে:
 
 ---
 
-# 13. Combination 7 — Prefix Sum + Searching
+# 13. Combination 7 - Prefix Sum + Searching
 
 ## Problem
 
@@ -19020,7 +19020,7 @@ Check Input Structure
 
 ---
 
-# 15. Combination 8 — Prefix Sum + Counting + Maximum
+# 15. Combination 8 - Prefix Sum + Counting + Maximum
 
 এবার তিনটি Pattern combine করি।
 
@@ -19421,7 +19421,7 @@ not every single line.
 
 ---
 
-## Question 1 — কী Traverse করতে হবে?
+## Question 1 - কী Traverse করতে হবে?
 
 ```text
 Array?
@@ -19432,7 +19432,7 @@ String?
 
 ---
 
-## Question 2 — কী Condition আছে?
+## Question 2 - কী Condition আছে?
 
 ```text
 Even?
@@ -19444,7 +19444,7 @@ Palindrome?
 
 ---
 
-## Question 3 — কী Store বা Track করতে হবে?
+## Question 3 - কী Store বা Track করতে হবে?
 
 ```text
 Count?
@@ -19457,7 +19457,7 @@ Found State?
 
 ---
 
-## Question 4 — একই কাজ বারবার হচ্ছে?
+## Question 4 - একই কাজ বারবার হচ্ছে?
 
 ```text
 Repeated Range Sum?
@@ -19474,7 +19474,7 @@ Prefix Sum?
 
 ---
 
-## Question 5 — Problem ছোট Tasks-এ ভাগ করা যায়?
+## Question 5 - Problem ছোট Tasks-এ ভাগ করা যায়?
 
 ```text
 Build
@@ -19486,7 +19486,7 @@ Output
 
 ---
 
-## Question 6 — Pattern Order কী?
+## Question 6 - Pattern Order কী?
 
 Example:
 
@@ -19527,7 +19527,7 @@ Pattern relationship বুঝবে।
 
 ---
 
-# 24. Mistake — পুরো Problem-কে একসাথে চিন্তা করা
+# 24. Mistake - পুরো Problem-কে একসাথে চিন্তা করা
 
 Beginner Problem দেখে:
 
@@ -19580,7 +19580,7 @@ Problem ছোট হয়ে গেল।
 
 ---
 
-# 25. Mistake — Pattern দেখেই Code Copy করা
+# 25. Mistake - Pattern দেখেই Code Copy করা
 
 ধরো তুমি Prefix Sum template জানো।
 
@@ -19620,7 +19620,7 @@ Copy Template
 
 ---
 
-# 26. Mistake — Wrong Update Order
+# 26. Mistake - Wrong Update Order
 
 Problem:
 
@@ -19662,7 +19662,7 @@ Then Update
 
 ---
 
-# 27. Mistake — One Variable for Multiple Meanings
+# 27. Mistake - One Variable for Multiple Meanings
 
 Bad:
 
@@ -19703,7 +19703,7 @@ Variable Name যেন State-এর কাজ বোঝায়।
 
 ---
 
-# 28. Mistake — No Valid Candidate Case
+# 28. Mistake - No Valid Candidate Case
 
 Problem:
 
@@ -20621,7 +20621,7 @@ Debug One Pattern at a Time
 
 # 45. Common Edge Cases in Combined Problems
 
-## Case 1 — No Match
+## Case 1 - No Match
 
 ```text
 Target নেই
@@ -20636,7 +20636,7 @@ count = 0
 
 ---
 
-## Case 2 — No Valid Candidate
+## Case 2 - No Valid Candidate
 
 Problem:
 
@@ -20658,13 +20658,13 @@ found flag
 
 ---
 
-## Case 3 — All Negative Values
+## Case 3 - All Negative Values
 
 Maximum initialization carefully করবে।
 
 ---
 
-## Case 4 — Single Element
+## Case 4 - Single Element
 
 ```text
 n = 1
@@ -20674,7 +20674,7 @@ n = 1
 
 ---
 
-## Case 5 — Entire Range Query
+## Case 5 - Entire Range Query
 
 ```text
 L = 0
@@ -20683,7 +20683,7 @@ R = n - 1
 
 ---
 
-## Case 6 — Single Position Query
+## Case 6 - Single Position Query
 
 ```text
 L = R
@@ -20691,7 +20691,7 @@ L = R
 
 ---
 
-## Case 7 — Large Sum
+## Case 7 - Large Sum
 
 Use:
 
@@ -20711,7 +20711,7 @@ long long
 
 ---
 
-## Practice 1 — Positive Count and Sum
+## Practice 1 - Positive Count and Sum
 
 Input:
 
@@ -20741,7 +20741,7 @@ Accumulation
 
 ---
 
-## Practice 2 — First Index and Count
+## Practice 2 - First Index and Count
 
 Input:
 
@@ -20772,7 +20772,7 @@ Counting
 
 ---
 
-## Practice 3 — Maximum Even Number
+## Practice 3 - Maximum Even Number
 
 Input:
 
@@ -20799,7 +20799,7 @@ Maximum Tracking
 
 ---
 
-## Practice 4 — Count Query Sums Greater Than X
+## Practice 4 - Count Query Sums Greater Than X
 
 Input:
 
@@ -20828,7 +20828,7 @@ Count
 
 ---
 
-## Practice 5 — Maximum Odd Query Sum
+## Practice 5 - Maximum Odd Query Sum
 
 একটি Array এবং `q` Queries দেওয়া থাকবে।
 
@@ -20864,7 +20864,7 @@ print করবে।
 
 # 📝 Chapter 9 Assignment
 
-## Assignment A — Pattern Identification
+## Assignment A - Pattern Identification
 
 নিচের প্রতিটি Problem-এর Pattern Combination লিখবে।
 
@@ -20904,7 +20904,7 @@ Pattern Flow:
 
 ---
 
-## Assignment B — Dry Run
+## Assignment B - Dry Run
 
 Array:
 
@@ -20950,7 +20950,7 @@ Queries:
 
 ---
 
-## Assignment C — Mandatory Coding
+## Assignment C - Mandatory Coding
 
 চারটি Program নিজে লিখবে:
 
@@ -21248,25 +21248,25 @@ Task 3 → কোন Pattern?
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
+├── ✅ Chapter 1 - Function Mental Model
 │
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
 │
-├── ✅ Chapter 3 — Problem Decomposition with Functions
+├── ✅ Chapter 3 - Problem Decomposition with Functions
 │
-├── ✅ Chapter 4 — Arrays & Strings with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
 │
-├── ✅ Chapter 5 — Recursion Mental Model
+├── ✅ Chapter 5 - Recursion Mental Model
 │
-├── ✅ Chapter 6 — Base Case, Recursive Case & Call Flow
+├── ✅ Chapter 6 - Base Case, Recursive Case & Call Flow
 │
-├── ✅ Chapter 7 — Prefix Sum Pattern
+├── ✅ Chapter 7 - Prefix Sum Pattern
 │
-├── ✅ Chapter 8 — Range Query & Prefix Sum Problems
+├── ✅ Chapter 8 - Range Query & Prefix Sum Problems
 │
-├── ✅ Chapter 9 — Pattern Combination Session
+├── ✅ Chapter 9 - Pattern Combination Session
 │
-└── ⬜ Chapter 10 — Assignment, Mini Contest & Reflection
+└── ⬜ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 # 🏁 Chapter 9 Final Rule
@@ -21308,13 +21308,13 @@ Code
 }
 ]
 
-Chapter 9 শেষ। **Chapter 10** হবে Day 4-এর final chapter—এখানে নতুন theory চাপিয়ে না দিয়ে Day 4-এর Function, Recursion, Prefix Sum, Range Query এবং Pattern Combination consolidate করার জন্য **focused assignment, mini contest, review system, mistake log এবং Day 4 completion criteria** থাকবে।
+Chapter 9 শেষ। **Chapter 10** হবে Day 4-এর final chapter-এখানে নতুন theory চাপিয়ে না দিয়ে Day 4-এর Function, Recursion, Prefix Sum, Range Query এবং Pattern Combination consolidate করার জন্য **focused assignment, mini contest, review system, mistake log এবং Day 4 completion criteria** থাকবে।
 
 ---
 
-# 📘 CP Bootcamp 2026 — Day 4
+# 📘 CP Bootcamp 2026 - Day 4
 
-# Chapter 10 — Final Assignment, Mini Contest, Review & Reflection
+# Chapter 10 - Final Assignment, Mini Contest, Review & Reflection
 
 > **Chapter Goal:** Day 4-এ শেখা সবকিছু consolidate করা, নিজে problem solve করা, Mini Contest-এর মাধ্যমে pressure-এর মধ্যে pattern recognize করা এবং Day 5-এর জন্য প্রস্তুত হওয়া।
 > **Estimated Time:** 2–2.5 hours
@@ -21422,7 +21422,7 @@ Mini Contest-এর আগে এই অংশটা দ্রুত revise ক�
 
 ---
 
-## Revision 1 — Function
+## Revision 1 - Function
 
 Function হলো:
 
@@ -21463,7 +21463,7 @@ result = 8
 
 ---
 
-## Revision 2 — Parameter vs Argument
+## Revision 2 - Parameter vs Argument
 
 Function Definition:
 
@@ -21505,7 +21505,7 @@ Parameter
 
 ---
 
-## Revision 3 — Return Value
+## Revision 3 - Return Value
 
 ```c
 int square(int n)
@@ -21534,7 +21534,7 @@ answer
 
 ---
 
-## Revision 4 — Problem Decomposition
+## Revision 4 - Problem Decomposition
 
 Problem:
 
@@ -21831,7 +21831,7 @@ Counting
 
 ---
 
-# 🧪 Part 1 — Concept Check
+# 🧪 Part 1 - Concept Check
 
 সময়:
 
@@ -21973,7 +21973,7 @@ Pattern Combination identify করো।
 
 ---
 
-# 💻 Part 2 — Final Assignment
+# 💻 Part 2 - Final Assignment
 
 সময়:
 
@@ -21987,7 +21987,7 @@ Pattern Combination identify করো।
 
 ---
 
-# Assignment 1 — Function Decomposition
+# Assignment 1 - Function Decomposition
 
 ## Problem
 
@@ -22063,7 +22063,7 @@ main()
 
 ---
 
-# Assignment 2 — Recursion Practice
+# Assignment 2 - Recursion Practice
 
 ## Problem
 
@@ -22127,7 +22127,7 @@ Time Complexity:
 
 ---
 
-# Assignment 3 — Range Sum Queries
+# Assignment 3 - Range Sum Queries
 
 ## Problem
 
@@ -22178,7 +22178,7 @@ long long
 
 ---
 
-# Assignment 4 — Combined Pattern Problem
+# Assignment 4 - Combined Pattern Problem
 
 ## Problem
 
@@ -22252,7 +22252,7 @@ Final Output
 
 ---
 
-# 🏆 Part 3 — Day 4 Mini Contest
+# 🏆 Part 3 - Day 4 Mini Contest
 
 > **Contest Duration:** 60 minutes
 > **Problems:** 4
@@ -22276,7 +22276,7 @@ Testing Habit
 
 ---
 
-# 🟢 Problem A — Number Analyzer
+# 🟢 Problem A - Number Analyzer
 
 ## Difficulty
 
@@ -22329,7 +22329,7 @@ Multiple State Variables
 
 ---
 
-# 🟢 Problem B — Target Report
+# 🟢 Problem B - Target Report
 
 ## Difficulty
 
@@ -22381,7 +22381,7 @@ break;
 
 ---
 
-# 🟡 Problem C — Query Statistics
+# 🟡 Problem C - Query Statistics
 
 ## Difficulty
 
@@ -22434,7 +22434,7 @@ O(n+q)
 
 ---
 
-# 🟡 Problem D — Query Filter
+# 🟡 Problem D - Query Filter
 
 ## Difficulty
 
@@ -22606,7 +22606,7 @@ Return later
 
 ---
 
-# 🐞 Part 4 — Debugging Challenge
+# 🐞 Part 4 - Debugging Challenge
 
 নিচের Code-গুলোর Bug identify করবে।
 
@@ -22614,7 +22614,7 @@ Return later
 
 ---
 
-## Bug 1 — Maximum
+## Bug 1 - Maximum
 
 ```c
 int maxValue = 0;
@@ -22640,7 +22640,7 @@ Question:
 
 ---
 
-## Bug 2 — Prefix Sum
+## Bug 2 - Prefix Sum
 
 ```c
 long long prefix[n + 1];
@@ -22660,7 +22660,7 @@ Missing Step কী?
 
 ---
 
-## Bug 3 — Range Query
+## Bug 3 - Range Query
 
 Query zero-based inclusive।
 
@@ -22677,7 +22677,7 @@ Correct Formula কী?
 
 ---
 
-## Bug 4 — First Index + Count
+## Bug 4 - First Index + Count
 
 ```c
 for (int i = 0; i < n; i++)
@@ -22707,7 +22707,7 @@ Logic Error কোথায়?
 
 ---
 
-## Bug 5 — Recursion
+## Bug 5 - Recursion
 
 ```c
 int sum(int n)
@@ -22736,7 +22736,7 @@ Program-এর কী হতে পারে?
 
 ---
 
-## Test Category 1 — Smallest Input
+## Test Category 1 - Smallest Input
 
 ```text
 n = 1
@@ -22751,7 +22751,7 @@ Example:
 
 ---
 
-## Test Category 2 — All Same
+## Test Category 2 - All Same
 
 ```text
 5
@@ -22771,7 +22771,7 @@ Minimum
 
 ---
 
-## Test Category 3 — All Negative
+## Test Category 3 - All Negative
 
 ```text
 5
@@ -22786,7 +22786,7 @@ Maximum Initialization
 
 ---
 
-## Test Category 4 — Target Missing
+## Test Category 4 - Target Missing
 
 ```text
 Array:
@@ -22808,7 +22808,7 @@ Count:
 
 ---
 
-## Test Category 5 — Full Range
+## Test Category 5 - Full Range
 
 ```text
 L = 0
@@ -22817,7 +22817,7 @@ R = n - 1
 
 ---
 
-## Test Category 6 — Single Position Range
+## Test Category 6 - Single Position Range
 
 ```text
 L = R
@@ -23397,16 +23397,16 @@ Wrong Answer হলে পুরো Code random change করো না।
 ```text
 Day 4
 │
-├── ✅ Chapter 1 — Function Mental Model
-├── ✅ Chapter 2 — Parameters, Arguments & Return Values
-├── ✅ Chapter 3 — Problem Decomposition with Functions
-├── ✅ Chapter 4 — Arrays & Strings with Functions
-├── ✅ Chapter 5 — Recursion Mental Model
-├── ✅ Chapter 6 — Base Case, Recursive Case & Call Flow
-├── ✅ Chapter 7 — Prefix Sum Pattern
-├── ✅ Chapter 8 — Range Query & Prefix Sum Problems
-├── ✅ Chapter 9 — Pattern Combination Session
-└── ✅ Chapter 10 — Assignment, Mini Contest & Reflection
+├── ✅ Chapter 1 - Function Mental Model
+├── ✅ Chapter 2 - Parameters, Arguments & Return Values
+├── ✅ Chapter 3 - Problem Decomposition with Functions
+├── ✅ Chapter 4 - Arrays & Strings with Functions
+├── ✅ Chapter 5 - Recursion Mental Model
+├── ✅ Chapter 6 - Base Case, Recursive Case & Call Flow
+├── ✅ Chapter 7 - Prefix Sum Pattern
+├── ✅ Chapter 8 - Range Query & Prefix Sum Problems
+├── ✅ Chapter 9 - Pattern Combination Session
+└── ✅ Chapter 10 - Assignment, Mini Contest & Reflection
 ```
 
 ## Day 4 Final Result

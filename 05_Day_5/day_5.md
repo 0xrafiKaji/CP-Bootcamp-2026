@@ -16,9 +16,9 @@ puppeteer:
     left: "1.8cm"
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 1 — Sorting Mental Model
+# Chapter 1 - Sorting Mental Model
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
 > **Chapter Goal:** Sorting-কে শুধু “ছোট থেকে বড় সাজানো” হিসেবে না দেখে **Problem-Solving Tool** হিসেবে বুঝতে শেখা।
@@ -84,21 +84,21 @@ Some Problems Become Simpler
 ```text
 Day 5
 │
-├── Chapter 1 — Sorting Mental Model
+├── Chapter 1 - Sorting Mental Model
 │
-├── Chapter 2 — Bubble Sort
+├── Chapter 2 - Bubble Sort
 │
-├── Chapter 3 — Selection Sort
+├── Chapter 3 - Selection Sort
 │
-├── Chapter 4 — Built-in qsort() for Contest Use
+├── Chapter 4 - Built-in qsort() for Contest Use
 │
-├── Chapter 5 — Frequency Counting Pattern
+├── Chapter 5 - Frequency Counting Pattern
 │
-├── Chapter 6 — Sorted Array & Frequency Problems
+├── Chapter 6 - Sorted Array & Frequency Problems
 │
-├── Chapter 7 — Pair Thinking Foundation
+├── Chapter 7 - Pair Thinking Foundation
 │
-└── Chapter 8 — Pattern Combination, Assignment,
+└── Chapter 8 - Pattern Combination, Assignment,
                 Mini Contest & Reflection
 ```
 
@@ -343,7 +343,7 @@ Solve Problem
 
 ---
 
-# 5. Example — Duplicate Detection
+# 5. Example - Duplicate Detection
 
 Problem:
 
@@ -704,7 +704,7 @@ Yes
 
 ---
 
-# 11. Example — First Occurrence Problem
+# 11. Example - First Occurrence Problem
 
 Original Array:
 
@@ -966,7 +966,7 @@ Already Sorted?
 
 ---
 
-# 16. Dry Run — `isSorted()`
+# 16. Dry Run - `isSorted()`
 
 Array:
 
@@ -1163,7 +1163,7 @@ Large n
 
 # 20. Sorting Mental Models
 
-## Mental Model 1 — Order Creation
+## Mental Model 1 - Order Creation
 
 ```text
 Unordered
@@ -1175,7 +1175,7 @@ Ordered
 
 ---
 
-## Mental Model 2 — Duplicate Grouping
+## Mental Model 2 - Duplicate Grouping
 
 ```text
 5 2 7 2 5
@@ -1189,7 +1189,7 @@ Equal Values Together
 
 ---
 
-## Mental Model 3 — Neighbor Comparison
+## Mental Model 3 - Neighbor Comparison
 
 ```text
 Sort
@@ -1201,7 +1201,7 @@ Detect Duplicate / Difference / Group
 
 ---
 
-## Mental Model 4 — Pair Structure
+## Mental Model 4 - Pair Structure
 
 ```text
 Sort
@@ -1215,7 +1215,7 @@ Controlled Pointer Movement
 
 # 21. Common Mistakes
 
-## Mistake 1 — Sorting Without Reason
+## Mistake 1 - Sorting Without Reason
 
 ```text
 Problem has Array
@@ -1233,7 +1233,7 @@ Why Do I Need Sorting?
 
 ---
 
-## Mistake 2 — Original Order Forgetting
+## Mistake 2 - Original Order Forgetting
 
 Problem:
 
@@ -1253,7 +1253,7 @@ Wrong Answer
 
 ---
 
-## Mistake 3 — Sorted মানেই Unique ভাবা
+## Mistake 3 - Sorted মানেই Unique ভাবা
 
 Sorted:
 
@@ -1267,7 +1267,7 @@ Sorting শুধু তাদের পাশাপাশি এনেছে।
 
 ---
 
-## Mistake 4 — Adjacent Comparison Before Sorting
+## Mistake 4 - Adjacent Comparison Before Sorting
 
 Unsorted:
 
@@ -1299,7 +1299,7 @@ Sort:
 
 এই Chapter theory-heavy foundation chapter। তাই practice ছোট রাখা হয়েছে।
 
-## Task 1 — Identify the Order
+## Task 1 - Identify the Order
 
 নিচের Arrayগুলো classify করো:
 
@@ -1326,7 +1326,7 @@ Both Non-decreasing and Non-increasing
 
 ---
 
-## Task 2 — `isSorted()`
+## Task 2 - `isSorted()`
 
 নিজে লিখবে:
 
@@ -1356,7 +1356,7 @@ Early Return
 
 ---
 
-## Task 3 — Duplicate Thinking
+## Task 3 - Duplicate Thinking
 
 Array:
 
@@ -1378,7 +1378,7 @@ Adjacent Comparisons Needed:
 
 ---
 
-## Task 4 — Sorting Decision
+## Task 4 - Sorting Decision
 
 প্রতিটি Problem-এর জন্য লিখবে:
 
@@ -1405,7 +1405,7 @@ Problems:
 7. Find pair with target sum.
 ```
 
-শুধু answer না—এক লাইনে কারণও লিখবে।
+শুধু answer না-এক লাইনে কারণও লিখবে।
 
 ---
 
@@ -1480,7 +1480,7 @@ Reason:
 
 Assignment intentionally ছোট।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -1502,7 +1502,7 @@ Assignment intentionally ছোট।
 
 ---
 
-## Part B — Code
+## Part B - Code
 
 Mandatory:
 
@@ -1518,7 +1518,7 @@ Optional:
 
 ---
 
-## Part C — Mental Exercise
+## Part C - Mental Exercise
 
 Array:
 
@@ -1704,21 +1704,21 @@ I need median or rank information.
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ⬜ Chapter 2 — Bubble Sort
+├── ⬜ Chapter 2 - Bubble Sort
 │
-├── ⬜ Chapter 3 — Selection Sort
+├── ⬜ Chapter 3 - Selection Sort
 │
-├── ⬜ Chapter 4 — Built-in qsort() for Contest Use
+├── ⬜ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ⬜ Chapter 5 — Frequency Counting Pattern
+├── ⬜ Chapter 5 - Frequency Counting Pattern
 │
-├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+├── ⬜ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -1739,7 +1739,7 @@ Problem-এর Structure কীভাবে বদলায়
 সেটা চিন্তা করতে শুরু করেছি
 ```
 
-পরবর্তী Chapter হবে **Day 5 — Chapter 2: Bubble Sort**। সেখানে focus থাকবে শুধু code মুখস্থ করা নয়, বরং:
+পরবর্তী Chapter হবে **Day 5 - Chapter 2: Bubble Sort**। সেখানে focus থাকবে শুধু code মুখস্থ করা নয়, বরং:
 
 ```text
 Compare Adjacent
@@ -1759,9 +1759,9 @@ Sorted Region Grows
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 2 — Bubble Sort
+# Chapter 2 - Bubble Sort
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
 > **Chapter Goal:** Bubble Sort-এর code মুখস্থ না করে **Compare → Swap → Pass → Sorted Region** mental model থেকে code নিজে তৈরি করতে শেখা।
@@ -3228,7 +3228,7 @@ Break
 
 ---
 
-# 26. Common Mistake — Wrong Inner Boundary
+# 26. Common Mistake - Wrong Inner Boundary
 
 Wrong:
 
@@ -3262,7 +3262,7 @@ j < n - 1 - i
 
 ---
 
-# 27. Common Mistake — Swap Condition উল্টো
+# 27. Common Mistake - Swap Condition উল্টো
 
 Ascending চাই:
 
@@ -3286,7 +3286,7 @@ if (arr[j] < arr[j + 1])
 
 ---
 
-# 28. Common Mistake — `temp` ভুলভাবে ব্যবহার
+# 28. Common Mistake - `temp` ভুলভাবে ব্যবহার
 
 Correct:
 
@@ -3310,7 +3310,7 @@ arr[j + 1] = arr[j];
 
 ---
 
-# 29. Common Mistake — Outer Loop এবং Inner Loop Confusion
+# 29. Common Mistake - Outer Loop এবং Inner Loop Confusion
 
 মনে রাখবে:
 
@@ -3348,7 +3348,7 @@ Pass 3
 
 Exam বা practice-এ code ভুলে গেলে এইভাবে derive করবে।
 
-## Step 1 — Need Multiple Passes
+## Step 1 - Need Multiple Passes
 
 ```c
 for (int i = 0; i < n - 1; i++)
@@ -3356,7 +3356,7 @@ for (int i = 0; i < n - 1; i++)
 }
 ```
 
-## Step 2 — Need Adjacent Comparison
+## Step 2 - Need Adjacent Comparison
 
 ```c
 for (int j = 0; j < n - 1 - i; j++)
@@ -3364,7 +3364,7 @@ for (int j = 0; j < n - 1 - i; j++)
 }
 ```
 
-## Step 3 — Wrong Order Check
+## Step 3 - Wrong Order Check
 
 ```c
 if (arr[j] > arr[j + 1])
@@ -3372,7 +3372,7 @@ if (arr[j] > arr[j + 1])
 }
 ```
 
-## Step 4 — Swap
+## Step 4 - Swap
 
 ```c
 int temp = arr[j];
@@ -3443,7 +3443,7 @@ for (int i = 0; i < n - 1; i++)
 
 # 🧪 Chapter 2 Practice
 
-## Task 1 — Manual Dry Run
+## Task 1 - Manual Dry Run
 
 Array:
 
@@ -3473,7 +3473,7 @@ Pass 3:
 
 ---
 
-## Task 2 — Ascending Bubble Sort
+## Task 2 - Ascending Bubble Sort
 
 নিজে লিখবে:
 
@@ -3485,7 +3485,7 @@ void bubbleSort(int arr[], int n)
 
 ---
 
-## Task 3 — Descending Bubble Sort
+## Task 3 - Descending Bubble Sort
 
 শুধু condition পরিবর্তন করে descending version বানাবে।
 
@@ -3504,7 +3504,7 @@ Expected:
 
 ---
 
-## Task 4 — Optimized Bubble Sort
+## Task 4 - Optimized Bubble Sort
 
 `swapped` flag ব্যবহার করবে।
 
@@ -3598,7 +3598,7 @@ Sorted Region ______
 
 Assignment focused রাখা হলো যাতে Day 5 একই দিনে শেষ করা যায়।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -3626,7 +3626,7 @@ Assignment focused রাখা হলো যাতে Day 5 একই দিন
 
 ---
 
-## Part B — Coding
+## Part B - Coding
 
 Mandatory:
 
@@ -3644,7 +3644,7 @@ Mandatory:
 
 ---
 
-## Part C — Debugging Exercise
+## Part C - Debugging Exercise
 
 এই code-এ problem খুঁজে বের করো:
 
@@ -3821,21 +3821,21 @@ Break
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ⬜ Chapter 3 — Selection Sort
+├── ⬜ Chapter 3 - Selection Sort
 │
-├── ⬜ Chapter 4 — Built-in qsort() for Contest Use
+├── ⬜ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ⬜ Chapter 5 — Frequency Counting Pattern
+├── ⬜ Chapter 5 - Frequency Counting Pattern
 │
-├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+├── ⬜ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -3855,7 +3855,7 @@ Chapter 3
 How Selection-Based Sorting Works
 ```
 
-পরের **Chapter 3 — Selection Sort**-এ মূল focus থাকবে:
+পরের **Chapter 3 - Selection Sort**-এ মূল focus থাকবে:
 
 ```text
 Current Position
@@ -3884,9 +3884,9 @@ Selection Sort
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 3 — Selection Sort
+# Chapter 3 - Selection Sort
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
 > **Chapter Goal:** Selection Sort-এর code মুখস্থ না করে **Position → Search Best Candidate → Remember Index → Swap → Grow Sorted Region** mental model থেকে algorithm বুঝতে শেখা।
@@ -5552,7 +5552,7 @@ Candidate Evolves During Traversal
 
 ---
 
-# 24. Common Mistake — `minIndex` Reset না করা
+# 24. Common Mistake - `minIndex` Reset না করা
 
 Wrong:
 
@@ -5592,7 +5592,7 @@ Reset minIndex = i
 
 ---
 
-# 25. Common Mistake — Inner Loop `0` থেকে শুরু করা
+# 25. Common Mistake - Inner Loop `0` থেকে শুরু করা
 
 Wrong:
 
@@ -5622,7 +5622,7 @@ for (int j = i + 1; j < n; j++)
 
 ---
 
-# 26. Common Mistake — Value দিয়ে Index Confusion
+# 26. Common Mistake - Value দিয়ে Index Confusion
 
 Wrong:
 
@@ -5659,7 +5659,7 @@ Stores Value
 
 ---
 
-# 27. Common Mistake — Search-এর ভিতরে Swap
+# 27. Common Mistake - Search-এর ভিতরে Swap
 
 Beginner version:
 
@@ -5697,7 +5697,7 @@ Swap
 
 ---
 
-# 28. Common Mistake — Bubble এবং Selection Mix করা
+# 28. Common Mistake - Bubble এবং Selection Mix করা
 
 Bubble Sort:
 
@@ -5739,7 +5739,7 @@ Selection
 
 Code ভুলে গেলে এইভাবে derive করবে।
 
-## Step 1 — Current Position
+## Step 1 - Current Position
 
 ```c
 for (int i = 0; i < n - 1; i++)
@@ -5749,7 +5749,7 @@ for (int i = 0; i < n - 1; i++)
 
 ---
 
-## Step 2 — Assume Current is Minimum
+## Step 2 - Assume Current is Minimum
 
 ```c
 int minIndex = i;
@@ -5757,7 +5757,7 @@ int minIndex = i;
 
 ---
 
-## Step 3 — Search Remaining Array
+## Step 3 - Search Remaining Array
 
 ```c
 for (int j = i + 1; j < n; j++)
@@ -5767,7 +5767,7 @@ for (int j = i + 1; j < n; j++)
 
 ---
 
-## Step 4 — Update Candidate
+## Step 4 - Update Candidate
 
 ```c
 if (arr[j] < arr[minIndex])
@@ -5778,7 +5778,7 @@ if (arr[j] < arr[minIndex])
 
 ---
 
-## Step 5 — Swap After Search
+## Step 5 - Swap After Search
 
 ```c
 int temp = arr[i];
@@ -5831,7 +5831,7 @@ Same Array:
 5 3 8 2
 ```
 
-## Bubble Sort — First Pass
+## Bubble Sort - First Pass
 
 ```text
 5 3 8 2
@@ -5853,7 +5853,7 @@ Largest fixed on right।
 
 ---
 
-## Selection Sort — First Pass
+## Selection Sort - First Pass
 
 ```text
 5 3 8 2
@@ -5945,7 +5945,7 @@ Smallest moves left
 
 # 🧪 Chapter 3 Practice
 
-## Task 1 — Manual Dry Run
+## Task 1 - Manual Dry Run
 
 Array:
 
@@ -5979,7 +5979,7 @@ Pass 3:
 
 ---
 
-## Task 2 — Ascending Selection Sort
+## Task 2 - Ascending Selection Sort
 
 নিজে লিখবে:
 
@@ -6009,7 +6009,7 @@ Swap
 
 ---
 
-## Task 3 — Descending Selection Sort
+## Task 3 - Descending Selection Sort
 
 নিজে লিখবে:
 
@@ -6035,7 +6035,7 @@ maxIndex
 
 ---
 
-## Task 4 — Print Selected Candidate
+## Task 4 - Print Selected Candidate
 
 Array:
 
@@ -6147,7 +6147,7 @@ Selection Sort
 
 Assignment manageable রাখা হলো যাতে Day 5 একদিনেই শেষ করা যায়।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -6175,7 +6175,7 @@ Assignment manageable রাখা হলো যাতে Day 5 একদিন�
 
 ---
 
-## Part B — Coding
+## Part B - Coding
 
 Mandatory:
 
@@ -6195,7 +6195,7 @@ if (minIndex != i)
 
 ---
 
-## Part C — Compare
+## Part C - Compare
 
 এই table নিজে complete করবে:
 
@@ -6209,7 +6209,7 @@ if (minIndex != i)
 
 ---
 
-## Part D — Debugging Exercise
+## Part D - Debugging Exercise
 
 এই code-এ ভুল খুঁজে বের করো:
 
@@ -6399,21 +6399,21 @@ Selection Sort
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ⬜ Chapter 4 — Built-in qsort() for Contest Use
+├── ⬜ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ⬜ Chapter 5 — Frequency Counting Pattern
+├── ⬜ Chapter 5 - Frequency Counting Pattern
 │
-├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+├── ⬜ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -6459,19 +6459,19 @@ Selection Sort
 → Swap After Search
 ```
 
-পরের **Day 5 — Chapter 4: Built-in `qsort()` for Contest Use**-এ focus থাকবে C-এর practical sorting tool-এর ওপর—বিশেষ করে comparator function কীভাবে কাজ করে, ascending/descending sorting, common comparator mistakes, এবং contest-এ কখন manual sort না লিখে `qsort()` ব্যবহার করবে।
+পরের **Day 5 - Chapter 4: Built-in `qsort()` for Contest Use**-এ focus থাকবে C-এর practical sorting tool-এর ওপর-বিশেষ করে comparator function কীভাবে কাজ করে, ascending/descending sorting, common comparator mistakes, এবং contest-এ কখন manual sort না লিখে `qsort()` ব্যবহার করবে।
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 4 — Built-in `qsort()` for Contest Use
+# Chapter 4 - Built-in `qsort()` for Contest Use
 
 > **Chapter Goal:** Bubble Sort ও Selection Sort দিয়ে sorting mechanics বোঝার পর এবার C-তে practicalভাবে `qsort()` ব্যবহার করা শেখা।
 > **Estimated Time:** 45–60 minutes
 > **Focus:** `qsort()` Syntax → Comparator Function → Ascending → Descending → Common Bugs → Contest Usage
 
-> **Note:** তুমি `Day 4 Chapter 4` লিখেছ, কিন্তু আমাদের বর্তমান sequence অনুযায়ী আমরা **Day 5 — Chapter 4**-এ আছি। তাই continuity বজায় রেখে সেটাই দিচ্ছি।
+> **Note:** তুমি `Day 4 Chapter 4` লিখেছ, কিন্তু আমাদের বর্তমান sequence অনুযায়ী আমরা **Day 5 - Chapter 4**-এ আছি। তাই continuity বজায় রেখে সেটাই দিচ্ছি।
 
 ---
 
@@ -6652,7 +6652,7 @@ compare
 
 # 3. `qsort()`-এর 4টি Argument
 
-## Argument 1 — Array
+## Argument 1 - Array
 
 ```c
 arr
@@ -6676,7 +6676,7 @@ qsort(arr, n, sizeof(int), compare);
 
 ---
 
-## Argument 2 — Number of Elements
+## Argument 2 - Number of Elements
 
 ```c
 n
@@ -6706,7 +6706,7 @@ qsort(arr, n, sizeof(int), compare);
 
 ---
 
-## Argument 3 — Element Size
+## Argument 3 - Element Size
 
 Integer Array:
 
@@ -6739,7 +6739,7 @@ Different Data Types Sort করতে পারে
 
 ---
 
-## Argument 4 — Comparator
+## Argument 4 - Comparator
 
 ```c
 compare
@@ -7589,7 +7589,7 @@ Habit তৈরি করো:
 
 ---
 
-# 20. Example — Find Duplicate after Sorting
+# 20. Example - Find Duplicate after Sorting
 
 Problem:
 
@@ -7685,7 +7685,7 @@ Early Exit
 
 ---
 
-# 21. Example — Count Distinct Values
+# 21. Example - Count Distinct Values
 
 Array:
 
@@ -7836,7 +7836,7 @@ Constraint পড়বে।
 
 ---
 
-# 23. Example — Minimum Difference
+# 23. Example - Minimum Difference
 
 Problem:
 
@@ -7983,7 +7983,7 @@ return (x > y) - (x < y);
 
 ---
 
-# 25. Common Mistake — `sizeof(arr)` ব্যবহার
+# 25. Common Mistake - `sizeof(arr)` ব্যবহার
 
 তুমি দেখতে পারো:
 
@@ -8067,7 +8067,7 @@ compareAscending
 
 ---
 
-# 27. Common Mistake — Comparator Call করা
+# 27. Common Mistake - Comparator Call করা
 
 Wrong:
 
@@ -8103,7 +8103,7 @@ compareAscending
 
 ---
 
-# 28. Common Mistake — Missing Header
+# 28. Common Mistake - Missing Header
 
 `qsort()` ব্যবহার করতে:
 
@@ -8162,25 +8162,25 @@ int compareDescending(const void *a, const void *b)
 
 `qsort()` ভুলে গেলে চারটি প্রশ্ন করবে।
 
-## Step 1 — কী sort করব?
+## Step 1 - কী sort করব?
 
 ```text
 arr
 ```
 
-## Step 2 — কয়টি element?
+## Step 2 - কয়টি element?
 
 ```text
 n
 ```
 
-## Step 3 — একটির size কত?
+## Step 3 - একটির size কত?
 
 ```text
 sizeof(arr[0])
 ```
 
-## Step 4 — Order কী?
+## Step 4 - Order কী?
 
 ```text
 compareAscending
@@ -8244,7 +8244,7 @@ Return Negative / Zero / Positive
 
 ---
 
-# 31. Bubble, Selection এবং `qsort()` — Final Mental Separation
+# 31. Bubble, Selection এবং `qsort()` - Final Mental Separation
 
 ```text
 Bubble Sort
@@ -8289,7 +8289,7 @@ qsort()
 
 # 🧪 Chapter 4 Practice
 
-## Task 1 — Ascending Sort
+## Task 1 - Ascending Sort
 
 Input:
 
@@ -8314,7 +8314,7 @@ Ascending Comparator
 
 ---
 
-## Task 2 — Descending Sort
+## Task 2 - Descending Sort
 
 Same Input:
 
@@ -8339,7 +8339,7 @@ Descending Comparator
 
 ---
 
-## Task 3 — Duplicate Detection
+## Task 3 - Duplicate Detection
 
 Input:
 
@@ -8368,7 +8368,7 @@ Early Exit
 
 ---
 
-## Task 4 — Count Distinct Values
+## Task 4 - Count Distinct Values
 
 Input:
 
@@ -8401,7 +8401,7 @@ Counter
 
 ---
 
-## Task 5 — Minimum Adjacent Difference
+## Task 5 - Minimum Adjacent Difference
 
 Input:
 
@@ -8532,7 +8532,7 @@ Reason:
 
 এই Chapter-এর assignment focused রাখা হয়েছে।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -8560,7 +8560,7 @@ Reason:
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 ```text
 1. qsort() Ascending
@@ -8574,7 +8574,7 @@ Reason:
 
 ---
 
-## Part C — Comparator Writing Drill
+## Part C - Comparator Writing Drill
 
 Code না দেখে লিখবে:
 
@@ -8608,7 +8608,7 @@ Test
 
 ---
 
-## Part D — Debugging
+## Part D - Debugging
 
 এই code-এর ভুলগুলো খুঁজে বের করো:
 
@@ -8817,21 +8817,21 @@ Preprocessing Tool
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+├── ✅ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ⬜ Chapter 5 — Frequency Counting Pattern
+├── ⬜ Chapter 5 - Frequency Counting Pattern
 │
-├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+├── ⬜ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -8856,7 +8856,7 @@ qsort()
 Practical Sorting + Comparator
 ```
 
-পরবর্তী **Day 5 — Chapter 5: Frequency Counting Pattern**-এ আমরা এই mental model তৈরি করব:
+পরবর্তী **Day 5 - Chapter 5: Frequency Counting Pattern**-এ আমরা এই mental model তৈরি করব:
 
 ```text
 Value Appears
@@ -8878,16 +8878,16 @@ vs
 Frequency Array Approach
 ```
 
-এবং শিখবে—**কখন sort করা ভালো, আর কখন direct frequency counting বেশি natural।**
+এবং শিখবে-**কখন sort করা ভালো, আর কখন direct frequency counting বেশি natural।**
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 5 — Frequency Counting Pattern
+# Chapter 5 - Frequency Counting Pattern
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
-> **Chapter Goal:** কোনো value কতবার এসেছে—এই ধরনের problem দেখলে **Traversal → Value → Frequency Index → Increment → Query** pattern চিনতে শেখা।
+> **Chapter Goal:** কোনো value কতবার এসেছে-এই ধরনের problem দেখলে **Traversal → Value → Frequency Index → Increment → Query** pattern চিনতে শেখা।
 > **Estimated Time:** 50–70 minutes
 
 ---
@@ -10329,7 +10329,7 @@ Negative values handle করার জন্য offset technique আছে।
 
 ---
 
-# 21. Offset Technique — Basic Idea
+# 21. Offset Technique - Basic Idea
 
 ধরো range:
 
@@ -10591,7 +10591,7 @@ Question:
 
 > কতটি distinct value আছে?
 
-## Approach 1 — Sorting
+## Approach 1 - Sorting
 
 ```text
 Sort
@@ -10605,7 +10605,7 @@ Count New Groups
 
 ---
 
-## Approach 2 — Frequency Array
+## Approach 2 - Frequency Array
 
 ```text
 Build freq[]
@@ -10719,7 +10719,7 @@ Candidate Tracking
 
 ---
 
-# 27. Common Mistake — Frequency Array ছোট নেওয়া
+# 27. Common Mistake - Frequency Array ছোট নেওয়া
 
 Constraint:
 
@@ -10765,7 +10765,7 @@ Size at least M + 1
 
 ---
 
-# 28. Common Mistake — Initialize না করা
+# 28. Common Mistake - Initialize না করা
 
 Wrong:
 
@@ -10789,7 +10789,7 @@ Counting শুরু হওয়া উচিত:
 
 ---
 
-# 29. Common Mistake — Index এবং Frequency Confusion
+# 29. Common Mistake - Index এবং Frequency Confusion
 
 ধরো:
 
@@ -10833,7 +10833,7 @@ freq[value] = count
 
 ---
 
-# 30. Common Mistake — Negative Value Direct Index
+# 30. Common Mistake - Negative Value Direct Index
 
 Wrong:
 
@@ -10865,7 +10865,7 @@ Can Value Safely Become an Array Index?
 
 ---
 
-# 31. Common Mistake — Huge Frequency Array
+# 31. Common Mistake - Huge Frequency Array
 
 Constraint:
 
@@ -10897,7 +10897,7 @@ Small?
 
 ---
 
-# 32. Common Mistake — Original Order হারানোর বিষয়
+# 32. Common Mistake - Original Order হারানোর বিষয়
 
 Frequency array:
 
@@ -10943,7 +10943,7 @@ Original Order
 
 Frequency problem দেখলে code ভুলে গেলে এইভাবে derive করবে।
 
-## Step 1 — Need Count Per Value
+## Step 1 - Need Count Per Value
 
 ```c
 int freq[SIZE] = {0};
@@ -10951,7 +10951,7 @@ int freq[SIZE] = {0};
 
 ---
 
-## Step 2 — Traverse Input
+## Step 2 - Traverse Input
 
 ```c
 for (int i = 0; i < n; i++)
@@ -10961,7 +10961,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Step 3 — Current Value
+## Step 3 - Current Value
 
 ```c
 int x = arr[i];
@@ -10969,7 +10969,7 @@ int x = arr[i];
 
 ---
 
-## Step 4 — Increment Its Counter
+## Step 4 - Increment Its Counter
 
 ```c
 freq[x]++;
@@ -10983,7 +10983,7 @@ freq[arr[i]]++;
 
 ---
 
-## Step 5 — Use Frequency Table
+## Step 5 - Use Frequency Table
 
 Example:
 
@@ -11155,7 +11155,7 @@ Example:
 
 # 🧪 Chapter 5 Practice
 
-## Task 1 — Basic Frequency Table
+## Task 1 - Basic Frequency Table
 
 Input:
 
@@ -11181,7 +11181,7 @@ Frequency Array
 
 ---
 
-## Task 2 — Query Frequency
+## Task 2 - Query Frequency
 
 Input:
 
@@ -11215,7 +11215,7 @@ Direct Lookup
 
 ---
 
-## Task 3 — Count Distinct Values
+## Task 3 - Count Distinct Values
 
 Input:
 
@@ -11242,7 +11242,7 @@ Counter
 
 ---
 
-## Task 4 — Most Frequent Value
+## Task 4 - Most Frequent Value
 
 Input:
 
@@ -11270,7 +11270,7 @@ Candidate Value
 
 ---
 
-## Task 5 — Character Frequency
+## Task 5 - Character Frequency
 
 Input:
 
@@ -11394,7 +11394,7 @@ Reason:
 
 Assignment focused রাখা হয়েছে যাতে Day 5 একই দিনে complete করা যায়।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -11422,7 +11422,7 @@ Assignment focused রাখা হয়েছে যাতে Day 5 একই দ
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 ```text
 1. Print Frequency of Every Present Value
@@ -11438,7 +11438,7 @@ Assignment focused রাখা হয়েছে যাতে Day 5 একই দ
 
 ---
 
-## Part C — Dry Run
+## Part C - Dry Run
 
 Array:
 
@@ -11469,7 +11469,7 @@ freq[3] = ?
 
 ---
 
-## Part D — Debugging Exercise
+## Part D - Debugging Exercise
 
 এই code-এ problem খুঁজে বের করো:
 
@@ -11781,21 +11781,21 @@ Direct Lookup
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+├── ✅ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ✅ Chapter 5 — Frequency Counting Pattern
+├── ✅ Chapter 5 - Frequency Counting Pattern
 │
-├── ⬜ Chapter 6 — Sorted Array & Frequency Problems
+├── ⬜ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -11833,7 +11833,7 @@ Problem
       Frequency Array
 ```
 
-পরবর্তী **Day 5 — Chapter 6: Sorted Array & Frequency Problems**-এ এই দুইটি idea একসঙ্গে compare এবং apply করা হবে:
+পরবর্তী **Day 5 - Chapter 6: Sorted Array & Frequency Problems**-এ এই দুইটি idea একসঙ্গে compare এবং apply করা হবে:
 
 ```text
 Same Problem
@@ -11849,12 +11849,12 @@ Which Representation Makes the Problem Easier?
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 6 — Sorted Array & Frequency Problems
+# Chapter 6 - Sorted Array & Frequency Problems
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
-> **Chapter Goal:** একই problem-কে **Sorting View** এবং **Frequency View**—দুইভাবে দেখতে শেখা, এবং constraint দেখে কোন approach বেশি natural সেটা চিনতে শেখা।
+> **Chapter Goal:** একই problem-কে **Sorting View** এবং **Frequency View**-দুইভাবে দেখতে শেখা, এবং constraint দেখে কোন approach বেশি natural সেটা চিনতে শেখা।
 > **Estimated Time:** 60–75 minutes
 
 ---
@@ -11896,7 +11896,7 @@ Raw Array
 
 Chapter 6-এর মূল প্রশ্ন:
 
-> **একই problem Sorting দিয়েও solve করা যায়, Frequency Array দিয়েও solve করা যায়—তাহলে কোনটা ব্যবহার করব?**
+> **একই problem Sorting দিয়েও solve করা যায়, Frequency Array দিয়েও solve করা যায়-তাহলে কোনটা ব্যবহার করব?**
 
 এই Chapter শেষে তোমার mental model হবে:
 
@@ -12089,7 +12089,7 @@ Stores Group Sizes Directly
 
 ---
 
-# 4. Problem 1 — Duplicate Detection
+# 4. Problem 1 - Duplicate Detection
 
 Problem:
 
@@ -12117,7 +12117,7 @@ Yes
 
 ---
 
-# 5. Duplicate Detection — Sorting Approach
+# 5. Duplicate Detection - Sorting Approach
 
 Original:
 
@@ -12222,7 +12222,7 @@ Early Exit
 
 ---
 
-# 6. Duplicate Detection — Frequency Approach
+# 6. Duplicate Detection - Frequency Approach
 
 Same Array:
 
@@ -12412,7 +12412,7 @@ Sorting May Be More Natural
 
 ---
 
-# 9. Problem 2 — Count Distinct Values
+# 9. Problem 2 - Count Distinct Values
 
 Problem:
 
@@ -12443,7 +12443,7 @@ Answer:
 
 ---
 
-# 10. Distinct Count — Sorting Approach
+# 10. Distinct Count - Sorting Approach
 
 Sort:
 
@@ -12597,7 +12597,7 @@ Final:
 
 ---
 
-# 12. Distinct Count — Frequency Approach
+# 12. Distinct Count - Frequency Approach
 
 Build:
 
@@ -12700,7 +12700,7 @@ Mental Table:
 
 ---
 
-# 14. Problem 3 — Count Repeated Values
+# 14. Problem 3 - Count Repeated Values
 
 Array:
 
@@ -12766,7 +12766,7 @@ Notice:
 
 ---
 
-# 15. খুব গুরুত্বপূর্ণ — Repeated Values vs Extra Duplicates
+# 15. খুব গুরুত্বপূর্ণ - Repeated Values vs Extra Duplicates
 
 Array:
 
@@ -12885,7 +12885,7 @@ How many duplicate elements?
 
 ---
 
-# 16. Problem 4 — Most Frequent Value / Mode
+# 16. Problem 4 - Most Frequent Value / Mode
 
 Array:
 
@@ -13140,7 +13140,7 @@ Candidate Value
 
 ---
 
-# 20. Mode Using Sorted Array — Code
+# 20. Mode Using Sorted Array - Code
 
 ```c
 #include <stdio.h>
@@ -13355,7 +13355,7 @@ New Group Boundary
 
 ---
 
-# 23. Problem 5 — Print Each Value with Frequency
+# 23. Problem 5 - Print Each Value with Frequency
 
 Input:
 
@@ -13543,7 +13543,7 @@ Print Final Group
 
 ---
 
-# 26. Problem 6 — Values Appearing Exactly K Times
+# 26. Problem 6 - Values Appearing Exactly K Times
 
 Problem:
 
@@ -13662,7 +13662,7 @@ Different Problems
 
 ---
 
-# 28. Problem 7 — Count Values Appearing Once
+# 28. Problem 7 - Count Values Appearing Once
 
 Array:
 
@@ -13729,7 +13729,7 @@ Appears Exactly Once
 
 ---
 
-# 29. Problem 8 — First Repeated Value
+# 29. Problem 8 - First Repeated Value
 
 এখানে interesting difference আছে।
 
@@ -13747,7 +13747,7 @@ Question:
 
 ---
 
-## Meaning A — First Value Whose Second Occurrence Appears
+## Meaning A - First Value Whose Second Occurrence Appears
 
 Traversal:
 
@@ -13880,7 +13880,7 @@ Need First by Input Order?
 
 ---
 
-# 31. Problem 9 — Smallest Repeated Value
+# 31. Problem 9 - Smallest Repeated Value
 
 Array:
 
@@ -14228,7 +14228,7 @@ Count Positive Entries
 
 ---
 
-# 38. Common Bug — Sorting করে Original Order Question Solve করা
+# 38. Common Bug - Sorting করে Original Order Question Solve করা
 
 Problem:
 
@@ -14309,7 +14309,7 @@ Be Careful Before Sorting
 
 ---
 
-# 39. Common Bug — Distinct Count Initialization
+# 39. Common Bug - Distinct Count Initialization
 
 Sorted Array:
 
@@ -14374,7 +14374,7 @@ if (n > 0)
 
 ---
 
-# 40. Common Bug — Frequency Range ভুল
+# 40. Common Bug - Frequency Range ভুল
 
 Constraint:
 
@@ -14412,7 +14412,7 @@ depending on valid range।
 
 ---
 
-# 41. Common Bug — Frequency Count আর Value Confuse করা
+# 41. Common Bug - Frequency Count আর Value Confuse করা
 
 Suppose:
 
@@ -14454,7 +14454,7 @@ Which Frequency is Largest?
 
 ---
 
-# 42. Common Bug — Tie Rule Ignore করা
+# 42. Common Bug - Tie Rule Ignore করা
 
 Array:
 
@@ -14509,7 +14509,7 @@ Tie-Breaking Rule
 
 ---
 
-# 43. Tie — Smallest Value
+# 43. Tie - Smallest Value
 
 Frequency array low to high traverse করলে:
 
@@ -14549,7 +14549,7 @@ bestValue = 2
 
 ---
 
-# 44. Tie — Largest Value
+# 44. Tie - Largest Value
 
 Option:
 
@@ -14747,7 +14747,7 @@ Does Original Order Matter?
 
 এই Chapter-এর problems solve করার সময়:
 
-## Step 1 — Question Translate করো
+## Step 1 - Question Translate করো
 
 Example:
 
@@ -14761,7 +14761,7 @@ How many different values are present?
 
 ---
 
-## Step 2 — Representation ভাবো
+## Step 2 - Representation ভাবো
 
 ```text
 Sorting?
@@ -14775,7 +14775,7 @@ Frequency?
 
 ---
 
-## Step 3 — Constraint Check
+## Step 3 - Constraint Check
 
 ```text
 Value Range Small?
@@ -14795,7 +14795,7 @@ Original Order Needed?
 
 ---
 
-## Step 4 — Pattern Chain লেখো
+## Step 4 - Pattern Chain লেখো
 
 Example:
 
@@ -14811,7 +14811,7 @@ Counter++
 
 ---
 
-## Step 5 — তারপর Code
+## Step 5 - তারপর Code
 
 এটা তোমার Bootcamp-এর core habit:
 
@@ -14835,7 +14835,7 @@ Code
 
 # 🧪 Chapter 6 Practice
 
-## Task 1 — Duplicate Detection
+## Task 1 - Duplicate Detection
 
 Input:
 
@@ -14859,7 +14859,7 @@ B. Frequency Approach
 
 ---
 
-## Task 2 — Distinct Count
+## Task 2 - Distinct Count
 
 Input:
 
@@ -14893,7 +14893,7 @@ B. Frequency + Positive Count
 
 ---
 
-## Task 3 — Count Repeated Values
+## Task 3 - Count Repeated Values
 
 Input:
 
@@ -14928,7 +14928,7 @@ Counter
 
 ---
 
-## Task 4 — Count Extra Duplicate Copies
+## Task 4 - Count Extra Duplicate Copies
 
 Same Input:
 
@@ -14962,7 +14962,7 @@ for every repeated value।
 
 ---
 
-## Task 5 — Most Frequent Value
+## Task 5 - Most Frequent Value
 
 Input:
 
@@ -14990,7 +14990,7 @@ Frequency: 4
 
 ---
 
-## Task 6 — Values Appearing Exactly K Times
+## Task 6 - Values Appearing Exactly K Times
 
 Input:
 
@@ -15022,7 +15022,7 @@ Output:
 
 ---
 
-## Task 7 — First Repeat Event
+## Task 7 - First Repeat Event
 
 Input:
 
@@ -15210,7 +15210,7 @@ Alternative from current knowledge:
 
 এই assignment এমনভাবে রাখা হয়েছে যাতে Chapter-এর main goals cover হয়, কিন্তু Day 5 একদিনেই শেষ করা যায়।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -15242,18 +15242,18 @@ Alternative from current knowledge:
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 নিজে করবে:
 
 ```text
-1. Duplicate Detection — Sorting Version
+1. Duplicate Detection - Sorting Version
 
-2. Duplicate Detection — Frequency Version
+2. Duplicate Detection - Frequency Version
 
-3. Distinct Count — Sorting Version
+3. Distinct Count - Sorting Version
 
-4. Distinct Count — Frequency Version
+4. Distinct Count - Frequency Version
 
 5. Count Repeated Values
 
@@ -15264,7 +15264,7 @@ Alternative from current knowledge:
 
 ---
 
-## Part C — Dry Run
+## Part C - Dry Run
 
 Array:
 
@@ -15300,7 +15300,7 @@ Maximum Frequency = ?
 
 ---
 
-## Part D — Sorting Dry Run
+## Part D - Sorting Dry Run
 
 Array:
 
@@ -15338,7 +15338,7 @@ Repeated Groups = ?
 
 ---
 
-## Part E — Debugging
+## Part E - Debugging
 
 এই code দেখো:
 
@@ -15678,21 +15678,21 @@ Early Exit
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+├── ✅ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ✅ Chapter 5 — Frequency Counting Pattern
+├── ✅ Chapter 5 - Frequency Counting Pattern
 │
-├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+├── ✅ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ⬜ Chapter 7 — Pair Thinking Foundation
+├── ⬜ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -15746,7 +15746,7 @@ Need Original Order?
              Frequency
 ```
 
-পরবর্তী **Day 5 — Chapter 7: Pair Thinking Foundation**-এ focus থাকবে:
+পরবর্তী **Day 5 - Chapter 7: Pair Thinking Foundation**-এ focus থাকবে:
 
 ```text
 One Element
@@ -15790,9 +15790,9 @@ Chapter 7-এ এখনই full advanced Two Pointer শেখানো হব�
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 7 — Pair Thinking Foundation
+# Chapter 7 - Pair Thinking Foundation
 
 > **Day 5 Theme:** Sorting → Frequency Counting → Sorted Array Thinking → Pair Thinking
 > **Chapter Goal:** Pair-based problem চিনতে শেখা, সব unique pair generate করার correct loop pattern বোঝা, `O(n²)` pair search করা এবং sorting কীভাবে future optimization-এর foundation তৈরি করে সেটা বোঝা।
@@ -16288,7 +16288,7 @@ All Elements After It
 
 ---
 
-# 8. Wrong Pair Loop — `j = 0`
+# 8. Wrong Pair Loop - `j = 0`
 
 Suppose:
 
@@ -16446,7 +16446,7 @@ Compare with Target
 
 ---
 
-# 11. Pair Sum Existence — Brute Force
+# 11. Pair Sum Existence - Brute Force
 
 ```c
 #include <stdio.h>
@@ -17124,7 +17124,7 @@ Faster Pair Search
 
 ---
 
-# 22. Problem — Minimum Pair Difference
+# 22. Problem - Minimum Pair Difference
 
 Array:
 
@@ -17228,7 +17228,7 @@ int difference = abs(arr[i] - arr[j]);
 
 ---
 
-# 24. Minimum Pair Difference — Brute Force Code
+# 24. Minimum Pair Difference - Brute Force Code
 
 ```c
 #include <stdio.h>
@@ -17349,7 +17349,7 @@ Correct State
 
 ---
 
-# 26. Maximum Pair Sum — Brute Force Thinking
+# 26. Maximum Pair Sum - Brute Force Thinking
 
 Array:
 
@@ -17910,7 +17910,7 @@ Problem statement carefully পড়বে।
 
 ---
 
-# 35. Common Bug — `j = i`
+# 35. Common Bug - `j = i`
 
 Wrong:
 
@@ -17953,7 +17953,7 @@ j = i + 1
 
 ---
 
-# 36. Common Bug — Double Counting
+# 36. Common Bug - Double Counting
 
 Wrong:
 
@@ -18000,7 +18000,7 @@ j = i + 1
 
 ---
 
-# 37. Common Bug — Existence Problem-এ সব Pair Check করা
+# 37. Common Bug - Existence Problem-এ সব Pair Check করা
 
 Suppose first pair-এই answer পাওয়া গেছে।
 
@@ -18036,7 +18036,7 @@ Early Exit
 
 ---
 
-# 38. Common Bug — Count Problem-এ `break`
+# 38. Common Bug - Count Problem-এ `break`
 
 Question:
 
@@ -18072,7 +18072,7 @@ Can Stop
 
 ---
 
-# 39. Common Bug — Value Pair এবং Index Pair Confusion
+# 39. Common Bug - Value Pair এবং Index Pair Confusion
 
 Array:
 
@@ -18126,7 +18126,7 @@ Occurrences
 
 ---
 
-# 40. Common Bug — Integer Overflow in Pair Sum
+# 40. Common Bug - Integer Overflow in Pair Sum
 
 Suppose:
 
@@ -18170,7 +18170,7 @@ Constraint দেখে decision নেবে।
 
 Pair problem দেখলে code মুখস্থ না করে derive করবে।
 
-## Step 1 — Need Two Different Indices
+## Step 1 - Need Two Different Indices
 
 ```text
 i
@@ -18179,7 +18179,7 @@ j
 
 ---
 
-## Step 2 — Avoid Self Pair and Duplicate Direction
+## Step 2 - Avoid Self Pair and Duplicate Direction
 
 Need:
 
@@ -18189,7 +18189,7 @@ i < j
 
 ---
 
-## Step 3 — Generate
+## Step 3 - Generate
 
 ```c
 for (int i = 0; i < n; i++)
@@ -18202,7 +18202,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Step 4 — Compute Pair Property
+## Step 4 - Compute Pair Property
 
 Example Sum:
 
@@ -18224,7 +18224,7 @@ arr[i] == arr[j]
 
 ---
 
-## Step 5 — Update Correct State
+## Step 5 - Update Correct State
 
 Existence:
 
@@ -18330,7 +18330,7 @@ Different Problem
 
 ---
 
-# 43. Recognition Drill — State Selection
+# 43. Recognition Drill - State Selection
 
 ## Problem
 
@@ -18590,7 +18590,7 @@ Can Frequency Replace Repeated Pair Checks?
 
 Pair problem দেখলে:
 
-## Step 1 — Translate
+## Step 1 - Translate
 
 Example:
 
@@ -18608,7 +18608,7 @@ Need Count of All Matches
 
 ---
 
-## Step 2 — Choose State
+## Step 2 - Choose State
 
 ```text
 Need Total Count
@@ -18622,7 +18622,7 @@ int count = 0;
 
 ---
 
-## Step 3 — Generate Unique Pairs
+## Step 3 - Generate Unique Pairs
 
 ```c
 for (int i = 0; i < n; i++)
@@ -18632,7 +18632,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Step 4 — Check Condition
+## Step 4 - Check Condition
 
 ```c
 if (arr[i] + arr[j] == target)
@@ -18640,7 +18640,7 @@ if (arr[i] + arr[j] == target)
 
 ---
 
-## Step 5 — Update
+## Step 5 - Update
 
 ```c
 count++;
@@ -18666,7 +18666,7 @@ Answer
 
 # 🧪 Chapter 7 Practice
 
-## Task 1 — Print All Unique Pairs
+## Task 1 - Print All Unique Pairs
 
 Input:
 
@@ -18694,7 +18694,7 @@ Pair Generation
 
 ---
 
-## Task 2 — Pair Sum Existence
+## Task 2 - Pair Sum Existence
 
 Input:
 
@@ -18731,7 +18731,7 @@ Early Exit
 
 ---
 
-## Task 3 — Count Target Sum Pairs
+## Task 3 - Count Target Sum Pairs
 
 Input:
 
@@ -18757,7 +18757,7 @@ Output:
 
 ---
 
-## Task 4 — Count Equal Index Pairs
+## Task 4 - Count Equal Index Pairs
 
 Input:
 
@@ -18782,7 +18782,7 @@ Output:
 
 ---
 
-## Task 5 — Minimum Pair Difference
+## Task 5 - Minimum Pair Difference
 
 Input:
 
@@ -18815,7 +18815,7 @@ Minimum Tracking
 
 ---
 
-## Task 6 — Maximum Pair Sum
+## Task 6 - Maximum Pair Sum
 
 Input:
 
@@ -18979,7 +18979,7 @@ Track ______
 
 Assignment focused রাখা হয়েছে যাতে Day 5 একই দিনে finish করা যায়।
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -19011,7 +19011,7 @@ Assignment focused রাখা হয়েছে যাতে Day 5 একই দ
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 নিজে করবে:
 
@@ -19033,7 +19033,7 @@ Assignment focused রাখা হয়েছে যাতে Day 5 একই দ
 
 ---
 
-## Part C — Pair Dry Run
+## Part C - Pair Dry Run
 
 Array:
 
@@ -19071,7 +19071,7 @@ Formula দিয়েও verify করবে:
 
 ---
 
-## Part D — Target Sum Dry Run
+## Part D - Target Sum Dry Run
 
 Array:
 
@@ -19104,7 +19104,7 @@ Valid Pair Count = ?
 
 ---
 
-## Part E — Debugging
+## Part E - Debugging
 
 এই code দেখো:
 
@@ -19470,21 +19470,21 @@ Pair Counting
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+├── ✅ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ✅ Chapter 5 — Frequency Counting Pattern
+├── ✅ Chapter 5 - Frequency Counting Pattern
 │
-├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+├── ✅ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ✅ Chapter 7 — Pair Thinking Foundation
+├── ✅ Chapter 7 - Pair Thinking Foundation
 │
-└── ⬜ Chapter 8 — Pattern Combination, Assignment,
+└── ⬜ Chapter 8 - Pattern Combination, Assignment,
                   Mini Contest & Reflection
 ```
 
@@ -19561,7 +19561,7 @@ Can Frequency Store Useful Information?
 Future Optimization
 ```
 
-পরবর্তী **Day 5 — Chapter 8** হবে Day 5-এর final integration chapter। সেখানে নতুন বড় topic ঢোকানোর বদলে focus থাকবে:
+পরবর্তী **Day 5 - Chapter 8** হবে Day 5-এর final integration chapter। সেখানে নতুন বড় topic ঢোকানোর বদলে focus থাকবে:
 
 ```text
 Sorting
@@ -19597,12 +19597,12 @@ Day 5 Reflection
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 5
+# 🚀 CP Bootcamp 2026 - Day 5
 
-# Chapter 8 — Pattern Combination, Final Assignment, Mini Contest & Reflection
+# Chapter 8 - Pattern Combination, Final Assignment, Mini Contest & Reflection
 
 > **Day 5 Final Chapter**
-> **Main Goal:** Sorting, Frequency Counting, Sorted Group এবং Pair Thinking—এই চারটি concept আলাদা আলাদা জানার পর problem দেখে সঠিক pattern choose এবং combine করতে শেখা।
+> **Main Goal:** Sorting, Frequency Counting, Sorted Group এবং Pair Thinking-এই চারটি concept আলাদা আলাদা জানার পর problem দেখে সঠিক pattern choose এবং combine করতে শেখা।
 > **Estimated Time:** 90–120 minutes
 
 ---
@@ -20044,7 +20044,7 @@ Count++
 
 ---
 
-# 6. Problem 1 — Count Distinct Values
+# 6. Problem 1 - Count Distinct Values
 
 Input:
 
@@ -20118,7 +20118,7 @@ natural।
 
 ---
 
-# 7. Problem 2 — First Repeated Value
+# 7. Problem 2 - First Repeated Value
 
 Array:
 
@@ -20194,7 +20194,7 @@ the exact question
 
 ---
 
-# 8. Problem 3 — Smallest Repeated Value
+# 8. Problem 3 - Smallest Repeated Value
 
 Same array:
 
@@ -20302,7 +20302,7 @@ Lesson:
 
 ---
 
-# 10. Problem 4 — Mode
+# 10. Problem 4 - Mode
 
 Array:
 
@@ -20369,7 +20369,7 @@ Candidate Value
 
 ---
 
-# 11. Problem 5 — Pair Sum Existence
+# 11. Problem 5 - Pair Sum Existence
 
 Array:
 
@@ -20421,7 +20421,7 @@ Stop When Found
 
 ---
 
-# 12. Problem 6 — Pair Sum Count
+# 12. Problem 6 - Pair Sum Count
 
 Same Array:
 
@@ -20483,7 +20483,7 @@ Count
 
 ---
 
-# 13. Problem 7 — Minimum Difference
+# 13. Problem 7 - Minimum Difference
 
 Array:
 
@@ -20632,7 +20632,7 @@ Sorting Can Reduce Search Space
 
 ---
 
-# 15. Problem 8 — Equal Pair Count
+# 15. Problem 8 - Equal Pair Count
 
 Array:
 
@@ -21093,7 +21093,7 @@ Counter Max   Flag    Counter Compare Min   Flag  Min   Counter
 
 আজকের পর Array problem দেখলে এই protocol follow করবে।
 
-## Phase 1 — Understand
+## Phase 1 - Understand
 
 ```text
 Input কী?
@@ -21105,7 +21105,7 @@ Exactly কী count/find/check করতে হবে?
 
 ---
 
-## Phase 2 — Constraint
+## Phase 2 - Constraint
 
 ```text
 n কত বড়?
@@ -21119,7 +21119,7 @@ Original order matter করে?
 
 ---
 
-## Phase 3 — Recognition
+## Phase 3 - Recognition
 
 ```text
 Need Order?
@@ -21143,7 +21143,7 @@ Need Two Elements?
 
 ---
 
-## Phase 4 — State
+## Phase 4 - State
 
 ```text
 Exists?
@@ -21172,7 +21172,7 @@ Maximum?
 
 ---
 
-## Phase 5 — Pattern Chain
+## Phase 5 - Pattern Chain
 
 Example:
 
@@ -21188,13 +21188,13 @@ Minimum Tracking
 
 ---
 
-## Phase 6 — Code
+## Phase 6 - Code
 
 এখন code লিখবে।
 
 ---
 
-## Phase 7 — Test
+## Phase 7 - Test
 
 At least:
 
@@ -21229,7 +21229,7 @@ Relevant case choose করবে।
 
 ---
 
-## Problem 1 — Appears Once
+## Problem 1 - Appears Once
 
 Input:
 
@@ -21274,7 +21274,7 @@ Values:
 
 ---
 
-## Problem 2 — Largest Repeated Value
+## Problem 2 - Largest Repeated Value
 
 Input:
 
@@ -21312,7 +21312,7 @@ Answer
 
 ---
 
-## Problem 3 — Closest Pair
+## Problem 3 - Closest Pair
 
 Input:
 
@@ -21355,7 +21355,7 @@ Minimum Tracking
 
 ---
 
-## Problem 4 — Count Pair Sum
+## Problem 4 - Count Pair Sum
 
 Input:
 
@@ -21399,7 +21399,7 @@ Day 5-এর সবচেয়ে important mistakes একসঙ্গে দে�
 
 ---
 
-## Mistake 1 — Comparator Overflow
+## Mistake 1 - Comparator Overflow
 
 Risky:
 
@@ -21415,7 +21415,7 @@ return (x > y) - (x < y);
 
 ---
 
-## Mistake 2 — Frequency Array Uninitialized
+## Mistake 2 - Frequency Array Uninitialized
 
 Wrong:
 
@@ -21443,7 +21443,7 @@ int freq[101] = {0};
 
 ---
 
-## Mistake 3 — Wrong Frequency Range
+## Mistake 3 - Wrong Frequency Range
 
 Constraint:
 
@@ -21459,7 +21459,7 @@ for (int value = 0; value <= 100; value++)
 
 ---
 
-## Mistake 4 — Sorting Original Order Problem
+## Mistake 4 - Sorting Original Order Problem
 
 Question original order dependent হলে:
 
@@ -21477,7 +21477,7 @@ Changes Positions
 
 ---
 
-## Mistake 5 — Missing First Sorted Group
+## Mistake 5 - Missing First Sorted Group
 
 Distinct count:
 
@@ -21495,13 +21495,13 @@ guaranteed হয়।
 
 ---
 
-## Mistake 6 — Missing Last Group
+## Mistake 6 - Missing Last Group
 
 Sorted group processing-এ loop শেষে final group handle করতে হবে।
 
 ---
 
-## Mistake 7 — Pair Loop Starts at `j = 0`
+## Mistake 7 - Pair Loop Starts at `j = 0`
 
 এতে:
 
@@ -21521,7 +21521,7 @@ j = i + 1;
 
 ---
 
-## Mistake 8 — Count Problem-এ Early Exit
+## Mistake 8 - Count Problem-এ Early Exit
 
 Need total count হলে:
 
@@ -21531,7 +21531,7 @@ Do Not Stop After First Match
 
 ---
 
-## Mistake 9 — Existence Problem-এ Unnecessary Full Search
+## Mistake 9 - Existence Problem-এ Unnecessary Full Search
 
 Need only yes/no হলে:
 
@@ -21545,7 +21545,7 @@ use করা যায়।
 
 ---
 
-## Mistake 10 — Ignoring Overflow
+## Mistake 10 - Ignoring Overflow
 
 Large values হলে:
 
@@ -21560,7 +21560,7 @@ consider করবে।
 
 # 25. Edge Case Review
 
-## Case 1 — Single Element
+## Case 1 - Single Element
 
 ```text
 1
@@ -21580,7 +21580,7 @@ Pair Count = 0
 
 ---
 
-## Case 2 — All Same
+## Case 2 - All Same
 
 ```text
 5
@@ -21608,7 +21608,7 @@ Index pair count:
 
 ---
 
-## Case 3 — All Different
+## Case 3 - All Different
 
 ```text
 5
@@ -21628,7 +21628,7 @@ Repeated Value Count = 0
 
 ---
 
-## Case 4 — Negative Values
+## Case 4 - Negative Values
 
 ```text
 -5 -2 -8 -1
@@ -21646,7 +21646,7 @@ Sorting works naturally।
 
 ---
 
-## Case 5 — Duplicate Pair Values
+## Case 5 - Duplicate Pair Values
 
 ```text
 1 1 2 2
@@ -21688,7 +21688,7 @@ Question wording matters।
 
 ---
 
-## Problem 1 — Distinct Counter
+## Problem 1 - Distinct Counter
 
 ### Difficulty
 
@@ -21720,7 +21720,7 @@ Question wording matters।
 
 ---
 
-## Problem 2 — Duplicate Detector
+## Problem 2 - Duplicate Detector
 
 ### Difficulty
 
@@ -21758,7 +21758,7 @@ Approach B
 
 ---
 
-## Problem 3 — Frequency Champion
+## Problem 3 - Frequency Champion
 
 ### Difficulty
 
@@ -21795,7 +21795,7 @@ print the smallest value.
 
 ---
 
-## Problem 4 — First Repeat Event
+## Problem 4 - First Repeat Event
 
 ### Difficulty
 
@@ -21823,7 +21823,7 @@ Original Traversal Order Matters
 
 ---
 
-## Problem 5 — Target Pair Counter
+## Problem 5 - Target Pair Counter
 
 ### Difficulty
 
@@ -21857,7 +21857,7 @@ Valid pairs:
 
 ---
 
-## Problem 6 — Closest Numbers
+## Problem 6 - Closest Numbers
 
 ### Difficulty
 
@@ -21966,7 +21966,7 @@ Duplicate values
 
 ---
 
-## Part A — Concept Questions
+## Part A - Concept Questions
 
 নিজের ভাষায় answer করবে:
 
@@ -22010,7 +22010,7 @@ Duplicate values
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 নিজে code করবে:
 
@@ -22042,7 +22042,7 @@ Duplicate values
 
 ---
 
-## Part C — Approach Comparison
+## Part C - Approach Comparison
 
 Problem:
 
@@ -22088,7 +22088,7 @@ When would I choose Frequency?
 
 ---
 
-## Part D — Dry Run
+## Part D - Dry Run
 
 Array:
 
@@ -22124,7 +22124,7 @@ Maximum Frequency = ?
 
 ---
 
-## Part E — Sorted Group Dry Run
+## Part E - Sorted Group Dry Run
 
 Original:
 
@@ -22162,7 +22162,7 @@ Mode = ?
 
 ---
 
-## Part F — Pair Dry Run
+## Part F - Pair Dry Run
 
 Array:
 
@@ -22203,7 +22203,7 @@ Valid Pairs:
 
 ---
 
-## Part G — Pattern Selection
+## Part G - Pattern Selection
 
 শুধু pattern লিখবে, code না।
 
@@ -22556,7 +22556,7 @@ Required Information
 
 ---
 
-# 🧠 Pattern Evolution — Day 1 to Day 5
+# 🧠 Pattern Evolution - Day 1 to Day 5
 
 তোমার pattern knowledge এখন এই stage-এ:
 
@@ -22728,21 +22728,21 @@ How to Build a Solution
 ```text
 Day 5
 │
-├── ✅ Chapter 1 — Sorting Mental Model
+├── ✅ Chapter 1 - Sorting Mental Model
 │
-├── ✅ Chapter 2 — Bubble Sort
+├── ✅ Chapter 2 - Bubble Sort
 │
-├── ✅ Chapter 3 — Selection Sort
+├── ✅ Chapter 3 - Selection Sort
 │
-├── ✅ Chapter 4 — Built-in qsort() for Contest Use
+├── ✅ Chapter 4 - Built-in qsort() for Contest Use
 │
-├── ✅ Chapter 5 — Frequency Counting Pattern
+├── ✅ Chapter 5 - Frequency Counting Pattern
 │
-├── ✅ Chapter 6 — Sorted Array & Frequency Problems
+├── ✅ Chapter 6 - Sorted Array & Frequency Problems
 │
-├── ✅ Chapter 7 — Pair Thinking Foundation
+├── ✅ Chapter 7 - Pair Thinking Foundation
 │
-└── ✅ Chapter 8 — Pattern Combination, Final Assignment,
+└── ✅ Chapter 8 - Pattern Combination, Final Assignment,
                   Mini Contest & Reflection
 ```
 

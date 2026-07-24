@@ -1,4 +1,4 @@
-# 🚀 Day 2 — Arrays, Traversal & Core Problem-Solving Patterns
+# 🚀 Day 2 - Arrays, Traversal & Core Problem-Solving Patterns
 
 তোমার বর্তমান অবস্থান অনুযায়ী Day 2 হবে **খুব গুরুত্বপূর্ণ turning point**।
 
@@ -37,42 +37,42 @@ Positive / Negative Count করো
 ```text
 Day 2
 │
-├── Chapter 1 — Array Mental Model
+├── Chapter 1 - Array Mental Model
 │
-├── Chapter 2 — Traversal Pattern
+├── Chapter 2 - Traversal Pattern
 │
-├── Chapter 3 — Accumulation Pattern
+├── Chapter 3 - Accumulation Pattern
 │
-├── Chapter 4 — Counting Pattern
+├── Chapter 4 - Counting Pattern
 │
-├── Chapter 5 — Maximum & Minimum Pattern
+├── Chapter 5 - Maximum & Minimum Pattern
 │
-├── Chapter 6 — Searching Pattern
+├── Chapter 6 - Searching Pattern
 │
-├── Chapter 7 — Combining Patterns
+├── Chapter 7 - Combining Patterns
 │
-├── Chapter 8 — Common Bugs & Edge Cases
+├── Chapter 8 - Common Bugs & Edge Cases
 │
-├── Chapter 9 — Problem Solving Session
+├── Chapter 9 - Problem Solving Session
 │
-├── Chapter 10 — Pattern Library Update
+├── Chapter 10 - Pattern Library Update
 │
-└── Chapter 11 — Assignment & Reflection
+└── Chapter 11 - Assignment & Reflection
 ```
 
 আমি Day 1-এর মতোই **বইয়ের Chapter style**-এ এগোব।
 
-আজ শুরু করছি **Day 2 — Chapter 1** দিয়ে।
+আজ শুরু করছি **Day 2 - Chapter 1** দিয়ে।
 
 ---
 
-# Day 2 — Chapter 1
+# Day 2 - Chapter 1
 
 # Array Mental Model
 
 ---
 
-## Lesson 1 — Array শুধু Syntax না
+## Lesson 1 - Array শুধু Syntax না
 
 তুমি ইতোমধ্যে C-তে Array জানো।
 
@@ -128,7 +128,7 @@ Even সংখ্যা Count করো।
 30 আছে কি না খুঁজে বের করো।
 ```
 
-লক্ষ্য করো—
+লক্ষ্য করো-
 
 **Array একই।**
 
@@ -136,7 +136,7 @@ Even সংখ্যা Count করো।
 
 ---
 
-# Lesson 2 — Array Problem-এর Basic Mental Model
+# Lesson 2 - Array Problem-এর Basic Mental Model
 
 যখন Array দেখবে, প্রথম চিন্তা হবে না:
 
@@ -218,7 +218,7 @@ Maximum Update
 
 ---
 
-# Lesson 3 — Index এবং Element এক জিনিস না
+# Lesson 3 - Index এবং Element এক জিনিস না
 
 ধরো:
 
@@ -340,7 +340,7 @@ Value Check
 
 ---
 
-# Lesson 4 — Traversal কী?
+# Lesson 4 - Traversal কী?
 
 Traversal তুমি Glossary-তে ইতোমধ্যে দেখেছো।
 
@@ -414,7 +414,7 @@ Array Traversal করছে
 
 ---
 
-# Lesson 5 — Traversal-এর তিনটি প্রশ্ন
+# Lesson 5 - Traversal-এর তিনটি প্রশ্ন
 
 যেকোনো Array Problem-এ Traversal করার আগে নিজেকে তিনটা প্রশ্ন করবে।
 
@@ -486,7 +486,7 @@ Found?
 
 ---
 
-# Lesson 6 — Same Traversal, Different Problems
+# Lesson 6 - Same Traversal, Different Problems
 
 এই Lesson খুব গুরুত্বপূর্ণ।
 
@@ -509,7 +509,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Problem A — Print All Elements
+## Problem A - Print All Elements
 
 ```c
 printf("%d ", arr[i]);
@@ -525,7 +525,7 @@ Output
 
 ---
 
-## Problem B — Sum
+## Problem B - Sum
 
 ```c
 sum += arr[i];
@@ -541,7 +541,7 @@ Accumulation
 
 ---
 
-## Problem C — Count Even
+## Problem C - Count Even
 
 ```c
 if (arr[i] % 2 == 0)
@@ -562,7 +562,7 @@ Counter
 
 ---
 
-## Problem D — Maximum
+## Problem D - Maximum
 
 ```c
 if (arr[i] > max)
@@ -583,7 +583,7 @@ Update
 
 ---
 
-## Problem E — Search
+## Problem E - Search
 
 ```c
 if (arr[i] == target)
@@ -624,7 +624,7 @@ Update Maximum
 
 ---
 
-# Lesson 7 — The Core Array Skeleton
+# Lesson 7 - The Core Array Skeleton
 
 অনেক Beginner Array Problem-এর ভিতরের common structure দেখতে পায় না।
 
@@ -717,7 +717,7 @@ Result
 
 ---
 
-# Lesson 8 — Read and Process: সব সময় Array লাগবে?
+# Lesson 8 - Read and Process: সব সময় Array লাগবে?
 
 না।
 
@@ -776,7 +776,7 @@ Process Later
 
 ---
 
-# Lesson 9 — Store or Process?
+# Lesson 9 - Store or Process?
 
 নিজেকে প্রশ্ন করবে:
 
@@ -867,7 +867,7 @@ Array
 
 ---
 
-# Lesson 10 — Array Problem Translation
+# Lesson 10 - Array Problem Translation
 
 Problem Statement:
 
@@ -971,7 +971,7 @@ Minimum Update
 
 ---
 
-# 🧪 Chapter 1 — Exercise
+# 🧪 Chapter 1 - Exercise
 
 এখন Code লিখবে না।
 
@@ -1057,7 +1057,7 @@ Pattern:
 
 ---
 
-## Exercise 6 — Important
+## Exercise 6 - Important
 
 Problem:
 
@@ -1106,7 +1106,7 @@ Day_2_chapter_1_exercise.md
 Structure:
 
 ```md
-# Day 2 — Chapter 1 Exercise
+# Day 2 - Chapter 1 Exercise
 
 ## Exercise 1
 
@@ -1160,7 +1160,7 @@ Negative হলে Counter এক বাড়াতে হবে।
 
 ---
 
-# Day 2 — Chapter 2
+# Day 2 - Chapter 2
 
 # 🔄 Traversal Pattern
 
@@ -1196,7 +1196,7 @@ Perform Operation
 
 ---
 
-# Lesson 1 — Traversal আবার পরিষ্কার করি
+# Lesson 1 - Traversal আবার পরিষ্কার করি
 
 Traversal মানে:
 
@@ -1235,7 +1235,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 2 — Loop এবং Traversal এক জিনিস নয়
+# Lesson 2 - Loop এবং Traversal এক জিনিস নয়
 
 এই পার্থক্যটা খুব গুরুত্বপূর্ণ।
 
@@ -1299,7 +1299,7 @@ Traversal = কোন Data-গুলো একে একে দেখছি?
 
 ---
 
-# Lesson 3 — Iteration এবং Traversal
+# Lesson 3 - Iteration এবং Traversal
 
 আরেকটা নতুন শব্দ:
 
@@ -1336,7 +1336,7 @@ Traversal
 
 ---
 
-# Lesson 4 — Forward Traversal
+# Lesson 4 - Forward Traversal
 
 সবচেয়ে common Traversal:
 
@@ -1404,7 +1404,7 @@ Final Output:
 
 ---
 
-# Lesson 5 — Reverse Traversal
+# Lesson 5 - Reverse Traversal
 
 সব সময় Left থেকে Right যেতে হবে না।
 
@@ -1485,7 +1485,7 @@ int i = n - 1;
 
 ---
 
-# Lesson 6 — Traversal Direction কীভাবে ঠিক করব?
+# Lesson 6 - Traversal Direction কীভাবে ঠিক করব?
 
 নিজেকে প্রশ্ন করবে:
 
@@ -1525,7 +1525,7 @@ Forward Traversal
 
 ---
 
-# Lesson 7 — Full Traversal
+# Lesson 7 - Full Traversal
 
 যখন সব Element Visit করা হয়:
 
@@ -1565,7 +1565,7 @@ Frequency
 
 ---
 
-# Lesson 8 — Partial Traversal
+# Lesson 8 - Partial Traversal
 
 সব Problem-এ শেষ পর্যন্ত যাওয়া দরকার হয় না।
 
@@ -1632,7 +1632,7 @@ Stop Early
 
 ---
 
-# Lesson 9 — Traversal + Operation
+# Lesson 9 - Traversal + Operation
 
 Traversal নিজে সাধারণত Final Solution না।
 
@@ -1640,7 +1640,7 @@ Traversal হলো Data দেখার Process।
 
 তারপর প্রতিটি Element-এর উপর কোনো Operation হয়।
 
-## Example 1 — Print
+## Example 1 - Print
 
 ```text
 Traversal
@@ -1657,7 +1657,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Example 2 — Sum
+## Example 2 - Sum
 
 ```text
 Traversal
@@ -1674,7 +1674,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Example 3 — Count
+## Example 3 - Count
 
 ```text
 Traversal
@@ -1696,7 +1696,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Example 4 — Maximum
+## Example 4 - Maximum
 
 ```text
 Traversal
@@ -1718,7 +1718,7 @@ for (int i = 1; i < n; i++)
 
 ---
 
-# Lesson 10 — Index Traversal vs Value Processing
+# Lesson 10 - Index Traversal vs Value Processing
 
 এটা Beginner-দের খুব common confusion।
 
@@ -1826,7 +1826,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 11 — Off-by-One Error
+# Lesson 11 - Off-by-One Error
 
 Traversal-এর সবচেয়ে common Bug-এর একটি হলো:
 
@@ -1906,7 +1906,7 @@ arr[4]
 
 ---
 
-# Lesson 12 — Empty Loop Body Bug
+# Lesson 12 - Empty Loop Body Bug
 
 এই Bug-টা C-তে খুব dangerous।
 
@@ -1942,7 +1942,7 @@ Contest-এ ছোট syntax mistake অনেক সময় বেশি স�
 
 ---
 
-# Lesson 13 — Traversal Recognition Signals
+# Lesson 13 - Traversal Recognition Signals
 
 Problem Statement-এ এই ধরনের কথা দেখলে Traversal চিন্তা করবে:
 
@@ -2044,7 +2044,7 @@ Input:
 -2 5 0 -7 9 3
 ```
 
-## Step 1 — Need every Element?
+## Step 1 - Need every Element?
 
 ```text
 Yes
@@ -2056,7 +2056,7 @@ Yes
 Traversal
 ```
 
-## Step 2 — কী Check করব?
+## Step 2 - কী Check করব?
 
 ```text
 Positive?
@@ -2068,7 +2068,7 @@ Condition:
 arr[i] > 0
 ```
 
-## Step 3 — কী করব?
+## Step 3 - কী করব?
 
 ```text
 Print
@@ -2221,9 +2221,9 @@ Actual Array Reverse করতে হলে Element swap করতে হবে�
 
 # 🧪 Chapter 2 Exercise
 
-এখানে Code লিখবে। তবে ছোট Problem—আজকের একদিনের pacing বজায় রাখার জন্য শুধু ৪টা exercise।
+এখানে Code লিখবে। তবে ছোট Problem-আজকের একদিনের pacing বজায় রাখার জন্য শুধু ৪টা exercise।
 
-## Exercise 1 — Forward Traversal
+## Exercise 1 - Forward Traversal
 
 Input:
 
@@ -2248,7 +2248,7 @@ Output
 
 ---
 
-## Exercise 2 — Reverse Traversal
+## Exercise 2 - Reverse Traversal
 
 Input:
 
@@ -2273,7 +2273,7 @@ Output
 
 ---
 
-## Exercise 3 — Print Even Values
+## Exercise 3 - Print Even Values
 
 Input:
 
@@ -2304,7 +2304,7 @@ Output
 
 ---
 
-## Exercise 4 — Print Values at Even Indices
+## Exercise 4 - Print Values at Even Indices
 
 Input:
 
@@ -2486,11 +2486,11 @@ Review Mistakes
 Day 2 Complete
 ```
 
-**Chapter 2 এখানেই শেষ।** Exerciseগুলো করার পর Chapter 3-এ আমরা **Accumulation + Counting Pattern** একসঙ্গে শিখব—কারণ ১৬ দিনের bootcamp pacing অনুযায়ী related patterns আলাদা আলাদা বিশাল Chapter করলে practical preparation পিছিয়ে যাবে।
+**Chapter 2 এখানেই শেষ।** Exerciseগুলো করার পর Chapter 3-এ আমরা **Accumulation + Counting Pattern** একসঙ্গে শিখব-কারণ ১৬ দিনের bootcamp pacing অনুযায়ী related patterns আলাদা আলাদা বিশাল Chapter করলে practical preparation পিছিয়ে যাবে।
 
 ---
 
-# Day 2 — Chapter 3
+# Day 2 - Chapter 3
 
 # 📦 Accumulation + Counting Pattern
 
@@ -2569,7 +2569,7 @@ Traversal
 
 ---
 
-# Lesson 1 — Accumulation Pattern কী?
+# Lesson 1 - Accumulation Pattern কী?
 
 ধরো Array:
 
@@ -2651,7 +2651,7 @@ Accumulator Update করো
 
 ---
 
-# Lesson 2 — Accumulator শব্দটার মানে
+# Lesson 2 - Accumulator শব্দটার মানে
 
 সহজ বাংলায়:
 
@@ -2717,7 +2717,7 @@ sum = 15
 
 ---
 
-# Lesson 3 — Running Sum
+# Lesson 3 - Running Sum
 
 Accumulation চলার সময় প্রতিটি ধাপের Sum-কে আমরা **Running Sum** বলতে পারি।
 
@@ -2760,7 +2760,7 @@ Final Answer:
 
 ---
 
-# Lesson 4 — Sum Problem-এর Complete Thinking
+# Lesson 4 - Sum Problem-এর Complete Thinking
 
 Problem:
 
@@ -2770,13 +2770,13 @@ Problem পড়েই Code লিখবে না।
 
 প্রথমে Translation:
 
-### Step 1 — কী দরকার?
+### Step 1 - কী দরকার?
 
 ```text
 সব Number-এর Total
 ```
 
-### Step 2 — সব Number দেখতে হবে?
+### Step 2 - সব Number দেখতে হবে?
 
 ```text
 Yes
@@ -2788,7 +2788,7 @@ Yes
 Traversal
 ```
 
-### Step 3 — প্রতিটি Number নিয়ে কী করব?
+### Step 3 - প্রতিটি Number নিয়ে কী করব?
 
 ```text
 Running Result-এর সঙ্গে Add
@@ -2812,7 +2812,7 @@ Output Sum
 
 ---
 
-# Lesson 5 — Sum Problem Code
+# Lesson 5 - Sum Problem Code
 
 ```c
 #include <stdio.h>
@@ -2873,7 +2873,7 @@ Output
 
 ---
 
-# Lesson 6 — সব সময় Array লাগবে?
+# Lesson 6 - সব সময় Array লাগবে?
 
 না।
 
@@ -2945,7 +2945,7 @@ Print Final Sum
 
 ---
 
-# Lesson 7 — Initialization কেন গুরুত্বপূর্ণ?
+# Lesson 7 - Initialization কেন গুরুত্বপূর্ণ?
 
 দেখো:
 
@@ -3015,7 +3015,7 @@ sum = 10
 
 ---
 
-# Lesson 8 — Counter Pattern কী?
+# Lesson 8 - Counter Pattern কী?
 
 এবার Problem:
 
@@ -3105,7 +3105,7 @@ count = 3
 
 ---
 
-# Lesson 9 — Counter কী?
+# Lesson 9 - Counter কী?
 
 সহজ ভাষায়:
 
@@ -3135,7 +3135,7 @@ New Count
 
 ---
 
-# Lesson 10 — Counting Pattern-এর Complete Thinking
+# Lesson 10 - Counting Pattern-এর Complete Thinking
 
 Problem:
 
@@ -3143,7 +3143,7 @@ Problem:
 
 Brain Translation:
 
-### Step 1 — সব Number দেখতে হবে?
+### Step 1 - সব Number দেখতে হবে?
 
 ```text
 Yes
@@ -3155,7 +3155,7 @@ Yes
 Traversal
 ```
 
-### Step 2 — কোন Number দরকার?
+### Step 2 - কোন Number দরকার?
 
 ```text
 Positive Number
@@ -3173,7 +3173,7 @@ Condition:
 arr[i] > 0
 ```
 
-### Step 3 — Positive পেলে কী করব?
+### Step 3 - Positive পেলে কী করব?
 
 ```text
 Count বাড়াব
@@ -3199,7 +3199,7 @@ Output Count
 
 ---
 
-# Lesson 11 — Counting Problem Code
+# Lesson 11 - Counting Problem Code
 
 ```c
 #include <stdio.h>
@@ -3235,7 +3235,7 @@ int main()
 
 ---
 
-# Lesson 12 — Accumulator vs Counter
+# Lesson 12 - Accumulator vs Counter
 
 এখানে অনেক Beginner Confused হয়।
 
@@ -3300,7 +3300,7 @@ Counter
 
 ---
 
-# Lesson 13 — একই Problem-এ Accumulator + Counter
+# Lesson 13 - একই Problem-এ Accumulator + Counter
 
 এবার গুরুত্বপূর্ণ অংশ।
 
@@ -3412,7 +3412,7 @@ if (count > 0)
 
 ---
 
-# Lesson 14 — Conditional Accumulation
+# Lesson 14 - Conditional Accumulation
 
 সব সময় সব Number যোগ করতে হবে না।
 
@@ -3472,7 +3472,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 15 — Conditional Counting
+# Lesson 15 - Conditional Counting
 
 Problem:
 
@@ -3524,7 +3524,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 16 — One Traversal, Multiple Results
+# Lesson 16 - One Traversal, Multiple Results
 
 একটা Array থেকে একই Traversal-এ একাধিক Result বের করা সম্ভব।
 
@@ -3587,7 +3587,7 @@ odd
 
 ---
 
-# Lesson 17 — Common Bug: Counter ভুল জায়গায় রাখা
+# Lesson 17 - Common Bug: Counter ভুল জায়গায় রাখা
 
 Problem:
 
@@ -3665,7 +3665,7 @@ Print After Loop
 
 ---
 
-# Lesson 18 — Common Bug: Result Loop-এর ভিতরে Print করা
+# Lesson 18 - Common Bug: Result Loop-এর ভিতরে Print করা
 
 ধরো Sum Problem।
 
@@ -3737,7 +3737,7 @@ Print
 
 ---
 
-# Lesson 19 — Common Bug: `=` এবং `+=`
+# Lesson 19 - Common Bug: `=` এবং `+=`
 
 এই দুইটা এক না।
 
@@ -3788,7 +3788,7 @@ sum += value;
 
 ---
 
-# Lesson 20 — Problem Statement Translation
+# Lesson 20 - Problem Statement Translation
 
 এখন কিছু common signal চিনে রাখো।
 
@@ -3940,7 +3940,7 @@ Accumulator   Counter
 
 ---
 
-# 🔬 Worked Example 1 — Sum of Negative Numbers
+# 🔬 Worked Example 1 - Sum of Negative Numbers
 
 Problem:
 
@@ -4002,7 +4002,7 @@ Final:
 
 ---
 
-# 🔬 Worked Example 2 — Count Multiples of 5
+# 🔬 Worked Example 2 - Count Multiples of 5
 
 Problem:
 
@@ -4058,7 +4058,7 @@ Final:
 
 ---
 
-## Exercise 1 — Sum of All Elements
+## Exercise 1 - Sum of All Elements
 
 Problem:
 
@@ -4089,7 +4089,7 @@ Pattern:
 
 ---
 
-## Exercise 2 — Count Positive Numbers
+## Exercise 2 - Count Positive Numbers
 
 Input:
 
@@ -4108,7 +4108,7 @@ Expected Output:
 
 ---
 
-## Exercise 3 — Sum of Even Numbers
+## Exercise 3 - Sum of Even Numbers
 
 Input:
 
@@ -4135,7 +4135,7 @@ Traversal
 
 ---
 
-## Exercise 4 — Count Numbers Divisible by Both 3 and 5
+## Exercise 4 - Count Numbers Divisible by Both 3 and 5
 
 Input:
 
@@ -4154,7 +4154,7 @@ Expected Output:
 
 ---
 
-## Exercise 5 — Count Even and Odd
+## Exercise 5 - Count Even and Odd
 
 Input:
 
@@ -4182,7 +4182,7 @@ Two Counters
 
 ---
 
-## Exercise 6 — Challenge
+## Exercise 6 - Challenge
 
 Problem:
 
@@ -4329,7 +4329,7 @@ Variables Needed:
 
 ---
 
-## Task 5 — Concept Check
+## Task 5 - Concept Check
 
 নিজের ভাষায় উত্তর দেবে:
 
@@ -4453,11 +4453,11 @@ Traversal
 └── Condition → Accumulator + Counter
 ```
 
-এটাই Day 2-এর মূল foundation। **Chapter 4-এ Maximum + Minimum Pattern** আসবে—সেখানে আমরা বিশেষভাবে `max = 0` bug, negative input, initialization, comparison এবং update logic নিয়ে কাজ করব।
+এটাই Day 2-এর মূল foundation। **Chapter 4-এ Maximum + Minimum Pattern** আসবে-সেখানে আমরা বিশেষভাবে `max = 0` bug, negative input, initialization, comparison এবং update logic নিয়ে কাজ করব।
 
 ---
 
-# Day 2 — Chapter 4
+# Day 2 - Chapter 4
 
 # 🏆 Maximum & Minimum Pattern
 
@@ -4563,7 +4563,7 @@ Update Current Best
 
 ---
 
-# Lesson 1 — Maximum Problem কী?
+# Lesson 1 - Maximum Problem কী?
 
 ধরো Array:
 
@@ -4649,7 +4649,7 @@ Maximum = 12
 
 ---
 
-# Lesson 2 — Maximum Pattern
+# Lesson 2 - Maximum Pattern
 
 Maximum বের করার মূল Pattern:
 
@@ -4689,7 +4689,7 @@ printf("%d\n", max);
 
 ---
 
-# Lesson 3 — Current Best এবং Candidate
+# Lesson 3 - Current Best এবং Candidate
 
 এই দুইটা Concept বুঝলে Maximum/Minimum Pattern অনেক সহজ হয়ে যায়।
 
@@ -4782,7 +4782,7 @@ Update if Better
 
 ---
 
-# Lesson 4 — Maximum Dry Run
+# Lesson 4 - Maximum Dry Run
 
 Array:
 
@@ -4820,7 +4820,7 @@ max = 15
 
 ---
 
-# Lesson 5 — কেন `i = 1` থেকে শুরু?
+# Lesson 5 - কেন `i = 1` থেকে শুরু?
 
 দেখো:
 
@@ -4899,7 +4899,7 @@ for (int i = 1; i < n; i++)
 
 ---
 
-# Lesson 6 — Complete Maximum Code
+# Lesson 6 - Complete Maximum Code
 
 ```c
 #include <stdio.h>
@@ -4949,7 +4949,7 @@ Output
 
 ---
 
-# Lesson 7 — The Dangerous `max = 0` Bug
+# Lesson 7 - The Dangerous `max = 0` Bug
 
 এটা খুব গুরুত্বপূর্ণ।
 
@@ -5043,7 +5043,7 @@ Wrong Answer:
 
 ---
 
-# Lesson 8 — Safe Initialization
+# Lesson 8 - Safe Initialization
 
 Maximum-এর জন্য Safe Approach:
 
@@ -5106,7 +5106,7 @@ Rule:
 
 ---
 
-# Lesson 9 — Minimum Pattern
+# Lesson 9 - Minimum Pattern
 
 Maximum-এর মতোই Minimum।
 
@@ -5182,7 +5182,7 @@ Minimum Update
 
 ---
 
-# Lesson 10 — `min = 0` কেন Dangerous?
+# Lesson 10 - `min = 0` কেন Dangerous?
 
 ধরো:
 
@@ -5235,7 +5235,7 @@ int min = arr[0];
 
 ---
 
-# Lesson 11 — Maximum এবং Minimum একসঙ্গে
+# Lesson 11 - Maximum এবং Minimum একসঙ্গে
 
 Problem:
 
@@ -5328,7 +5328,7 @@ int main()
 
 ---
 
-# Lesson 12 — Maximum Value vs Maximum Index
+# Lesson 12 - Maximum Value vs Maximum Index
 
 ধরো Array:
 
@@ -5398,7 +5398,7 @@ Maximum Index Update
 
 ---
 
-# Lesson 13 — Index Track করার Dry Run
+# Lesson 13 - Index Track করার Dry Run
 
 Array:
 
@@ -5431,7 +5431,7 @@ Maximum Index = 3
 
 ---
 
-# Lesson 14 — Duplicate Maximum
+# Lesson 14 - Duplicate Maximum
 
 Array:
 
@@ -5522,7 +5522,7 @@ Problem-এর Result বদলে দিতে পারে।
 
 ---
 
-# Lesson 15 — Conditional Maximum
+# Lesson 15 - Conditional Maximum
 
 সব সময় পুরো Array-এর Maximum চাইবে না।
 
@@ -5597,7 +5597,7 @@ arr[0] = 3
 
 ---
 
-# Lesson 16 — Valid Candidate Initialization
+# Lesson 16 - Valid Candidate Initialization
 
 Conditional Maximum-এ আমাদের প্রথম **Valid Candidate** দরকার।
 
@@ -5657,7 +5657,7 @@ found = 1         Update?
 
 ---
 
-# Lesson 17 — Maximum Difference: Max - Min
+# Lesson 17 - Maximum Difference: Max - Min
 
 Problem:
 
@@ -5722,7 +5722,7 @@ int difference = max - min;
 
 ---
 
-# Lesson 18 — Maximum Input না Maximum Output?
+# Lesson 18 - Maximum Input না Maximum Output?
 
 Problem Statement carefully পড়বে।
 
@@ -5770,7 +5770,7 @@ Update Student ID
 
 ---
 
-# Lesson 19 — Second Maximum-এর Basic Idea
+# Lesson 19 - Second Maximum-এর Basic Idea
 
 এই Chapter-এ আমরা Second Maximum পুরোপুরি Deep Dive করব না, কারণ Day 2-এর scope concise রাখতে হবে।
 
@@ -5829,7 +5829,7 @@ becomes Largest        ↓
 
 ---
 
-# Lesson 20 — Common Bug: Comparison উল্টো করা
+# Lesson 20 - Common Bug: Comparison উল্টো করা
 
 Maximum Problem:
 
@@ -5869,7 +5869,7 @@ Current Value < Current Minimum?
 
 ---
 
-# Lesson 21 — Common Bug: Wrong Update
+# Lesson 21 - Common Bug: Wrong Update
 
 ভুল:
 
@@ -5909,7 +5909,7 @@ max = arr[i]
 
 ---
 
-# Lesson 22 — Common Bug: Input Constraint না দেখা
+# Lesson 22 - Common Bug: Input Constraint না দেখা
 
 ধরো Problem-এর Constraint:
 
@@ -5974,7 +5974,7 @@ Write Logic
 
 ---
 
-# 🔬 Worked Example 1 — Maximum from Negative Numbers
+# 🔬 Worked Example 1 - Maximum from Negative Numbers
 
 Problem:
 
@@ -6018,7 +6018,7 @@ int max = 0;
 
 ---
 
-# 🔬 Worked Example 2 — Minimum and Its Index
+# 🔬 Worked Example 2 - Minimum and Its Index
 
 Problem:
 
@@ -6085,7 +6085,7 @@ Index = 3
 
 ---
 
-## Exercise 1 — Find Maximum
+## Exercise 1 - Find Maximum
 
 Problem:
 
@@ -6116,7 +6116,7 @@ Pattern:
 
 ---
 
-## Exercise 2 — Find Minimum
+## Exercise 2 - Find Minimum
 
 Input:
 
@@ -6135,7 +6135,7 @@ Expected Output:
 
 ---
 
-## Exercise 3 — Find Maximum and Minimum Together
+## Exercise 3 - Find Maximum and Minimum Together
 
 Input:
 
@@ -6161,7 +6161,7 @@ Track Two Results
 
 ---
 
-## Exercise 4 — Maximum Index
+## Exercise 4 - Maximum Index
 
 Input:
 
@@ -6187,7 +6187,7 @@ Index Update
 
 ---
 
-## Exercise 5 — Difference Between Maximum and Minimum
+## Exercise 5 - Difference Between Maximum and Minimum
 
 Input:
 
@@ -6206,7 +6206,7 @@ Expected Output:
 
 ---
 
-## Exercise 6 — Challenge: Largest Even Number
+## Exercise 6 - Challenge: Largest Even Number
 
 Input:
 
@@ -6384,7 +6384,7 @@ Comparison কী হবে?
 
 ---
 
-## Task 5 — Bug Hunt
+## Task 5 - Bug Hunt
 
 এই Code-এর Problem খুঁজে বের করো:
 
@@ -6426,7 +6426,7 @@ Fix:
 
 ---
 
-## Task 6 — Challenge Thinking
+## Task 6 - Challenge Thinking
 
 Problem:
 
@@ -6599,11 +6599,11 @@ Traversal
 └── Condition → Valid Candidate → Comparison → Update
 ```
 
-**Day 2 — Chapter 4 এখানেই শেষ।** পরের Chapter হবে **Chapter 5 — Linear Search Pattern**। সেখানে `target`, `found flag`, `break`, first occurrence, last occurrence, count occurrences এবং search-এর common bugs একসঙ্গে শেখা হবে।
+**Day 2 - Chapter 4 এখানেই শেষ।** পরের Chapter হবে **Chapter 5 - Linear Search Pattern**। সেখানে `target`, `found flag`, `break`, first occurrence, last occurrence, count occurrences এবং search-এর common bugs একসঙ্গে শেখা হবে।
 
 ---
 
-# Day 2 — Chapter 5
+# Day 2 - Chapter 5
 
 # 🔎 Linear Search Pattern
 
@@ -6688,7 +6688,7 @@ Found       Continue Search
 
 ---
 
-# Lesson 1 — Search Problem কী?
+# Lesson 1 - Search Problem কী?
 
 ধরো Array:
 
@@ -6742,7 +6742,7 @@ Match Detection
 
 ---
 
-# Lesson 2 — Linear Search কী?
+# Lesson 2 - Linear Search কী?
 
 সহজ ভাষায়:
 
@@ -6800,7 +6800,7 @@ One by One
 
 ---
 
-# Lesson 3 — Target কী?
+# Lesson 3 - Target কী?
 
 Search Problem-এ আমরা যেটা খুঁজছি সেটাই:
 
@@ -6854,7 +6854,7 @@ Target Search
 
 ---
 
-# Lesson 4 — Basic Linear Search
+# Lesson 4 - Basic Linear Search
 
 Problem:
 
@@ -6911,7 +6911,7 @@ Not Found
 
 ---
 
-# Lesson 5 — Flag Variable কী?
+# Lesson 5 - Flag Variable কী?
 
 Flag হলো একটি Variable যেটা কোনো Condition বা Event-এর State মনে রাখে।
 
@@ -6972,7 +6972,7 @@ found = 1
 
 ---
 
-# Lesson 6 — Basic Search with Flag
+# Lesson 6 - Basic Search with Flag
 
 ```c
 #include <stdio.h>
@@ -7039,7 +7039,7 @@ Final Decision
 
 ---
 
-# Lesson 7 — Flag কেন দরকার?
+# Lesson 7 - Flag কেন দরকার?
 
 ধরো:
 
@@ -7098,7 +7098,7 @@ Flag মূলত Search-এর Result **মনে রাখছে**।
 
 ---
 
-# Lesson 8 — `break` কী করছে?
+# Lesson 8 - `break` কী করছে?
 
 এই Code দেখো:
 
@@ -7173,7 +7173,7 @@ Stop Searching
 
 ---
 
-# Lesson 9 — সব Search-এ `break` দেওয়া যাবে?
+# Lesson 9 - সব Search-এ `break` দেওয়া যাবে?
 
 না।
 
@@ -7249,7 +7249,7 @@ Must Continue
 
 ---
 
-# Lesson 10 — Search Problem-এর বিভিন্ন ধরন
+# Lesson 10 - Search Problem-এর বিভিন্ন ধরন
 
 একই Array:
 
@@ -7265,7 +7265,7 @@ Target:
 
 Problem হতে পারে:
 
-### Type 1 — Exists?
+### Type 1 - Exists?
 
 ```text
 12 আছে?
@@ -7279,7 +7279,7 @@ Yes
 
 ---
 
-### Type 2 — First Occurrence
+### Type 2 - First Occurrence
 
 ```text
 প্রথম 12 কোথায়?
@@ -7293,7 +7293,7 @@ Index 1
 
 ---
 
-### Type 3 — Last Occurrence
+### Type 3 - Last Occurrence
 
 ```text
 শেষ 12 কোথায়?
@@ -7307,7 +7307,7 @@ Index 3
 
 ---
 
-### Type 4 — Count Occurrences
+### Type 4 - Count Occurrences
 
 ```text
 12 কতবার আছে?
@@ -7327,7 +7327,7 @@ Answer:
 
 ---
 
-# Lesson 11 — Existence Search
+# Lesson 11 - Existence Search
 
 Problem:
 
@@ -7406,7 +7406,7 @@ if (found == 1)
 
 ---
 
-# Lesson 12 — First Occurrence
+# Lesson 12 - First Occurrence
 
 Array:
 
@@ -7487,7 +7487,7 @@ break
 
 ---
 
-# Lesson 13 — কেন First Occurrence-এ `break`?
+# Lesson 13 - কেন First Occurrence-এ `break`?
 
 Array:
 
@@ -7533,7 +7533,7 @@ Stop
 
 ---
 
-# Lesson 14 — Last Occurrence
+# Lesson 14 - Last Occurrence
 
 একই Array:
 
@@ -7595,7 +7595,7 @@ index = 3
 
 ---
 
-# Lesson 15 — First vs Last Occurrence
+# Lesson 15 - First vs Last Occurrence
 
 এই পার্থক্য মনে রাখো:
 
@@ -7658,7 +7658,7 @@ Last Occurrence
 
 ---
 
-# Lesson 16 — Reverse Search দিয়ে Last Occurrence
+# Lesson 16 - Reverse Search দিয়ে Last Occurrence
 
 Last Occurrence বের করার আরেকটি উপায় আছে।
 
@@ -7715,7 +7715,7 @@ Actually Last Occurrence
 
 ---
 
-# Lesson 17 — Count Occurrences
+# Lesson 17 - Count Occurrences
 
 Problem:
 
@@ -7795,7 +7795,7 @@ Counting Pattern
 
 ---
 
-# Lesson 18 — Search এবং Count-এর পার্থক্য
+# Lesson 18 - Search এবং Count-এর পার্থক্য
 
 Problem 1:
 
@@ -7844,7 +7844,7 @@ Problem Statement-এর Goal বুঝে State Variable ঠিক করবে
 
 ---
 
-# Lesson 19 — Search করে Value না Index?
+# Lesson 19 - Search করে Value না Index?
 
 ধরো:
 
@@ -7896,7 +7896,7 @@ Code-এর State সে অনুযায়ী বদলাবে।
 
 ---
 
-# Lesson 20 — Common Bug: `=` vs `==`
+# Lesson 20 - Common Bug: `=` vs `==`
 
 Search-এর সবচেয়ে Dangerous Beginner Bug-এর একটি।
 
@@ -7950,7 +7950,7 @@ Need Comparison
 
 ---
 
-# Lesson 21 — Common Bug: Loop-এর ভিতরে `Not Found` Print
+# Lesson 21 - Common Bug: Loop-এর ভিতরে `Not Found` Print
 
 এই Code ভুল:
 
@@ -8034,7 +8034,7 @@ Final Decision
 
 ---
 
-# Lesson 22 — Common Bug: Flag Reset করা
+# Lesson 22 - Common Bug: Flag Reset করা
 
 ভুল:
 
@@ -8090,7 +8090,7 @@ After Loop
 
 ---
 
-# Lesson 23 — Common Bug: First Occurrence-এ `break` না দেওয়া
+# Lesson 23 - Common Bug: First Occurrence-এ `break` না দেওয়া
 
 Problem:
 
@@ -8142,7 +8142,7 @@ if (arr[i] == target)
 
 ---
 
-# Lesson 24 — Common Bug: Count Occurrence-এ `break`
+# Lesson 24 - Common Bug: Count Occurrence-এ `break`
 
 Problem:
 
@@ -8187,7 +8187,7 @@ No break
 
 ---
 
-# Lesson 25 — Linear Search Time Complexity
+# Lesson 25 - Linear Search Time Complexity
 
 এখন Complexity খুব Deep-এ যাচ্ছি না।
 
@@ -8248,7 +8248,7 @@ Example:
 
 ---
 
-# Lesson 26 — Read and Search Without Array?
+# Lesson 26 - Read and Search Without Array?
 
 ধরো Problem:
 
@@ -8291,7 +8291,7 @@ Bootcamp-এর জন্য Rule:
 
 ---
 
-# Lesson 27 — Search Pattern Recognition Signals
+# Lesson 27 - Search Pattern Recognition Signals
 
 Problem Statement-এ এই ধরনের শব্দ দেখলে Search চিন্তা করবে:
 
@@ -8388,7 +8388,7 @@ Counter
 
 ---
 
-# 🔬 Worked Example 1 — Search Target
+# 🔬 Worked Example 1 - Search Target
 
 Problem:
 
@@ -8407,25 +8407,25 @@ Target:
 7
 ```
 
-### Step 1 — Need Search
+### Step 1 - Need Search
 
 ```text
 Target = 7
 ```
 
-### Step 2 — Need Elements
+### Step 2 - Need Elements
 
 ```text
 Traversal
 ```
 
-### Step 3 — Need Existence Only
+### Step 3 - Need Existence Only
 
 ```text
 Flag
 ```
 
-### Step 4 — Once Found
+### Step 4 - Once Found
 
 ```text
 Early Termination
@@ -8466,7 +8466,7 @@ Found
 
 ---
 
-# 🔬 Worked Example 2 — Count Occurrences
+# 🔬 Worked Example 2 - Count Occurrences
 
 Problem:
 
@@ -8509,7 +8509,7 @@ Final:
 
 ---
 
-# 🔬 Worked Example 3 — First Occurrence
+# 🔬 Worked Example 3 - First Occurrence
 
 Problem:
 
@@ -8586,7 +8586,7 @@ break
 
 ---
 
-## Exercise 1 — Exists or Not
+## Exercise 1 - Exists or Not
 
 Problem:
 
@@ -8624,7 +8624,7 @@ Not Found
 
 ---
 
-## Exercise 2 — First Occurrence
+## Exercise 2 - First Occurrence
 
 Input:
 
@@ -8652,7 +8652,7 @@ Early Termination
 
 ---
 
-## Exercise 3 — Last Occurrence
+## Exercise 3 - Last Occurrence
 
 একই Input:
 
@@ -8682,7 +8682,7 @@ Search Continue করব?
 
 ---
 
-## Exercise 4 — Count Occurrences
+## Exercise 4 - Count Occurrences
 
 Input:
 
@@ -8702,7 +8702,7 @@ Pattern নিজে লিখবে।
 
 ---
 
-## Exercise 5 — Search Negative Target
+## Exercise 5 - Search Negative Target
 
 Input:
 
@@ -8728,7 +8728,7 @@ Target negative হলেও একই Pattern।
 
 ---
 
-## Exercise 6 — Challenge: First and Last Position
+## Exercise 6 - Challenge: First and Last Position
 
 Problem:
 
@@ -8772,7 +8772,7 @@ Assignment-এ প্রথমে **Code লিখবে না**। Pattern Rec
 
 ---
 
-## Task 1 — Existence Search
+## Task 1 - Existence Search
 
 Problem:
 
@@ -8802,7 +8802,7 @@ Why?
 
 ---
 
-## Task 2 — First Occurrence
+## Task 2 - First Occurrence
 
 Problem:
 
@@ -8832,7 +8832,7 @@ Why is break needed?
 
 ---
 
-## Task 3 — Last Occurrence
+## Task 3 - Last Occurrence
 
 Problem:
 
@@ -8860,7 +8860,7 @@ Why should search continue?
 
 ---
 
-## Task 4 — Count Occurrences
+## Task 4 - Count Occurrences
 
 Problem:
 
@@ -8892,7 +8892,7 @@ Why?
 
 ---
 
-## Task 5 — Bug Hunt
+## Task 5 - Bug Hunt
 
 এই Code-এর সমস্যা বের করো:
 
@@ -8932,7 +8932,7 @@ Correct Thinking:
 
 ---
 
-## Task 6 — Bug Hunt
+## Task 6 - Bug Hunt
 
 Problem:
 
@@ -8970,7 +8970,7 @@ First Occurrence-এর জন্য কী পরিবর্তন করত�
 
 ---
 
-## Task 7 — Pattern Combination
+## Task 7 - Pattern Combination
 
 Problem:
 
@@ -9252,22 +9252,22 @@ Counter
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation + Counting
+├── ✅ Chapter 3 - Accumulation + Counting
 │
-├── ✅ Chapter 4 — Maximum + Minimum
+├── ✅ Chapter 4 - Maximum + Minimum
 │
-├── ✅ Chapter 5 — Linear Search
+├── ✅ Chapter 5 - Linear Search
 │
-├── ⏳ Chapter 6 — Mixed Pattern Problems
+├── ⏳ Chapter 6 - Mixed Pattern Problems
 │
-└── ⏳ Chapter 7 — Mistake Review + Pattern Library + Final Assignment
+└── ⏳ Chapter 7 - Mistake Review + Pattern Library + Final Assignment
 ```
 
-Day 2-এর core theory এখন শেষ। **Chapter 6 থেকে নতুন theory অনেক কম থাকবে**—সেখানে আসল কাজ হবে Problem দেখে নিজে ঠিক করা:
+Day 2-এর core theory এখন শেষ। **Chapter 6 থেকে নতুন theory অনেক কম থাকবে**-সেখানে আসল কাজ হবে Problem দেখে নিজে ঠিক করা:
 
 ```text
 Traversal?
@@ -9285,7 +9285,7 @@ Break?
 
 ---
 
-# Day 2 — Chapter 6
+# Day 2 - Chapter 6
 
 # 🧩 Mixed Pattern Problems
 
@@ -9413,7 +9413,7 @@ Code
 
 ---
 
-# Lesson 1 — Mixed Pattern Problem কী?
+# Lesson 1 - Mixed Pattern Problem কী?
 
 ধরো Problem:
 
@@ -9482,7 +9482,7 @@ Counter
 
 ---
 
-# Lesson 2 — Problem Decomposition
+# Lesson 2 - Problem Decomposition
 
 একটা বড় Problem দেখলে সঙ্গে সঙ্গে Code লিখবে না।
 
@@ -9554,7 +9554,7 @@ Average
 
 ---
 
-# Lesson 3 — Pattern Combination Formula
+# Lesson 3 - Pattern Combination Formula
 
 Mixed Problem-এর জন্য একটা Mental Formula মনে রাখো:
 
@@ -9658,7 +9658,7 @@ Maximum Update
 
 ---
 
-# Lesson 4 — State Variable কী?
+# Lesson 4 - State Variable কী?
 
 এখন পর্যন্ত আমরা অনেক ধরনের Variable ব্যবহার করেছি।
 
@@ -9729,7 +9729,7 @@ Problem Solve করার আগে প্রশ্ন করবে:
 
 ---
 
-# Lesson 5 — Single Pass কী?
+# Lesson 5 - Single Pass কী?
 
 একবার Array Traverse করে Problem Solve করলে তাকে সহজভাবে:
 
@@ -9788,7 +9788,7 @@ Number of Passes = 1
 
 ---
 
-# Lesson 6 — Multi-pass কী?
+# Lesson 6 - Multi-pass কী?
 
 একই Array একাধিকবার Traverse করলে:
 
@@ -9864,7 +9864,7 @@ Number of Passes = 2
 
 ---
 
-# Lesson 7 — কেন দুই Pass দরকার হতে পারে?
+# Lesson 7 - কেন দুই Pass দরকার হতে পারে?
 
 Problem:
 
@@ -9922,7 +9922,7 @@ Phase 2 needs Phase 1 result?
 
 ---
 
-# Lesson 8 — এক Pass-এ Maximum Count করা যায়?
+# Lesson 8 - এক Pass-এ Maximum Count করা যায়?
 
 হ্যাঁ, যায়।
 
@@ -9998,7 +9998,7 @@ Optimization পরে।
 
 ---
 
-# Lesson 9 — One Pass না Two Pass?
+# Lesson 9 - One Pass না Two Pass?
 
 এই Rule অনুসরণ করতে পারো।
 
@@ -10055,7 +10055,7 @@ while seeing each element once?
 
 ---
 
-# Lesson 10 — Mixed Problem 1: Count Maximum Occurrences
+# Lesson 10 - Mixed Problem 1: Count Maximum Occurrences
 
 Problem:
 
@@ -10068,7 +10068,7 @@ Input:
 5 12 7 12 3 12 8
 ```
 
-## Step 1 — Find Maximum
+## Step 1 - Find Maximum
 
 Pattern:
 
@@ -10086,7 +10086,7 @@ Result:
 max = 12
 ```
 
-## Step 2 — Count Maximum
+## Step 2 - Count Maximum
 
 Pattern:
 
@@ -10156,7 +10156,7 @@ int main()
 
 ---
 
-# Lesson 11 — Mixed Problem 2: Average of Positive Numbers
+# Lesson 11 - Mixed Problem 2: Average of Positive Numbers
 
 Problem:
 
@@ -10248,7 +10248,7 @@ Division by Zero
 
 ---
 
-# Lesson 12 — Mixed Problem 3: Largest Even Number
+# Lesson 12 - Mixed Problem 3: Largest Even Number
 
 Problem:
 
@@ -10347,7 +10347,7 @@ Maximum
 
 ---
 
-# Lesson 13 — Mixed Problem 4: First Positive Number
+# Lesson 13 - Mixed Problem 4: First Positive Number
 
 Problem:
 
@@ -10448,7 +10448,7 @@ First Divisible by 7
 
 ---
 
-# Lesson 14 — Mixed Problem 5: Last Negative Number
+# Lesson 14 - Mixed Problem 5: Last Negative Number
 
 Problem:
 
@@ -10509,7 +10509,7 @@ No `break`.
 
 ---
 
-# Lesson 15 — Mixed Problem 6: Sum Between Minimum and Maximum?
+# Lesson 15 - Mixed Problem 6: Sum Between Minimum and Maximum?
 
 এখন Problem Statement পড়ার গুরুত্ব দেখি।
 
@@ -10578,7 +10578,7 @@ Contest-এ একটা শব্দের পার্থক্য পুর�
 
 ---
 
-# Lesson 16 — Multiple Counters
+# Lesson 16 - Multiple Counters
 
 Problem:
 
@@ -10658,7 +10658,7 @@ Three Counters
 
 ---
 
-# Lesson 17 — `if` vs `else if` in Classification
+# Lesson 17 - `if` vs `else if` in Classification
 
 আগের Problem:
 
@@ -10771,7 +10771,7 @@ else if (arr[i] % 3 == 0)
 
 ---
 
-# Lesson 18 — Independent Conditions vs Exclusive Conditions
+# Lesson 18 - Independent Conditions vs Exclusive Conditions
 
 ## Exclusive Categories
 
@@ -10836,7 +10836,7 @@ No
 
 ---
 
-# Lesson 19 — Order Matters
+# Lesson 19 - Order Matters
 
 Mixed Pattern Problem-এ Operation-এর Order গুরুত্বপূর্ণ হতে পারে।
 
@@ -10902,7 +10902,7 @@ count = 1
 
 ---
 
-# Lesson 20 — Pattern Dependency চিনবে কীভাবে?
+# Lesson 20 - Pattern Dependency চিনবে কীভাবে?
 
 Problem:
 
@@ -10977,7 +10977,7 @@ Save Index
 
 ---
 
-# Lesson 21 — Same Problem, Better Combination
+# Lesson 21 - Same Problem, Better Combination
 
 আগের Problem:
 
@@ -11039,7 +11039,7 @@ Elegant
 
 ---
 
-# Lesson 22 — Constraints দেখে Pass Count নিয়ে ভাবা
+# Lesson 22 - Constraints দেখে Pass Count নিয়ে ভাবা
 
 ধরো:
 
@@ -11089,11 +11089,11 @@ Beginner হিসেবে:
 
 ---
 
-# Lesson 23 — Mixed Problem Solving Workflow
+# Lesson 23 - Mixed Problem Solving Workflow
 
 এখন থেকে Mixed Problem-এ এই Workflow ব্যবহার করবে।
 
-## Step 1 — Output Question
+## Step 1 - Output Question
 
 ```text
 শেষে কী Print করতে হবে?
@@ -11101,7 +11101,7 @@ Beginner হিসেবে:
 
 ---
 
-## Step 2 — Required Information
+## Step 2 - Required Information
 
 ```text
 Output বের করতে কী কী Information দরকার?
@@ -11109,7 +11109,7 @@ Output বের করতে কী কী Information দরকার?
 
 ---
 
-## Step 3 — State Selection
+## Step 3 - State Selection
 
 ```text
 কোন Variables দরকার?
@@ -11128,7 +11128,7 @@ index
 
 ---
 
-## Step 4 — Traversal Requirement
+## Step 4 - Traversal Requirement
 
 ```text
 কোন Elements দেখতে হবে?
@@ -11143,7 +11143,7 @@ Filtered Values?
 
 ---
 
-## Step 5 — Dependency Check
+## Step 5 - Dependency Check
 
 ```text
 এক Result পাওয়ার পর আরেক কাজ শুরু করতে হবে?
@@ -11157,7 +11157,7 @@ Multiple Phase / Pass
 
 ---
 
-## Step 6 — Update Rules
+## Step 6 - Update Rules
 
 প্রতিটি State কখন Update হবে?
 
@@ -11183,7 +11183,7 @@ if value > max
 
 ---
 
-## Step 7 — Edge Cases
+## Step 7 - Edge Cases
 
 ```text
 No Match?
@@ -11196,7 +11196,7 @@ Target Missing?
 
 ---
 
-## Step 8 — Dry Run
+## Step 8 - Dry Run
 
 তারপর Code।
 
@@ -11227,7 +11227,7 @@ Target Missing?
 
 ---
 
-# 🔬 Worked Problem 1 — Count Maximum Occurrences
+# 🔬 Worked Problem 1 - Count Maximum Occurrences
 
 Problem:
 
@@ -11292,7 +11292,7 @@ Answer:
 
 ---
 
-# 🔬 Worked Problem 2 — Sum and Count of Even Numbers
+# 🔬 Worked Problem 2 - Sum and Count of Even Numbers
 
 Problem:
 
@@ -11363,7 +11363,7 @@ One Pass
 
 ---
 
-# 🔬 Worked Problem 3 — First Maximum Index
+# 🔬 Worked Problem 3 - First Maximum Index
 
 Problem:
 
@@ -11428,7 +11428,7 @@ Exercise 6–8
 
 ---
 
-## Exercise 1 — Sum and Count Positive Numbers
+## Exercise 1 - Sum and Count Positive Numbers
 
 Input:
 
@@ -11466,7 +11466,7 @@ Variables:
 
 ---
 
-## Exercise 2 — Maximum and Minimum Together
+## Exercise 2 - Maximum and Minimum Together
 
 Input:
 
@@ -11490,7 +11490,7 @@ One Traversal
 
 ---
 
-## Exercise 3 — Count Maximum Occurrences
+## Exercise 3 - Count Maximum Occurrences
 
 Input:
 
@@ -11525,7 +11525,7 @@ Phase 2:
 
 ---
 
-## Exercise 4 — First Positive Index
+## Exercise 4 - First Positive Index
 
 Input:
 
@@ -11550,7 +11550,7 @@ break দরকার?
 
 ---
 
-## Exercise 5 — Count Positive, Negative and Zero
+## Exercise 5 - Count Positive, Negative and Zero
 
 Input:
 
@@ -11577,7 +11577,7 @@ Three Counters
 
 ---
 
-## Exercise 6 — Challenge: Largest Odd Number
+## Exercise 6 - Challenge: Largest Odd Number
 
 Input:
 
@@ -11617,7 +11617,7 @@ Update
 
 ---
 
-## Exercise 7 — Challenge: First and Last Occurrence
+## Exercise 7 - Challenge: First and Last Occurrence
 
 Input:
 
@@ -11651,7 +11651,7 @@ last
 
 ---
 
-## Exercise 8 — Challenge: Count Minimum Occurrences
+## Exercise 8 - Challenge: Count Minimum Occurrences
 
 Input:
 
@@ -11694,7 +11694,7 @@ Phase 2:
 
 ---
 
-## Task 1 — Pattern Breakdown
+## Task 1 - Pattern Breakdown
 
 Problem:
 
@@ -11726,7 +11726,7 @@ Variables:
 
 ---
 
-## Task 2 — Dependency Analysis
+## Task 2 - Dependency Analysis
 
 Problem:
 
@@ -11754,7 +11754,7 @@ Complete Pattern:
 
 ---
 
-## Task 3 — State Selection
+## Task 3 - State Selection
 
 Problem:
 
@@ -11783,7 +11783,7 @@ Why?
 
 ---
 
-## Task 4 — Condition Logic
+## Task 4 - Condition Logic
 
 Problem:
 
@@ -11814,7 +11814,7 @@ if + else if
 
 ---
 
-## Task 5 — Pattern Combination
+## Task 5 - Pattern Combination
 
 Problem:
 
@@ -11858,7 +11858,7 @@ No Negative Number থাকলে:
 
 ---
 
-## Task 6 — Bug Hunt
+## Task 6 - Bug Hunt
 
 Problem:
 
@@ -11911,7 +11911,7 @@ Divisible by 3
 
 ---
 
-## Task 7 — Design the Pipeline
+## Task 7 - Design the Pipeline
 
 Problem:
 
@@ -12183,26 +12183,26 @@ Break
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation + Counting
+├── ✅ Chapter 3 - Accumulation + Counting
 │
-├── ✅ Chapter 4 — Maximum + Minimum
+├── ✅ Chapter 4 - Maximum + Minimum
 │
-├── ✅ Chapter 5 — Linear Search
+├── ✅ Chapter 5 - Linear Search
 │
-├── ✅ Chapter 6 — Mixed Pattern Problems
+├── ✅ Chapter 6 - Mixed Pattern Problems
 │
-└── ⏳ Chapter 7 — Mistake Review, Pattern Library & Day 2 Final Assignment
+└── ⏳ Chapter 7 - Mistake Review, Pattern Library & Day 2 Final Assignment
 ```
 
-Chapter 6 পর্যন্ত Day 2-এর **সব Core Problem-Solving Pattern শেখা শেষ**। Chapter 7-এ আর বড় নতুন Theory যোগ হবে না। সেখানে Day 2-এর common mistakes, edge-case checklist, debugging workflow, `core_pattern.md` update, final mixed assignment এবং Day 2 completion checklist থাকবে—যাতে Day 2 সত্যিই একদিনের মধ্যে close করে Day 3-তে যাওয়া যায়।
+Chapter 6 পর্যন্ত Day 2-এর **সব Core Problem-Solving Pattern শেখা শেষ**। Chapter 7-এ আর বড় নতুন Theory যোগ হবে না। সেখানে Day 2-এর common mistakes, edge-case checklist, debugging workflow, `core_pattern.md` update, final mixed assignment এবং Day 2 completion checklist থাকবে-যাতে Day 2 সত্যিই একদিনের মধ্যে close করে Day 3-তে যাওয়া যায়।
 
 ---
 
-# Day 2 — Chapter 7
+# Day 2 - Chapter 7
 
 # 🧩 Combining Patterns
 
@@ -12302,7 +12302,7 @@ Code
 
 ---
 
-# Lesson 1 — Pattern Combination কী?
+# Lesson 1 - Pattern Combination কী?
 
 ধরো Problem:
 
@@ -12375,7 +12375,7 @@ Count Matches
 
 ---
 
-# Lesson 2 — একটি Problem-এর ভিতরে ছোট Problem
+# Lesson 2 - একটি Problem-এর ভিতরে ছোট Problem
 
 Competitive Programming Problem অনেক সময় দেখতে একটা Problem হলেও ভিতরে একাধিক ছোট Problem থাকে।
 
@@ -12457,7 +12457,7 @@ Final Calculation
 
 ---
 
-# Lesson 3 — Problem Decomposition
+# Lesson 3 - Problem Decomposition
 
 একটি Problem-কে ছোট ছোট Logical Task-এ ভাগ করাকে আমরা এখানে বলছি:
 
@@ -12508,7 +12508,7 @@ Code-এর আগে এই Pipeline বের করতে পারলে Sol
 
 ---
 
-# Lesson 4 — Pattern Pipeline কী?
+# Lesson 4 - Pattern Pipeline কী?
 
 একটি Problem Solve করতে Pattern-গুলো যে Order-এ কাজ করে, সেটাকে আমরা Bootcamp-এ বলব:
 
@@ -12558,7 +12558,7 @@ Counter
 
 ---
 
-# Lesson 5 — Pattern Combination-এর আগে Output দেখো
+# Lesson 5 - Pattern Combination-এর আগে Output দেখো
 
 Problem Solve করার সময় প্রথমে Output বুঝতে হবে।
 
@@ -12630,7 +12630,7 @@ count
 
 ---
 
-# Lesson 6 — State Combination
+# Lesson 6 - State Combination
 
 Mixed Problem-এ একাধিক State Variable থাকতে পারে।
 
@@ -12679,7 +12679,7 @@ Sum Update Count Update
 
 ---
 
-# Lesson 7 — Independent States
+# Lesson 7 - Independent States
 
 ধরো Problem:
 
@@ -12734,7 +12734,7 @@ Update Max    Update Min
 
 ---
 
-# Lesson 8 — Dependent Patterns
+# Lesson 8 - Dependent Patterns
 
 এবার Problem:
 
@@ -12781,7 +12781,7 @@ Dependent Phases
 
 ---
 
-# Lesson 9 — Single-pass Combination
+# Lesson 9 - Single-pass Combination
 
 একবার Traversal করে একাধিক Result বের করলে:
 
@@ -12839,7 +12839,7 @@ Correct Counter Update
 
 ---
 
-# Lesson 10 — Multi-pass Combination
+# Lesson 10 - Multi-pass Combination
 
 একই Array একাধিকবার Traverse করলে:
 
@@ -12909,9 +12909,9 @@ Counter
 
 ---
 
-# Lesson 11 — One Pass না Two Pass?
+# Lesson 11 - One Pass না Two Pass?
 
-সবসময় কম Loop মানেই Better Solution—এভাবে চিন্তা করবে না।
+সবসময় কম Loop মানেই Better Solution-এভাবে চিন্তা করবে না।
 
 ধরো:
 
@@ -12958,7 +12958,7 @@ One Pass   Multi Pass
 
 ---
 
-# Lesson 12 — Pattern Order Matters
+# Lesson 12 - Pattern Order Matters
 
 Pattern Combine করলেই হবে না।
 
@@ -13004,7 +13004,7 @@ Order উল্টো করা যাবে না।
 
 ---
 
-# Lesson 13 — Maximum + Index
+# Lesson 13 - Maximum + Index
 
 Problem:
 
@@ -13095,7 +13095,7 @@ Final:
 
 ---
 
-# Lesson 14 — Maximum + Last Index
+# Lesson 14 - Maximum + Last Index
 
 Problem:
 
@@ -13159,7 +13159,7 @@ Update Index Only
 
 ---
 
-# Lesson 15 — Maximum + Count
+# Lesson 15 - Maximum + Count
 
 Problem:
 
@@ -13256,7 +13256,7 @@ count = 1
 
 ---
 
-# Lesson 16 — Condition + Maximum
+# Lesson 16 - Condition + Maximum
 
 Problem:
 
@@ -13335,7 +13335,7 @@ Maximum
 
 ---
 
-# Lesson 17 — Condition + Minimum
+# Lesson 17 - Condition + Minimum
 
 Problem:
 
@@ -13401,7 +13401,7 @@ Comparison Direction বদলেছে
 
 ---
 
-# Lesson 18 — Condition + Accumulator + Counter
+# Lesson 18 - Condition + Accumulator + Counter
 
 Problem:
 
@@ -13488,7 +13488,7 @@ if (count > 0)
 
 ---
 
-# Lesson 19 — Search + Counter
+# Lesson 19 - Search + Counter
 
 Problem:
 
@@ -13546,7 +13546,7 @@ No break
 
 ---
 
-# Lesson 20 — Search + Index Tracking
+# Lesson 20 - Search + Index Tracking
 
 Problem:
 
@@ -13630,7 +13630,7 @@ combine হয়েছে।
 
 ---
 
-# Lesson 21 — কেন এখানে `break` নেই?
+# Lesson 21 - কেন এখানে `break` নেই?
 
 Problem:
 
@@ -13676,7 +13676,7 @@ Rule:
 
 ---
 
-# Lesson 22 — Multiple Counters Combine করা
+# Lesson 22 - Multiple Counters Combine করা
 
 Problem:
 
@@ -13736,7 +13736,7 @@ Odd
 
 ---
 
-# Lesson 23 — Independent Condition Combination
+# Lesson 23 - Independent Condition Combination
 
 Problem:
 
@@ -13779,7 +13779,7 @@ count2++       count3++
 
 ---
 
-# Lesson 24 — Pattern Share করা
+# Lesson 24 - Pattern Share করা
 
 একাধিক কাজের জন্য সবসময় আলাদা Loop দরকার হয় না।
 
@@ -13834,7 +13834,7 @@ Can Often Share Traversal
 
 ---
 
-# Lesson 25 — কখন Pattern Share করবে না?
+# Lesson 25 - কখন Pattern Share করবে না?
 
 Problem:
 
@@ -13883,7 +13883,7 @@ Separate Phase is often clearer
 
 ---
 
-# Lesson 26 — Combination Decision Framework
+# Lesson 26 - Combination Decision Framework
 
 Mixed Problem দেখলে এই Questions করবে।
 
@@ -13982,7 +13982,7 @@ break দেওয়া যাবে?
 
 ---
 
-# 🔬 Worked Problem 1 — Maximum and Minimum Difference
+# 🔬 Worked Problem 1 - Maximum and Minimum Difference
 
 Problem:
 
@@ -13995,7 +13995,7 @@ Input:
 8 3 15 2 10 7
 ```
 
-### Step 1 — Output
+### Step 1 - Output
 
 ```text
 Difference
@@ -14007,21 +14007,21 @@ Formula:
 max - min
 ```
 
-### Step 2 — Required Information
+### Step 2 - Required Information
 
 ```text
 Maximum
 Minimum
 ```
 
-### Step 3 — States
+### Step 3 - States
 
 ```text
 max
 min
 ```
 
-### Step 4 — Dependency
+### Step 4 - Dependency
 
 Maximum এবং Minimum Independent।
 
@@ -14063,7 +14063,7 @@ int difference = max - min;
 
 ---
 
-# 🔬 Worked Problem 2 — Largest Even and Count
+# 🔬 Worked Problem 2 - Largest Even and Count
 
 Problem:
 
@@ -14139,7 +14139,7 @@ count
 
 ---
 
-# 🔬 Worked Problem 3 — First Minimum Index
+# 🔬 Worked Problem 3 - First Minimum Index
 
 Problem:
 
@@ -14201,7 +14201,7 @@ Update Value + Index
 
 ---
 
-# 🔬 Worked Problem 4 — Sum of Values Greater Than Average
+# 🔬 Worked Problem 4 - Sum of Values Greater Than Average
 
 Problem:
 
@@ -14274,7 +14274,7 @@ Conditional Accumulation
 
 ---
 
-# 🔬 Worked Problem 5 — Count Numbers Equal to Minimum or Maximum
+# 🔬 Worked Problem 5 - Count Numbers Equal to Minimum or Maximum
 
 Problem:
 
@@ -14368,7 +14368,7 @@ Counter
 
 ---
 
-## Exercise 1 — Sum and Count of Negative Numbers
+## Exercise 1 - Sum and Count of Negative Numbers
 
 Input:
 
@@ -14398,7 +14398,7 @@ Condition
 
 ---
 
-## Exercise 2 — Maximum and Its First Index
+## Exercise 2 - Maximum and Its First Index
 
 Input:
 
@@ -14434,7 +14434,7 @@ One Pass
 
 ---
 
-## Exercise 3 — Maximum and Its Last Index
+## Exercise 3 - Maximum and Its Last Index
 
 একই Input:
 
@@ -14454,7 +14454,7 @@ Exercise 2-এর সঙ্গে Logic Difference লিখবে।
 
 ---
 
-## Exercise 4 — Minimum Occurrence Count
+## Exercise 4 - Minimum Occurrence Count
 
 Input:
 
@@ -14488,7 +14488,7 @@ Phase 2:
 
 ---
 
-## Exercise 5 — Smallest Positive Number
+## Exercise 5 - Smallest Positive Number
 
 Input:
 
@@ -14514,7 +14514,7 @@ Expected:
 
 ---
 
-## Exercise 6 — First and Last Even Index
+## Exercise 6 - First and Last Even Index
 
 Input:
 
@@ -14545,7 +14545,7 @@ last
 
 ---
 
-## Exercise 7 — Count Values Greater Than Minimum
+## Exercise 7 - Count Values Greater Than Minimum
 
 Input:
 
@@ -14576,7 +14576,7 @@ Problem Dependency নিজে লিখবে।
 
 ---
 
-## Exercise 8 — Challenge: Closest to Maximum
+## Exercise 8 - Challenge: Closest to Maximum
 
 Problem:
 
@@ -14617,7 +14617,7 @@ Closest non-maximum value:
 
 ---
 
-## Task 1 — Pattern Decomposition
+## Task 1 - Pattern Decomposition
 
 Problem:
 
@@ -14652,7 +14652,7 @@ Pipeline:
 
 ---
 
-## Task 2 — Independent or Dependent?
+## Task 2 - Independent or Dependent?
 
 নিচের Problem-গুলোর পাশে লিখবে:
 
@@ -14684,7 +14684,7 @@ Problems:
 
 ---
 
-## Task 3 — One Pass or Multi Pass?
+## Task 3 - One Pass or Multi Pass?
 
 নিচের Problem-গুলোর জন্য Beginner-friendly Approach select করবে:
 
@@ -14716,7 +14716,7 @@ Problems:
 
 ---
 
-## Task 4 — State Selection
+## Task 4 - State Selection
 
 Problem:
 
@@ -14748,7 +14748,7 @@ Pattern:
 
 ---
 
-## Task 5 — Break Decision
+## Task 5 - Break Decision
 
 Problem:
 
@@ -14776,7 +14776,7 @@ Which state still depends on future elements?
 
 ---
 
-## Task 6 — Update Rule Analysis
+## Task 6 - Update Rule Analysis
 
 Problem:
 
@@ -14812,7 +14812,7 @@ Why?
 
 ---
 
-## Task 7 — Dependency Pipeline
+## Task 7 - Dependency Pipeline
 
 Problem:
 
@@ -14854,7 +14854,7 @@ count before average is known?
 
 ---
 
-## Task 8 — Final Combination Design
+## Task 8 - Final Combination Design
 
 Problem:
 
@@ -15027,7 +15027,7 @@ Largest Negative
 
 # 📌 Chapter 7 Quick Revision Sheet
 
-## Pattern A — Condition + Sum
+## Pattern A - Condition + Sum
 
 ```text
 Traversal
@@ -15039,7 +15039,7 @@ Accumulator
 
 ---
 
-## Pattern B — Condition + Count
+## Pattern B - Condition + Count
 
 ```text
 Traversal
@@ -15051,7 +15051,7 @@ Counter
 
 ---
 
-## Pattern C — Condition + Sum + Count
+## Pattern C - Condition + Sum + Count
 
 ```text
 Traversal
@@ -15063,7 +15063,7 @@ Accumulator + Counter
 
 ---
 
-## Pattern D — Maximum + Index
+## Pattern D - Maximum + Index
 
 ```text
 Traversal
@@ -15075,7 +15075,7 @@ Update Maximum + Index
 
 ---
 
-## Pattern E — Maximum + Count
+## Pattern E - Maximum + Count
 
 Beginner-friendly:
 
@@ -15091,7 +15091,7 @@ Counter
 
 ---
 
-## Pattern F — Search + First + Last
+## Pattern F - Search + First + Last
 
 ```text
 Traversal
@@ -15107,7 +15107,7 @@ Continue
 
 ---
 
-## Pattern G — Conditional Maximum
+## Pattern G - Conditional Maximum
 
 ```text
 Traversal
@@ -15123,7 +15123,7 @@ Update
 
 ---
 
-## Pattern H — Dependent Multi-phase Problem
+## Pattern H - Dependent Multi-phase Problem
 
 ```text
 Phase 1
@@ -15216,32 +15216,32 @@ Code
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation Pattern
+├── ✅ Chapter 3 - Accumulation Pattern
 │
-├── ✅ Chapter 4 — Counting / Maximum-Minimum Core Practice
+├── ✅ Chapter 4 - Counting / Maximum-Minimum Core Practice
 │
-├── ✅ Chapter 5 — Maximum-Minimum / Search Foundation
+├── ✅ Chapter 5 - Maximum-Minimum / Search Foundation
 │
-├── ✅ Chapter 6 — Searching & Mixed Pattern Foundation
+├── ✅ Chapter 6 - Searching & Mixed Pattern Foundation
 │
-├── ✅ Chapter 7 — Combining Patterns
+├── ✅ Chapter 7 - Combining Patterns
 │
-├── ⏳ Chapter 8 — Common Bugs & Edge Cases
+├── ⏳ Chapter 8 - Common Bugs & Edge Cases
 │
-├── ⏳ Chapter 9 — Problem Solving Session
+├── ⏳ Chapter 9 - Problem Solving Session
 │
-├── ⏳ Chapter 10 — Pattern Library Update
+├── ⏳ Chapter 10 - Pattern Library Update
 │
-└── ⏳ Chapter 11 — Assignment & Reflection
+└── ⏳ Chapter 11 - Assignment & Reflection
 ```
 
 ---
 
-# Day 2 — Chapter 8
+# Day 2 - Chapter 8
 
 # 🐞 Common Bugs & Edge Cases
 
@@ -15361,9 +15361,9 @@ Retest Old + New Cases
 
 ---
 
-# Part 1 — Error এবং Bug চিনে নেওয়া
+# Part 1 - Error এবং Bug চিনে নেওয়া
 
-# Lesson 1 — সব Error একরকম না
+# Lesson 1 - সব Error একরকম না
 
 Programming-এ Problem হলে Beginner অনেক সময় সবকিছুকে বলে:
 
@@ -15400,7 +15400,7 @@ Output Format Problem
 
 ---
 
-# Lesson 2 — Compile Error
+# Lesson 2 - Compile Error
 
 Compile Error মানে Compiler তোমার Code থেকে Executable Program বানাতে পারছে না।
 
@@ -15459,7 +15459,7 @@ Program এখনো Run-ই হয়নি
 
 ---
 
-# Lesson 3 — Runtime Error
+# Lesson 3 - Runtime Error
 
 Code Compile হয়েছে।
 
@@ -15512,11 +15512,11 @@ Wrong Value দিতে পারে
 
 তাই:
 
-> **Program crash না করলেই Code safe—এটা ধরে নেওয়া যাবে না।**
+> **Program crash না করলেই Code safe-এটা ধরে নেওয়া যাবে না।**
 
 ---
 
-# Lesson 4 — Wrong Answer
+# Lesson 4 - Wrong Answer
 
 Competitive Programming-এ সবচেয়ে common frustration:
 
@@ -15603,9 +15603,9 @@ Failed
 
 ---
 
-# Part 2 — Array Boundary Bugs
+# Part 2 - Array Boundary Bugs
 
-# Lesson 5 — Off-by-One Error
+# Lesson 5 - Off-by-One Error
 
 Array Problem-এর সবচেয়ে common Bug-এর একটি:
 
@@ -15677,7 +15677,7 @@ arr[n - 1]
 
 ---
 
-# Lesson 6 — Index Mental Model
+# Lesson 6 - Index Mental Model
 
 ধরো:
 
@@ -15711,7 +15711,7 @@ Last Index = n - 1
 
 ---
 
-# Lesson 7 — Wrong Starting Index
+# Lesson 7 - Wrong Starting Index
 
 সব Loop সবসময় `0` থেকে শুরু হবে না।
 
@@ -15774,9 +15774,9 @@ Start from i = 1
 
 ---
 
-# Part 3 — Initialization Bugs
+# Part 3 - Initialization Bugs
 
-# Lesson 8 — Initialization কেন এত গুরুত্বপূর্ণ?
+# Lesson 8 - Initialization কেন এত গুরুত্বপূর্ণ?
 
 Pattern Code-এ State Variable থাকে।
 
@@ -15838,7 +15838,7 @@ Initialization random number দিয়ে করা যাবে না।
 
 ---
 
-# Lesson 9 — Sum-এর Wrong Initialization
+# Lesson 9 - Sum-এর Wrong Initialization
 
 Wrong:
 
@@ -15897,7 +15897,7 @@ x + 0 = x
 
 ---
 
-# Lesson 10 — Product-এর Initialization
+# Lesson 10 - Product-এর Initialization
 
 Problem:
 
@@ -15948,7 +15948,7 @@ Mental Table:
 
 ---
 
-# Lesson 11 — Maximum-এ `0` Bug
+# Lesson 11 - Maximum-এ `0` Bug
 
 Wrong:
 
@@ -16002,7 +16002,7 @@ int max = arr[0];
 
 ---
 
-# Lesson 12 — Minimum-এ `0` Bug
+# Lesson 12 - Minimum-এ `0` Bug
 
 Wrong:
 
@@ -16047,9 +16047,9 @@ General Rule:
 
 ---
 
-# Part 4 — State Reset Bugs
+# Part 4 - State Reset Bugs
 
-# Lesson 13 — State Variable Loop-এর ভিতরে Initialize করা
+# Lesson 13 - State Variable Loop-এর ভিতরে Initialize করা
 
 Problem:
 
@@ -16122,7 +16122,7 @@ After Traversal
 
 ---
 
-# Lesson 14 — Nested Scope বুঝে রাখো
+# Lesson 14 - Nested Scope বুঝে রাখো
 
 এই Code:
 
@@ -16167,9 +16167,9 @@ found
 
 ---
 
-# Part 5 — Condition Bugs
+# Part 5 - Condition Bugs
 
-# Lesson 15 — Condition উল্টো লেখা
+# Lesson 15 - Condition উল্টো লেখা
 
 Problem:
 
@@ -16208,7 +16208,7 @@ Condition সত্য হলে
 
 ---
 
-# Lesson 16 — `=` বনাম `==`
+# Lesson 16 - `=` বনাম `==`
 
 Assignment:
 
@@ -16262,7 +16262,7 @@ Compare
 
 ---
 
-# Lesson 17 — `if` বনাম `else if`
+# Lesson 17 - `if` বনাম `else if`
 
 Problem:
 
@@ -16347,7 +16347,7 @@ else if (arr[i] % 3 == 0)
 
 ---
 
-# Lesson 18 — Boundary Condition Bug
+# Lesson 18 - Boundary Condition Bug
 
 Problem:
 
@@ -16392,9 +16392,9 @@ CP-তে Problem Statement-এর শব্দকে Operator-এ translate ক
 
 ---
 
-# Part 6 — Search Bugs
+# Part 6 - Search Bugs
 
-# Lesson 19 — `Not Found` Loop-এর ভিতরে Print করা
+# Lesson 19 - `Not Found` Loop-এর ভিতরে Print করা
 
 Problem:
 
@@ -16470,7 +16470,7 @@ else
 
 ---
 
-# Lesson 20 — Wrong `break`
+# Lesson 20 - Wrong `break`
 
 Problem:
 
@@ -16536,7 +16536,7 @@ continue traversal
 
 ---
 
-# Lesson 21 — First Occurrence Bug
+# Lesson 21 - First Occurrence Bug
 
 Input:
 
@@ -16604,7 +16604,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 22 — First Maximum Index Bug
+# Lesson 22 - First Maximum Index Bug
 
 Input:
 
@@ -16677,9 +16677,9 @@ Equal Value-তে Update না করলে First Occurrence preserve হয়�
 
 ---
 
-# Part 7 — Conditional Maximum/Minimum Bugs
+# Part 7 - Conditional Maximum/Minimum Bugs
 
-# Lesson 23 — Invalid Initial Candidate
+# Lesson 23 - Invalid Initial Candidate
 
 Problem:
 
@@ -16736,7 +16736,7 @@ Final Answer:
 
 ---
 
-# Lesson 24 — Valid Candidate Pattern
+# Lesson 24 - Valid Candidate Pattern
 
 Conditional Maximum-এর Safe Pattern:
 
@@ -16794,7 +16794,7 @@ else
 
 ---
 
-# Lesson 25 — No Valid Candidate Edge Case
+# Lesson 25 - No Valid Candidate Edge Case
 
 Problem:
 
@@ -16829,9 +16829,9 @@ Important Rule:
 
 ---
 
-# Part 8 — Arithmetic Bugs
+# Part 8 - Arithmetic Bugs
 
-# Lesson 26 — Integer Division Bug
+# Lesson 26 - Integer Division Bug
 
 Problem:
 
@@ -16898,7 +16898,7 @@ double average = (double)sum / count;
 
 ---
 
-# Lesson 27 — Division by Zero
+# Lesson 27 - Division by Zero
 
 Problem:
 
@@ -16962,7 +16962,7 @@ Divide        Handle Case
 
 ---
 
-# Lesson 28 — Integer Overflow চিনে রাখা
+# Lesson 28 - Integer Overflow চিনে রাখা
 
 ধরো:
 
@@ -17010,9 +17010,9 @@ Maximum possible result কত বড় হতে পারে?
 
 ---
 
-# Part 9 — Output Format Bugs
+# Part 9 - Output Format Bugs
 
-# Lesson 29 — Online Judge তোমার Friend না 😄
+# Lesson 29 - Online Judge তোমার Friend না 😄
 
 Local Practice-এ তুমি লিখতে পারো:
 
@@ -17063,7 +17063,7 @@ Match Exactly
 
 ---
 
-# Lesson 30 — Extra Space এবং Newline
+# Lesson 30 - Extra Space এবং Newline
 
 বেশিরভাগ Judge trailing whitespace tolerate করতে পারে, কিন্তু Safe Habit:
 
@@ -17095,9 +17095,9 @@ Formatting-ও Problem-এর অংশ।
 
 ---
 
-# Part 10 — Edge Case Thinking
+# Part 10 - Edge Case Thinking
 
-# Lesson 31 — Edge Case কী?
+# Lesson 31 - Edge Case কী?
 
 Edge Case মানে শুধু:
 
@@ -17126,9 +17126,9 @@ Normal Test:
 
 ---
 
-# Lesson 32 — Maximum Problem-এর Edge Cases
+# Lesson 32 - Maximum Problem-এর Edge Cases
 
-## Case 1 — Single Element
+## Case 1 - Single Element
 
 ```text
 1
@@ -17151,7 +17151,7 @@ loop starting point
 
 ---
 
-## Case 2 — All Negative
+## Case 2 - All Negative
 
 ```text
 5
@@ -17172,7 +17172,7 @@ max = 0 bug
 
 ---
 
-## Case 3 — All Equal
+## Case 3 - All Equal
 
 ```text
 5
@@ -17193,7 +17193,7 @@ equality handling
 
 ---
 
-## Case 4 — Maximum First
+## Case 4 - Maximum First
 
 ```text
 5
@@ -17214,7 +17214,7 @@ initial candidate preservation
 
 ---
 
-## Case 5 — Maximum Last
+## Case 5 - Maximum Last
 
 ```text
 5
@@ -17236,7 +17236,7 @@ loop boundary
 
 ---
 
-# Lesson 33 — Search Problem-এর Edge Cases
+# Lesson 33 - Search Problem-এর Edge Cases
 
 Problem:
 
@@ -17324,7 +17324,7 @@ Expected Last:
 
 ---
 
-# Lesson 34 — Counting Problem-এর Edge Cases
+# Lesson 34 - Counting Problem-এর Edge Cases
 
 Problem:
 
@@ -17397,7 +17397,7 @@ All Match
 
 ---
 
-# Lesson 35 — Conditional Best-এর Edge Cases
+# Lesson 35 - Conditional Best-এর Edge Cases
 
 Problem:
 
@@ -17463,9 +17463,9 @@ Bug।
 
 ---
 
-# Part 11 — Counterexample Thinking
+# Part 11 - Counterexample Thinking
 
-# Lesson 36 — Counterexample কী?
+# Lesson 36 - Counterexample কী?
 
 ধরো তুমি Claim করলে:
 
@@ -17492,7 +17492,7 @@ Code দেখে জিজ্ঞেস করো:
 
 ---
 
-# Lesson 37 — Smallest Failing Test
+# Lesson 37 - Smallest Failing Test
 
 বড় Input দিয়ে Debugging কঠিন।
 
@@ -17544,7 +17544,7 @@ Bug দ্রুত দেখা যায়
 
 ---
 
-# Lesson 38 — Assumption Hunting
+# Lesson 38 - Assumption Hunting
 
 Bug খোঁজার সময় নিজের Code-এর Hidden Assumption ধরো।
 
@@ -17596,9 +17596,9 @@ Problem Statement কি সেটা Guarantee করেছে?
 
 ---
 
-# Part 12 — Dry Run Debugging
+# Part 12 - Dry Run Debugging
 
-# Lesson 39 — Dry Run শুধু শেখার জন্য না
+# Lesson 39 - Dry Run শুধু শেখার জন্য না
 
 অনেকে মনে করে Dry Run Beginner-এর কাজ।
 
@@ -17645,7 +17645,7 @@ Final:
 
 ---
 
-# Lesson 40 — Debugging Table কীভাবে বানাবে?
+# Lesson 40 - Debugging Table কীভাবে বানাবে?
 
 Problem অনুযায়ী Column select করবে।
 
@@ -17680,9 +17680,9 @@ Combined Pattern:
 
 ---
 
-# Part 13 — Systematic Debugging Workflow
+# Part 13 - Systematic Debugging Workflow
 
-# Lesson 41 — Random Debugging কেন খারাপ?
+# Lesson 41 - Random Debugging কেন খারাপ?
 
 Beginner Workflow:
 
@@ -17740,7 +17740,7 @@ Retest
 
 ---
 
-# Lesson 42 — First Wrong State Principle
+# Lesson 42 - First Wrong State Principle
 
 ধরো Final Output ভুল।
 
@@ -17786,7 +17786,7 @@ Mental Rule:
 
 ---
 
-# Lesson 43 — Bug Classification Checklist
+# Lesson 43 - Bug Classification Checklist
 
 Wrong Answer হলে এই Order-এ Check করতে পারো:
 
@@ -17826,7 +17826,7 @@ Relevantগুলো Check করবে।
 
 ---
 
-# Part 14 — Bug Hunt Session
+# Part 14 - Bug Hunt Session
 
 এখন কিছু Buggy Code দেখব।
 
@@ -17834,7 +17834,7 @@ Relevantগুলো Check করবে।
 
 ---
 
-# Lesson 44 — Bug Hunt 1
+# Lesson 44 - Bug Hunt 1
 
 Problem:
 
@@ -17885,7 +17885,7 @@ max = arr[0]
 
 ---
 
-# Lesson 45 — Bug Hunt 2
+# Lesson 45 - Bug Hunt 2
 
 Problem:
 
@@ -17934,7 +17934,7 @@ Actual:
 
 ---
 
-# Lesson 46 — Bug Hunt 3
+# Lesson 46 - Bug Hunt 3
 
 Problem:
 
@@ -17988,7 +17988,7 @@ Actual:
 
 ---
 
-# Lesson 47 — Bug Hunt 4
+# Lesson 47 - Bug Hunt 4
 
 Problem:
 
@@ -18033,7 +18033,7 @@ if (count > 0)
 
 ---
 
-# Lesson 48 — Bug Hunt 5
+# Lesson 48 - Bug Hunt 5
 
 Problem:
 
@@ -18086,7 +18086,7 @@ Valid Candidate Initialization
 
 ---
 
-# Lesson 49 — Bug Hunt 6
+# Lesson 49 - Bug Hunt 6
 
 Problem:
 
@@ -18131,9 +18131,9 @@ if (arr[i] % 3 == 0)
 
 ---
 
-# Part 15 — Edge Case Generation Framework
+# Part 15 - Edge Case Generation Framework
 
-# Lesson 50 — নিজে Test Case বানানোর Formula
+# Lesson 50 - নিজে Test Case বানানোর Formula
 
 Problem দেখার পরে এই Categories থেকে Relevant Test বেছে নাও:
 
@@ -18182,7 +18182,7 @@ Problem অনুযায়ী select করবে।
 
 ---
 
-# Lesson 51 — Pattern-Based Edge Case Map
+# Lesson 51 - Pattern-Based Edge Case Map
 
 ## Traversal
 
@@ -18253,9 +18253,9 @@ large sum
 
 ---
 
-# Part 16 — Contest Debugging Strategy
+# Part 16 - Contest Debugging Strategy
 
-# Lesson 52 — Contest-এ Wrong Answer এলে
+# Lesson 52 - Contest-এ Wrong Answer এলে
 
 Contest-এর সময় Panic Debugging করলে সময় নষ্ট হয়।
 
@@ -18291,7 +18291,7 @@ Submit
 
 ---
 
-# Lesson 53 — Sample Passed মানে Correct না
+# Lesson 53 - Sample Passed মানে Correct না
 
 Sample Test-এর উদ্দেশ্য:
 
@@ -18330,7 +18330,7 @@ Better Confidence
 
 ---
 
-# Lesson 54 — Debug Print ব্যবহার
+# Lesson 54 - Debug Print ব্যবহার
 
 Local Debugging-এ Temporary Print ব্যবহার করতে পারো।
 
@@ -18374,7 +18374,7 @@ Judge Requirement Only
 
 ---
 
-# Part 17 — Chapter 8 Practice Session
+# Part 17 - Chapter 8 Practice Session
 
 এখন নিচের Problem-গুলোতে Code-এর Bug খুঁজবে।
 
@@ -18404,7 +18404,7 @@ Fix Idea:
 
 ---
 
-## Practice 1 — Maximum Bug
+## Practice 1 - Maximum Bug
 
 ```c
 int max = 0;
@@ -18436,7 +18436,7 @@ Fix:
 
 ---
 
-## Practice 2 — Boundary Bug
+## Practice 2 - Boundary Bug
 
 ```c
 for (int i = 0; i <= n; i++)
@@ -18460,7 +18460,7 @@ Correct Condition:
 
 ---
 
-## Practice 3 — Counter Reset Bug
+## Practice 3 - Counter Reset Bug
 
 ```c
 for (int i = 0; i < n; i++)
@@ -18486,7 +18486,7 @@ Questions:
 
 ---
 
-## Practice 4 — Search Bug
+## Practice 4 - Search Bug
 
 ```c
 for (int i = 0; i < n; i++)
@@ -18511,7 +18511,7 @@ Explain:
 
 ---
 
-## Practice 5 — Average Bug
+## Practice 5 - Average Bug
 
 ```c
 double average = sum / count;
@@ -18529,7 +18529,7 @@ Risk 2:
 
 ---
 
-## Practice 6 — First Index Bug
+## Practice 6 - First Index Bug
 
 ```c
 if (arr[i] == target)
@@ -18549,7 +18549,7 @@ Last?
 
 ---
 
-## Practice 7 — Conditional Maximum Bug
+## Practice 7 - Conditional Maximum Bug
 
 ```c
 int max_even = arr[0];
@@ -18567,7 +18567,7 @@ Failing Test বানাও।
 
 ---
 
-## Practice 8 — `if/else if` Bug
+## Practice 8 - `if/else if` Bug
 
 ```c
 if (x % 2 == 0)
@@ -18590,9 +18590,9 @@ Dry Run করে Explain করবে।
 
 ---
 
-# Part 18 — Chapter 8 Assignment
+# Part 18 - Chapter 8 Assignment
 
-# Task 1 — Build an Edge Case Table
+# Task 1 - Build an Edge Case Table
 
 Problem:
 
@@ -18611,7 +18611,7 @@ Problem:
 
 ---
 
-# Task 2 — Find the Counterexample
+# Task 2 - Find the Counterexample
 
 Code:
 
@@ -18653,7 +18653,7 @@ Correct Initialization:
 
 ---
 
-# Task 3 — Search Debugging
+# Task 3 - Search Debugging
 
 Buggy Code:
 
@@ -18695,7 +18695,7 @@ Should it become Not Found again?
 
 ---
 
-# Task 4 — First vs Last Bug
+# Task 4 - First vs Last Bug
 
 Problem:
 
@@ -18741,7 +18741,7 @@ Why:
 
 ---
 
-# Task 5 — Average Safety Analysis
+# Task 5 - Average Safety Analysis
 
 Problem:
 
@@ -18775,7 +18775,7 @@ No Even Number Edge Case:
 
 ---
 
-# Task 6 — Design Tests for Largest Negative
+# Task 6 - Design Tests for Largest Negative
 
 Problem:
 
@@ -18801,7 +18801,7 @@ Categories:
 
 ---
 
-# Task 7 — Bug Classification
+# Task 7 - Bug Classification
 
 নিচের প্রতিটি Bug-কে Category দাও:
 
@@ -18844,7 +18844,7 @@ Invalid Candidate Bug
 
 ---
 
-# Task 8 — Dry Run Assignment
+# Task 8 - Dry Run Assignment
 
 Buggy Code:
 
@@ -18897,7 +18897,7 @@ Fix:
 
 ---
 
-# Task 9 — Build Your Debugging Checklist
+# Task 9 - Build Your Debugging Checklist
 
 নিজের `Day_2_assignment.md`-এ এই Section বানাবে:
 
@@ -18927,7 +18927,7 @@ Before changing code randomly, I will check:
 
 ---
 
-# Task 10 — Final Bug Hunt Challenge
+# Task 10 - Final Bug Hunt Challenge
 
 Problem:
 
@@ -19027,7 +19027,7 @@ Failing Case বানানো
 
 # 📌 Chapter 8 Quick Revision
 
-## Bug 1 — Maximum Initialization
+## Bug 1 - Maximum Initialization
 
 Wrong:
 
@@ -19043,7 +19043,7 @@ int max = arr[0];
 
 ---
 
-## Bug 2 — Array Boundary
+## Bug 2 - Array Boundary
 
 Wrong:
 
@@ -19059,7 +19059,7 @@ i < n
 
 ---
 
-## Bug 3 — Counter Reset
+## Bug 3 - Counter Reset
 
 Wrong:
 
@@ -19083,7 +19083,7 @@ for (...)
 
 ---
 
-## Bug 4 — Search Output
+## Bug 4 - Search Output
 
 Wrong Mental Model:
 
@@ -19105,7 +19105,7 @@ Target Not Found
 
 ---
 
-## Bug 5 — Wrong Break
+## Bug 5 - Wrong Break
 
 ```text
 Need only existence?
@@ -19121,7 +19121,7 @@ No break
 
 ---
 
-## Bug 6 — First vs Last
+## Bug 6 - First vs Last
 
 First:
 
@@ -19145,7 +19145,7 @@ Continue
 
 ---
 
-## Bug 7 — Conditional Best
+## Bug 7 - Conditional Best
 
 Wrong:
 
@@ -19165,7 +19165,7 @@ Compare future valid candidates
 
 ---
 
-## Bug 8 — Average
+## Bug 8 - Average
 
 Need:
 
@@ -19458,34 +19458,34 @@ Verify
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation Pattern
+├── ✅ Chapter 3 - Accumulation Pattern
 │
-├── ✅ Chapter 4 — Counting Pattern
+├── ✅ Chapter 4 - Counting Pattern
 │
-├── ✅ Chapter 5 — Maximum & Minimum Pattern
+├── ✅ Chapter 5 - Maximum & Minimum Pattern
 │
-├── ✅ Chapter 6 — Searching Pattern
+├── ✅ Chapter 6 - Searching Pattern
 │
-├── ✅ Chapter 7 — Combining Patterns
+├── ✅ Chapter 7 - Combining Patterns
 │
-├── ✅ Chapter 8 — Common Bugs & Edge Cases
+├── ✅ Chapter 8 - Common Bugs & Edge Cases
 │
-├── ⏳ Chapter 9 — Problem Solving Session
+├── ⏳ Chapter 9 - Problem Solving Session
 │
-├── ⏳ Chapter 10 — Pattern Library Update
+├── ⏳ Chapter 10 - Pattern Library Update
 │
-└── ⏳ Chapter 11 — Assignment & Reflection
+└── ⏳ Chapter 11 - Assignment & Reflection
 ```
 
-**Day 2 — Chapter 8 এখানেই শেষ।** Chapter 9 হবে Theory-heavy Chapter না; ওটা হবে **Problem Solving Session**—যেখানে Problem দেখার পর `Problem → Pattern → State → Pipeline → Dry Run → Code → Test` পুরো workflow practice করা হবে।
+**Day 2 - Chapter 8 এখানেই শেষ।** Chapter 9 হবে Theory-heavy Chapter না; ওটা হবে **Problem Solving Session**-যেখানে Problem দেখার পর `Problem → Pattern → State → Pipeline → Dry Run → Code → Test` পুরো workflow practice করা হবে।
 
 ---
 
-# Day 2 — Chapter 9
+# Day 2 - Chapter 9
 
 # 🧠 Problem Solving Session
 
@@ -19583,9 +19583,9 @@ SUBMIT
 
 ---
 
-# Part 1 — Problem Solving মানে কী?
+# Part 1 - Problem Solving মানে কী?
 
-# Lesson 1 — Code লেখা Problem Solving-এর প্রথম Step না
+# Lesson 1 - Code লেখা Problem Solving-এর প্রথম Step না
 
 Beginner-এর Common Habit:
 
@@ -19635,11 +19635,11 @@ Code
 
 ---
 
-# Lesson 2 — Problem Solve করার ৩টি Layer
+# Lesson 2 - Problem Solve করার ৩টি Layer
 
 একটি CP Problem-কে তিনটি Layer-এ ভাবতে পারো।
 
-## Layer 1 — Story
+## Layer 1 - Story
 
 Problem যেভাবে লেখা আছে।
 
@@ -19649,7 +19649,7 @@ Example:
 
 ---
 
-## Layer 2 — Mathematical / Logical Goal
+## Layer 2 - Mathematical / Logical Goal
 
 Story বাদ দিলে:
 
@@ -19660,7 +19660,7 @@ Find the maximum
 
 ---
 
-## Layer 3 — Programming Pattern
+## Layer 3 - Programming Pattern
 
 ```text
 Traversal
@@ -19686,9 +19686,9 @@ Contest-এ Story দেখে ভয় পেলে:
 
 ---
 
-# Part 2 — The Complete Problem Solving Workflow
+# Part 2 - The Complete Problem Solving Workflow
 
-# Lesson 3 — Step 1: Read the Problem
+# Lesson 3 - Step 1: Read the Problem
 
 Problem একবার দ্রুত পড়বে।
 
@@ -19730,7 +19730,7 @@ What should be printed?
 
 ---
 
-# Lesson 4 — Step 2: Input এবং Output আলাদা করো
+# Lesson 4 - Step 2: Input এবং Output আলাদা করো
 
 ধরো Problem:
 
@@ -19772,7 +19772,7 @@ Counter
 
 ---
 
-# Lesson 5 — Step 3: নিজের ভাষায় Problem বলো
+# Lesson 5 - Step 3: নিজের ভাষায় Problem বলো
 
 Problem পড়ার পরে নিজেকে জিজ্ঞেস করবে:
 
@@ -19810,7 +19810,7 @@ Code এখনো লিখিনি।
 
 ---
 
-# Lesson 6 — Step 4: Example হাতে Solve করো
+# Lesson 6 - Step 4: Example হাতে Solve করো
 
 Problem:
 
@@ -19868,7 +19868,7 @@ Counter
 
 ---
 
-# Lesson 7 — Step 5: Problem Decompose করো
+# Lesson 7 - Step 5: Problem Decompose করো
 
 Problem:
 
@@ -19922,7 +19922,7 @@ Calculate Average
 
 ---
 
-# Lesson 8 — Step 6: Pattern Signal খুঁজো
+# Lesson 8 - Step 6: Pattern Signal খুঁজো
 
 Problem Statement-এর কিছু শব্দ Pattern-এর Signal দিতে পারে।
 
@@ -19952,7 +19952,7 @@ Problem-এর Goal বুঝে Pattern confirm করবে।
 
 ---
 
-# Lesson 9 — Step 7: State Variable select করো
+# Lesson 9 - Step 7: State Variable select করো
 
 State মানে:
 
@@ -20030,7 +20030,7 @@ Mental Question:
 
 ---
 
-# Lesson 10 — Step 8: Dependency Check
+# Lesson 10 - Step 8: Dependency Check
 
 Problem:
 
@@ -20098,7 +20098,7 @@ Dependency আছে
 
 ---
 
-# Lesson 11 — Step 9: Pattern Pipeline লিখো
+# Lesson 11 - Step 9: Pattern Pipeline লিখো
 
 Code-এর আগে ৫–১০ সেকেন্ডে Pipeline লিখতে শিখবে।
 
@@ -20152,7 +20152,7 @@ Pipeline তোমার Code-এর Blueprint।
 
 ---
 
-# Lesson 12 — Step 10: Pseudocode লিখো
+# Lesson 12 - Step 10: Pseudocode লিখো
 
 Pseudocode হলো Code না।
 
@@ -20203,9 +20203,9 @@ Syntax পরে লেখা
 
 ---
 
-# Part 3 — Full Guided Problem Solving
+# Part 3 - Full Guided Problem Solving
 
-# Problem 1 — Sum of Even Numbers
+# Problem 1 - Sum of Even Numbers
 
 ## Problem
 
@@ -20226,7 +20226,7 @@ Expected Output:
 
 ---
 
-## Step 1 — নিজের ভাষায় Problem
+## Step 1 - নিজের ভাষায় Problem
 
 ```text
 সব Number দেখব
@@ -20236,7 +20236,7 @@ Even হলে Sum-এর সঙ্গে যোগ করব
 
 ---
 
-## Step 2 — Required Information
+## Step 2 - Required Information
 
 Final Output:
 
@@ -20252,7 +20252,7 @@ sum
 
 ---
 
-## Step 3 — Pattern
+## Step 3 - Pattern
 
 ```text
 Traversal
@@ -20264,7 +20264,7 @@ Accumulator
 
 ---
 
-## Step 4 — Pipeline
+## Step 4 - Pipeline
 
 ```text
 Read Input
@@ -20282,7 +20282,7 @@ Print sum
 
 ---
 
-## Step 5 — Pseudocode
+## Step 5 - Pseudocode
 
 ```text
 sum = 0
@@ -20296,7 +20296,7 @@ print sum
 
 ---
 
-## Step 6 — Dry Run
+## Step 6 - Dry Run
 
 Input:
 
@@ -20321,7 +20321,7 @@ Answer:
 
 ---
 
-## Step 7 — Code
+## Step 7 - Code
 
 ```c
 #include <stdio.h>
@@ -20356,7 +20356,7 @@ int main()
 
 ---
 
-## Step 8 — Own Tests
+## Step 8 - Own Tests
 
 ### No Even Number
 
@@ -20399,7 +20399,7 @@ Expected:
 
 ---
 
-# Problem 2 — Maximum and Minimum
+# Problem 2 - Maximum and Minimum
 
 ## Problem
 
@@ -20420,7 +20420,7 @@ Expected:
 
 ---
 
-## Step 1 — Required Information
+## Step 1 - Required Information
 
 ```text
 Maximum
@@ -20436,7 +20436,7 @@ min
 
 ---
 
-## Step 2 — Dependency
+## Step 2 - Dependency
 
 Question:
 
@@ -20460,7 +20460,7 @@ Independent States
 
 ---
 
-## Step 3 — Pattern
+## Step 3 - Pattern
 
 ```text
 Traversal
@@ -20472,7 +20472,7 @@ Minimum Tracking
 
 ---
 
-## Step 4 — Pipeline
+## Step 4 - Pipeline
 
 ```text
 Initialize max = arr[0]
@@ -20491,7 +20491,7 @@ Print max and min
 
 ---
 
-## Step 5 — Pseudocode
+## Step 5 - Pseudocode
 
 ```text
 max = first element
@@ -20509,7 +20509,7 @@ print max and min
 
 ---
 
-## Step 6 — Edge Cases
+## Step 6 - Edge Cases
 
 ```text
 Single Element
@@ -20523,7 +20523,7 @@ Minimum Last
 
 ---
 
-# Problem 3 — Count Maximum Occurrences
+# Problem 3 - Count Maximum Occurrences
 
 ## Problem
 
@@ -20544,7 +20544,7 @@ Expected:
 
 ---
 
-## Step 1 — Decomposition
+## Step 1 - Decomposition
 
 ```text
 Task 1
@@ -20556,7 +20556,7 @@ Count Maximum
 
 ---
 
-## Step 2 — Dependency
+## Step 2 - Dependency
 
 Count করার Target:
 
@@ -20578,7 +20578,7 @@ Count Target
 
 ---
 
-## Step 3 — Beginner-friendly Decision
+## Step 3 - Beginner-friendly Decision
 
 ```text
 Multi Pass
@@ -20586,7 +20586,7 @@ Multi Pass
 
 ---
 
-## Step 4 — Pipeline
+## Step 4 - Pipeline
 
 ```text
 Pass 1
@@ -20606,7 +20606,7 @@ Counter
 
 ---
 
-## Step 5 — Pseudocode
+## Step 5 - Pseudocode
 
 ```text
 max = first element
@@ -20625,7 +20625,7 @@ print max and count
 
 ---
 
-## Step 6 — Important Edge Case
+## Step 6 - Important Edge Case
 
 Input:
 
@@ -20642,7 +20642,7 @@ Expected:
 
 ---
 
-# Problem 4 — First and Last Target Index
+# Problem 4 - First and Last Target Index
 
 ## Problem
 
@@ -20664,7 +20664,7 @@ Expected:
 
 ---
 
-## Step 1 — Required Information
+## Step 1 - Required Information
 
 ```text
 first
@@ -20673,7 +20673,7 @@ last
 
 ---
 
-## Step 2 — Initialization
+## Step 2 - Initialization
 
 ```text
 first = -1
@@ -20688,7 +20688,7 @@ Target has not been found yet
 
 ---
 
-## Step 3 — Pattern
+## Step 3 - Pattern
 
 ```text
 Traversal
@@ -20700,7 +20700,7 @@ Index Tracking
 
 ---
 
-## Step 4 — Pipeline
+## Step 4 - Pipeline
 
 ```text
 Traverse
@@ -20718,7 +20718,7 @@ Continue Traversal
 
 ---
 
-## Step 5 — Why No `break`?
+## Step 5 - Why No `break`?
 
 কারণ:
 
@@ -20740,7 +20740,7 @@ No break
 
 ---
 
-# Problem 5 — Largest Even Number
+# Problem 5 - Largest Even Number
 
 ## Problem
 
@@ -20761,7 +20761,7 @@ Expected:
 
 ---
 
-## Step 1 — Core Task
+## Step 1 - Core Task
 
 ```text
 Maximum
@@ -20785,7 +20785,7 @@ Maximum
 
 ---
 
-## Step 2 — Initialization Problem
+## Step 2 - Initialization Problem
 
 এই Code unsafe:
 
@@ -20808,7 +20808,7 @@ max_even
 
 ---
 
-## Step 3 — Pipeline
+## Step 3 - Pipeline
 
 ```text
 Traverse
@@ -20826,7 +20826,7 @@ Update if Larger
 
 ---
 
-## Step 4 — Edge Cases
+## Step 4 - Edge Cases
 
 ```text
 One Even
@@ -20838,7 +20838,7 @@ No Even
 
 ---
 
-# Part 4 — Semi-Guided Problem Solving
+# Part 4 - Semi-Guided Problem Solving
 
 এখন থেকে Solution পুরো দেওয়া হবে না।
 
@@ -20846,7 +20846,7 @@ No Even
 
 ---
 
-# Problem 6 — Count Values Greater Than Average
+# Problem 6 - Count Values Greater Than Average
 
 ## Problem
 
@@ -20923,7 +20923,7 @@ before average is known?
 
 ---
 
-# Problem 7 — Smallest Positive Number
+# Problem 7 - Smallest Positive Number
 
 Input:
 
@@ -20954,7 +20954,7 @@ Expected:
 
 ---
 
-# Problem 8 — Count Minimum Occurrences
+# Problem 8 - Count Minimum Occurrences
 
 Input:
 
@@ -20995,7 +20995,7 @@ Test
 
 ---
 
-# Part 5 — Independent Problem Solving Session
+# Part 5 - Independent Problem Solving Session
 
 এখন Hint কমে যাবে।
 
@@ -21005,7 +21005,7 @@ Test
 
 ---
 
-# Problem 9 — Count Numbers Between Min and Max
+# Problem 9 - Count Numbers Between Min and Max
 
 Given an array, count how many values are strictly greater than the minimum and strictly less than the maximum.
 
@@ -21076,7 +21076,7 @@ Edge Cases:
 
 ---
 
-# Problem 10 — First Positive Maximum Index
+# Problem 10 - First Positive Maximum Index
 
 Problem:
 
@@ -21112,7 +21112,7 @@ No positive number থাকলে কী করবে?
 
 ---
 
-# Problem 11 — Sum of Values Equal to Target
+# Problem 11 - Sum of Values Equal to Target
 
 Input:
 
@@ -21146,7 +21146,7 @@ Traversal
 
 ---
 
-# Problem 12 — Count Elements Equal to Min or Max
+# Problem 12 - Count Elements Equal to Min or Max
 
 Input:
 
@@ -21177,9 +21177,9 @@ Matching Count:
 
 ---
 
-# Part 6 — Time-boxed Problem Solving
+# Part 6 - Time-boxed Problem Solving
 
-# Lesson 13 — একটি Problem-এ কতক্ষণ বসবে?
+# Lesson 13 - একটি Problem-এ কতক্ষণ বসবে?
 
 Practice-এর সময় Problem দেখেই Solution দেখে ফেলবে না।
 
@@ -21221,7 +21221,7 @@ At least one serious analysis attempt
 
 ---
 
-# Lesson 14 — Stuck হলে কী করবে?
+# Lesson 14 - Stuck হলে কী করবে?
 
 Problem দেখে কিছুই মাথায় না এলে এই Ladder follow করবে:
 
@@ -21254,7 +21254,7 @@ Code
 
 ---
 
-# Lesson 15 — Code না আসলে Syntax Problem নাকি Logic Problem?
+# Lesson 15 - Code না আসলে Syntax Problem নাকি Logic Problem?
 
 নিজেকে জিজ্ঞেস করবে:
 
@@ -21298,9 +21298,9 @@ Problem Understanding / Algorithm Gap
 
 ---
 
-# Part 7 — Problem Solving Journal
+# Part 7 - Problem Solving Journal
 
-# Lesson 16 — প্রতিটি Problem-এর পরে কী লিখবে?
+# Lesson 16 - প্রতিটি Problem-এর পরে কী লিখবে?
 
 তোমার Bootcamp Repo-তে Problem Solve করার পরে ছোট Review রাখবে।
 
@@ -21359,7 +21359,7 @@ Format:
 
 ---
 
-# Lesson 17 — Wrong Answer Journal
+# Lesson 17 - Wrong Answer Journal
 
 একই Bug বারবার করলে আলাদা Note রাখবে।
 
@@ -21368,7 +21368,7 @@ Example:
 ````markdown
 # Mistake Log
 
-## 01 — Maximum Initialization
+## 01 - Maximum Initialization
 
 ### Wrong Habit
 
@@ -21411,9 +21411,9 @@ Stop Repeating
 
 ---
 
-# Part 8 — Contest Simulation Workflow
+# Part 8 - Contest Simulation Workflow
 
-# Lesson 18 — Contest Problem Open করার পরে
+# Lesson 18 - Contest Problem Open করার পরে
 
 তোমার Workflow:
 
@@ -21449,7 +21449,7 @@ Stop Repeating
 
 ---
 
-# Lesson 19 — Contest-এ Problem Selection
+# Lesson 19 - Contest-এ Problem Selection
 
 তুমি যেহেতু Beginner, Contest শুরু হলে সব Problem একসঙ্গে Solve করতে যেও না।
 
@@ -21488,7 +21488,7 @@ Then Try Harder Problem
 
 ---
 
-# Lesson 20 — Contest-এ একটি Problem-এ আটকে গেলে
+# Lesson 20 - Contest-এ একটি Problem-এ আটকে গেলে
 
 ধরো ২৫ মিনিট ধরে একই জায়গায় আছো।
 
@@ -21522,7 +21522,7 @@ Contest Strategy-তে Problem Switching-ও Skill।
 
 ---
 
-# Part 9 — Full Problem Solving Template
+# Part 9 - Full Problem Solving Template
 
 এখন থেকে নতুন Beginner Problem Solve করার সময় এই Template ব্যবহার করতে পারো।
 
@@ -21623,7 +21623,7 @@ Space: O(...)
 
 ---
 
-# Part 10 — Complexity-এর Basic Connection
+# Part 10 - Complexity-এর Basic Connection
 
 Day 2-তে Complexity নিয়ে Deep Theory দরকার নেই।
 
@@ -21681,7 +21681,7 @@ Order of Growth হিসেবে Linear।
 
 ---
 
-# Lesson 21 — Nested Loop দেখলেই কি ভুল?
+# Lesson 21 - Nested Loop দেখলেই কি ভুল?
 
 না।
 
@@ -21733,7 +21733,7 @@ Traversal + State
 
 ---
 
-# Part 11 — Chapter 9 Main Practice Set
+# Part 11 - Chapter 9 Main Practice Set
 
 এখন তোমার আসল Practice Session।
 
@@ -21741,7 +21741,7 @@ Traversal + State
 
 ---
 
-## Problem 1 — Count Positive Numbers
+## Problem 1 - Count Positive Numbers
 
 Goal:
 
@@ -21755,7 +21755,7 @@ Counter
 
 ---
 
-## Problem 2 — Sum Negative Numbers
+## Problem 2 - Sum Negative Numbers
 
 Goal:
 
@@ -21769,7 +21769,7 @@ Accumulator
 
 ---
 
-## Problem 3 — Maximum and Minimum
+## Problem 3 - Maximum and Minimum
 
 Goal:
 
@@ -21779,7 +21779,7 @@ Independent State Combination
 
 ---
 
-## Problem 4 — First Target Index
+## Problem 4 - First Target Index
 
 Goal:
 
@@ -21793,7 +21793,7 @@ break
 
 ---
 
-## Problem 5 — Last Target Index
+## Problem 5 - Last Target Index
 
 Goal:
 
@@ -21807,7 +21807,7 @@ Full Traversal
 
 ---
 
-## Problem 6 — Target Occurrence Count
+## Problem 6 - Target Occurrence Count
 
 Goal:
 
@@ -21819,7 +21819,7 @@ Counter
 
 ---
 
-## Problem 7 — Largest Even Number
+## Problem 7 - Largest Even Number
 
 Goal:
 
@@ -21833,7 +21833,7 @@ Maximum
 
 ---
 
-## Problem 8 — Smallest Positive Number
+## Problem 8 - Smallest Positive Number
 
 Goal:
 
@@ -21847,7 +21847,7 @@ Minimum
 
 ---
 
-## Problem 9 — Count Maximum
+## Problem 9 - Count Maximum
 
 Goal:
 
@@ -21859,7 +21859,7 @@ Multi Pass
 
 ---
 
-## Problem 10 — Count Values Above Average
+## Problem 10 - Count Values Above Average
 
 Goal:
 
@@ -21877,7 +21877,7 @@ Counter
 
 # 🧪 Chapter 9 Assignment
 
-# Task 1 — Full Workflow Analysis
+# Task 1 - Full Workflow Analysis
 
 Problem:
 
@@ -21918,7 +21918,7 @@ Edge Cases:
 
 ---
 
-# Task 2 — Manual Simulation
+# Task 2 - Manual Simulation
 
 Problem:
 
@@ -21947,7 +21947,7 @@ Input:
 
 ---
 
-# Task 3 — Pattern Detection
+# Task 3 - Pattern Detection
 
 নিচের Problem-গুলোর Pattern লিখবে।
 
@@ -21993,7 +21993,7 @@ Traversal
 
 ---
 
-# Task 4 — State Selection
+# Task 4 - State Selection
 
 নিচের Problem-গুলোর State Variable লিখবে।
 
@@ -22017,7 +22017,7 @@ Traversal
 
 ---
 
-# Task 5 — Dependency Analysis
+# Task 5 - Dependency Analysis
 
 নিচের Problem-গুলো:
 
@@ -22045,7 +22045,7 @@ Independent / Dependent
 
 ---
 
-# Task 6 — Build Pipelines
+# Task 6 - Build Pipelines
 
 এই Problem-গুলোর Pipeline লিখবে।
 
@@ -22071,7 +22071,7 @@ Independent / Dependent
 
 ---
 
-# Task 7 — Pseudocode Practice
+# Task 7 - Pseudocode Practice
 
 Problem:
 
@@ -22090,7 +22090,7 @@ Code না।
 
 ---
 
-# Task 8 — Edge Case Design
+# Task 8 - Edge Case Design
 
 Problem:
 
@@ -22118,7 +22118,7 @@ Categories:
 
 ---
 
-# Task 9 — Complete Problem Solve
+# Task 9 - Complete Problem Solve
 
 Problem:
 
@@ -22171,7 +22171,7 @@ Expected:
 
 ---
 
-# Task 10 — Independent Challenge
+# Task 10 - Independent Challenge
 
 Problem:
 
@@ -22599,34 +22599,34 @@ Pipeline কী?
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation Pattern
+├── ✅ Chapter 3 - Accumulation Pattern
 │
-├── ✅ Chapter 4 — Counting Pattern
+├── ✅ Chapter 4 - Counting Pattern
 │
-├── ✅ Chapter 5 — Maximum & Minimum Pattern
+├── ✅ Chapter 5 - Maximum & Minimum Pattern
 │
-├── ✅ Chapter 6 — Searching Pattern
+├── ✅ Chapter 6 - Searching Pattern
 │
-├── ✅ Chapter 7 — Combining Patterns
+├── ✅ Chapter 7 - Combining Patterns
 │
-├── ✅ Chapter 8 — Common Bugs & Edge Cases
+├── ✅ Chapter 8 - Common Bugs & Edge Cases
 │
-├── ✅ Chapter 9 — Problem Solving Session
+├── ✅ Chapter 9 - Problem Solving Session
 │
-├── ⏳ Chapter 10 — Pattern Library Update
+├── ⏳ Chapter 10 - Pattern Library Update
 │
-└── ⏳ Chapter 11 — Assignment & Reflection
+└── ⏳ Chapter 11 - Assignment & Reflection
 ```
 
-**Day 2 — Chapter 9 এখানেই শেষ।** এখন Chapter 10-এ Day 2-তে শেখা Pattern-গুলোকে তোমার `21_Pattern_Library/core_pattern.md`-এ reusable reference হিসেবে organize করার কাজ হবে।
+**Day 2 - Chapter 9 এখানেই শেষ।** এখন Chapter 10-এ Day 2-তে শেখা Pattern-গুলোকে তোমার `21_Pattern_Library/core_pattern.md`-এ reusable reference হিসেবে organize করার কাজ হবে।
 
 ---
 
-# 📘 Day 2 — Chapter 10
+# 📘 Day 2 - Chapter 10
 
 # 🧩 Pattern Library Update
 
@@ -22728,9 +22728,9 @@ Reuse Later
 
 ---
 
-# Part 1 — Pattern Library কী?
+# Part 1 - Pattern Library কী?
 
-# Lesson 1 — Problem Collection আর Pattern Library এক না
+# Lesson 1 - Problem Collection আর Pattern Library এক না
 
 ধরো তুমি ১০০টা Problem Solve করলে।
 
@@ -22791,7 +22791,7 @@ Reusable Thinking Models
 
 ---
 
-# Lesson 2 — Pattern Library কেন দরকার?
+# Lesson 2 - Pattern Library কেন দরকার?
 
 ধরো আজকে Problem:
 
@@ -22861,7 +22861,7 @@ One Reusable Pattern
 
 ---
 
-# Lesson 3 — Pattern Memorize না, Recognize করতে হবে
+# Lesson 3 - Pattern Memorize না, Recognize করতে হবে
 
 Pattern Library-এর উদ্দেশ্য:
 
@@ -22931,9 +22931,9 @@ Stop after first valid match
 
 ---
 
-# Part 2 — Pattern Card Design
+# Part 2 - Pattern Card Design
 
-# Lesson 4 — প্রতিটি Pattern কীভাবে লিখব?
+# Lesson 4 - প্রতিটি Pattern কীভাবে লিখব?
 
 আমাদের Pattern Library-এর প্রতিটি Entry এই Structure follow করবে:
 
@@ -23039,7 +23039,7 @@ Complex Pattern হলে Full Entry হবে।
 
 ---
 
-# Lesson 5 — Pattern Card-এর সবচেয়ে গুরুত্বপূর্ণ অংশ
+# Lesson 5 - Pattern Card-এর সবচেয়ে গুরুত্বপূর্ণ অংশ
 
 সব Section useful।
 
@@ -23083,9 +23083,9 @@ Edge Case
 
 ---
 
-# Part 3 — Pattern 01: Traversal
+# Part 3 - Pattern 01: Traversal
 
-# Pattern 01 — Array Traversal
+# Pattern 01 - Array Traversal
 
 ## Purpose
 
@@ -23209,9 +23209,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 4 — Pattern 02: Accumulation
+# Part 4 - Pattern 02: Accumulation
 
-# Pattern 02 — Accumulator
+# Pattern 02 - Accumulator
 
 ## Purpose
 
@@ -23391,9 +23391,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 5 — Pattern 03: Counting
+# Part 5 - Pattern 03: Counting
 
-# Pattern 03 — Counter
+# Pattern 03 - Counter
 
 ## Purpose
 
@@ -23545,9 +23545,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 6 — Pattern 04: Maximum
+# Part 6 - Pattern 04: Maximum
 
-# Pattern 04 — Maximum Tracking
+# Pattern 04 - Maximum Tracking
 
 ## Purpose
 
@@ -23697,9 +23697,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 7 — Pattern 05: Minimum
+# Part 7 - Pattern 05: Minimum
 
-# Pattern 05 — Minimum Tracking
+# Pattern 05 - Minimum Tracking
 
 ## Purpose
 
@@ -23816,9 +23816,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 8 — Pattern 06: Linear Search
+# Part 8 - Pattern 06: Linear Search
 
-# Pattern 06 — Linear Search
+# Pattern 06 - Linear Search
 
 ## Purpose
 
@@ -23856,7 +23856,7 @@ Goal-এর উপর নির্ভর করে।
 
 ---
 
-## Version A — Existence Search
+## Version A - Existence Search
 
 ### State
 
@@ -23895,7 +23895,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-## Version B — Index Search
+## Version B - Index Search
 
 ```c
 int index = -1;
@@ -23963,9 +23963,9 @@ Extra Space: O(1)
 
 ---
 
-# Part 9 — Pattern 07: First Occurrence
+# Part 9 - Pattern 07: First Occurrence
 
-# Pattern 07 — First Occurrence
+# Pattern 07 - First Occurrence
 
 ## Purpose
 
@@ -24058,9 +24058,9 @@ Target Repeated
 
 ---
 
-# Part 10 — Pattern 08: Last Occurrence
+# Part 10 - Pattern 08: Last Occurrence
 
-# Pattern 08 — Last Occurrence
+# Pattern 08 - Last Occurrence
 
 ## Purpose
 
@@ -24138,9 +24138,9 @@ break;
 
 ---
 
-# Part 11 — Pattern 09: First and Last Together
+# Part 11 - Pattern 09: First and Last Together
 
-# Pattern 09 — First + Last Occurrence
+# Pattern 09 - First + Last Occurrence
 
 ## Purpose
 
@@ -24236,9 +24236,9 @@ All Values Target
 
 ---
 
-# Part 12 — Pattern 10: Conditional Accumulation
+# Part 12 - Pattern 10: Conditional Accumulation
 
-# Pattern 10 — Filter + Accumulator
+# Pattern 10 - Filter + Accumulator
 
 ## Purpose
 
@@ -24316,9 +24316,9 @@ Possible Overflow
 
 ---
 
-# Part 13 — Pattern 11: Filter + Counter
+# Part 13 - Pattern 11: Filter + Counter
 
-# Pattern 11 — Conditional Counting
+# Pattern 11 - Conditional Counting
 
 ## Purpose
 
@@ -24386,9 +24386,9 @@ All Match
 
 ---
 
-# Part 14 — Pattern 12: Filter + Sum + Count
+# Part 14 - Pattern 12: Filter + Sum + Count
 
-# Pattern 12 — Conditional Average Foundation
+# Pattern 12 - Conditional Average Foundation
 
 ## Purpose
 
@@ -24482,9 +24482,9 @@ if (count > 0)
 
 ---
 
-# Part 15 — Pattern 13: Conditional Maximum / Minimum
+# Part 15 - Pattern 13: Conditional Maximum / Minimum
 
-# Pattern 13 — Conditional Best
+# Pattern 13 - Conditional Best
 
 ## Purpose
 
@@ -24627,9 +24627,9 @@ Repeated Best Candidate
 
 ---
 
-# Part 16 — Pattern 14: Maximum/Minimum + Index
+# Part 16 - Pattern 14: Maximum/Minimum + Index
 
-# Pattern 14 — Best Value + Index Tracking
+# Pattern 14 - Best Value + Index Tracking
 
 ## Purpose
 
@@ -24723,9 +24723,9 @@ Ignore       Update Index
 
 ---
 
-# Part 17 — Pattern 15: Best Value + Frequency
+# Part 17 - Pattern 15: Best Value + Frequency
 
-# Pattern 15 — Maximum/Minimum Occurrence Count
+# Pattern 15 - Maximum/Minimum Occurrence Count
 
 ## Purpose
 
@@ -24831,9 +24831,9 @@ Clear Two-Pass Solution
 
 ---
 
-# Part 18 — Pattern 16: Dependent Multi-Pass
+# Part 18 - Pattern 16: Dependent Multi-Pass
 
-# Pattern 16 — Result → Threshold → Second Pass
+# Pattern 16 - Result → Threshold → Second Pass
 
 ## Purpose
 
@@ -24888,7 +24888,7 @@ Dependent Pattern
 
 ---
 
-# Part 19 — Pattern Combination Map
+# Part 19 - Pattern Combination Map
 
 এখন Pattern-গুলোকে আলাদা Box হিসেবে না দেখে Combination হিসেবে দেখো।
 
@@ -24934,7 +24934,7 @@ Traversal
 
 ---
 
-# Part 20 — Signal → Pattern Table
+# Part 20 - Signal → Pattern Table
 
 `core_pattern.md`-এ এই Quick Lookup Table রাখতে পারো।
 
@@ -24963,7 +24963,7 @@ Rule:
 
 ---
 
-# Part 21 — State Selection Table
+# Part 21 - State Selection Table
 
 | Goal               | Typical State    |
 | ------------------ | ---------------- |
@@ -24993,7 +24993,7 @@ State Variable
 
 ---
 
-# Part 22 — Initialization Table
+# Part 22 - Initialization Table
 
 | State                 | Common Initialization |
 | --------------------- | --------------------- |
@@ -25020,7 +25020,7 @@ Random Initialization না।
 
 ---
 
-# Part 23 — Stop Condition Map
+# Part 23 - Stop Condition Map
 
 সব Traversal শেষ পর্যন্ত যাবে না।
 
@@ -25092,7 +25092,7 @@ Continue   break may be possible
 
 ---
 
-# Part 24 — Edge Case Library
+# Part 24 - Edge Case Library
 
 Pattern Library শুধু Code Skeleton-এর জায়গা না।
 
@@ -25166,7 +25166,7 @@ large sum
 
 ---
 
-# Part 25 — Common Bug Library
+# Part 25 - Common Bug Library
 
 `core_pattern.md`-এর শেষে একটি Bug Map রাখা যেতে পারে।
 
@@ -25208,9 +25208,9 @@ Bug
 
 ---
 
-# Part 26 — Pattern Extraction
+# Part 26 - Pattern Extraction
 
-# Lesson 6 — Solved Problem থেকে Pattern কীভাবে Extract করবে?
+# Lesson 6 - Solved Problem থেকে Pattern কীভাবে Extract করবে?
 
 ধরো তুমি Problem Solve করলে:
 
@@ -25269,7 +25269,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# Lesson 7 — Specific Code বনাম General Skeleton
+# Lesson 7 - Specific Code বনাম General Skeleton
 
 Specific:
 
@@ -25313,7 +25313,7 @@ Pattern Library-তে দুটোই থাকতে পারে।
 
 ---
 
-# Lesson 8 — Pattern Entry কখন Add করবে?
+# Lesson 8 - Pattern Entry কখন Add করবে?
 
 প্রতিটি Problem Solve করার পরে নতুন Pattern add করবে না।
 
@@ -25347,7 +25347,7 @@ Pattern Library becomes useless
 
 ---
 
-# Lesson 9 — Pattern Library Clean রাখবে কীভাবে?
+# Lesson 9 - Pattern Library Clean রাখবে কীভাবে?
 
 Pattern Library-তে এই ধরনের Entry avoid করবে:
 
@@ -25389,7 +25389,7 @@ Good Pattern Entry
 
 ---
 
-# Part 27 — Recommended `core_pattern.md` Structure
+# Part 27 - Recommended `core_pattern.md` Structure
 
 তোমার File:
 
@@ -25429,7 +25429,7 @@ Core Pattern Library
 
 ---
 
-# Part 28 — Copy-Paste Starter Version
+# Part 28 - Copy-Paste Starter Version
 
 নিচের অংশটি চাইলে সরাসরি তোমার:
 
@@ -25467,7 +25467,7 @@ File-এ Base Structure হিসেবে রাখতে পারো।
 
 ---
 
-# 01 — Traversal
+# 01 - Traversal
 
 ## Signal
 
@@ -25517,7 +25517,7 @@ Extra Space: O(1)
 
 ---
 
-# 02 — Accumulator
+# 02 - Accumulator
 
 ## Signal
 
@@ -25562,7 +25562,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 03 — Counter
+# 03 - Counter
 
 ## Signal
 
@@ -25614,7 +25614,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 04 — Maximum
+# 04 - Maximum
 
 ## Signal
 
@@ -25671,7 +25671,7 @@ for (int i = 1; i < n; i++)
 
 ---
 
-# 05 — Minimum
+# 05 - Minimum
 
 ## Signal
 
@@ -25716,7 +25716,7 @@ for (int i = 1; i < n; i++)
 
 ---
 
-# 06 — Linear Search
+# 06 - Linear Search
 
 ## Signal
 
@@ -25777,7 +25777,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 07 — First Occurrence
+# 07 - First Occurrence
 
 ## Pipeline
 
@@ -25808,7 +25808,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 08 — Last Occurrence
+# 08 - Last Occurrence
 
 ## Pipeline
 
@@ -25838,7 +25838,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 09 — First + Last Occurrence
+# 09 - First + Last Occurrence
 
 ## States
 
@@ -25879,7 +25879,7 @@ Future matches may still change `last`.
 
 ---
 
-# 10 — Conditional Accumulation
+# 10 - Conditional Accumulation
 
 ## Pipeline
 
@@ -25907,7 +25907,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 11 — Conditional Counting
+# 11 - Conditional Counting
 
 ## Pipeline
 
@@ -25935,7 +25935,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 12 — Filter + Sum + Count
+# 12 - Filter + Sum + Count
 
 ## States
 
@@ -25981,7 +25981,7 @@ if (count > 0)
 
 ---
 
-# 13 — Conditional Best
+# 13 - Conditional Best
 
 ## Examples
 
@@ -26043,7 +26043,7 @@ Using an invalid initial candidate.
 
 ---
 
-# 14 — Best Value + Index
+# 14 - Best Value + Index
 
 ## States
 
@@ -26078,7 +26078,7 @@ Preserve first occurrence
 
 ---
 
-# 15 — Best Value + Frequency
+# 15 - Best Value + Frequency
 
 ## Beginner Strategy
 
@@ -26116,7 +26116,7 @@ for (int i = 0; i < n; i++)
 
 ---
 
-# 16 — Dependent Multi-Pass
+# 16 - Dependent Multi-Pass
 
 ## Signal
 
@@ -26315,7 +26315,7 @@ No break
 
 ---
 
-# Part 29 — Pattern Library Update Workflow
+# Part 29 - Pattern Library Update Workflow
 
 নতুন Problem Solve করার পরে সবসময় Library Update করবে না।
 
@@ -26343,7 +26343,7 @@ Edge Case     Pattern Entry
 
 ---
 
-# Lesson 10 — Existing Pattern Update Example
+# Lesson 10 - Existing Pattern Update Example
 
 ধরো Pattern Library-তে আগে ছিল:
 
@@ -26384,7 +26384,7 @@ This fails when all values are negative.
 
 ---
 
-# Lesson 11 — Mistake থেকে Pattern Library Update
+# Lesson 11 - Mistake থেকে Pattern Library Update
 
 একটি powerful Workflow:
 
@@ -26425,7 +26425,7 @@ Best Value + Index → Update Rule
 
 ---
 
-# Part 30 — Pattern Library এবং Glossary-এর পার্থক্য
+# Part 30 - Pattern Library এবং Glossary-এর পার্থক্য
 
 তোমার Repository-তে আছে:
 
@@ -26495,7 +26495,7 @@ Application
 
 ---
 
-# Part 31 — Pattern Library Revision Strategy
+# Part 31 - Pattern Library Revision Strategy
 
 Contest-এর আগে পুরো Day 2 পড়ার দরকার নেই।
 
@@ -26553,7 +26553,7 @@ Personal
 
 ---
 
-## Exercise 1 — Extract the Pattern
+## Exercise 1 - Extract the Pattern
 
 Problem:
 
@@ -26594,7 +26594,7 @@ Reusable Skeleton:
 
 ---
 
-## Exercise 2 — Extract the Pattern
+## Exercise 2 - Extract the Pattern
 
 Problem:
 
@@ -26624,7 +26624,7 @@ Edge Cases:
 
 ---
 
-## Exercise 3 — Pattern Comparison
+## Exercise 3 - Pattern Comparison
 
 Compare:
 
@@ -26650,7 +26650,7 @@ Table Complete করবে:
 
 ---
 
-## Exercise 4 — State Selection
+## Exercise 4 - State Selection
 
 Problem:
 
@@ -26688,7 +26688,7 @@ First Index Preservation Rule:
 
 ---
 
-## Exercise 5 — Dependency Extraction
+## Exercise 5 - Dependency Extraction
 
 Problem:
 
@@ -26718,7 +26718,7 @@ Complexity:
 
 ---
 
-## Exercise 6 — Bug Library Update
+## Exercise 6 - Bug Library Update
 
 Problem:
 
@@ -26758,7 +26758,7 @@ Reusable Lesson:
 
 ---
 
-## Exercise 7 — Edge Case Extraction
+## Exercise 7 - Edge Case Extraction
 
 Problem:
 
@@ -26784,7 +26784,7 @@ Format:
 
 ---
 
-## Exercise 8 — Pattern Combination
+## Exercise 8 - Pattern Combination
 
 Problem:
 
@@ -26818,7 +26818,7 @@ Pipeline:
 
 # 📝 Chapter 10 Assignment
 
-# Task 1 — Create or Update the File
+# Task 1 - Create or Update the File
 
 Repository:
 
@@ -26842,7 +26842,7 @@ touch 21_Pattern_Library/core_pattern.md
 
 ---
 
-# Task 2 — Add Pattern Index
+# Task 2 - Add Pattern Index
 
 তোমার `core_pattern.md`-এ কমপক্ষে এই Index থাকবে:
 
@@ -26867,7 +26867,7 @@ touch 21_Pattern_Library/core_pattern.md
 
 ---
 
-# Task 3 — Complete Five Core Cards Yourself
+# Task 3 - Complete Five Core Cards Yourself
 
 নিচের পাঁচটি Pattern নিজের ভাষায় লিখবে:
 
@@ -26909,7 +26909,7 @@ Reconstruct
 
 ---
 
-# Task 4 — Build Signal Map
+# Task 4 - Build Signal Map
 
 কমপক্ষে ১০টি Signal add করবে।
 
@@ -26924,7 +26924,7 @@ Example Format:
 
 ---
 
-# Task 5 — Build State Map
+# Task 5 - Build State Map
 
 কমপক্ষে এই Goal-গুলোর State লিখবে:
 
@@ -26943,7 +26943,7 @@ Best Value + Index
 
 ---
 
-# Task 6 — Build Initialization Map
+# Task 6 - Build Initialization Map
 
 Table:
 
@@ -26962,7 +26962,7 @@ Table:
 
 ---
 
-# Task 7 — Build Stop Condition Map
+# Task 7 - Build Stop Condition Map
 
 এই Problem-গুলোর জন্য `break` Decision লিখবে:
 
@@ -26985,7 +26985,7 @@ Can future elements change the answer?
 
 ---
 
-# Task 8 — Add Personal Mistake Log
+# Task 8 - Add Personal Mistake Log
 
 `core_pattern.md`-এর শেষে:
 
@@ -26998,7 +26998,7 @@ Section তৈরি করবে।
 Format:
 
 ````markdown
-## Mistake 01 — Title
+## Mistake 01 - Title
 
 ### Pattern
 
@@ -27035,7 +27035,7 @@ Format:
 
 ---
 
-# Task 9 — Pattern Extraction Challenge
+# Task 9 - Pattern Extraction Challenge
 
 এই তিনটি Problem-এর জন্য নতুন Pattern বানাবে না।
 
@@ -27071,7 +27071,7 @@ Pipeline:
 
 ---
 
-# Task 10 — Final Library Review
+# Task 10 - Final Library Review
 
 শেষে নিজেকে Check করবে:
 
@@ -27105,7 +27105,7 @@ Pipeline:
 
 ---
 
-# Part 32 — Git Workflow
+# Part 32 - Git Workflow
 
 Chapter 10-এর কাজ শেষ হলে Repository Root-এ যাবে।
 
@@ -27400,36 +27400,36 @@ Your Compressed Problem-Solving Experience
 ```text
 Day 2
 │
-├── ✅ Chapter 1 — Array Mental Model
+├── ✅ Chapter 1 - Array Mental Model
 │
-├── ✅ Chapter 2 — Traversal Pattern
+├── ✅ Chapter 2 - Traversal Pattern
 │
-├── ✅ Chapter 3 — Accumulation Pattern
+├── ✅ Chapter 3 - Accumulation Pattern
 │
-├── ✅ Chapter 4 — Counting Pattern
+├── ✅ Chapter 4 - Counting Pattern
 │
-├── ✅ Chapter 5 — Maximum & Minimum Pattern
+├── ✅ Chapter 5 - Maximum & Minimum Pattern
 │
-├── ✅ Chapter 6 — Searching Pattern
+├── ✅ Chapter 6 - Searching Pattern
 │
-├── ✅ Chapter 7 — Combining Patterns
+├── ✅ Chapter 7 - Combining Patterns
 │
-├── ✅ Chapter 8 — Common Bugs & Edge Cases
+├── ✅ Chapter 8 - Common Bugs & Edge Cases
 │
-├── ✅ Chapter 9 — Problem Solving Session
+├── ✅ Chapter 9 - Problem Solving Session
 │
-├── ✅ Chapter 10 — Pattern Library Update
+├── ✅ Chapter 10 - Pattern Library Update
 │
-└── ⏳ Chapter 11 — Assignment & Reflection
+└── ⏳ Chapter 11 - Assignment & Reflection
 ```
 
-**Day 2 — Chapter 10 এখানেই শেষ।**
+**Day 2 - Chapter 10 এখানেই শেষ।**
 
-Chapter 11 হবে Day 2-এর **Final Assessment & Reflection**। সেখানে নতুন Theory যোগ না করে Day 2-এর পুরো Array foundation—`Traversal → State → Pattern → Combination → Edge Case → Debugging → Problem Solving Workflow`—সবকিছুর উপর Final Assignment থাকবে।
+Chapter 11 হবে Day 2-এর **Final Assessment & Reflection**। সেখানে নতুন Theory যোগ না করে Day 2-এর পুরো Array foundation-`Traversal → State → Pattern → Combination → Edge Case → Debugging → Problem Solving Workflow`-সবকিছুর উপর Final Assignment থাকবে।
 
 ---
 
-# 📘 Day 2 — Chapter 11
+# 📘 Day 2 - Chapter 11
 
 # 🏁 Final Assignment, Assessment & Reflection
 
@@ -27539,40 +27539,40 @@ Can I Reuse It?
 ```text
 Chapter 11
 │
-├── Part 1  — Day 2 Knowledge Audit
+├── Part 1  - Day 2 Knowledge Audit
 │
-├── Part 2  — Concept Recall Test
+├── Part 2  - Concept Recall Test
 │
-├── Part 3  — Pattern Recognition Test
+├── Part 3  - Pattern Recognition Test
 │
-├── Part 4  — State Selection Test
+├── Part 4  - State Selection Test
 │
-├── Part 5  — Initialization Test
+├── Part 5  - Initialization Test
 │
-├── Part 6  — Pipeline Building Test
+├── Part 6  - Pipeline Building Test
 │
-├── Part 7  — Dry Run Test
+├── Part 7  - Dry Run Test
 │
-├── Part 8  — Bug Hunting Test
+├── Part 8  - Bug Hunting Test
 │
-├── Part 9  — Edge Case Design
+├── Part 9  - Edge Case Design
 │
-├── Part 10 — Coding Assignment
+├── Part 10 - Coding Assignment
 │
-├── Part 11 — Final Challenge
+├── Part 11 - Final Challenge
 │
-├── Part 12 — Pattern Library Review
+├── Part 12 - Pattern Library Review
 │
-├── Part 13 — Reflection
+├── Part 13 - Reflection
 │
-└── Part 14 — Day 2 Completion Protocol
+└── Part 14 - Day 2 Completion Protocol
 ```
 
 ---
 
-# Part 1 — Day 2 Knowledge Audit
+# Part 1 - Day 2 Knowledge Audit
 
-# Lesson 1 — শেখা আর পারা এক জিনিস না
+# Lesson 1 - শেখা আর পারা এক জিনিস না
 
 একটি Pattern দেখে মনে হতে পারে:
 
@@ -27653,7 +27653,7 @@ Maximum Tracking
 
 ---
 
-# Lesson 2 — Day 2-এর Core Skill Tree
+# Lesson 2 - Day 2-এর Core Skill Tree
 
 Day 2-এর Skill Tree:
 
@@ -27712,7 +27712,7 @@ Chapter 11-এর Assignment এই পুরো Tree-এর উপর হবে
 
 ---
 
-# Part 2 — Concept Recall Test
+# Part 2 - Concept Recall Test
 
 ## Rule
 
@@ -27730,7 +27730,7 @@ Internet Search করবে না
 
 ---
 
-# Task 1 — Array Mental Model
+# Task 1 - Array Mental Model
 
 নিজের ভাষায় উত্তর দাও।
 
@@ -27791,7 +27791,7 @@ i < n
 
 ---
 
-# Task 2 — Traversal Understanding
+# Task 2 - Traversal Understanding
 
 নিচের প্রশ্নগুলোর উত্তর দাও।
 
@@ -27837,7 +27837,7 @@ Traversal কী?
 
 ---
 
-# Task 3 — State Understanding
+# Task 3 - State Understanding
 
 নিজের ভাষায় লিখবে:
 
@@ -27859,7 +27859,7 @@ Traversal কী?
 
 ---
 
-# Part 3 — Pattern Recognition Test
+# Part 3 - Pattern Recognition Test
 
 এই Section-এ Code লিখবে না।
 
@@ -27867,7 +27867,7 @@ Traversal কী?
 
 ---
 
-# Task 4 — Identify the Pattern
+# Task 4 - Identify the Pattern
 
 ## Problem A
 
@@ -28023,7 +28023,7 @@ Pattern:
 
 ---
 
-# Task 5 — Same Pattern, Different Story
+# Task 5 - Same Pattern, Different Story
 
 নিচের Problem-গুলোর মধ্যে কোনগুলো একই Structural Pattern ব্যবহার করে তা Group করবে।
 
@@ -28062,9 +28062,9 @@ State:
 
 ---
 
-# Part 4 — State Selection Test
+# Part 4 - State Selection Test
 
-# Task 6 — Choose the State
+# Task 6 - Choose the State
 
 নিচের প্রতিটি Problem-এর জন্য State Variable select করবে।
 
@@ -28152,7 +28152,7 @@ Purpose of each:
 
 ---
 
-# Part 5 — Initialization Test
+# Part 5 - Initialization Test
 
 Initialization মুখস্থ করার বিষয় না।
 
@@ -28160,7 +28160,7 @@ Initialization মুখস্থ করার বিষয় না।
 
 ---
 
-# Task 7 — Fill the Initialization Table
+# Task 7 - Fill the Initialization Table
 
 | Goal                | State           | Initialization |
 | ------------------- | --------------- | -------------- |
@@ -28175,7 +28175,7 @@ Initialization মুখস্থ করার বিষয় না।
 
 ---
 
-# Task 8 — Explain Why
+# Task 8 - Explain Why
 
 নিজের ভাষায় Explain করবে।
 
@@ -28231,7 +28231,7 @@ unsafe হতে পারে?
 
 ---
 
-# Part 6 — Pipeline Building Test
+# Part 6 - Pipeline Building Test
 
 এই Section খুব গুরুত্বপূর্ণ।
 
@@ -28241,23 +28241,9 @@ Code লিখবে না।
 
 ---
 
-# Task 9 — Build the Pipeline
+# Task 9 - Build the Pipeline
 
-## Problem A — Count Positive Numbers
-
-```text
-...
-↓
-...
-↓
-...
-↓
-...
-```
-
----
-
-## Problem B — Sum Negative Numbers
+## Problem A - Count Positive Numbers
 
 ```text
 ...
@@ -28271,7 +28257,21 @@ Code লিখবে না।
 
 ---
 
-## Problem C — First Target Index
+## Problem B - Sum Negative Numbers
+
+```text
+...
+↓
+...
+↓
+...
+↓
+...
+```
+
+---
+
+## Problem C - First Target Index
 
 ```text
 ...
@@ -28287,7 +28287,7 @@ Code লিখবে না।
 
 ---
 
-## Problem D — Last Target Index
+## Problem D - Last Target Index
 
 ```text
 ...
@@ -28301,7 +28301,7 @@ Code লিখবে না।
 
 ---
 
-## Problem E — Largest Even Number
+## Problem E - Largest Even Number
 
 Pipeline-এ অবশ্যই থাকবে:
 
@@ -28315,7 +28315,7 @@ Update
 
 ---
 
-## Problem F — Count Maximum Occurrences
+## Problem F - Count Maximum Occurrences
 
 Pipeline-এ Phase আলাদা করে লিখবে।
 
@@ -28333,7 +28333,7 @@ Phase 2
 
 ---
 
-## Problem G — Count Values Above Average
+## Problem G - Count Values Above Average
 
 নিজে Complete Pipeline লিখবে।
 
@@ -28345,9 +28345,9 @@ Average আগে জানা দরকার।
 
 ---
 
-# Part 7 — Dry Run Test
+# Part 7 - Dry Run Test
 
-# Task 10 — Counter Dry Run
+# Task 10 - Counter Dry Run
 
 Problem:
 
@@ -28380,7 +28380,7 @@ Final Answer:
 
 ---
 
-# Task 11 — Maximum Dry Run
+# Task 11 - Maximum Dry Run
 
 Input:
 
@@ -28413,7 +28413,7 @@ Final Maximum:
 
 ---
 
-# Task 12 — Search Dry Run
+# Task 12 - Search Dry Run
 
 Problem:
 
@@ -28448,7 +28448,7 @@ Why does traversal stop here?
 
 ---
 
-# Part 8 — Bug Hunting Test
+# Part 8 - Bug Hunting Test
 
 এখানে Code দেখে Bug খুঁজবে।
 
@@ -28470,7 +28470,7 @@ Then Fix
 
 ---
 
-# Task 13 — Bug Hunt 1
+# Task 13 - Bug Hunt 1
 
 ```c
 int max = 0;
@@ -28508,7 +28508,7 @@ Correct Rule:
 
 ---
 
-# Task 14 — Bug Hunt 2
+# Task 14 - Bug Hunt 2
 
 ```c
 int count;
@@ -28537,7 +28537,7 @@ Correct initialization:
 
 ---
 
-# Task 15 — Bug Hunt 3
+# Task 15 - Bug Hunt 3
 
 ```c
 for (int i = 0; i <= n; i++)
@@ -28561,7 +28561,7 @@ Correct Boundary:
 
 ---
 
-# Task 16 — Bug Hunt 4
+# Task 16 - Bug Hunt 4
 
 Problem:
 
@@ -28600,7 +28600,7 @@ Correct rule:
 
 ---
 
-# Task 17 — Bug Hunt 5
+# Task 17 - Bug Hunt 5
 
 Problem:
 
@@ -28640,7 +28640,7 @@ When should final result be printed?
 
 ---
 
-# Task 18 — Bug Hunt 6
+# Task 18 - Bug Hunt 6
 
 Problem:
 
@@ -28694,9 +28694,9 @@ Reusable lesson:
 
 ---
 
-# Part 9 — Edge Case Design
+# Part 9 - Edge Case Design
 
-# Lesson 3 — Edge Case মানে Random Test না
+# Lesson 3 - Edge Case মানে Random Test না
 
 Random Test:
 
@@ -28726,7 +28726,7 @@ All Equal
 
 ---
 
-# Task 19 — Maximum Edge Cases
+# Task 19 - Maximum Edge Cases
 
 এই Categories-এর জন্য Input এবং Expected Output বানাবে।
 
@@ -28747,7 +28747,7 @@ All Equal
 Format:
 
 ````markdown
-## Test 1 — Single Element
+## Test 1 - Single Element
 
 ### Input
 
@@ -28768,7 +28768,7 @@ Format:
 
 ---
 
-# Task 20 — Search Edge Cases
+# Task 20 - Search Edge Cases
 
 Target Search-এর জন্য Test বানাও:
 
@@ -28782,7 +28782,7 @@ Target Search-এর জন্য Test বানাও:
 
 ---
 
-# Task 21 — Conditional Best Edge Cases
+# Task 21 - Conditional Best Edge Cases
 
 Problem:
 
@@ -28803,7 +28803,7 @@ Test বানাবে:
 
 ---
 
-# Part 10 — Coding Assignment
+# Part 10 - Coding Assignment
 
 এখন Code লেখা শুরু।
 
@@ -28831,7 +28831,7 @@ Test
 
 ---
 
-# Problem 1 — Sum of Positive Values
+# Problem 1 - Sum of Positive Values
 
 ## Problem
 
@@ -28864,7 +28864,7 @@ Output:
 
 ---
 
-# Problem 2 — Count Negative Values
+# Problem 2 - Count Negative Values
 
 Input:
 
@@ -28892,7 +28892,7 @@ Edge Cases:
 
 ---
 
-# Problem 3 — Maximum and Minimum
+# Problem 3 - Maximum and Minimum
 
 Input:
 
@@ -28920,7 +28920,7 @@ Two Independent States
 
 ---
 
-# Problem 4 — Target Frequency
+# Problem 4 - Target Frequency
 
 Input:
 
@@ -28950,7 +28950,7 @@ Counter
 
 ---
 
-# Problem 5 — First and Last Occurrence
+# Problem 5 - First and Last Occurrence
 
 Input:
 
@@ -28978,7 +28978,7 @@ Last: -1
 
 ---
 
-# Problem 6 — Largest Even Number
+# Problem 6 - Largest Even Number
 
 Input:
 
@@ -29013,7 +29013,7 @@ Maximum
 
 ---
 
-# Problem 7 — Smallest Positive Number
+# Problem 7 - Smallest Positive Number
 
 Input:
 
@@ -29036,7 +29036,7 @@ No Positive Number
 
 ---
 
-# Problem 8 — Count Maximum Occurrences
+# Problem 8 - Count Maximum Occurrences
 
 Input:
 
@@ -29064,7 +29064,7 @@ Count Maximum
 
 ---
 
-# Problem 9 — Average of Positive Values
+# Problem 9 - Average of Positive Values
 
 Input:
 
@@ -29100,7 +29100,7 @@ Division by Zero
 
 ---
 
-# Problem 10 — Count Values Above Average
+# Problem 10 - Count Values Above Average
 
 Input:
 
@@ -29141,11 +29141,11 @@ Why is Multi Pass natural here?
 
 ---
 
-# Part 11 — Final Challenge
+# Part 11 - Final Challenge
 
 # 🏆 Day 2 Final Problem
 
-## Problem — Array Analysis Report
+## Problem - Array Analysis Report
 
 Given an array of `n` integers, determine:
 
@@ -29199,7 +29199,7 @@ Between Min and Max Count: 5
 
 ---
 
-# Step 1 — Do Not Code Yet
+# Step 1 - Do Not Code Yet
 
 প্রথমে লিখবে:
 
@@ -29214,7 +29214,7 @@ Required Outputs:
 
 ---
 
-# Step 2 — Identify States
+# Step 2 - Identify States
 
 Table বানাবে:
 
@@ -29233,7 +29233,7 @@ Table বানাবে:
 
 ---
 
-# Step 3 — Dependency Analysis
+# Step 3 - Dependency Analysis
 
 এই Question-এর Answer লিখবে:
 
@@ -29249,7 +29249,7 @@ Which outputs are dependent?
 
 ---
 
-# Step 4 — Design Phases
+# Step 4 - Design Phases
 
 একটি Possible Design:
 
@@ -29279,7 +29279,7 @@ Phase 2
 
 ---
 
-# Step 5 — Build Pipeline
+# Step 5 - Build Pipeline
 
 নিজে Complete করবে:
 
@@ -29309,7 +29309,7 @@ Print Report
 
 ---
 
-# Step 6 — Pseudocode
+# Step 6 - Pseudocode
 
 নিজে লিখবে।
 
@@ -29338,7 +29338,7 @@ print results
 
 ---
 
-# Step 7 — Code
+# Step 7 - Code
 
 File Suggestion:
 
@@ -29360,7 +29360,7 @@ Day_2/
 
 ---
 
-# Step 8 — Required Test Cases
+# Step 8 - Required Test Cases
 
 Final Challenge Code-এর জন্য কমপক্ষে:
 
@@ -29390,7 +29390,7 @@ Test করবে।
 
 ---
 
-# Part 12 — Pattern Library Review
+# Part 12 - Pattern Library Review
 
 Chapter 10-এ তৈরি:
 
@@ -29403,7 +29403,7 @@ Chapter 10-এ তৈরি:
 
 ---
 
-# Task 22 — Pattern Library Audit
+# Task 22 - Pattern Library Audit
 
 Check:
 
@@ -29441,7 +29441,7 @@ Check:
 
 ---
 
-# Task 23 — Quality Check
+# Task 23 - Quality Check
 
 প্রতিটি Important Pattern-এর জন্য Check:
 
@@ -29467,7 +29467,7 @@ Check:
 
 ---
 
-# Task 24 — Personal Mistake Update
+# Task 24 - Personal Mistake Update
 
 Day 2 করতে গিয়ে নিজের যেসব Mistake হয়েছে, সেগুলো Add করবে।
 
@@ -29476,7 +29476,7 @@ Suggested Format:
 ````markdown
 # 🐞 Personal Mistake Log
 
-## Mistake 01 — Maximum Initialization
+## Mistake 01 - Maximum Initialization
 
 ### Wrong Idea
 
@@ -29522,7 +29522,7 @@ Stronger Recall
 
 ---
 
-# Part 13 — Reflection
+# Part 13 - Reflection
 
 Reflection মানে:
 
@@ -29544,7 +29544,7 @@ What should I revise?
 
 ---
 
-# Task 25 — Day 2 Reflection
+# Task 25 - Day 2 Reflection
 
 এই Template Complete করবে।
 
@@ -29693,7 +29693,7 @@ Before Day 3, I will revise:
 
 ---
 
-# Part 14 — Day 2 Final Assignment Structure
+# Part 14 - Day 2 Final Assignment Structure
 
 তোমার Assignment File:
 
@@ -29708,26 +29708,26 @@ Recommended Structure:
 ```text
 Day 2 Assignment
 │
-├── Part A — Concept Questions
+├── Part A - Concept Questions
 │
-├── Part B — Pattern Detection
+├── Part B - Pattern Detection
 │
-├── Part C — State Selection
+├── Part C - State Selection
 │
-├── Part D — Initialization
+├── Part D - Initialization
 │
-├── Part E — Pipeline Building
+├── Part E - Pipeline Building
 │
-├── Part F — Dry Run
+├── Part F - Dry Run
 │
-├── Part G — Bug Hunting
+├── Part G - Bug Hunting
 │
-├── Part H — Edge Case Design
+├── Part H - Edge Case Design
 │
-├── Part I — Coding Problems
+├── Part I - Coding Problems
 │
-├── Part J — Final Challenge
-└── Part K — Reflection
+├── Part J - Final Challenge
+└── Part K - Reflection
 ```
 
 ---
@@ -29771,7 +29771,7 @@ Day_2/
 Recommended Order:
 
 ```text
-Phase 1 — Recall
+Phase 1 - Recall
 │
 ├── Concept Test
 ├── Pattern Recognition
@@ -29780,7 +29780,7 @@ Phase 1 — Recall
 
         ↓
 
-Phase 2 — Design
+Phase 2 - Design
 │
 ├── Pipeline Building
 ├── Dry Run
@@ -29788,20 +29788,20 @@ Phase 2 — Design
 
         ↓
 
-Phase 3 — Debug
+Phase 3 - Debug
 │
 └── Bug Hunting
 
         ↓
 
-Phase 4 — Implementation
+Phase 4 - Implementation
 │
 ├── Coding Problems
 └── Final Challenge
 
         ↓
 
-Phase 5 — Consolidation
+Phase 5 - Consolidation
 │
 ├── Pattern Library Review
 ├── Mistake Log
@@ -29814,7 +29814,7 @@ Phase 5 — Consolidation
 
 প্রতিটি Skill-কে তিনটি Level-এ Evaluate করবে।
 
-## 🔴 Level 1 — Need Revision
+## 🔴 Level 1 - Need Revision
 
 ```text
 Concept দেখেছি
@@ -29823,7 +29823,7 @@ Concept দেখেছি
 
 ---
 
-## 🟡 Level 2 — Understand but Slow
+## 🟡 Level 2 - Understand but Slow
 
 ```text
 নিজে করতে পারি
@@ -29833,7 +29833,7 @@ Concept দেখেছি
 
 ---
 
-## 🟢 Level 3 — Ready to Use
+## 🟢 Level 3 - Ready to Use
 
 ```text
 Problem দেখে Pattern চিনতে পারি
@@ -29897,7 +29897,7 @@ Own Notes allowed only after first 40 minutes
 
 ---
 
-## Problem 1 — Easy
+## Problem 1 - Easy
 
 > Count values divisible by both 2 and 3.
 
@@ -29909,7 +29909,7 @@ Target Time:
 
 ---
 
-## Problem 2 — Easy
+## Problem 2 - Easy
 
 > Find maximum and minimum.
 
@@ -29921,7 +29921,7 @@ Target Time:
 
 ---
 
-## Problem 3 — Easy-Medium
+## Problem 3 - Easy-Medium
 
 > Find first and last occurrence of target.
 
@@ -29933,7 +29933,7 @@ Target Time:
 
 ---
 
-## Problem 4 — Medium for Current Level
+## Problem 4 - Medium for Current Level
 
 > Find the largest negative number and count its occurrences.
 
@@ -29955,7 +29955,7 @@ Frequency
 
 ---
 
-## Problem 5 — Medium for Current Level
+## Problem 5 - Medium for Current Level
 
 > Count how many values are strictly between the minimum and maximum.
 
@@ -30138,27 +30138,27 @@ Day 3-এ যাওয়ার আগে কোন Topic আরেকবার rev
 ## Chapter Completion
 
 ```text
-[ ] Chapter 1 — Array Mental Model
+[ ] Chapter 1 - Array Mental Model
 
-[ ] Chapter 2 — Traversal Pattern
+[ ] Chapter 2 - Traversal Pattern
 
-[ ] Chapter 3 — Accumulation Pattern
+[ ] Chapter 3 - Accumulation Pattern
 
-[ ] Chapter 4 — Counting Pattern
+[ ] Chapter 4 - Counting Pattern
 
-[ ] Chapter 5 — Maximum & Minimum Pattern
+[ ] Chapter 5 - Maximum & Minimum Pattern
 
-[ ] Chapter 6 — Searching Pattern
+[ ] Chapter 6 - Searching Pattern
 
-[ ] Chapter 7 — Combining Patterns
+[ ] Chapter 7 - Combining Patterns
 
-[ ] Chapter 8 — Common Bugs & Edge Cases
+[ ] Chapter 8 - Common Bugs & Edge Cases
 
-[ ] Chapter 9 — Problem Solving Session
+[ ] Chapter 9 - Problem Solving Session
 
-[ ] Chapter 10 — Pattern Library Update
+[ ] Chapter 10 - Pattern Library Update
 
-[ ] Chapter 11 — Assignment & Reflection
+[ ] Chapter 11 - Assignment & Reflection
 ```
 
 ---

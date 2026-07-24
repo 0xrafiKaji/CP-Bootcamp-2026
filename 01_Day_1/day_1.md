@@ -6,14 +6,14 @@
 
 ## 📚 Day 1 - Table of Contents
 
-### Chapter 1 — Contest Programmer Mindset
+### Chapter 1 - Contest Programmer Mindset
 - Programmer vs. Competitive Programmer
 - What to Think Before a Contest
 - Common Beginner Mistakes
 
 ---
 
-### Chapter 2 — Contest Environment Setup
+### Chapter 2 - Contest Environment Setup
 - VS Code Setup
 - Project & Folder Structure
 - Compile Command
@@ -23,7 +23,7 @@
 
 ---
 
-### Chapter 3 — C for Competitive Programming
+### Chapter 3 - C for Competitive Programming
 #### Essential Topics
 - Input & Output (`scanf`, `printf`)
 - Variables & Data Types
@@ -38,7 +38,7 @@
 
 ---
 
-### Chapter 4 — Contest Coding Style
+### Chapter 4 - Contest Coding Style
 - Recommended Code Template
 - Why This Template?
 - Code Formatting
@@ -60,7 +60,7 @@ int main(void)
 
 ---
 
-### Chapter 5 — Problem Reading Framework
+### Chapter 5 - Problem Reading Framework
 Learn how to understand a programming problem before writing any code.
 
 ```text
@@ -85,7 +85,7 @@ Code
 
 ---
 
-### Chapter 6 — Warm-up Problems
+### Chapter 6 - Warm-up Problems
 #### Recommended Practice Order (HackerRank)
 
 1. Sum and Difference of Two Numbers
@@ -99,7 +99,7 @@ Code
 
 ---
 
-### Chapter 7 — Problem Analysis Guide
+### Chapter 7 - Problem Analysis Guide
 For every practice problem, we'll discuss:
 
 - Expected Time
@@ -110,7 +110,7 @@ For every practice problem, we'll discuss:
 
 ---
 
-### Chapter 8 — Homework
+### Chapter 8 - Homework
 - Practice Tasks
 - Assignment Submission
 - What to Write
@@ -118,7 +118,7 @@ For every practice problem, we'll discuss:
 
 ---
 
-### Chapter 9 — Revision Sheet
+### Chapter 9 - Revision Sheet
 A one-page summary of everything learned today.
 
 - Key Concepts
@@ -129,7 +129,7 @@ A one-page summary of everything learned today.
 
 ---
 
-# **Day 1 — Chapter 1**
+# **Day 1 - Chapter 1**
 
 # **The Competitive Programmer's Mindset**
 
@@ -161,7 +161,7 @@ A one-page summary of everything learned today.
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষে তুমি বুঝতে পারবে—
+এই Chapter শেষে তুমি বুঝতে পারবে-
 
 * Competitive Programmer কীভাবে চিন্তা করে।
 * কেন Code সবসময় প্রথম Step না।
@@ -230,7 +230,7 @@ C Language Student A-এর মতো ভালো না।
 
 সে Problem-টা পড়ে।
 
-সে কাগজে লিখে—
+সে কাগজে লিখে-
 
 ```
 Need
@@ -278,11 +278,11 @@ Student B আগে Solve করল।
 
 এটা পুরো Bootcamp-এর সবচেয়ে Important Line.
 
-Programming হচ্ছে—
+Programming হচ্ছে-
 
 > Computer-কে Instruction দেওয়া।
 
-Competitive Programming হচ্ছে—
+Competitive Programming হচ্ছে-
 
 > Problem-কে Algorithm-এ Convert করা।
 
@@ -332,15 +332,15 @@ Programming আর Problem Solving আলাদা।
 
 # Mentor Note 💡
 
-যদি কেউ আমাকে জিজ্ঞেস করে—
+যদি কেউ আমাকে জিজ্ঞেস করে-
 
 > "CP-এর সবচেয়ে Important Skill কী?"
 
-আমি কখনো বলব না—
+আমি কখনো বলব না-
 
 > C Language
 
-আমি বলব—
+আমি বলব-
 
 > **Pattern চিনার ক্ষমতা।**
 
@@ -408,7 +408,7 @@ Code এখানে **শেষে**।
 
 # একটা বাস্তব উদাহরণ
 
-ধরো Problem—
+ধরো Problem-
 
 ```
 Input
@@ -420,7 +420,7 @@ Output
 120
 ```
 
-অনেকে সাথে সাথে লিখবে—
+অনেকে সাথে সাথে লিখবে-
 
 ```c
 int fact=1;
@@ -430,7 +430,7 @@ int fact=1;
 
 Professional কী করবে?
 
-সে প্রথমে জিজ্ঞেস করবে—
+সে প্রথমে জিজ্ঞেস করবে-
 
 ```
 120 কেন?
@@ -440,7 +440,7 @@ Professional কী করবে?
 1×2×3×4×5?
 ```
 
-এখন সে বুঝল—
+এখন সে বুঝল-
 
 ```
 Problem
@@ -460,7 +460,7 @@ Factorial
 
 Contest-এ একটা Problem তিনবার পড়া খুবই Normal.
 
-অনেকে ভাবে—
+অনেকে ভাবে-
 
 > "Problem তো পড়েছি।"
 
@@ -474,7 +474,7 @@ Contest-এ একটা Problem তিনবার পড়া খুবই No
 
 ---
 
-ধরো লেখা আছে—
+ধরো লেখা আছে-
 
 ```
 Given N integers,
@@ -503,7 +503,7 @@ Even
 
 # 🧠 Think Like This
 
-Problem পড়ার সময় নিজেকে প্রশ্ন করো—
+Problem পড়ার সময় নিজেকে প্রশ্ন করো-
 
 ### Question 1
 
@@ -593,7 +593,7 @@ Brute Force কী হতে পারে?
 
 এটা Beginner-এর সবচেয়ে Dangerous Habit.
 
-Problem পেলেই—
+Problem পেলেই-
 
 ```
 #include<stdio.h>
@@ -628,13 +628,13 @@ Code-এর আগে Problem.
 
 ## Every Problem is a Story
 
-অনেকে Problem দেখে—
+অনেকে Problem দেখে-
 
 ```
 Boring.
 ```
 
-Professional দেখে—
+Professional দেখে-
 
 ```
 Story.
@@ -650,7 +650,7 @@ Find the highest marks.
 
 Story Ignore.
 
-Actually Problem হচ্ছে—
+Actually Problem হচ্ছে-
 
 ```
 Maximum
@@ -668,7 +668,7 @@ Count empty boxes.
 
 Story Ignore.
 
-Problem হচ্ছে—
+Problem হচ্ছে-
 
 ```
 Counting
@@ -768,7 +768,7 @@ Code
 
 না।
 
-তুমি—
+তুমি-
 
 ```
 Contract বুঝো
@@ -814,7 +814,7 @@ Algorithm ভাবো
 
 # 📌 Chapter 1 Summary
 
-আজ আমরা শিখলাম—
+আজ আমরা শিখলাম-
 
 * Programming আর Problem Solving এক না।
 * Code হচ্ছে শেষ Step।
@@ -898,7 +898,7 @@ Reverse an array.
 
 ### 🎯 Mentor's Final Words
 
-আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ লাইনটা আবার লিখছি—
+আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ লাইনটা আবার লিখছি-
 
 > **"একজন Beginner Code লেখে। একজন Competitive Programmer Problem Solve করে।"**
 
@@ -908,7 +908,7 @@ Reverse an array.
 
 ---
 
-# **Day 1 — Chapter 2**
+# **Day 1 - Chapter 2**
 
 # **Setting Up Your Battlefield**
 
@@ -922,7 +922,7 @@ Reverse an array.
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষে তুমি জানতে পারবে—
+এই Chapter শেষে তুমি জানতে পারবে-
 
 * একজন Competitive Programmer-এর Workspace কেমন হওয়া উচিত।
 * Folder Structure কীভাবে সাজাতে হয়।
@@ -936,7 +936,7 @@ Reverse an array.
 
 # Environment Matters
 
-অনেক Beginner ভাবে—
+অনেক Beginner ভাবে-
 
 > "Programming মানেই Code."
 
@@ -1330,7 +1330,7 @@ output.txt
 
 ## 🤔 Sample Test Case কি যথেষ্ট?
 
-ধরো Problem—
+ধরো Problem-
 
 > Given `N` numbers, print the largest number.
 
@@ -1341,7 +1341,7 @@ Sample Input:
 1 4 7 2 3
 ```
 
-এখানে—
+এখানে-
 
 ```text
 N = 5
@@ -1375,7 +1375,7 @@ Output এলো:
 7
 ```
 
-এখন Question—
+এখন Question-
 
 > Code কি অবশ্যই Correct?
 
@@ -1389,7 +1389,7 @@ Output এলো:
 
 ---
 
-# 🧪 Test Case 1 — Single Element
+# 🧪 Test Case 1 - Single Element
 
 ধরো Input:
 
@@ -1426,7 +1426,7 @@ Expected Output:
 
 ## 🧠 কেন এই Test?
 
-আমরা দেখতে চাই—
+আমরা দেখতে চাই-
 
 > মাত্র একটি Number থাকলেও Code ঠিকভাবে কাজ করে কি না।
 
@@ -1448,7 +1448,7 @@ N = 1
 
 ---
 
-# 🧪 Test Case 2 — All Numbers Are Negative
+# 🧪 Test Case 2 - All Numbers Are Negative
 
 Input:
 
@@ -1599,7 +1599,7 @@ Correct. ✅
 
 ---
 
-# 🧪 Test Case 3 — All Values Are Equal
+# 🧪 Test Case 3 - All Values Are Equal
 
 Input:
 
@@ -1626,7 +1626,7 @@ Expected Output:
 
 ## 🧠 কেন এই Test?
 
-আমরা দেখতে চাই—
+আমরা দেখতে চাই-
 
 > সব Value Equal হলে Code ঠিকভাবে কাজ করে কি না।
 
@@ -1662,7 +1662,7 @@ Correct. ✅
 
 ---
 
-# 🧪 Test Case 4 — Maximum at the Beginning
+# 🧪 Test Case 4 - Maximum at the Beginning
 
 Input:
 
@@ -1687,7 +1687,7 @@ Expected Output:
 
 ## 🧠 কেন এই Test?
 
-আমরা দেখতে চাই—
+আমরা দেখতে চাই-
 
 > প্রথম Element-টাই Maximum হলে Code সেটাকে ধরে রাখতে পারে কি না।
 
@@ -1719,7 +1719,7 @@ Correct. ✅
 
 ---
 
-# 🧪 Test Case 5 — Maximum at the End
+# 🧪 Test Case 5 - Maximum at the End
 
 Input:
 
@@ -1744,7 +1744,7 @@ Expected Output:
 
 ## 🧠 কেন এই Test?
 
-আমরা দেখতে চাই—
+আমরা দেখতে চাই-
 
 > Code শেষ Element পর্যন্ত সঠিকভাবে Traversal করছে কি না।
 
@@ -1766,7 +1766,7 @@ Check-ই হবে না।
 
 ---
 
-# 🧪 Test Case 6 — Large Values
+# 🧪 Test Case 6 - Large Values
 
 Input:
 
@@ -1791,7 +1791,7 @@ Expected Output:
 
 ## 🧠 কেন এই Test?
 
-আমরা দেখতে চাই—
+আমরা দেখতে চাই-
 
 - বড় Value ঠিকভাবে Handle হচ্ছে কি না।
 - সঠিক Data Type ব্যবহার করা হয়েছে কি না।
@@ -1803,7 +1803,7 @@ Expected Output:
 
 # 🧠 তাহলে Edge Case কী?
 
-সহজ ভাষায়—
+সহজ ভাষায়-
 
 > **Edge Case হলো এমন বিশেষ, সীমান্তবর্তী, বা অস্বাভাবিক Valid Input, যেটা সাধারণ Input-এর তুলনায় তোমার Code-এর লুকানো Bug বের করার সম্ভাবনা বেশি রাখে।**
 
@@ -1822,11 +1822,11 @@ Expected Output:
 
 # 💡 Mentor Note
 
-Sample Input-এর কাজ হলো—
+Sample Input-এর কাজ হলো-
 
 > **Problem বুঝতে সাহায্য করা।**
 
-নিজের Test Case-এর কাজ হলো—
+নিজের Test Case-এর কাজ হলো-
 
 > **নিজের Solution ভাঙার চেষ্টা করা।**
 
@@ -1840,7 +1840,7 @@ Sample Input-এর কাজ হলো—
 
 Smart Contract Audit করার সময় তুমি শুধু Happy Path দেখো না।
 
-তুমি ভাবো—
+তুমি ভাবো-
 
 ```text
 Zero হলে কী হবে?
@@ -1922,11 +1922,11 @@ Large Values
 
 # 🎯 Final Rule
 
-আজ থেকে Sample Input Pass করলেই ভাববে না—
+আজ থেকে Sample Input Pass করলেই ভাববে না-
 
 > "আমার Code Correct."
 
-বরং নিজেকে প্রশ্ন করবে—
+বরং নিজেকে প্রশ্ন করবে-
 
 > **"আমি কী Input দিলে আমার নিজের Code-টা ভেঙে ফেলতে পারি?"**
 
@@ -2019,7 +2019,7 @@ int main(void)
 }
 ```
 
-এখন প্রশ্ন—
+এখন প্রশ্ন-
 
 > "Sir, এত ছোট Template কেন?"
 
@@ -2027,7 +2027,7 @@ int main(void)
 
 আমি Template-এ অপ্রয়োজনীয় Code বিশ্বাস করি না।
 
-অনেকে লিখে—
+অনেকে লিখে-
 
 ```c
 #include<stdio.h>
@@ -2225,7 +2225,7 @@ Run করো।
 
 # Summary
 
-আজ আমরা শিখলাম—
+আজ আমরা শিখলাম-
 
 * Workspace-ও Skill।
 * Professional Folder Structure।
@@ -2239,7 +2239,7 @@ Run করো।
 
 # 🧠 Reflection
 
-নিজেকে প্রশ্ন করো—
+নিজেকে প্রশ্ন করো-
 
 1. আমার Folder Structure কি Professional?
 2. আমি কি Terminal ব্যবহার করতে স্বচ্ছন্দ?
@@ -2257,7 +2257,7 @@ Run করো।
 
 ---
 
-# **Day 1 — Chapter 3**
+# **Day 1 - Chapter 3**
 
 # **Writing C Like a Competitive Programmer**
 
@@ -2267,7 +2267,7 @@ Run করো।
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষে তুমি শিখবে—
+এই Chapter শেষে তুমি শিখবে-
 
 * একজন Competitive Programmer-এর Coding Style
 * Clean Code vs Contest Code
@@ -2288,7 +2288,7 @@ Run করো।
 
 আমি তোমাকে শুধু C শেখাব না।
 
-আমি শেখাব—
+আমি শেখাব-
 
 > **"কীভাবে একজন Competitive Programmer C লিখে।"**
 
@@ -2382,7 +2382,7 @@ Professional কোনটা?
 
 এটা খুব Important।
 
-অনেকে YouTube দেখে বলে—
+অনেকে YouTube দেখে বলে-
 
 > Variable-এর নাম এক অক্ষরের হবে।
 
@@ -2628,7 +2628,7 @@ C Language অনুযায়ী
 int main(void)
 ```
 
-আরও পরিষ্কারভাবে বোঝায়—
+আরও পরিষ্কারভাবে বোঝায়-
 
 > "এই function কোনো argument নেয় না।"
 
@@ -2658,7 +2658,7 @@ int main(void)
 
 কারণ...
 
-এটা Program-কে জানায়—
+এটা Program-কে জানায়-
 
 > "সবকিছু Successfully শেষ হয়েছে।"
 
@@ -3100,7 +3100,7 @@ Brace বাদ।
 
 Code শেষ হলে
 
-নিজেকে জিজ্ঞেস করো—
+নিজেকে জিজ্ঞেস করো-
 
 ✔ Variable Name বোঝা যাচ্ছে?
 
@@ -3160,7 +3160,7 @@ Code-এর Logic পরিবর্তন করবে না।
 
 # Reflection
 
-আজকের শেষে নিজের কাছে প্রশ্ন করো—
+আজকের শেষে নিজের কাছে প্রশ্ন করো-
 
 ### ১.
 
@@ -3184,7 +3184,7 @@ Code-এর Logic পরিবর্তন করবে না।
 
 # 📌 Chapter Summary
 
-আজ আমরা শিখলাম—
+আজ আমরা শিখলাম-
 
 * একজন Competitive Programmer-এর Coding Style।
 * কেন Readability গুরুত্বপূর্ণ।
@@ -3197,13 +3197,13 @@ Code-এর Logic পরিবর্তন করবে না।
 
 # 🧠 Mentor's Closing Thought
 
-আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ শিক্ষা হলো—
+আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ শিক্ষা হলো-
 
 > **"Fast code লেখা গুরুত্বপূর্ণ, কিন্তু এমন code লেখা আরও গুরুত্বপূর্ণ যেটা তুমি ১ সপ্তাহ পরে খুলে ১০ সেকেন্ডে বুঝতে পারবে।"**
 
 ---
 
-# **Day 1 — Chapter 4**
+# **Day 1 - Chapter 4**
 
 # **Thinking Before Coding**
 
@@ -3215,7 +3215,7 @@ Code-এর Logic পরিবর্তন করবে না।
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষ হলে তুমি শিখবে—
+এই Chapter শেষ হলে তুমি শিখবে-
 
 * Problem Statement কীভাবে পড়তে হয়।
 * কোন লাইন গুরুত্বপূর্ণ আর কোনটা গল্প।
@@ -3227,7 +3227,7 @@ Code-এর Logic পরিবর্তন করবে না।
 
 # একটি কথা...
 
-এখন পর্যন্ত আমরা শিখেছি—
+এখন পর্যন্ত আমরা শিখেছি-
 
 * CP কী
 * Environment
@@ -4155,7 +4155,7 @@ Find the average of N numbers.
 
 # Reflection
 
-নিজেকে প্রশ্ন করো—
+নিজেকে প্রশ্ন করো-
 
 ### ১.
 
@@ -4177,7 +4177,7 @@ Find the average of N numbers.
 
 # 📌 Chapter Summary
 
-আজ আমরা শিখলাম—
+আজ আমরা শিখলাম-
 
 * Problem পড়ার Professional Method।
 * English থেকে Logic-এ Translate করা।
@@ -4200,7 +4200,7 @@ Find the average of N numbers.
 
 আংশিক সত্য।
 
-কিন্তু আমি যত Senior ICPC Programmer দেখেছি, তাদের একটা Common Habit ছিল—
+কিন্তু আমি যত Senior ICPC Programmer দেখেছি, তাদের একটা Common Habit ছিল-
 
 > **তারা Code দ্রুত লেখে না। তারা Problem দ্রুত বুঝে ফেলে।**
 
@@ -4208,7 +4208,7 @@ Find the average of N numbers.
 
 ---
 
-# **Day 1 — Chapter 5**
+# **Day 1 - Chapter 5**
 
 # **Your First Competitive Programming Problems**
 
@@ -4220,7 +4220,7 @@ Find the average of N numbers.
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষে তুমি—
+এই Chapter শেষে তুমি-
 
 * প্রথমবার Competitive Programming-এর জন্য Problem Solve শুরু করবে।
 * বুঝবে **কেন** এই Problem করছি।
@@ -4231,7 +4231,7 @@ Find the average of N numbers.
 
 # 📖 Introduction
 
-আজ পর্যন্ত আমরা শিখেছি—
+আজ পর্যন্ত আমরা শিখেছি-
 
 * CP কী
 * Thinking কীভাবে করতে হয়
@@ -4252,7 +4252,7 @@ Find the average of N numbers.
 
 একটা Problem-ও Solve হয় না।
 
-তারপর ভাবে—
+তারপর ভাবে-
 
 > **"CP আমার জন্য না।"**
 
@@ -4268,11 +4268,11 @@ Problem তোমার না।
 
 ## Easy Problem Solve করতে লজ্জা পেও না।
 
-অনেক Beginner ভাবে—
+অনেক Beginner ভাবে-
 
 > "এটা তো খুব Easy."
 
-Professional ভাবে—
+Professional ভাবে-
 
 > "আমি কি এটা ২ মিনিটে করতে পারি?"
 
@@ -4949,7 +4949,7 @@ Bug কোথায় ছিল?
 
 # ✅ Success Criteria
 
-আজকের শেষে তুমি যদি—
+আজকের শেষে তুমি যদি-
 
 * সব Problem Solve করতে না-ও পারো,
 * কিন্তু প্রতিটা Problem-এর Pattern চিনতে পারো,
@@ -4986,17 +4986,17 @@ Bug কোথায় ছিল?
 
 # 📌 Day 1 Progress
 
-* ✅ Chapter 1 — Mindset
-* ✅ Chapter 2 — Battlefield Setup
-* ✅ Chapter 3 — Professional C Style
-* ✅ Chapter 4 — Thinking Before Coding
-* ✅ Chapter 5 — First Problems
+* ✅ Chapter 1 - Mindset
+* ✅ Chapter 2 - Battlefield Setup
+* ✅ Chapter 3 - Professional C Style
+* ✅ Chapter 4 - Thinking Before Coding
+* ✅ Chapter 5 - First Problems
 
 **Day 1 প্রায় ৬০% শেষ।**
 
 ---
 
-# **Day 1 — Chapter 6**
+# **Day 1 - Chapter 6**
 
 # **How to Solve a Problem Without Looking at the Solution**
 
@@ -5144,7 +5144,7 @@ Code ভাবা নিষেধ।
 
 ---
 
-তুমি যদি এখন ভাবো—
+তুমি যদি এখন ভাবো-
 
 ```c
 for(...)
@@ -5172,7 +5172,7 @@ Given N numbers,
 Print the largest number.
 ```
 
-আমার Brain-এ এটা হয়—
+আমার Brain-এ এটা হয়-
 
 ```text
 আমাকে অনেকগুলো Number দেওয়া হবে।
@@ -5788,7 +5788,7 @@ Code লিখবে না।
 Find the minimum number in an array.
 ```
 
-লিখবে—
+লিখবে-
 
 * নিজের ভাষায় Problem
 * Pattern
@@ -5837,7 +5837,7 @@ Reverse a string.
 
 # 📌 Chapter Summary
 
-আজ আমরা শিখলাম—
+আজ আমরা শিখলাম-
 
 * Code লেখার আগে কীভাবে ভাবতে হয়।
 * Problem-কে নিজের ভাষায় Rewrite করা।
@@ -5854,7 +5854,7 @@ Reverse a string.
 
 আজ থেকে Bootcamp-এর বাকি প্রতিটি Problem-এ তুমি আমাকে **Code চাইবে না।**
 
-তুমি আগে আমাকে পাঠাবে—
+তুমি আগে আমাকে পাঠাবে-
 
 1. **Problem-এর Pattern**
 2. **তোমার Brute Force Idea**
@@ -5872,15 +5872,15 @@ Reverse a string.
 
 ### 📖 শেষ কথা
 
-আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ বাক্যটি আবার লিখছি—
+আজকের Chapter-এর সবচেয়ে গুরুত্বপূর্ণ বাক্যটি আবার লিখছি-
 
 > **"একজন Beginner Code লেখে। একজন Competitive Programmer প্রথমে চিন্তা করে, তারপর Algorithm বানায়, তারপর Code লেখে।"**
 
-যেদিন এই Habit তোমার Default হয়ে যাবে, সেদিন থেকে তুমি আর শুধু C Programmer থাকবে না—**তুমি একজন Problem Solver হয়ে উঠবে।** 🚀
+যেদিন এই Habit তোমার Default হয়ে যাবে, সেদিন থেকে তুমি আর শুধু C Programmer থাকবে না-**তুমি একজন Problem Solver হয়ে উঠবে।** 🚀
 
 ---
 
-# **Day 1 — Chapter 7**
+# **Day 1 - Chapter 7**
 
 # **The First Real Practice Session**
 
@@ -5932,7 +5932,7 @@ Think.
 
 আমি Code দিব না।
 
-আমি আগে জিজ্ঞেস করব—
+আমি আগে জিজ্ঞেস করব-
 
 > "তুমি কী ভাবছো?"
 
@@ -6022,7 +6022,7 @@ Problem পুরোটা একবার পড়ো।
 
 Problem পড়ে গুরুত্বপূর্ণ Keyword বের করো।
 
-ধরো Problem-এ আছে—
+ধরো Problem-এ আছে-
 
 ```
 Character
@@ -6100,7 +6100,7 @@ Array?
 
 না।
 
-Pattern হলো—
+Pattern হলো-
 
 ```
 Basic Input / Output
@@ -6132,7 +6132,7 @@ Hello
 Programming
 ```
 
-নিজেকে জিজ্ঞেস করো—
+নিজেকে জিজ্ঞেস করো-
 
 Expected Output কী?
 
@@ -6400,7 +6400,7 @@ Accepted হলেই Problem Close করা।
 
 Accepted হওয়ার পরে
 
-নিজেকে জিজ্ঞেস করবে—
+নিজেকে জিজ্ঞেস করবে-
 
 ```
 এই Problem
@@ -6438,7 +6438,7 @@ Editorial পড়ে।
 
 কেন?
 
-কারণ তারা জানতে চায়—
+কারণ তারা জানতে চায়-
 
 > **"আমার চেয়ে আরও ভালো Idea ছিল?"**
 
@@ -6486,7 +6486,7 @@ Editorial পড়ে।
 
 Code লেখার আগে
 
-Notebook-এ লিখবে—
+Notebook-এ লিখবে-
 
 ```
 Pattern
@@ -6510,7 +6510,7 @@ Possible Mistake
 
 # 🧠 Reflection
 
-নিজেকে প্রশ্ন করো—
+নিজেকে প্রশ্ন করো-
 
 ### ১।
 
@@ -6540,7 +6540,7 @@ Possible Mistake
 
 আজ থেকে Bootcamp-এর আসল Training শুরু।
 
-আমরা শিখলাম—
+আমরা শিখলাম-
 
 * Mentor Method
 * ১০ ধাপের Problem Solving Framework
@@ -6566,7 +6566,7 @@ Possible Mistake
 
 ---
 
-# **Day 1 — Chapter 8 (Final Chapter)**
+# **Day 1 - Chapter 8 (Final Chapter)**
 
 # **Day 1 Mission Complete**
 
@@ -6578,7 +6578,7 @@ Possible Mistake
 
 # 🎯 Chapter Goal
 
-এই Chapter শেষে তুমি—
+এই Chapter শেষে তুমি-
 
 * Day 1-এ কী শিখলে সেটা Review করবে।
 * নিজের Progress Evaluate করবে।
@@ -6605,11 +6605,11 @@ Possible Mistake
 
 # 🧠 আজকের Journey
 
-সকালে যদি তোমাকে আমি বলতাম—
+সকালে যদি তোমাকে আমি বলতাম-
 
 > **"Competitive Programming কী?"**
 
-তুমি হয়তো বলতে—
+তুমি হয়তো বলতে-
 
 > "Programming Contest."
 
@@ -6617,7 +6617,7 @@ Possible Mistake
 
 তুমি জানো...
 
-Competitive Programming মানে—
+Competitive Programming মানে-
 
 ```text
 Problem
@@ -6647,7 +6647,7 @@ Code হলো শেষ Step।
 
 # 📚 Day 1 Knowledge Map
 
-আজ আমরা যা শিখলাম—
+আজ আমরা যা শিখলাম-
 
 ```text
 Mindset
@@ -6687,7 +6687,7 @@ Reflection
 
 সবচেয়ে Important Concept কোনটা?
 
-অনেকে বলবে—
+অনেকে বলবে-
 
 > Variable Naming
 
@@ -6695,7 +6695,7 @@ Reflection
 
 ---
 
-অনেকে বলবে—
+অনেকে বলবে-
 
 > Folder Structure
 
@@ -6703,7 +6703,7 @@ Reflection
 
 ---
 
-অনেকে বলবে—
+অনেকে বলবে-
 
 > HackerRank
 
@@ -7068,11 +7068,11 @@ Day 2
 
 Contest-এ গেলে
 
-নিজেকে বলবে না—
+নিজেকে বলবে না-
 
 > **"আমি জিততে এসেছি।"**
 
-বলবে—
+বলবে-
 
 > **"আমি যতগুলো Problem পারি Solve করতে এসেছি।"**
 
@@ -7173,19 +7173,19 @@ Day 2 = Arrays.
 
 আমাদের Bootcamp-এ
 
-Day 2-এর নাম হবে—
+Day 2-এর নাম হবে-
 
 # **"Learning to See Arrays, Not Just Use Arrays."**
 
 কারণ...
 
-Beginner Array দেখে—
+Beginner Array দেখে-
 
 ```c
 int arr[100];
 ```
 
-Professional দেখে—
+Professional দেখে-
 
 ```text
 Collection
@@ -7286,11 +7286,11 @@ Day 2  🔒 Locked
 
 আমি চাই আমাদের Bootcamp আলাদা হোক।
 
-আমি চাই ১৬ দিন পরে তুমি শুধু বলতে না পারো—
+আমি চাই ১৬ দিন পরে তুমি শুধু বলতে না পারো-
 
 > "আমি ১০০টা Problem Solve করেছি।"
 
-আমি চাই তুমি বলতে পারো—
+আমি চাই তুমি বলতে পারো-
 
 > **"আমি এখন একটা নতুন Problem দেখে কীভাবে চিন্তা শুরু করতে হয়, সেটা জানি।"**
 
@@ -7304,7 +7304,7 @@ Day 2  🔒 Locked
 
 আমি Day 1-কে যদি ১০০-তে Score দিই, আমি নিজে **৭৮/১০০** দেব।
 
-কারণ এটা Foundation হিসেবে ভালো হয়েছে, কিন্তু একটা জিনিস আমি ইচ্ছা করে Day 1-এ রাখিনি—
+কারণ এটা Foundation হিসেবে ভালো হয়েছে, কিন্তু একটা জিনিস আমি ইচ্ছা করে Day 1-এ রাখিনি-
 
 **বাস্তব Problem Walkthrough।**
 

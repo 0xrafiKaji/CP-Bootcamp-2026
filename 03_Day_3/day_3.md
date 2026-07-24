@@ -16,7 +16,7 @@ puppeteer:
     left: "1.8cm"
 ---
 
-# 📘 Day 3 — String Fundamentals & Character Processing
+# 📘 Day 3 - String Fundamentals & Character Processing
 
 # 🔤 From Array of Numbers to Array of Characters
 
@@ -160,26 +160,26 @@ Day 3 একদিনে শেষ করার মতো করে সাজা
 ```text
 Day 3
 │
-├── Chapter 1 — String Mental Model
+├── Chapter 1 - String Mental Model
 │
-├── Chapter 2 — String Input & Output
+├── Chapter 2 - String Input & Output
 │
-├── Chapter 3 — String Traversal Pattern
+├── Chapter 3 - String Traversal Pattern
 │
-├── Chapter 4 — Character Classification
+├── Chapter 4 - Character Classification
 │
-├── Chapter 5 — Counting Patterns on Strings
+├── Chapter 5 - Counting Patterns on Strings
 │
-├── Chapter 6 — Character Search & Frequency
+├── Chapter 6 - Character Search & Frequency
 │
-├── Chapter 7 — String Transformation
+├── Chapter 7 - String Transformation
 │
-├── Chapter 8 — Reverse & Two-Pointer Mental Model
+├── Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── Chapter 9 — Palindrome Pattern
+├── Chapter 9 - Palindrome Pattern
 │
-├── Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
 Day 3-এর Learning Flow:
@@ -296,7 +296,7 @@ STRING
 
 ---
 
-# 📗 Day 3 — Chapter 1
+# 📗 Day 3 - Chapter 1
 
 # 🧠 String Mental Model
 
@@ -352,9 +352,9 @@ Loop কোথায় থামাব?
 
 ---
 
-# Part 1 — Character কী?
+# Part 1 - Character কী?
 
-## Lesson 1 — একটি Character
+## Lesson 1 - একটি Character
 
 C-তে একটি Character store করতে:
 
@@ -441,7 +441,7 @@ int x = 7;
 
 ---
 
-# Lesson 2 — Single Quote
+# Lesson 2 - Single Quote
 
 একটি Character:
 
@@ -483,9 +483,9 @@ char ch = 'A';
 
 ---
 
-# Part 2 — String কী?
+# Part 2 - String কী?
 
-## Lesson 3 — একাধিক Character
+## Lesson 3 - একাধিক Character
 
 ধরো তোমার নাম:
 
@@ -538,7 +538,7 @@ Null Terminator
 
 ---
 
-# Lesson 4 — String হলো Character Array
+# Lesson 4 - String হলো Character Array
 
 ```c
 char name[] = "RAFI";
@@ -591,9 +591,9 @@ Count:
 
 ---
 
-# Part 3 — Null Terminator
+# Part 3 - Null Terminator
 
-# Lesson 5 — `'\0'` কী?
+# Lesson 5 - `'\0'` কী?
 
 C String-এর শেষে থাকে:
 
@@ -653,7 +653,7 @@ End of String
 
 ---
 
-# Lesson 6 — `'\0'` এবং `'0'` এক না
+# Lesson 6 - `'\0'` এবং `'0'` এক না
 
 এটা খুব গুরুত্বপূর্ণ।
 
@@ -689,7 +689,7 @@ String termination marker
 
 ---
 
-# Lesson 7 — কেন Null Terminator দরকার?
+# Lesson 7 - কেন Null Terminator দরকার?
 
 ধরো Memory-তে:
 
@@ -762,9 +762,9 @@ STOP
 
 ---
 
-# Part 4 — Index Mental Model
+# Part 4 - Index Mental Model
 
-# Lesson 8 — String-এরও Index আছে
+# Lesson 8 - String-এরও Index আছে
 
 Day 2 Array:
 
@@ -809,7 +809,7 @@ Null Terminator:
 
 ---
 
-# Lesson 9 — Individual Character Access
+# Lesson 9 - Individual Character Access
 
 ```c
 char str[] = "CODE";
@@ -888,7 +888,7 @@ E
 
 ---
 
-# Lesson 10 — `%c` এবং `%s`
+# Lesson 10 - `%c` এবং `%s`
 
 Single Character print:
 
@@ -928,9 +928,9 @@ APPLE
 
 ---
 
-# Part 5 — String Literal
+# Part 5 - String Literal
 
-# Lesson 11 — Double Quote
+# Lesson 11 - Double Quote
 
 একটি Character:
 
@@ -1001,9 +1001,9 @@ Value   │ A  │  \0  │
 
 ---
 
-# Part 6 — String Length vs Array Capacity
+# Part 6 - String Length vs Array Capacity
 
-# Lesson 12 — সবচেয়ে গুরুত্বপূর্ণ পার্থক্য
+# Lesson 12 - সবচেয়ে গুরুত্বপূর্ণ পার্থক্য
 
 ধরো:
 
@@ -1060,7 +1060,7 @@ String Length:
 
 ---
 
-# Lesson 13 — `sizeof` এবং `strlen` Conceptual Difference
+# Lesson 13 - `sizeof` এবং `strlen` Conceptual Difference
 
 এখন Deep Detail দরকার নেই।
 
@@ -1097,9 +1097,9 @@ strlen(str) → 5
 
 ---
 
-# Part 7 — Manual String Traversal
+# Part 7 - Manual String Traversal
 
-# Lesson 14 — Day 2 Traversal আবার ফিরে এসেছে
+# Lesson 14 - Day 2 Traversal আবার ফিরে এসেছে
 
 Day 2:
 
@@ -1157,7 +1157,7 @@ Repeat
 
 ---
 
-# Lesson 15 — Manual Length Calculation
+# Lesson 15 - Manual Length Calculation
 
 Library Function ছাড়া String Length বের করতে চাইলে:
 
@@ -1246,9 +1246,9 @@ Counter
 
 ---
 
-# Part 8 — Character Comparison
+# Part 8 - Character Comparison
 
-# Lesson 16 — Character Compare করা যায়
+# Lesson 16 - Character Compare করা যায়
 
 ধরো:
 
@@ -1293,7 +1293,7 @@ Update State
 
 ---
 
-# Example — Count `'a'`
+# Example - Count `'a'`
 
 ```c
 #include <stdio.h>
@@ -1350,9 +1350,9 @@ Structural Pattern একই।
 
 ---
 
-# Part 9 — Character Range Mental Model
+# Part 9 - Character Range Mental Model
 
-# Lesson 17 — Letter Range
+# Lesson 17 - Letter Range
 
 Basic C Character Problems-এ আমরা প্রায়ই Check করব:
 
@@ -1411,7 +1411,7 @@ Character
 
 ---
 
-# Part 10 — Day 2 Patterns Reused in Strings
+# Part 10 - Day 2 Patterns Reused in Strings
 
 এটা Day 3-এর সবচেয়ে গুরুত্বপূর্ণ Section-এর একটি।
 
@@ -1533,7 +1533,7 @@ Faster Learning
 
 ---
 
-# Part 11 — Visual Mental Model
+# Part 11 - Visual Mental Model
 
 ধরো:
 
@@ -1583,7 +1583,7 @@ STOP
 
 ---
 
-# Part 12 — Common Beginner Confusions
+# Part 12 - Common Beginner Confusions
 
 # Confusion 1
 
@@ -1724,9 +1724,9 @@ printf("%s", str);
 
 ---
 
-# Part 13 — Guided Practice
+# Part 13 - Guided Practice
 
-# Practice 1 — Predict the Output
+# Practice 1 - Predict the Output
 
 ```c
 #include <stdio.h>
@@ -1752,7 +1752,7 @@ Output:
 
 ---
 
-# Practice 2 — Draw the Memory Model
+# Practice 2 - Draw the Memory Model
 
 ```c
 char str[] = "CP";
@@ -1778,7 +1778,7 @@ Required Character Slots:
 
 ---
 
-# Practice 3 — Manual Traversal
+# Practice 3 - Manual Traversal
 
 String:
 
@@ -1799,7 +1799,7 @@ Table Complete করবে:
 
 ---
 
-# Practice 4 — Count Target Character
+# Practice 4 - Count Target Character
 
 String:
 
@@ -1827,7 +1827,7 @@ Code না লিখে manually count করবে।
 
 ---
 
-# Practice 5 — Identify Data Type
+# Practice 5 - Identify Data Type
 
 নিচের প্রতিটির Conceptual Type লিখবে:
 
@@ -1855,9 +1855,9 @@ Format:
 
 ---
 
-# Part 14 — Chapter 1 Exercises
+# Part 14 - Chapter 1 Exercises
 
-# Exercise 1 — Character vs String
+# Exercise 1 - Character vs String
 
 নিজের ভাষায় Explain করবে:
 
@@ -1873,7 +1873,7 @@ String কী?
 
 ---
 
-# Exercise 2 — Memory Drawing
+# Exercise 2 - Memory Drawing
 
 এই String-গুলোর Memory Model draw করবে:
 
@@ -1898,7 +1898,7 @@ Required Slots: 4
 
 ---
 
-# Exercise 3 — Manual Length
+# Exercise 3 - Manual Length
 
 Library Function ছাড়া String Length বের করার Logic নিজের ভাষায় লিখবে।
 
@@ -1929,7 +1929,7 @@ Pipeline:
 
 ---
 
-# Exercise 4 — Count Character
+# Exercise 4 - Count Character
 
 Problem:
 
@@ -1967,7 +1967,7 @@ Pipeline:
 
 ---
 
-# Exercise 5 — First Character Search
+# Exercise 5 - First Character Search
 
 Problem:
 
@@ -1998,7 +1998,7 @@ Missing Character Output:
 
 # 🧪 Chapter 1 Assignment
 
-# Task 1 — Explain the Memory Model
+# Task 1 - Explain the Memory Model
 
 এই Declaration:
 
@@ -2030,7 +2030,7 @@ Last Visible Character:
 
 ---
 
-# Task 2 — Draw Index Table
+# Task 2 - Draw Index Table
 
 ```c
 char str[] = "SECURITY";
@@ -2054,7 +2054,7 @@ char str[] = "SECURITY";
 
 ---
 
-# Task 3 — Predict Before Running
+# Task 3 - Predict Before Running
 
 ```c
 #include <stdio.h>
@@ -2089,7 +2089,7 @@ Yes / No
 
 ---
 
-# Task 4 — Manual String Length
+# Task 4 - Manual String Length
 
 নিজে Program লিখবে।
 
@@ -2124,7 +2124,7 @@ Complexity:
 
 ---
 
-# Task 5 — Count a Character
+# Task 5 - Count a Character
 
 String:
 
@@ -2153,7 +2153,7 @@ m
 
 ---
 
-# Task 6 — Search a Character
+# Task 6 - Search a Character
 
 Problem:
 
@@ -2186,7 +2186,7 @@ Output if missing:
 
 ---
 
-# Task 7 — First Index
+# Task 7 - First Index
 
 Problem:
 
@@ -2218,7 +2218,7 @@ Code:
 
 ---
 
-# Task 8 — Last Index
+# Task 8 - Last Index
 
 একই String:
 
@@ -2250,7 +2250,7 @@ Why no break?
 
 ---
 
-# Task 9 — Pattern Transfer
+# Task 9 - Pattern Transfer
 
 নিচের Pair-গুলোর Structural Similarity Explain করবে।
 
@@ -2308,7 +2308,7 @@ Same Update Idea:
 
 ---
 
-# Task 10 — Chapter Reflection
+# Task 10 - Chapter Reflection
 
 নিজের ভাষায় Answer করবে:
 
@@ -2542,41 +2542,41 @@ Core Problem-Solving Pattern Survived
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ⏳ Chapter 2 — String Input & Output
+├── ⏳ Chapter 2 - String Input & Output
 │
-├── ⏳ Chapter 3 — String Traversal Pattern
+├── ⏳ Chapter 3 - String Traversal Pattern
 │
-├── ⏳ Chapter 4 — Character Classification
+├── ⏳ Chapter 4 - Character Classification
 │
-├── ⏳ Chapter 5 — Counting Patterns on Strings
+├── ⏳ Chapter 5 - Counting Patterns on Strings
 │
-├── ⏳ Chapter 6 — Character Search & Frequency
+├── ⏳ Chapter 6 - Character Search & Frequency
 │
-├── ⏳ Chapter 7 — String Transformation
+├── ⏳ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 1 এখানেই শেষ।**
+**Day 3 - Chapter 1 এখানেই শেষ।**
 
-পরের Chapter-এ সবচেয়ে গুরুত্বপূর্ণ practical অংশ হবে: **`scanf("%s")`, `fgets()`, space-containing input, input buffer এবং newline handling**—কারণ String Problem-এ Logic ঠিক থাকার পরেও Input Handling-এর কারণে Beginner-দের অনেক ভুল হয়।
+পরের Chapter-এ সবচেয়ে গুরুত্বপূর্ণ practical অংশ হবে: **`scanf("%s")`, `fgets()`, space-containing input, input buffer এবং newline handling**-কারণ String Problem-এ Logic ঠিক থাকার পরেও Input Handling-এর কারণে Beginner-দের অনেক ভুল হয়।
 
 ---
 
-# 📘 Day 3 — Chapter 2
+# 📘 Day 3 - Chapter 2
 
 # ⌨️ String Input & Output in C
 
 ## From “Code Works” to “Input Works Correctly”
 
-Day 3 — Chapter 1-এ তুমি String-এর Internal Mental Model শিখেছ:
+Day 3 - Chapter 1-এ তুমি String-এর Internal Mental Model শিখেছ:
 
 ```text
 C String
@@ -2684,20 +2684,20 @@ Verify Input
 ```text
 Chapter 2
 │
-├── Part 1  — Input Type Recognition
-├── Part 2  — Single Character Input
-├── Part 3  — Single Word Input
-├── Part 4  — Why String Input Uses No &
-├── Part 5  — Full Line Input
-├── Part 6  — fgets() Mental Model
-├── Part 7  — Newline Character Problem
-├── Part 8  — Input Buffer Mental Model
-├── Part 9  — Mixed Input Problems
-├── Part 10 — Safe Input Habits for CP
-├── Part 11 — Common Bugs
-├── Part 12 — Guided Practice
-├── Part 13 — Exercises
-└── Part 14 — Assignment & Reflection
+├── Part 1  - Input Type Recognition
+├── Part 2  - Single Character Input
+├── Part 3  - Single Word Input
+├── Part 4  - Why String Input Uses No &
+├── Part 5  - Full Line Input
+├── Part 6  - fgets() Mental Model
+├── Part 7  - Newline Character Problem
+├── Part 8  - Input Buffer Mental Model
+├── Part 9  - Mixed Input Problems
+├── Part 10 - Safe Input Habits for CP
+├── Part 11 - Common Bugs
+├── Part 12 - Guided Practice
+├── Part 13 - Exercises
+└── Part 14 - Assignment & Reflection
 ```
 
 ---
@@ -2761,9 +2761,9 @@ Choose Input Method
 
 ---
 
-# Part 1 — Input Type Recognition
+# Part 1 - Input Type Recognition
 
-# Lesson 1 — সব String Input একই না
+# Lesson 1 - সব String Input একই না
 
 ধরো Problem A:
 
@@ -2835,7 +2835,7 @@ Line Input
 
 ---
 
-# Lesson 2 — Problem Statement-এর Signal চিনো
+# Lesson 2 - Problem Statement-এর Signal চিনো
 
 Problem-এ যদি লেখা থাকে:
 
@@ -2899,9 +2899,9 @@ Input Tool
 
 ---
 
-# Part 2 — Single Character Input
+# Part 2 - Single Character Input
 
-# Lesson 3 — `%c`
+# Lesson 3 - `%c`
 
 একটি Character Input:
 
@@ -2950,7 +2950,7 @@ Address of character variable
 
 ---
 
-# Lesson 4 — `%c` Whitespace-ও পড়তে পারে
+# Lesson 4 - `%c` Whitespace-ও পড়তে পারে
 
 এটা খুব গুরুত্বপূর্ণ।
 
@@ -3045,7 +3045,7 @@ ch = '\n'
 
 ---
 
-# Lesson 5 — `" %c"` কেন?
+# Lesson 5 - `" %c"` কেন?
 
 Solution:
 
@@ -3125,9 +3125,9 @@ Do I want whitespace itself?
 
 ---
 
-# Part 3 — Single Word Input
+# Part 3 - Single Word Input
 
-# Lesson 6 — `%s`
+# Lesson 6 - `%s`
 
 একটি Word Input:
 
@@ -3168,7 +3168,7 @@ Read a whitespace-delimited string
 
 ---
 
-# Lesson 7 — `%s` কোথায় থামে?
+# Lesson 7 - `%s` কোথায় থামে?
 
 `scanf("%s", str)` whitespace পর্যন্ত পড়ে।
 
@@ -3229,7 +3229,7 @@ Stop
 
 ---
 
-# Lesson 8 — `%s` মানেই Full String Input না
+# Lesson 8 - `%s` মানেই Full String Input না
 
 Beginner confusion:
 
@@ -3281,7 +3281,7 @@ C
 
 ---
 
-# Lesson 9 — `%99s` কেন?
+# Lesson 9 - `%99s` কেন?
 
 ধরো:
 
@@ -3329,9 +3329,9 @@ scanf("%19s", str);
 
 ---
 
-# Part 4 — String Input-এ `&` কেন লাগে না?
+# Part 4 - String Input-এ `&` কেন লাগে না?
 
-# Lesson 10 — Beginner-এর খুব Common Question
+# Lesson 10 - Beginner-এর খুব Common Question
 
 Integer Input:
 
@@ -3464,9 +3464,9 @@ Pointers Chapter-এ এর deeper reason আরও পরিষ্কার হ
 
 ---
 
-# Part 5 — Full Line Input
+# Part 5 - Full Line Input
 
-# Lesson 11 — Space-সহ Input
+# Lesson 11 - Space-সহ Input
 
 Problem:
 
@@ -3517,7 +3517,7 @@ I love C programming
 
 ---
 
-# Lesson 12 — `fgets()` Structure
+# Lesson 12 - `fgets()` Structure
 
 ```c
 fgets(line, sizeof(line), stdin);
@@ -3567,9 +3567,9 @@ Keyboard / Judge Input
 
 ---
 
-# Part 6 — `fgets()` Mental Model
+# Part 6 - `fgets()` Mental Model
 
-# Lesson 13 — `fgets()` কতটুকু পড়ে?
+# Lesson 13 - `fgets()` কতটুকু পড়ে?
 
 ধরো:
 
@@ -3599,7 +3599,7 @@ Up to 9 input characters
 
 ---
 
-# Lesson 14 — `fgets()` newline রাখতে পারে
+# Lesson 14 - `fgets()` newline রাখতে পারে
 
 Input:
 
@@ -3656,7 +3656,7 @@ O
 
 ---
 
-# Lesson 15 — Newline কি সবসময় থাকবে?
+# Lesson 15 - Newline কি সবসময় থাকবে?
 
 না।
 
@@ -3687,9 +3687,9 @@ fgets() always adds newline
 
 ---
 
-# Part 7 — Newline Remove করা
+# Part 7 - Newline Remove করা
 
-# Lesson 16 — `strcspn()` Method
+# Lesson 16 - `strcspn()` Method
 
 আমরা ব্যবহার করতে পারি:
 
@@ -3725,7 +3725,7 @@ int main()
 
 ---
 
-# Lesson 17 — এই Line আসলে কী করে?
+# Lesson 17 - এই Line আসলে কী করে?
 
 ```c
 str[strcspn(str, "\n")] = '\0';
@@ -3805,7 +3805,7 @@ String ends there
 
 ---
 
-# Lesson 18 — যদি Newline না থাকে?
+# Lesson 18 - যদি Newline না থাকে?
 
 এই idiom-এর একটি useful property আছে।
 
@@ -3821,9 +3821,9 @@ str[strcspn(str, "\n")] = '\0';
 
 ---
 
-# Part 8 — Input Buffer Mental Model
+# Part 8 - Input Buffer Mental Model
 
-# Lesson 19 — Buffer বলতে এখানে কী বুঝব?
+# Lesson 19 - Buffer বলতে এখানে কী বুঝব?
 
 এখন low-level internal implementation শেখার দরকার নেই।
 
@@ -3874,7 +3874,7 @@ remaining conceptually:
 
 ---
 
-# Lesson 20 — সব `scanf` Specifier একইভাবে whitespace handle করে না
+# Lesson 20 - সব `scanf` Specifier একইভাবে whitespace handle করে না
 
 এটা মনে রাখা দরকার।
 
@@ -3923,9 +3923,9 @@ scanf(" %c", &ch);
 
 ---
 
-# Part 9 — Mixed Input Problems
+# Part 9 - Mixed Input Problems
 
-# Lesson 21 — Integer তারপর Word
+# Lesson 21 - Integer তারপর Word
 
 Example:
 
@@ -3960,7 +3960,7 @@ hello
 
 ---
 
-# Lesson 22 — Integer তারপর Character
+# Lesson 22 - Integer তারপর Character
 
 Potential issue:
 
@@ -3981,7 +3981,7 @@ scanf(" %c", &ch);
 
 ---
 
-# Lesson 23 — Integer তারপর `fgets()`
+# Lesson 23 - Integer তারপর `fgets()`
 
 এখানে Beginner-দের সবচেয়ে বেশি confusion হয়।
 
@@ -4030,7 +4030,7 @@ line appears empty
 
 ---
 
-# Lesson 24 — Simple Cleanup Strategy
+# Lesson 24 - Simple Cleanup Strategy
 
 একটি simple controlled case-এ:
 
@@ -4070,7 +4070,7 @@ Then consume intentionally
 
 ---
 
-# Lesson 25 — Line-Based Strategy
+# Lesson 25 - Line-Based Strategy
 
 যদি Problem heavily line-based হয়, একটি alternative approach:
 
@@ -4104,9 +4104,9 @@ Handle pending newline carefully
 
 ---
 
-# Part 10 — Safe Input Habits for CP
+# Part 10 - Safe Input Habits for CP
 
-# Lesson 26 — Contest-এ Input Requirement Follow করো
+# Lesson 26 - Contest-এ Input Requirement Follow করো
 
 CP-তে unnecessary complexity avoid করতে হবে।
 
@@ -4134,7 +4134,7 @@ constraint অনুযায়ী যথেষ্ট হতে পারে।
 
 ---
 
-# Lesson 27 — Constraint দেখে Array Size
+# Lesson 27 - Constraint দেখে Array Size
 
 Problem:
 
@@ -4170,7 +4170,7 @@ Need at least N + 1 char slots
 
 ---
 
-# Lesson 28 — Variable Length Array নিয়ে Careful হও
+# Lesson 28 - Variable Length Array নিয়ে Careful হও
 
 তুমি লিখতে পারো:
 
@@ -4199,7 +4199,7 @@ char str[1001];
 
 ---
 
-# Lesson 29 — Output Formatting
+# Lesson 29 - Output Formatting
 
 String print:
 
@@ -4226,7 +4226,7 @@ printf("\n");
 
 ---
 
-# Lesson 30 — `puts()`
+# Lesson 30 - `puts()`
 
 Basic String output-এর জন্য:
 
@@ -4262,9 +4262,9 @@ printf("%s\n", str);
 
 ---
 
-# Part 11 — Common Bugs
+# Part 11 - Common Bugs
 
-# 🐞 Bug 1 — Space-containing line with `%s`
+# 🐞 Bug 1 - Space-containing line with `%s`
 
 Code:
 
@@ -4308,7 +4308,7 @@ fgets()
 
 ---
 
-# 🐞 Bug 2 — Wrong Format Specifier
+# 🐞 Bug 2 - Wrong Format Specifier
 
 ```c
 char ch = 'A';
@@ -4334,7 +4334,7 @@ printf("%c\n", ch);
 
 ---
 
-# 🐞 Bug 3 — String Input with Tiny Buffer
+# 🐞 Bug 3 - String Input with Tiny Buffer
 
 ```c
 char str[5];
@@ -4364,7 +4364,7 @@ Input Width
 
 ---
 
-# 🐞 Bug 4 — Forgetting `'\0'` Space
+# 🐞 Bug 4 - Forgetting `'\0'` Space
 
 Maximum input length:
 
@@ -4396,7 +4396,7 @@ char str[101];
 
 ---
 
-# 🐞 Bug 5 — Mixed `%d` and `%c`
+# 🐞 Bug 5 - Mixed `%d` and `%c`
 
 ```c
 int n;
@@ -4420,7 +4420,7 @@ scanf(" %c", &ch);
 
 ---
 
-# 🐞 Bug 6 — `fgets()` “Skipped Input”
+# 🐞 Bug 6 - `fgets()` “Skipped Input”
 
 ```c
 scanf("%d", &n);
@@ -4443,7 +4443,7 @@ What characters remain unread before fgets()?
 
 ---
 
-# 🐞 Bug 7 — `strlen()` Unexpectedly One More
+# 🐞 Bug 7 - `strlen()` Unexpectedly One More
 
 Input via `fgets()`:
 
@@ -4477,7 +4477,7 @@ strlen = 5
 
 ---
 
-# 🐞 Bug 8 — Blindly Using `gets()`
+# 🐞 Bug 8 - Blindly Using `gets()`
 
 পুরোনো Tutorial-এ দেখতে পারো:
 
@@ -4505,9 +4505,9 @@ fgets()
 
 ---
 
-# Part 12 — Guided Practice
+# Part 12 - Guided Practice
 
-# Practice 1 — Choose Input Method
+# Practice 1 - Choose Input Method
 
 নিচের Problem-গুলোর জন্য Method select করো।
 
@@ -4566,7 +4566,7 @@ Method:
 
 ---
 
-# Practice 2 — Predict the Result
+# Practice 2 - Predict the Result
 
 ```c
 #include <stdio.h>
@@ -4605,7 +4605,7 @@ Why:
 
 ---
 
-# Practice 3 — Predict the Character
+# Practice 3 - Predict the Character
 
 ```c
 #include <stdio.h>
@@ -4647,7 +4647,7 @@ Why:
 
 ---
 
-# Practice 4 — Fix the Input
+# Practice 4 - Fix the Input
 
 Problem:
 
@@ -4687,7 +4687,7 @@ Reason:
 
 ---
 
-# Practice 5 — `fgets()` Memory Drawing
+# Practice 5 - `fgets()` Memory Drawing
 
 Input:
 
@@ -4711,7 +4711,7 @@ Value:
 
 ---
 
-# Practice 6 — Select Buffer Size
+# Practice 6 - Select Buffer Size
 
 Constraint:
 
@@ -4731,9 +4731,9 @@ Why:
 
 ---
 
-# Part 13 — Exercises
+# Part 13 - Exercises
 
-# Exercise 1 — Character Input
+# Exercise 1 - Character Input
 
 একটি Program লিখবে:
 
@@ -4762,7 +4762,7 @@ Output Format:
 
 ---
 
-# Exercise 2 — Word Input
+# Exercise 2 - Word Input
 
 Problem:
 
@@ -4788,7 +4788,7 @@ Use a bounded %s width appropriate for your buffer.
 
 ---
 
-# Exercise 3 — Full Line Input
+# Exercise 3 - Full Line Input
 
 Problem:
 
@@ -4816,7 +4816,7 @@ Use fgets()
 
 ---
 
-# Exercise 4 — Compare `%s` and `fgets()`
+# Exercise 4 - Compare `%s` and `fgets()`
 
 একই Input:
 
@@ -4853,7 +4853,7 @@ Reason for difference:
 
 ---
 
-# Exercise 5 — Integer + Character
+# Exercise 5 - Integer + Character
 
 Input:
 
@@ -4877,7 +4877,7 @@ Why did I use " %c" instead of "%c"?
 
 ---
 
-# Exercise 6 — Integer + Full Line
+# Exercise 6 - Integer + Full Line
 
 Input:
 
@@ -4913,7 +4913,7 @@ How I handled it:
 
 ---
 
-# Exercise 7 — Newline Investigation
+# Exercise 7 - Newline Investigation
 
 Program:
 
@@ -4958,7 +4958,7 @@ Why:
 
 ---
 
-# Exercise 8 — Input Method Decision Table
+# Exercise 8 - Input Method Decision Table
 
 নিজে Table Complete করবে।
 
@@ -4972,9 +4972,9 @@ Why:
 
 ---
 
-# Part 14 — Chapter Assignment
+# Part 14 - Chapter Assignment
 
-# 📝 Task 1 — Input Classification
+# 📝 Task 1 - Input Classification
 
 নিচের প্রতিটির জন্য Input Category এবং Method লিখবে।
 
@@ -5007,7 +5007,7 @@ Contains whitespace.
 
 ---
 
-# 📝 Task 2 — Explain `%c`
+# 📝 Task 2 - Explain `%c`
 
 নিজের ভাষায় লিখবে:
 
@@ -5025,7 +5025,7 @@ When can " %c" be wrong for the problem?
 
 ---
 
-# 📝 Task 3 — Explain `%s`
+# 📝 Task 3 - Explain `%s`
 
 নিজের ভাষায়:
 
@@ -5043,7 +5043,7 @@ What buffer size is needed for N visible characters?
 
 ---
 
-# 📝 Task 4 — Explain `fgets()`
+# 📝 Task 4 - Explain `fgets()`
 
 এই Call:
 
@@ -5072,7 +5072,7 @@ Null terminator behavior:
 
 ---
 
-# 📝 Task 5 — Debug the Code
+# 📝 Task 5 - Debug the Code
 
 Code:
 
@@ -5125,7 +5125,7 @@ Fix Strategy:
 
 ---
 
-# 📝 Task 6 — Newline Removal Dry Run
+# 📝 Task 6 - Newline Removal Dry Run
 
 Input:
 
@@ -5166,7 +5166,7 @@ After:
 
 ---
 
-# 📝 Task 7 — Build an Input Decision Tree
+# 📝 Task 7 - Build an Input Decision Tree
 
 নিজের `Day_3_assignment.md`-এ এই Tree Complete করবে:
 
@@ -5200,7 +5200,7 @@ Handle intentionally
 
 ---
 
-# 📝 Task 8 — Write Three Programs
+# 📝 Task 8 - Write Three Programs
 
 তিনটি আলাদা File বানাবে।
 
@@ -5238,7 +5238,7 @@ Print it
 
 ---
 
-# 📝 Task 9 — Mixed Input Program
+# 📝 Task 9 - Mixed Input Program
 
 File:
 
@@ -5291,12 +5291,12 @@ Input Pipeline:
 
 ---
 
-# 📝 Task 10 — Chapter Reflection
+# 📝 Task 10 - Chapter Reflection
 
 এই Template Complete করবে:
 
 ````markdown
-# 🧠 Day 3 — Chapter 2 Reflection
+# 🧠 Day 3 - Chapter 2 Reflection
 
 ## 1. What I Learned
 
@@ -5724,29 +5724,29 @@ Wrong Answer
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ⏳ Chapter 3 — String Traversal Pattern
+├── ⏳ Chapter 3 - String Traversal Pattern
 │
-├── ⏳ Chapter 4 — Character Classification
+├── ⏳ Chapter 4 - Character Classification
 │
-├── ⏳ Chapter 5 — Counting Patterns on Strings
+├── ⏳ Chapter 5 - Counting Patterns on Strings
 │
-├── ⏳ Chapter 6 — Character Search & Frequency
+├── ⏳ Chapter 6 - Character Search & Frequency
 │
-├── ⏳ Chapter 7 — String Transformation
+├── ⏳ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 2 Complete.**
+**Day 3 - Chapter 2 Complete.**
 
 পরবর্তী Chapter-এর Core Idea হবে:
 
@@ -5760,17 +5760,17 @@ Observe Current Character
 Update State
 ```
 
-অর্থাৎ **Chapter 3 — String Traversal Pattern**-এ Day 2-এর Traversal Mental Model সরাসরি String-এর উপর প্রয়োগ করা হবে।
+অর্থাৎ **Chapter 3 - String Traversal Pattern**-এ Day 2-এর Traversal Mental Model সরাসরি String-এর উপর প্রয়োগ করা হবে।
 
 ---
 
-# 📘 Day 3 — Chapter 3
+# 📘 Day 3 - Chapter 3
 
 # 🔁 String Traversal Pattern
 
 ## Character by Character Thinking
 
-Day 3 — Chapter 1-এ তুমি শিখেছ:
+Day 3 - Chapter 1-এ তুমি শিখেছ:
 
 ```text
 String
@@ -5780,7 +5780,7 @@ Character Array
 '\0'
 ```
 
-Day 3 — Chapter 2-এ তুমি শিখেছ:
+Day 3 - Chapter 2-এ তুমি শিখেছ:
 
 ```text
 Input Requirement
@@ -5866,25 +5866,25 @@ E → দেখো
 ```text
 Chapter 3
 │
-├── Part 1  — Traversal Mental Model
-├── Part 2  — Why Traversal Is Needed
-├── Part 3  — '\0'-Based Traversal
-├── Part 4  — for Loop Traversal
-├── Part 5  — while Loop Traversal
-├── Part 6  — Current Character Thinking
-├── Part 7  — Index vs Character
-├── Part 8  — Traversal + Condition
-├── Part 9  — Traversal + Counter
-├── Part 10 — Traversal + Flag
-├── Part 11 — Early Termination
-├── Part 12 — Position Tracking
-├── Part 13 — Multiple State
-├── Part 14 — Forward & Backward Thinking
-├── Part 15 — strlen() and Traversal
-├── Part 16 — Common Bugs & Edge Cases
-├── Part 17 — Guided Problem Solving
-├── Part 18 — Exercises
-└── Part 19 — Assignment & Reflection
+├── Part 1  - Traversal Mental Model
+├── Part 2  - Why Traversal Is Needed
+├── Part 3  - '\0'-Based Traversal
+├── Part 4  - for Loop Traversal
+├── Part 5  - while Loop Traversal
+├── Part 6  - Current Character Thinking
+├── Part 7  - Index vs Character
+├── Part 8  - Traversal + Condition
+├── Part 9  - Traversal + Counter
+├── Part 10 - Traversal + Flag
+├── Part 11 - Early Termination
+├── Part 12 - Position Tracking
+├── Part 13 - Multiple State
+├── Part 14 - Forward & Backward Thinking
+├── Part 15 - strlen() and Traversal
+├── Part 16 - Common Bugs & Edge Cases
+├── Part 17 - Guided Problem Solving
+├── Part 18 - Exercises
+└── Part 19 - Assignment & Reflection
 ```
 
 ---
@@ -5933,9 +5933,9 @@ Update
 
 ---
 
-# Part 1 — Traversal Mental Model
+# Part 1 - Traversal Mental Model
 
-# Lesson 1 — Traversal মানে কী?
+# Lesson 1 - Traversal মানে কী?
 
 Traversal মানে:
 
@@ -5997,7 +5997,7 @@ Character by Character
 
 ---
 
-# Lesson 2 — Traversal নিজে Final Goal না
+# Lesson 2 - Traversal নিজে Final Goal না
 
 এটা খুব গুরুত্বপূর্ণ।
 
@@ -6061,9 +6061,9 @@ Solution
 
 ---
 
-# Part 2 — Why Traversal Is Needed
+# Part 2 - Why Traversal Is Needed
 
-# Lesson 3 — কেন একটা একটা Character দেখতে হয়?
+# Lesson 3 - কেন একটা একটা Character দেখতে হয়?
 
 ধরো String:
 
@@ -6111,7 +6111,7 @@ count = 2
 
 ---
 
-# Lesson 4 — Traversal Signal Words
+# Lesson 4 - Traversal Signal Words
 
 Problem Statement-এ কিছু Signal আছে।
 
@@ -6175,9 +6175,9 @@ Consider traversal
 
 ---
 
-# Part 3 — `'\0'`-Based Traversal
+# Part 3 - `'\0'`-Based Traversal
 
-# Lesson 5 — String কোথায় শেষ?
+# Lesson 5 - String কোথায় শেষ?
 
 Chapter 1 থেকে:
 
@@ -6232,7 +6232,7 @@ Current Character কি String End Marker না?
 
 ---
 
-# Lesson 6 — Basic Traversal Skeleton
+# Lesson 6 - Basic Traversal Skeleton
 
 ```c
 int i = 0;
@@ -6275,7 +6275,7 @@ Move to next character
 
 ---
 
-# Lesson 7 — Dry Run
+# Lesson 7 - Dry Run
 
 String:
 
@@ -6321,9 +6321,9 @@ G
 
 ---
 
-# Part 4 — `for` Loop Traversal
+# Part 4 - `for` Loop Traversal
 
-# Lesson 8 — Basic `for` Loop
+# Lesson 8 - Basic `for` Loop
 
 String Traversal:
 
@@ -6370,7 +6370,7 @@ Repeat
 
 ---
 
-# Lesson 9 — Complete Example
+# Lesson 9 - Complete Example
 
 ```c
 #include <stdio.h>
@@ -6400,7 +6400,7 @@ O
 
 ---
 
-# Lesson 10 — Same Line-এ Print
+# Lesson 10 - Same Line-এ Print
 
 ```c
 #include <stdio.h>
@@ -6448,9 +6448,9 @@ O
 
 ---
 
-# Part 5 — `while` Loop Traversal
+# Part 5 - `while` Loop Traversal
 
-# Lesson 11 — একই কাজ `while` দিয়ে
+# Lesson 11 - একই কাজ `while` দিয়ে
 
 ```c
 #include <stdio.h>
@@ -6494,7 +6494,7 @@ Loop Body-এর শেষে
 
 ---
 
-# Lesson 12 — `for` নাকি `while`?
+# Lesson 12 - `for` নাকি `while`?
 
 দুটোই Valid।
 
@@ -6534,9 +6534,9 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Part 6 — Current Character Thinking
+# Part 6 - Current Character Thinking
 
-# Lesson 13 — `str[i]` হলো Current Character
+# Lesson 13 - `str[i]` হলো Current Character
 
 এটা খুব গুরুত্বপূর্ণ Mental Model।
 
@@ -6590,7 +6590,7 @@ Character tells WHAT
 
 ---
 
-# Lesson 14 — Current Character Variable
+# Lesson 14 - Current Character Variable
 
 কখনো readability-এর জন্য লিখতে পারো:
 
@@ -6630,9 +6630,9 @@ if (current >= 'A' && current <= 'Z')
 
 ---
 
-# Part 7 — Index vs Character
+# Part 7 - Index vs Character
 
-# Lesson 15 — সবচেয়ে Common Confusion
+# Lesson 15 - সবচেয়ে Common Confusion
 
 ধরো:
 
@@ -6707,7 +6707,7 @@ if (i == 2)
 
 ---
 
-# Lesson 16 — প্রশ্ন করো: WHERE না WHAT?
+# Lesson 16 - প্রশ্ন করো: WHERE না WHAT?
 
 Problem-solving-এর সময় নিজেকে প্রশ্ন করবে:
 
@@ -6755,9 +6755,9 @@ Value / Character
 
 ---
 
-# Part 8 — Traversal + Condition
+# Part 8 - Traversal + Condition
 
-# Lesson 17 — Character Inspect করা
+# Lesson 17 - Character Inspect করা
 
 Problem:
 
@@ -6818,7 +6818,7 @@ Condition
 
 ---
 
-# Lesson 18 — Print Characters Except Target
+# Lesson 18 - Print Characters Except Target
 
 Problem:
 
@@ -6861,7 +6861,7 @@ No  → Skip
 
 ---
 
-# Lesson 19 — Multiple Conditions
+# Lesson 19 - Multiple Conditions
 
 Problem:
 
@@ -6909,9 +6909,9 @@ Chapter 4-এ Character Classification আরও বিস্তারিত হ
 
 ---
 
-# Part 9 — Traversal + Counter
+# Part 9 - Traversal + Counter
 
-# Lesson 20 — Count Target Character
+# Lesson 20 - Count Target Character
 
 Problem:
 
@@ -6984,7 +6984,7 @@ Output:
 
 ---
 
-# Lesson 21 — Dry Run
+# Lesson 21 - Dry Run
 
 String:
 
@@ -7017,7 +7017,7 @@ count = 3
 
 ---
 
-# Lesson 22 — State Dependency
+# Lesson 22 - State Dependency
 
 এখানে State:
 
@@ -7074,9 +7074,9 @@ Print count
 
 ---
 
-# Part 10 — Traversal + Flag
+# Part 10 - Traversal + Flag
 
-# Lesson 23 — Character Exists কি না?
+# Lesson 23 - Character Exists কি না?
 
 Problem:
 
@@ -7147,7 +7147,7 @@ int main()
 
 ---
 
-# Lesson 24 — Why Flag?
+# Lesson 24 - Why Flag?
 
 আমরা Traversal-এর পরে Result জানতে চাই।
 
@@ -7185,9 +7185,9 @@ Found?
 
 ---
 
-# Part 11 — Early Termination
+# Part 11 - Early Termination
 
-# Lesson 25 — `break` কেন?
+# Lesson 25 - `break` কেন?
 
 Problem:
 
@@ -7233,7 +7233,7 @@ break may be useful
 
 ---
 
-# Lesson 26 — কোথায় `break` দেওয়া যাবে না?
+# Lesson 26 - কোথায় `break` দেওয়া যাবে না?
 
 Problem:
 
@@ -7293,7 +7293,7 @@ Must continue traversal
 
 ---
 
-# Lesson 27 — Goal Determines Traversal Length
+# Lesson 27 - Goal Determines Traversal Length
 
 এটা খুব গুরুত্বপূর্ণ CP Principle।
 
@@ -7335,9 +7335,9 @@ How far must I traverse?
 
 ---
 
-# Part 12 — Position Tracking
+# Part 12 - Position Tracking
 
-# Lesson 28 — Character না, Index দরকার
+# Lesson 28 - Character না, Index দরকার
 
 Problem:
 
@@ -7436,7 +7436,7 @@ Early Stop
 
 ---
 
-# Lesson 29 — Last Occurrence
+# Lesson 29 - Last Occurrence
 
 Problem:
 
@@ -7543,9 +7543,9 @@ Overwrite on later match
 
 ---
 
-# Part 13 — Multiple State
+# Part 13 - Multiple State
 
-# Lesson 30 — এক Traversal-এ একাধিক Information
+# Lesson 30 - এক Traversal-এ একাধিক Information
 
 Problem:
 
@@ -7593,7 +7593,7 @@ Update Relevant States
 
 ---
 
-# Lesson 31 — Why not Two Traversals?
+# Lesson 31 - Why not Two Traversals?
 
 তুমি চাইলে করতে পারো:
 
@@ -7626,7 +7626,7 @@ Update
 
 ---
 
-# Lesson 32 — `if` vs `else if`
+# Lesson 32 - `if` vs `else if`
 
 ধরো:
 
@@ -7677,9 +7677,9 @@ Chapter 4-এ Character Classification-এর সময় এটা গুরু�
 
 ---
 
-# Part 14 — Forward & Backward Thinking
+# Part 14 - Forward & Backward Thinking
 
-# Lesson 33 — Forward Traversal
+# Lesson 33 - Forward Traversal
 
 আমাদের এখন পর্যন্ত Traversal:
 
@@ -7709,7 +7709,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Lesson 34 — Backward Traversal-এর Idea
+# Lesson 34 - Backward Traversal-এর Idea
 
 ধরো String:
 
@@ -7772,7 +7772,7 @@ Reverse এবং Two Pointer Chapter 8-এ বিস্তারিত হব�
 
 ---
 
-# Lesson 35 — Direction Is Part of Pattern
+# Lesson 35 - Direction Is Part of Pattern
 
 Problem দেখে প্রশ্ন করবে:
 
@@ -7809,11 +7809,11 @@ Palindrome
 
 ---
 
-# Part 15 — `strlen()` and Traversal
+# Part 15 - `strlen()` and Traversal
 
-# Lesson 36 — Two Common Traversal Styles
+# Lesson 36 - Two Common Traversal Styles
 
-### Style A — Null Terminator
+### Style A - Null Terminator
 
 ```c
 for (int i = 0; str[i] != '\0'; i++)
@@ -7822,7 +7822,7 @@ for (int i = 0; str[i] != '\0'; i++)
 }
 ```
 
-### Style B — Known Length
+### Style B - Known Length
 
 ```c
 int len = strlen(str);
@@ -7837,7 +7837,7 @@ for (int i = 0; i < len; i++)
 
 ---
 
-# Lesson 37 — Bootcamp-এ এখন কোনটা prefer করব?
+# Lesson 37 - Bootcamp-এ এখন কোনটা prefer করব?
 
 String Mental Model শক্ত করার জন্য:
 
@@ -7875,7 +7875,7 @@ for (int i = len - 1; i >= 0; i--)
 
 ---
 
-# Lesson 38 — Loop Condition-এ Repeated `strlen()`
+# Lesson 38 - Loop Condition-এ Repeated `strlen()`
 
 Beginner হিসেবে তুমি এমন লিখতে পারো:
 
@@ -7920,9 +7920,9 @@ Reuse
 
 ---
 
-# Part 16 — Common Bugs & Edge Cases
+# Part 16 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — Wrong Stop Condition
+# 🐞 Bug 1 - Wrong Stop Condition
 
 Wrong:
 
@@ -7946,7 +7946,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# 🐞 Bug 2 — Forgetting `i++`
+# 🐞 Bug 2 - Forgetting `i++`
 
 ```c
 int i = 0;
@@ -7983,7 +7983,7 @@ i++;
 
 ---
 
-# 🐞 Bug 3 — Comparing Index with Character
+# 🐞 Bug 3 - Comparing Index with Character
 
 Wrong:
 
@@ -8015,7 +8015,7 @@ Character
 
 ---
 
-# 🐞 Bug 4 — Wrong Counter Initialization
+# 🐞 Bug 4 - Wrong Counter Initialization
 
 Wrong:
 
@@ -8047,7 +8047,7 @@ Usually starts at 0
 
 ---
 
-# 🐞 Bug 5 — `break` in Count-All Problem
+# 🐞 Bug 5 - `break` in Count-All Problem
 
 Wrong:
 
@@ -8065,7 +8065,7 @@ if (str[i] == 'a')
 
 ---
 
-# 🐞 Bug 6 — First Occurrence-এ `break` না দেওয়া
+# 🐞 Bug 6 - First Occurrence-এ `break` না দেওয়া
 
 ধরো:
 
@@ -8087,7 +8087,7 @@ break;
 
 ---
 
-# 🐞 Bug 7 — `fgets()` Newline ভুলে যাওয়া
+# 🐞 Bug 7 - `fgets()` Newline ভুলে যাওয়া
 
 Input:
 
@@ -8122,7 +8122,7 @@ str[strcspn(str, "\n")] = '\0';
 
 ---
 
-# 🐞 Bug 8 — Empty String Assumption
+# 🐞 Bug 8 - Empty String Assumption
 
 String conceptually হতে পারে:
 
@@ -8148,7 +8148,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# 🐞 Bug 9 — One Character String
+# 🐞 Bug 9 - One Character String
 
 String:
 
@@ -8167,7 +8167,7 @@ One-character String edge case test করবে।
 
 ---
 
-# 🐞 Bug 10 — All Same Characters
+# 🐞 Bug 10 - All Same Characters
 
 String:
 
@@ -8197,9 +8197,9 @@ Last occurrence:
 
 ---
 
-# Part 17 — Guided Problem Solving
+# Part 17 - Guided Problem Solving
 
-# Problem 1 — Print Every Character Separately
+# Problem 1 - Print Every Character Separately
 
 ## Problem
 
@@ -8222,7 +8222,7 @@ E
 
 ---
 
-## Step 1 — What needs to be visited?
+## Step 1 - What needs to be visited?
 
 ```text
 Every Character
@@ -8236,7 +8236,7 @@ Need Traversal
 
 ---
 
-## Step 2 — State দরকার?
+## Step 2 - State দরকার?
 
 না।
 
@@ -8249,7 +8249,7 @@ None
 
 ---
 
-## Step 3 — Action কী?
+## Step 3 - Action কী?
 
 ```text
 Print current character
@@ -8289,7 +8289,7 @@ int main()
 
 ---
 
-# Problem 2 — Count Target Character
+# Problem 2 - Count Target Character
 
 ## Problem
 
@@ -8312,7 +8312,7 @@ Output:
 
 ---
 
-## Step 1 — Need full traversal?
+## Step 1 - Need full traversal?
 
 Yes।
 
@@ -8320,7 +8320,7 @@ Yes।
 
 ---
 
-## Step 2 — State
+## Step 2 - State
 
 ```text
 count
@@ -8328,7 +8328,7 @@ count
 
 ---
 
-## Step 3 — Initialization
+## Step 3 - Initialization
 
 ```text
 count = 0
@@ -8336,7 +8336,7 @@ count = 0
 
 ---
 
-## Step 4 — Condition
+## Step 4 - Condition
 
 ```text
 str[i] == target
@@ -8344,7 +8344,7 @@ str[i] == target
 
 ---
 
-## Step 5 — Update
+## Step 5 - Update
 
 ```text
 count++
@@ -8405,7 +8405,7 @@ int main()
 
 ---
 
-# Problem 3 — Find First Position
+# Problem 3 - Find First Position
 
 ## Problem
 
@@ -8492,7 +8492,7 @@ int main()
 
 ---
 
-# Problem 4 — Find Last Position
+# Problem 4 - Find Last Position
 
 ## Problem
 
@@ -8558,9 +8558,9 @@ int main()
 
 ---
 
-# Part 18 — Exercises
+# Part 18 - Exercises
 
-# Exercise 1 — Print with Index
+# Exercise 1 - Print with Index
 
 Input:
 
@@ -8595,7 +8595,7 @@ Output Action:
 
 ---
 
-# Exercise 2 — Count `'e'`
+# Exercise 2 - Count `'e'`
 
 String:
 
@@ -8629,7 +8629,7 @@ Update:
 
 ---
 
-# Exercise 3 — Search `'z'`
+# Exercise 3 - Search `'z'`
 
 String:
 
@@ -8653,7 +8653,7 @@ Not Found
 
 ---
 
-# Exercise 4 — First `'m'`
+# Exercise 4 - First `'m'`
 
 String:
 
@@ -8687,7 +8687,7 @@ Why?
 
 ---
 
-# Exercise 5 — Last `'m'`
+# Exercise 5 - Last `'m'`
 
 String:
 
@@ -8716,7 +8716,7 @@ Main Difference:
 
 ---
 
-# Exercise 6 — Count Two Characters
+# Exercise 6 - Count Two Characters
 
 String:
 
@@ -8742,7 +8742,7 @@ b = 2
 
 ---
 
-# Exercise 7 — Print Odd Index Characters
+# Exercise 7 - Print Odd Index Characters
 
 String:
 
@@ -8785,7 +8785,7 @@ Action
 
 ---
 
-# Exercise 8 — Print Even Index Characters
+# Exercise 8 - Print Even Index Characters
 
 Input:
 
@@ -8803,7 +8803,7 @@ ACEG
 
 ---
 
-# Exercise 9 — Manual Length
+# Exercise 9 - Manual Length
 
 Library Function ছাড়া Length বের করো।
 
@@ -8829,7 +8829,7 @@ Why does the counter equal string length?
 
 ---
 
-# Exercise 10 — Compare Two Traversal Styles
+# Exercise 10 - Compare Two Traversal Styles
 
 একই String দুইভাবে Traverse করো।
 
@@ -8860,9 +8860,9 @@ Which one helps me understand C strings better?
 
 ---
 
-# Part 19 — Chapter Assignment
+# Part 19 - Chapter Assignment
 
-# 📝 Task 1 — Traversal Mental Model
+# 📝 Task 1 - Traversal Mental Model
 
 নিজের ভাষায় Explain করবে:
 
@@ -8882,7 +8882,7 @@ Which one helps me understand C strings better?
 
 ---
 
-# 📝 Task 2 — Dry Run Table
+# 📝 Task 2 - Dry Run Table
 
 String:
 
@@ -8915,7 +8915,7 @@ Dry Run Table Complete করবে:
 
 ---
 
-# 📝 Task 3 — Manual Length Program
+# 📝 Task 3 - Manual Length Program
 
 File:
 
@@ -8965,7 +8965,7 @@ Final State Meaning:
 
 ---
 
-# 📝 Task 4 — Count Target Character
+# 📝 Task 4 - Count Target Character
 
 File:
 
@@ -9008,7 +9008,7 @@ Dry Run
 
 ---
 
-# 📝 Task 5 — Character Existence
+# 📝 Task 5 - Character Existence
 
 File:
 
@@ -9051,7 +9051,7 @@ Why can traversal stop early?
 
 ---
 
-# 📝 Task 6 — First Occurrence
+# 📝 Task 6 - First Occurrence
 
 File:
 
@@ -9099,7 +9099,7 @@ Reason:
 
 ---
 
-# 📝 Task 7 — Last Occurrence
+# 📝 Task 7 - Last Occurrence
 
 File:
 
@@ -9135,7 +9135,7 @@ Why break is not used:
 
 ---
 
-# 📝 Task 8 — First vs Last Comparison
+# 📝 Task 8 - First vs Last Comparison
 
 নিজের Notes-এ Table বানাবে:
 
@@ -9156,7 +9156,7 @@ The structural difference between first and last occurrence is:
 
 ---
 
-# 📝 Task 9 — One Traversal, Multiple States
+# 📝 Task 9 - One Traversal, Multiple States
 
 File:
 
@@ -9211,7 +9211,7 @@ Update Rules:
 
 ---
 
-# 📝 Task 10 — Index-Based Selection
+# 📝 Task 10 - Index-Based Selection
 
 File:
 
@@ -9249,7 +9249,7 @@ Direct Action
 
 ---
 
-# 📝 Task 11 — Build Your Own Test Cases
+# 📝 Task 11 - Build Your Own Test Cases
 
 এই Problem-এর জন্য Test Case বানাও:
 
@@ -9295,7 +9295,7 @@ Why this test matters:
 
 ---
 
-# 📝 Task 12 — Pattern Recognition Drill
+# 📝 Task 12 - Pattern Recognition Drill
 
 নিচের Problem-গুলোর Pattern Combination লিখবে।
 
@@ -9377,12 +9377,12 @@ Pattern:
 
 ---
 
-# 📝 Task 13 — Chapter Reflection
+# 📝 Task 13 - Chapter Reflection
 
 Copy-paste Template:
 
 ````markdown
-# 🧠 Day 3 — Chapter 3 Reflection
+# 🧠 Day 3 - Chapter 3 Reflection
 
 ## 1. What Is String Traversal?
 
@@ -9700,7 +9700,7 @@ Stop at '\0'
 
 ---
 
-## Pattern Combination 1 — Direct Action
+## Pattern Combination 1 - Direct Action
 
 ```text
 Traversal
@@ -9714,7 +9714,7 @@ Example:
 
 ---
 
-## Pattern Combination 2 — Counting
+## Pattern Combination 2 - Counting
 
 ```text
 Traversal
@@ -9730,7 +9730,7 @@ Example:
 
 ---
 
-## Pattern Combination 3 — Existence Search
+## Pattern Combination 3 - Existence Search
 
 ```text
 Traversal
@@ -9748,7 +9748,7 @@ Example:
 
 ---
 
-## Pattern Combination 4 — First Occurrence
+## Pattern Combination 4 - First Occurrence
 
 ```text
 Traversal
@@ -9762,7 +9762,7 @@ Break
 
 ---
 
-## Pattern Combination 5 — Last Occurrence
+## Pattern Combination 5 - Last Occurrence
 
 ```text
 Traversal
@@ -9960,29 +9960,29 @@ Data বদলেছে।
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ⏳ Chapter 4 — Character Classification
+├── ⏳ Chapter 4 - Character Classification
 │
-├── ⏳ Chapter 5 — Counting Patterns on Strings
+├── ⏳ Chapter 5 - Counting Patterns on Strings
 │
-├── ⏳ Chapter 6 — Character Search & Frequency
+├── ⏳ Chapter 6 - Character Search & Frequency
 │
-├── ⏳ Chapter 7 — String Transformation
+├── ⏳ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 3 Complete.**
+**Day 3 - Chapter 3 Complete.**
 
 Chapter 4-এ এই Traversal Engine-এর উপর **Character Classification** বসবে:
 
@@ -10003,13 +10003,13 @@ What type is it?
 
 ---
 
-# 📘 Day 3 — Chapter 4
+# 📘 Day 3 - Chapter 4
 
 # 🔤 Character Classification
 
 ## Current Character-কে চিনতে শেখা
 
-Day 3 — Chapter 3-এ তুমি শিখেছ:
+Day 3 - Chapter 3-এ তুমি শিখেছ:
 
 ```text
 String
@@ -10137,25 +10137,25 @@ Action / State Update
 ```text
 Chapter 4
 │
-├── Part 1  — Classification Mental Model
-├── Part 2  — Character Range Thinking
-├── Part 3  — Uppercase Classification
-├── Part 4  — Lowercase Classification
-├── Part 5  — Alphabet Classification
-├── Part 6  — Digit Classification
-├── Part 7  — Vowel Classification
-├── Part 8  — Consonant Classification
-├── Part 9  — Space & Other Characters
-├── Part 10 — Classification Decision Tree
-├── Part 11 — if vs else-if
-├── Part 12 — Traversal + Classification
-├── Part 13 — Multiple Category Tracking
-├── Part 14 — ctype.h Introduction
-├── Part 15 — Manual vs Library Method
-├── Part 16 — Common Bugs & Edge Cases
-├── Part 17 — Guided Problem Solving
-├── Part 18 — Exercises
-└── Part 19 — Assignment & Reflection
+├── Part 1  - Classification Mental Model
+├── Part 2  - Character Range Thinking
+├── Part 3  - Uppercase Classification
+├── Part 4  - Lowercase Classification
+├── Part 5  - Alphabet Classification
+├── Part 6  - Digit Classification
+├── Part 7  - Vowel Classification
+├── Part 8  - Consonant Classification
+├── Part 9  - Space & Other Characters
+├── Part 10 - Classification Decision Tree
+├── Part 11 - if vs else-if
+├── Part 12 - Traversal + Classification
+├── Part 13 - Multiple Category Tracking
+├── Part 14 - ctype.h Introduction
+├── Part 15 - Manual vs Library Method
+├── Part 16 - Common Bugs & Edge Cases
+├── Part 17 - Guided Problem Solving
+├── Part 18 - Exercises
+└── Part 19 - Assignment & Reflection
 ```
 
 ---
@@ -10254,9 +10254,9 @@ Update Relevant State
 
 ---
 
-# Part 1 — Classification Mental Model
+# Part 1 - Classification Mental Model
 
-# Lesson 1 — Classification মানে কী?
+# Lesson 1 - Classification মানে কী?
 
 Classification মানে:
 
@@ -10316,7 +10316,7 @@ Determine Category
 
 ---
 
-# Lesson 2 — একটি Character-এর একাধিক Property থাকতে পারে
+# Lesson 2 - একটি Character-এর একাধিক Property থাকতে পারে
 
 ধরো:
 
@@ -10395,7 +10395,7 @@ Digit Classification
 
 ---
 
-# Lesson 3 — Classification নিজে Final Goal না
+# Lesson 3 - Classification নিজে Final Goal না
 
 Chapter 3-এর মতো এখানেও:
 
@@ -10463,9 +10463,9 @@ Solution
 
 ---
 
-# Part 2 — Character Range Thinking
+# Part 2 - Character Range Thinking
 
-# Lesson 4 — Character Compare করা যায়
+# Lesson 4 - Character Compare করা যায়
 
 C-তে Character লিখি:
 
@@ -10516,7 +10516,7 @@ Is ch inside the range:
 
 ---
 
-# Lesson 5 — Range Mental Model
+# Lesson 5 - Range Mental Model
 
 Uppercase English Letters:
 
@@ -10583,7 +10583,7 @@ ch >= 'A' && ch <= 'Z'
 
 ---
 
-# Lesson 6 — কেন `&&`?
+# Lesson 6 - কেন `&&`?
 
 Uppercase হওয়ার জন্য দুটি Condition-ই True হতে হবে:
 
@@ -10615,7 +10615,7 @@ Inside A-Z range
 
 ---
 
-# Lesson 7 — Wrong Range Logic
+# Lesson 7 - Wrong Range Logic
 
 Wrong:
 
@@ -10643,9 +10643,9 @@ Lower Boundary AND Upper Boundary
 
 ---
 
-# Part 3 — Uppercase Classification
+# Part 3 - Uppercase Classification
 
-# Lesson 8 — Uppercase Character Check
+# Lesson 8 - Uppercase Character Check
 
 Problem:
 
@@ -10689,7 +10689,7 @@ Uppercase
 
 ---
 
-# Lesson 9 — Dry Run
+# Lesson 9 - Dry Run
 
 Input:
 
@@ -10731,7 +10731,7 @@ Uppercase
 
 ---
 
-# Lesson 10 — String-এর Uppercase Character Print
+# Lesson 10 - String-এর Uppercase Character Print
 
 Input:
 
@@ -10782,9 +10782,9 @@ int main()
 
 ---
 
-# Part 4 — Lowercase Classification
+# Part 4 - Lowercase Classification
 
-# Lesson 11 — Lowercase Character Check
+# Lesson 11 - Lowercase Character Check
 
 Condition:
 
@@ -10817,7 +10817,7 @@ z
 
 ---
 
-# Lesson 12 — Count Lowercase Letters
+# Lesson 12 - Count Lowercase Letters
 
 Input:
 
@@ -10877,7 +10877,7 @@ int main()
 
 ---
 
-# Lesson 13 — Dry Run
+# Lesson 13 - Dry Run
 
 String:
 
@@ -10907,9 +10907,9 @@ count = 2
 
 ---
 
-# Part 5 — Alphabet Classification
+# Part 5 - Alphabet Classification
 
-# Lesson 14 — Alphabet মানে Uppercase OR Lowercase
+# Lesson 14 - Alphabet মানে Uppercase OR Lowercase
 
 একটি Character Alphabet যদি:
 
@@ -10946,7 +10946,7 @@ Uppercase Range?
 
 ---
 
-# Lesson 15 — Parentheses কেন গুরুত্বপূর্ণ?
+# Lesson 15 - Parentheses কেন গুরুত্বপূর্ণ?
 
 Condition:
 
@@ -10999,7 +10999,7 @@ if ((ch >= 'A' && ch <= 'Z') ||
 
 ---
 
-# Lesson 16 — Alphabet Count
+# Lesson 16 - Alphabet Count
 
 Input:
 
@@ -11042,9 +11042,9 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Part 6 — Digit Classification
+# Part 6 - Digit Classification
 
-# Lesson 17 — Character Digit vs Integer Digit
+# Lesson 17 - Character Digit vs Integer Digit
 
 এখানে খুব গুরুত্বপূর্ণ Difference আছে।
 
@@ -11099,7 +11099,7 @@ str[i] >= '0' && str[i] <= '9'
 
 ---
 
-# Lesson 18 — Digit Check
+# Lesson 18 - Digit Check
 
 ```c
 if (ch >= '0' && ch <= '9')
@@ -11124,7 +11124,7 @@ Range:
 
 ---
 
-# Lesson 19 — Count Digits
+# Lesson 19 - Count Digits
 
 Input:
 
@@ -11186,7 +11186,7 @@ int main()
 
 ---
 
-# Lesson 20 — Digit Character থেকে Numeric Value
+# Lesson 20 - Digit Character থেকে Numeric Value
 
 এটা Classification-এর বাইরে সামান্য extra knowledge, কিন্তু খুব useful।
 
@@ -11242,9 +11242,9 @@ Output:
 
 ---
 
-# Part 7 — Vowel Classification
+# Part 7 - Vowel Classification
 
-# Lesson 21 — Vowel Range না
+# Lesson 21 - Vowel Range না
 
 Uppercase:
 
@@ -11282,7 +11282,7 @@ ch >= 'a' && ch <= 'u'
 
 ---
 
-# Lesson 22 — Lowercase Vowel Condition
+# Lesson 22 - Lowercase Vowel Condition
 
 ```c
 if (ch == 'a' ||
@@ -11317,7 +11317,7 @@ Vowel
 
 ---
 
-# Lesson 23 — Uppercase + Lowercase Vowel
+# Lesson 23 - Uppercase + Lowercase Vowel
 
 Condition:
 
@@ -11347,7 +11347,7 @@ Vowel
 
 ---
 
-# Lesson 24 — Count Vowels
+# Lesson 24 - Count Vowels
 
 Input:
 
@@ -11425,9 +11425,9 @@ int main()
 
 ---
 
-# Part 8 — Consonant Classification
+# Part 8 - Consonant Classification
 
-# Lesson 25 — `Not Vowel` মানেই Consonant না
+# Lesson 25 - `Not Vowel` মানেই Consonant না
 
 এটা খুব গুরুত্বপূর্ণ।
 
@@ -11481,7 +11481,7 @@ Not Vowel
 
 ---
 
-# Lesson 26 — Consonant Decision Pipeline
+# Lesson 26 - Consonant Decision Pipeline
 
 ```text
 Current Character
@@ -11503,7 +11503,7 @@ Is Alphabet?
 
 ---
 
-# Lesson 27 — Code Structure
+# Lesson 27 - Code Structure
 
 ```c
 int isAlphabet =
@@ -11552,7 +11552,7 @@ Consonant
 
 ---
 
-# Lesson 28 — Boolean-like State in C
+# Lesson 28 - Boolean-like State in C
 
 C-তে basic level-এ আমরা:
 
@@ -11595,9 +11595,9 @@ result হবে logically:
 
 ---
 
-# Part 9 — Space & Other Characters
+# Part 9 - Space & Other Characters
 
-# Lesson 29 — Space Detect
+# Lesson 29 - Space Detect
 
 Single Space Character:
 
@@ -11624,7 +11624,7 @@ if (ch == ' ')
 
 ---
 
-# Lesson 30 — Full Line দরকার হতে পারে
+# Lesson 30 - Full Line দরকার হতে পারে
 
 যদি String-এর মধ্যে Space count করতে চাও:
 
@@ -11679,7 +11679,7 @@ int main()
 
 ---
 
-# Lesson 31 — Other Character Category
+# Lesson 31 - Other Character Category
 
 ধরো Input:
 
@@ -11744,9 +11744,9 @@ Alphabet?
 
 ---
 
-# Part 10 — Classification Decision Tree
+# Part 10 - Classification Decision Tree
 
-# Lesson 32 — Problem Solve করার আগে Category Tree বানাও
+# Lesson 32 - Problem Solve করার আগে Category Tree বানাও
 
 Problem:
 
@@ -11800,7 +11800,7 @@ else if (digit_condition)
 
 ---
 
-# Lesson 33 — Classification Pipeline
+# Lesson 33 - Classification Pipeline
 
 Problem দেখলে:
 
@@ -11855,9 +11855,9 @@ Relevant Counter++
 
 ---
 
-# Part 11 — `if` vs `else if`
+# Part 11 - `if` vs `else if`
 
-# Lesson 34 — Independent Conditions
+# Lesson 34 - Independent Conditions
 
 ধরো Problem:
 
@@ -11891,7 +11891,7 @@ if (isVowel)
 
 ---
 
-# Lesson 35 — Mutually Exclusive Categories
+# Lesson 35 - Mutually Exclusive Categories
 
 Problem:
 
@@ -11934,7 +11934,7 @@ natural structure।
 
 ---
 
-# Lesson 36 — সবচেয়ে গুরুত্বপূর্ণ প্রশ্ন
+# Lesson 36 - সবচেয়ে গুরুত্বপূর্ণ প্রশ্ন
 
 `if` না `else if`?
 
@@ -11978,9 +11978,9 @@ Exclusive Classification
 
 ---
 
-# Part 12 — Traversal + Classification
+# Part 12 - Traversal + Classification
 
-# Lesson 37 — Core Pattern
+# Lesson 37 - Core Pattern
 
 এই Chapter-এর Main Pattern:
 
@@ -12012,7 +12012,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Lesson 38 — Uppercase Count Pattern
+# Lesson 38 - Uppercase Count Pattern
 
 ```text
 Need uppercase count
@@ -12042,7 +12042,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Lesson 39 — Digit Exists Pattern
+# Lesson 39 - Digit Exists Pattern
 
 Problem:
 
@@ -12101,7 +12101,7 @@ break
 
 ---
 
-# Lesson 40 — Print Vowels Pattern
+# Lesson 40 - Print Vowels Pattern
 
 ```text
 Traversal
@@ -12129,9 +12129,9 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Part 13 — Multiple Category Tracking
+# Part 13 - Multiple Category Tracking
 
-# Lesson 41 — Count Uppercase, Lowercase and Digit
+# Lesson 41 - Count Uppercase, Lowercase and Digit
 
 Input:
 
@@ -12198,7 +12198,7 @@ int main()
 
 ---
 
-# Lesson 42 — Dry Run
+# Lesson 42 - Dry Run
 
 Input:
 
@@ -12231,7 +12231,7 @@ Digit = 1
 
 ---
 
-# Lesson 43 — One Traversal, Multiple States
+# Lesson 43 - One Traversal, Multiple States
 
 এই Pattern আগের Chapter থেকে পরিচিত:
 
@@ -12269,9 +12269,9 @@ Update corresponding counter
 
 ---
 
-# Part 14 — `<ctype.h>` Introduction
+# Part 14 - `<ctype.h>` Introduction
 
-# Lesson 44 — C Standard Library Classification Functions
+# Lesson 44 - C Standard Library Classification Functions
 
 C-তে Character Classification-এর জন্য:
 
@@ -12302,7 +12302,7 @@ if (isupper(ch))
 
 ---
 
-# Lesson 45 — Common Functions Map
+# Lesson 45 - Common Functions Map
 
 | Function      | Basic Purpose           |
 | ------------- | ----------------------- |
@@ -12335,7 +12335,7 @@ int main()
 
 ---
 
-# Lesson 46 — এখনই Library Function-এ Depend করব?
+# Lesson 46 - এখনই Library Function-এ Depend করব?
 
 Bootcamp-এর এই Stage-এ দুটোই শিখবে।
 
@@ -12384,7 +12384,7 @@ Use Problem-appropriate method
 
 ---
 
-# Lesson 47 — `isspace()` শুধু `' '` না
+# Lesson 47 - `isspace()` শুধু `' '` না
 
 এই Difference জানা useful।
 
@@ -12426,9 +12426,9 @@ Whitespace Classification
 
 ---
 
-# Part 15 — Manual vs Library Method
+# Part 15 - Manual vs Library Method
 
-# Lesson 48 — Uppercase Example
+# Lesson 48 - Uppercase Example
 
 Manual:
 
@@ -12450,7 +12450,7 @@ if (isupper((unsigned char)ch))
 
 ---
 
-# Lesson 49 — Digit Example
+# Lesson 49 - Digit Example
 
 Manual:
 
@@ -12472,7 +12472,7 @@ if (isdigit((unsigned char)ch))
 
 ---
 
-# Lesson 50 — কোনটা ব্যবহার করবে?
+# Lesson 50 - কোনটা ব্যবহার করবে?
 
 এই Bootcamp-এর current learning problems-এ:
 
@@ -12498,9 +12498,9 @@ Blind memorization না।
 
 ---
 
-# Part 16 — Common Bugs & Edge Cases
+# Part 16 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — Wrong Range Operator
+# 🐞 Bug 1 - Wrong Range Operator
 
 Wrong:
 
@@ -12524,7 +12524,7 @@ Both boundaries must hold
 
 ---
 
-# 🐞 Bug 2 — Mathematical Chained Comparison
+# 🐞 Bug 2 - Mathematical Chained Comparison
 
 Wrong C:
 
@@ -12542,7 +12542,7 @@ if (ch >= 'A' && ch <= 'Z')
 
 ---
 
-# 🐞 Bug 3 — Character vs Integer
+# 🐞 Bug 3 - Character vs Integer
 
 Wrong:
 
@@ -12574,7 +12574,7 @@ Integer
 
 ---
 
-# 🐞 Bug 4 — `Not Vowel = Consonant`
+# 🐞 Bug 4 - `Not Vowel = Consonant`
 
 Wrong:
 
@@ -12609,7 +12609,7 @@ Consonant
 
 ---
 
-# 🐞 Bug 5 — Lowercase Vowel Only
+# 🐞 Bug 5 - Lowercase Vowel Only
 
 Condition:
 
@@ -12633,7 +12633,7 @@ A E I O U
 
 ---
 
-# 🐞 Bug 6 — `%s` দিয়ে Space Count
+# 🐞 Bug 6 - `%s` দিয়ে Space Count
 
 Input:
 
@@ -12663,7 +12663,7 @@ fgets(str, sizeof(str), stdin);
 
 ---
 
-# 🐞 Bug 7 — `if` / `else if` Wrong Structure
+# 🐞 Bug 7 - `if` / `else if` Wrong Structure
 
 Problem:
 
@@ -12704,7 +12704,7 @@ if (isVowel)
 
 ---
 
-# 🐞 Bug 8 — Forgetting Input Constraint
+# 🐞 Bug 8 - Forgetting Input Constraint
 
 Problem বলেছে:
 
@@ -12734,7 +12734,7 @@ Build Necessary Classification Logic
 
 ---
 
-# 🐞 Bug 9 — Newline as Character
+# 🐞 Bug 9 - Newline as Character
 
 `fgets()` input:
 
@@ -12774,9 +12774,9 @@ str[strcspn(str, "\n")] = '\0';
 
 ---
 
-# Part 17 — Guided Problem Solving
+# Part 17 - Guided Problem Solving
 
-# Problem 1 — Count Uppercase Letters
+# Problem 1 - Count Uppercase Letters
 
 ## Problem
 
@@ -12796,7 +12796,7 @@ Output:
 
 ---
 
-## Step 1 — Need Traversal?
+## Step 1 - Need Traversal?
 
 ```text
 Need to inspect every character
@@ -12806,7 +12806,7 @@ Yes
 
 ---
 
-## Step 2 — Need Classification?
+## Step 2 - Need Classification?
 
 ```text
 Need to know uppercase or not
@@ -12816,7 +12816,7 @@ Yes
 
 ---
 
-## Step 3 — Need State?
+## Step 3 - Need State?
 
 ```text
 Need total number
@@ -12891,7 +12891,7 @@ int main()
 
 ---
 
-# Problem 2 — Check Digit Exists
+# Problem 2 - Check Digit Exists
 
 ## Problem
 
@@ -12996,7 +12996,7 @@ int main()
 
 ---
 
-# Problem 3 — Count Vowels and Consonants
+# Problem 3 - Count Vowels and Consonants
 
 ## Problem
 
@@ -13080,7 +13080,7 @@ int main()
 
 ---
 
-# Problem 4 — Mixed Character Classification
+# Problem 4 - Mixed Character Classification
 
 ## Problem
 
@@ -13169,9 +13169,9 @@ int main()
 
 ---
 
-# Part 18 — Exercises
+# Part 18 - Exercises
 
-# Exercise 1 — Classify One Character
+# Exercise 1 - Classify One Character
 
 Input:
 
@@ -13209,7 +13209,7 @@ Conditions:
 
 ---
 
-# Exercise 2 — Count Uppercase
+# Exercise 2 - Count Uppercase
 
 Input:
 
@@ -13242,7 +13242,7 @@ Code লিখবে।
 
 ---
 
-# Exercise 3 — Count Lowercase
+# Exercise 3 - Count Lowercase
 
 Input:
 
@@ -13270,7 +13270,7 @@ Condition:
 
 ---
 
-# Exercise 4 — Count Digits
+# Exercise 4 - Count Digits
 
 Input:
 
@@ -13298,7 +13298,7 @@ Pattern লিখবে:
 
 ---
 
-# Exercise 5 — Check Alphabet
+# Exercise 5 - Check Alphabet
 
 একটি Character Input নাও।
 
@@ -13324,7 +13324,7 @@ Lowercase Range
 
 ---
 
-# Exercise 6 — Print Only Digits
+# Exercise 6 - Print Only Digits
 
 Input:
 
@@ -13352,7 +13352,7 @@ Traversal
 
 ---
 
-# Exercise 7 — Print Only Letters
+# Exercise 7 - Print Only Letters
 
 Input:
 
@@ -13370,7 +13370,7 @@ CSELAB
 
 ---
 
-# Exercise 8 — Count Vowels
+# Exercise 8 - Count Vowels
 
 Input:
 
@@ -13404,7 +13404,7 @@ Update:
 
 ---
 
-# Exercise 9 — Digit Exists
+# Exercise 9 - Digit Exists
 
 Input:
 
@@ -13437,7 +13437,7 @@ Why break is valid:
 
 ---
 
-# Exercise 10 — Count Categories
+# Exercise 10 - Count Categories
 
 Input:
 
@@ -13473,7 +13473,7 @@ Other
 
 ---
 
-# Exercise 11 — Count Spaces
+# Exercise 11 - Count Spaces
 
 Input:
 
@@ -13502,7 +13502,7 @@ Classification condition:
 
 ---
 
-# Exercise 12 — Alphabet and Vowel Together
+# Exercise 12 - Alphabet and Vowel Together
 
 Input:
 
@@ -13525,9 +13525,9 @@ Important Question:
 
 ---
 
-# Part 19 — Chapter Assignment
+# Part 19 - Chapter Assignment
 
-# 📝 Task 1 — Classification Dictionary
+# 📝 Task 1 - Classification Dictionary
 
 নিজের ভাষায় নিচের Terms explain করবে:
 
@@ -13562,7 +13562,7 @@ Example:
 
 ---
 
-# 📝 Task 2 — Range Table
+# 📝 Task 2 - Range Table
 
 নিজে Table Complete করবে:
 
@@ -13581,7 +13581,7 @@ Why && is used for range checking:
 
 ---
 
-# 📝 Task 3 — Single Character Classifier
+# 📝 Task 3 - Single Character Classifier
 
 File:
 
@@ -13638,7 +13638,7 @@ Space test করতে input method নিয়ে নিজে চিন্ত�
 
 ---
 
-# 📝 Task 4 — Count Uppercase, Lowercase and Digits
+# 📝 Task 4 - Count Uppercase, Lowercase and Digits
 
 File:
 
@@ -13681,7 +13681,7 @@ Why one traversal is enough:
 
 ---
 
-# 📝 Task 5 — Count Vowels
+# 📝 Task 5 - Count Vowels
 
 File:
 
@@ -13725,7 +13725,7 @@ Update:
 
 ---
 
-# 📝 Task 6 — Count Vowels and Consonants Safely
+# 📝 Task 6 - Count Vowels and Consonants Safely
 
 File:
 
@@ -13782,7 +13782,7 @@ Consonants: 2
 
 ---
 
-# 📝 Task 7 — Find First Digit
+# 📝 Task 7 - Find First Digit
 
 File:
 
@@ -13836,7 +13836,7 @@ Early Termination
 
 ---
 
-# 📝 Task 8 — Check Uppercase Exists
+# 📝 Task 8 - Check Uppercase Exists
 
 File:
 
@@ -13877,7 +13877,7 @@ Why full traversal may be unnecessary:
 
 ---
 
-# 📝 Task 9 — Extract Digits
+# 📝 Task 9 - Extract Digits
 
 File:
 
@@ -13919,7 +13919,7 @@ Action:
 
 ---
 
-# 📝 Task 10 — Full Line Classification
+# 📝 Task 10 - Full Line Classification
 
 File:
 
@@ -13972,7 +13972,7 @@ Classification Categories:
 
 ---
 
-# 📝 Task 11 — `if` vs `else if` Analysis
+# 📝 Task 11 - `if` vs `else if` Analysis
 
 নিচের দুই Problem compare করো।
 
@@ -14014,7 +14014,7 @@ Reason:
 
 ---
 
-# 📝 Task 12 — Manual vs Library Version
+# 📝 Task 12 - Manual vs Library Version
 
 একই Problem দুইভাবে solve করবে:
 
@@ -14054,7 +14054,7 @@ What did library version teach me:
 
 ---
 
-# 📝 Task 13 — Build Test Cases
+# 📝 Task 13 - Build Test Cases
 
 Problem:
 
@@ -14095,11 +14095,11 @@ Why this test matters:
 
 ---
 
-# 📝 Task 14 — Pattern Recognition Drill
+# 📝 Task 14 - Pattern Recognition Drill
 
 নিচের Problem-গুলোর Pattern Combination লিখবে।
 
-### A — Count Uppercase
+### A - Count Uppercase
 
 ```text
 ...
@@ -14111,7 +14111,7 @@ Why this test matters:
 
 ---
 
-### B — Print Digits
+### B - Print Digits
 
 ```text
 ...
@@ -14123,21 +14123,7 @@ Why this test matters:
 
 ---
 
-### C — Check Digit Exists
-
-```text
-...
-+
-...
-+
-...
-+
-...
-```
-
----
-
-### D — Find First Uppercase Position
+### C - Check Digit Exists
 
 ```text
 ...
@@ -14151,19 +14137,7 @@ Why this test matters:
 
 ---
 
-### E — Count Uppercase, Lowercase and Digit
-
-```text
-...
-+
-...
-+
-...
-```
-
----
-
-### F — Count Consonants from Mixed Input
+### D - Find First Uppercase Position
 
 ```text
 ...
@@ -14177,12 +14151,38 @@ Why this test matters:
 
 ---
 
-# 📝 Task 15 — Chapter Reflection
+### E - Count Uppercase, Lowercase and Digit
+
+```text
+...
++
+...
++
+...
+```
+
+---
+
+### F - Count Consonants from Mixed Input
+
+```text
+...
++
+...
++
+...
++
+...
+```
+
+---
+
+# 📝 Task 15 - Chapter Reflection
 
 Copy-paste Template:
 
 ````markdown
-# 🧠 Day 3 — Chapter 4 Reflection
+# 🧠 Day 3 - Chapter 4 Reflection
 
 ## 1. What Is Character Classification?
 
@@ -14402,7 +14402,7 @@ Alphabet Count এবং Vowel Count একই সঙ্গে করতে চ�
 
 ## Question 11
 
-Uppercase, Lowercase, Digit, Other—exactly one Category select করতে কোন Structure natural?
+Uppercase, Lowercase, Digit, Other-exactly one Category select করতে কোন Structure natural?
 
 ---
 
@@ -14584,7 +14584,7 @@ Consonant
 
 ---
 
-## Pattern Combination 1 — Classification Count
+## Pattern Combination 1 - Classification Count
 
 ```text
 Traversal
@@ -14602,7 +14602,7 @@ Example:
 
 ---
 
-## Pattern Combination 2 — Classification Filter
+## Pattern Combination 2 - Classification Filter
 
 ```text
 Traversal
@@ -14619,7 +14619,7 @@ Example:
 
 ---
 
-## Pattern Combination 3 — Classification Existence
+## Pattern Combination 3 - Classification Existence
 
 ```text
 Traversal
@@ -14637,7 +14637,7 @@ Example:
 
 ---
 
-## Pattern Combination 4 — First Classified Position
+## Pattern Combination 4 - First Classified Position
 
 ```text
 Traversal
@@ -14879,29 +14879,29 @@ Letters + digits + symbols
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ⏳ Chapter 5 — Counting Patterns on Strings
+├── ⏳ Chapter 5 - Counting Patterns on Strings
 │
-├── ⏳ Chapter 6 — Character Search & Frequency
+├── ⏳ Chapter 6 - Character Search & Frequency
 │
-├── ⏳ Chapter 7 — String Transformation
+├── ⏳ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 4 Complete.**
+**Day 3 - Chapter 4 Complete.**
 
 Chapter 5-এ এখন এই পর্যন্ত শেখা তিনটি বড় জিনিস একসঙ্গে ব্যবহার হবে:
 
@@ -14929,13 +14929,13 @@ Update Count
 Final Frequency / Count
 ```
 
-সেখান থেকে শুরু হবে **Day 3 — Chapter 5: Counting Patterns on Strings**।
+সেখান থেকে শুরু হবে **Day 3 - Chapter 5: Counting Patterns on Strings**।
 
 ---
 
-# 🚀 CP Bootcamp 2026 — Day 3
+# 🚀 CP Bootcamp 2026 - Day 3
 
-# Chapter 5 — Counting Patterns on Strings
+# Chapter 5 - Counting Patterns on Strings
 
 > **Day 3 Theme:** String Traversal → Character Classification → Counting → Search → Transformation  
 > **Chapter Goal:** String traverse করার সময় বিভিন্ন ধরনের character count করা এবং **Traversal + Classification + Counter** pattern combine করতে শেখা।  
@@ -15969,7 +15969,7 @@ Compare
 
 ---
 
-# 17. Word Count — Basic Version
+# 17. Word Count - Basic Version
 
 Input:
 
@@ -16580,7 +16580,7 @@ Counter
 
 ---
 
-# 26. Common Bug — Counting `'\n'`
+# 26. Common Bug - Counting `'\n'`
 
 Input:
 
@@ -16629,7 +16629,7 @@ str[strcspn(str, "\n")] = '\0';
 
 ---
 
-# 27. Common Bug — Consonant Logic
+# 27. Common Bug - Consonant Logic
 
 Wrong:
 
@@ -16681,7 +16681,7 @@ Is Alphabet?
 
 ---
 
-# 28. Common Bug — Uppercase Vowel Miss করা
+# 28. Common Bug - Uppercase Vowel Miss করা
 
 Condition:
 
@@ -16734,7 +16734,7 @@ if (lower == 'a' ||
 
 ---
 
-# 29. Common Bug — Word Count = Spaces + 1
+# 29. Common Bug - Word Count = Spaces + 1
 
 Input:
 
@@ -16988,7 +16988,7 @@ Outside   Already Inside?
 
 # 🧪 Chapter 5 Practice
 
-## Task 1 — Count Vowels
+## Task 1 - Count Vowels
 
 Input:
 
@@ -17004,7 +17004,7 @@ Vowel Count = ?
 
 ---
 
-## Task 2 — Count Digits
+## Task 2 - Count Digits
 
 Input:
 
@@ -17020,7 +17020,7 @@ Digit Count = ?
 
 ---
 
-## Task 3 — Count Character Types
+## Task 3 - Count Character Types
 
 Input:
 
@@ -17044,7 +17044,7 @@ Special Characters = ?
 
 ---
 
-## Task 4 — Count Specific Character
+## Task 4 - Count Specific Character
 
 Input:
 
@@ -17066,7 +17066,7 @@ Output:
 
 ---
 
-## Task 5 — Count Words
+## Task 5 - Count Words
 
 Input:
 
@@ -17100,7 +17100,7 @@ Counter
 
 ---
 
-## Task 6 — Vowel and Consonant Count
+## Task 6 - Vowel and Consonant Count
 
 Input:
 
@@ -17223,7 +17223,7 @@ What about digits, spaces and punctuation?
 
 # 📝 Chapter 5 Assignment
 
-## Part A — Explain
+## Part A - Explain
 
 নিজের ভাষায় লিখবে:
 
@@ -17251,7 +17251,7 @@ What about digits, spaces and punctuation?
 
 ---
 
-## Part B — Mandatory Coding
+## Part B - Mandatory Coding
 
 নিজে code করবে:
 
@@ -17273,7 +17273,7 @@ What about digits, spaces and punctuation?
 
 ---
 
-## Part C — Dry Run
+## Part C - Dry Run
 
 String:
 
@@ -17311,7 +17311,7 @@ Special = ?
 
 ---
 
-## Part D — Word Count Dry Run
+## Part D - Word Count Dry Run
 
 String:
 
@@ -17345,7 +17345,7 @@ wordCount:
 
 ---
 
-## Part E — Debugging
+## Part E - Debugging
 
 এই code দেখো:
 
@@ -17683,27 +17683,27 @@ Which Counter Updates?
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ⬜ Chapter 6 — Character Search & Frequency
+├── ⬜ Chapter 6 - Character Search & Frequency
 │
-├── ⬜ Chapter 7 — String Transformation
+├── ⬜ Chapter 7 - String Transformation
 │
-├── ⬜ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⬜ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⬜ Chapter 9 — Palindrome Pattern
+├── ⬜ Chapter 9 - Palindrome Pattern
 │
-├── ⬜ Chapter 10 — Common Bugs, Edge Cases & String Problem Solving Session
+├── ⬜ Chapter 10 - Common Bugs, Edge Cases & String Problem Solving Session
 │
-└── ⬜ Chapter 11 — Pattern Library Update, Final Assignment,
+└── ⬜ Chapter 11 - Pattern Library Update, Final Assignment,
                    Mini Contest Review & Day 3 Reflection
 ```
 
@@ -17743,7 +17743,7 @@ Update Counter
 Update State
 ```
 
-পরবর্তী **Chapter 6 — Character Search & Frequency**-তে progression হবে:
+পরবর্তী **Chapter 6 - Character Search & Frequency**-তে progression হবে:
 
 ```text
 Counting One Category
@@ -17761,7 +17761,7 @@ Frequency Table Mental Model
 
 ---
 
-# 📘 Day 3 — Chapter 6
+# 📘 Day 3 - Chapter 6
 
 # 🔎 Character Search & Frequency Analysis
 
@@ -17870,24 +17870,24 @@ banana
 ```text
 Chapter 6
 │
-├── Part 1  — Search Mental Model
-├── Part 2  — Existence Search
-├── Part 3  — First Occurrence
-├── Part 4  — Last Occurrence
-├── Part 5  — Total Occurrence
-├── Part 6  — Search Pattern Comparison
-├── Part 7  — Index vs Position
-├── Part 8  — Sentinel Value
-├── Part 9  — Frequency as Search Memory
-├── Part 10 — Direct Search vs Preprocessing
-├── Part 11 — Repeated Query Pattern
-├── Part 12 — Frequency Analysis
-├── Part 13 — Maximum & Minimum Frequency
-├── Part 14 — Tie Cases
-├── Part 15 — Common Bugs & Edge Cases
-├── Part 16 — Guided Problem Solving
-├── Part 17 — Exercises
-└── Part 18 — Assignment & Reflection
+├── Part 1  - Search Mental Model
+├── Part 2  - Existence Search
+├── Part 3  - First Occurrence
+├── Part 4  - Last Occurrence
+├── Part 5  - Total Occurrence
+├── Part 6  - Search Pattern Comparison
+├── Part 7  - Index vs Position
+├── Part 8  - Sentinel Value
+├── Part 9  - Frequency as Search Memory
+├── Part 10 - Direct Search vs Preprocessing
+├── Part 11 - Repeated Query Pattern
+├── Part 12 - Frequency Analysis
+├── Part 13 - Maximum & Minimum Frequency
+├── Part 14 - Tie Cases
+├── Part 15 - Common Bugs & Edge Cases
+├── Part 16 - Guided Problem Solving
+├── Part 17 - Exercises
+└── Part 18 - Assignment & Reflection
 ```
 
 ---
@@ -18022,9 +18022,9 @@ Different State and Control Flow
 
 ---
 
-# Part 1 — Search Mental Model
+# Part 1 - Search Mental Model
 
-# Lesson 1 — Search মানে কী?
+# Lesson 1 - Search মানে কী?
 
 Search মানে:
 
@@ -18094,7 +18094,7 @@ Decision
 
 ---
 
-# Lesson 2 — Search Problem-এর ৫টি Question
+# Lesson 2 - Search Problem-এর ৫টি Question
 
 Search Problem দেখলে নিজেকে জিজ্ঞেস করবে:
 
@@ -18114,7 +18114,7 @@ Search Problem দেখলে নিজেকে জিজ্ঞেস কর�
 
 ---
 
-# Lesson 3 — Search State Selection
+# Lesson 3 - Search State Selection
 
 ```text
 Need only Yes / No?
@@ -18176,9 +18176,9 @@ What answer is needed?
 
 ---
 
-# Part 2 — Existence Search
+# Part 2 - Existence Search
 
-# Lesson 4 — Character আছে কি না?
+# Lesson 4 - Character আছে কি না?
 
 Problem:
 
@@ -18230,7 +18230,7 @@ Flag
 
 ---
 
-# Lesson 5 — Flag কী?
+# Lesson 5 - Flag কী?
 
 Flag হচ্ছে এমন একটি State যেটা সাধারণত দুইটি অবস্থা represent করে।
 
@@ -18271,7 +18271,7 @@ Target Found
 
 ---
 
-# Lesson 6 — Existence Search Code
+# Lesson 6 - Existence Search Code
 
 ```c
 #include <stdio.h>
@@ -18310,7 +18310,7 @@ int main()
 
 ---
 
-# Lesson 7 — এখানে `break` কেন Valid?
+# Lesson 7 - এখানে `break` কেন Valid?
 
 Problem:
 
@@ -18368,7 +18368,7 @@ Early Termination
 
 ---
 
-# Lesson 8 — Early Termination Mental Model
+# Lesson 8 - Early Termination Mental Model
 
 নিজেকে জিজ্ঞেস করবে:
 
@@ -18437,9 +18437,9 @@ No break
 
 ---
 
-# Part 3 — First Occurrence
+# Part 3 - First Occurrence
 
-# Lesson 9 — First Occurrence কী?
+# Lesson 9 - First Occurrence কী?
 
 String:
 
@@ -18476,7 +18476,7 @@ Index 1
 
 ---
 
-# Lesson 10 — First Occurrence State
+# Lesson 10 - First Occurrence State
 
 Need:
 
@@ -18543,7 +18543,7 @@ int main()
 
 ---
 
-# Lesson 11 — First Occurrence Dry Run
+# Lesson 11 - First Occurrence Dry Run
 
 Input:
 
@@ -18587,7 +18587,7 @@ First Occurrence
 
 ---
 
-# Lesson 12 — First Occurrence Formula
+# Lesson 12 - First Occurrence Formula
 
 ```text
 Traversal from Left to Right
@@ -18611,9 +18611,9 @@ Stop
 
 ---
 
-# Part 4 — Last Occurrence
+# Part 4 - Last Occurrence
 
-# Lesson 13 — Last Occurrence কী?
+# Lesson 13 - Last Occurrence কী?
 
 String:
 
@@ -18643,7 +18643,7 @@ Index 5
 
 ---
 
-# Lesson 14 — Last Occurrence-এর Core Difference
+# Lesson 14 - Last Occurrence-এর Core Difference
 
 First Occurrence:
 
@@ -18675,7 +18675,7 @@ A later match may exist.
 
 ---
 
-# Lesson 15 — Last Occurrence Code
+# Lesson 15 - Last Occurrence Code
 
 ```c
 #include <stdio.h>
@@ -18713,7 +18713,7 @@ int main()
 
 ---
 
-# Lesson 16 — Last Occurrence Dry Run
+# Lesson 16 - Last Occurrence Dry Run
 
 String:
 
@@ -18764,7 +18764,7 @@ Last Matching Index remains stored.
 
 ---
 
-# Lesson 17 — Last Occurrence-এর Alternative চিন্তা
+# Lesson 17 - Last Occurrence-এর Alternative চিন্তা
 
 আমরা Left-to-Right traverse করেছি:
 
@@ -18815,9 +18815,9 @@ Overwrite Matching Index
 
 ---
 
-# Part 5 — Total Occurrence
+# Part 5 - Total Occurrence
 
-# Lesson 18 — Total Occurrence
+# Lesson 18 - Total Occurrence
 
 Problem:
 
@@ -18859,7 +18859,7 @@ Counter
 
 ---
 
-# Lesson 19 — Occurrence Count Code
+# Lesson 19 - Occurrence Count Code
 
 ```c
 #include <stdio.h>
@@ -18890,7 +18890,7 @@ int main()
 
 ---
 
-# Lesson 20 — এখানে `break` দিলে কী হবে?
+# Lesson 20 - এখানে `break` দিলে কী হবে?
 
 Wrong:
 
@@ -18939,9 +18939,9 @@ Do not stop at first match.
 
 ---
 
-# Part 6 — Search Pattern Comparison
+# Part 6 - Search Pattern Comparison
 
-# Lesson 21 — একই Problem Family-এর Comparison
+# Lesson 21 - একই Problem Family-এর Comparison
 
 String:
 
@@ -18968,7 +18968,7 @@ Logic বুঝবে।
 
 ---
 
-# Lesson 22 — Control Flow Decision
+# Lesson 22 - Control Flow Decision
 
 ```text
 What does a match mean for the final answer?
@@ -19024,7 +19024,7 @@ Count + Continue
 
 ---
 
-# Lesson 23 — State Transition View
+# Lesson 23 - State Transition View
 
 ## Existence
 
@@ -19080,9 +19080,9 @@ Done
 
 ---
 
-# Part 7 — Index vs Position
+# Part 7 - Index vs Position
 
-# Lesson 24 — Index কী?
+# Lesson 24 - Index কী?
 
 C Array এবং String সাধারণত Zero-Based।
 
@@ -19110,7 +19110,7 @@ E → Index 3
 
 ---
 
-# Lesson 25 — Position কী?
+# Lesson 25 - Position কী?
 
 Human-friendly Position সাধারণত 1 থেকে শুরু হতে পারে।
 
@@ -19139,7 +19139,7 @@ Problem Statement পড়বে।
 
 ---
 
-# Lesson 26 — Common Mistake
+# Lesson 26 - Common Mistake
 
 Problem চেয়েছে:
 
@@ -19179,9 +19179,9 @@ Check Indexing Convention
 
 ---
 
-# Part 8 — Sentinel Value
+# Part 8 - Sentinel Value
 
-# Lesson 27 — `-1` কেন?
+# Lesson 27 - `-1` কেন?
 
 ধরো String Length:
 
@@ -19217,7 +19217,7 @@ No valid matching index has been found yet.
 
 ---
 
-# Lesson 28 — Sentinel Value কী?
+# Lesson 28 - Sentinel Value কী?
 
 Sentinel Value হলো একটি Special Value যা Special State represent করে।
 
@@ -19247,7 +19247,7 @@ Not Found বোঝাতে ব্যবহার করা যাবে না
 
 ---
 
-# Lesson 29 — Dangerous Initialization
+# Lesson 29 - Dangerous Initialization
 
 Wrong:
 
@@ -19284,9 +19284,9 @@ Valid Data Range-এর বাইরে Meaningful Special Value
 
 ---
 
-# Part 9 — Frequency as Search Memory
+# Part 9 - Frequency as Search Memory
 
-# Lesson 30 — Frequency Array শুধু Count না
+# Lesson 30 - Frequency Array শুধু Count না
 
 Chapter 5-এ:
 
@@ -19344,7 +19344,7 @@ freq['n' - 'a']
 
 ---
 
-# Lesson 31 — Presence from Frequency
+# Lesson 31 - Presence from Frequency
 
 Condition:
 
@@ -19375,7 +19375,7 @@ Character does not exist
 
 ---
 
-# Lesson 32 — Count from Frequency
+# Lesson 32 - Count from Frequency
 
 ধরো:
 
@@ -19399,9 +19399,9 @@ Answer Queries
 
 ---
 
-# Part 10 — Direct Search vs Preprocessing
+# Part 10 - Direct Search vs Preprocessing
 
-# Lesson 33 — Direct Search
+# Lesson 33 - Direct Search
 
 একটি Query:
 
@@ -19429,7 +19429,7 @@ Direct Search
 
 ---
 
-# Lesson 34 — Preprocessing
+# Lesson 34 - Preprocessing
 
 ধরো একই String-এর জন্য অনেক Query:
 
@@ -19461,7 +19461,7 @@ Preprocessing
 
 ---
 
-# Lesson 35 — Preprocessing মানে কী?
+# Lesson 35 - Preprocessing মানে কী?
 
 Preprocessing মানে:
 
@@ -19506,7 +19506,7 @@ String আবার traverse করতে হচ্ছে না।
 
 ---
 
-# Lesson 36 — One Query vs Many Queries
+# Lesson 36 - One Query vs Many Queries
 
 ## One Query
 
@@ -19574,9 +19574,9 @@ Think about Preprocessing
 
 ---
 
-# Part 11 — Repeated Query Pattern
+# Part 11 - Repeated Query Pattern
 
-# Lesson 37 — Query কী?
+# Lesson 37 - Query কী?
 
 Query মানে:
 
@@ -19612,7 +19612,7 @@ z → 0
 
 ---
 
-# Lesson 38 — Frequency Query Program
+# Lesson 38 - Frequency Query Program
 
 Constraint:
 
@@ -19656,7 +19656,7 @@ int main()
 
 ---
 
-# Lesson 39 — Dry Run of Repeated Queries
+# Lesson 39 - Dry Run of Repeated Queries
 
 Input:
 
@@ -19716,7 +19716,7 @@ Output:
 
 ---
 
-# Lesson 40 — Important Pattern Recognition
+# Lesson 40 - Important Pattern Recognition
 
 Problem Statement-এ যদি দেখো:
 
@@ -19746,9 +19746,9 @@ Can I preprocess?
 
 ---
 
-# Part 12 — Frequency Analysis
+# Part 12 - Frequency Analysis
 
-# Lesson 41 — Frequency Build করার পর কী করা যায়?
+# Lesson 41 - Frequency Build করার পর কী করা যায়?
 
 Frequency Array শুধু print করার জন্য না।
 
@@ -19777,7 +19777,7 @@ Final Answer
 
 ---
 
-# Lesson 42 — Count Distinct Characters
+# Lesson 42 - Count Distinct Characters
 
 Input:
 
@@ -19839,7 +19839,7 @@ Conditional Counter
 
 ---
 
-# Lesson 43 — Count Exactly-Once Characters
+# Lesson 43 - Count Exactly-Once Characters
 
 Input:
 
@@ -19879,7 +19879,7 @@ freq[i] == 1
 
 ---
 
-# Lesson 44 — Count Repeated Character Types
+# Lesson 44 - Count Repeated Character Types
 
 Input:
 
@@ -19933,7 +19933,7 @@ Total Duplicate Occurrences
 
 ---
 
-# Lesson 45 — Frequency Condition Map
+# Lesson 45 - Frequency Condition Map
 
 ```text
 freq[i] == 0
@@ -19963,9 +19963,9 @@ Repeated
 
 ---
 
-# Part 13 — Maximum & Minimum Frequency
+# Part 13 - Maximum & Minimum Frequency
 
-# Lesson 46 — Most Frequent Character
+# Lesson 46 - Most Frequent Character
 
 Input:
 
@@ -20005,7 +20005,7 @@ Index State
 
 ---
 
-# Lesson 47 — Most Frequent Code
+# Lesson 47 - Most Frequent Code
 
 ```c
 int maxFreq = 0;
@@ -20030,7 +20030,7 @@ printf("Frequency: %d\n", maxFreq);
 
 ---
 
-# Lesson 48 — Dry Run
+# Lesson 48 - Dry Run
 
 Frequency:
 
@@ -20091,7 +20091,7 @@ a
 
 ---
 
-# Lesson 49 — Least Frequent Present Character
+# Lesson 49 - Least Frequent Present Character
 
 এখানে একটি নতুন সমস্যা আছে।
 
@@ -20132,7 +20132,7 @@ if (freq[i] > 0)
 
 ---
 
-# Lesson 50 — Minimum Initialization Problem
+# Lesson 50 - Minimum Initialization Problem
 
 Maximum-এর জন্য:
 
@@ -20198,9 +20198,9 @@ Compare Only Valid Present Frequencies
 
 ---
 
-# Part 14 — Tie Cases
+# Part 14 - Tie Cases
 
-# Lesson 51 — Tie কী?
+# Lesson 51 - Tie কী?
 
 Input:
 
@@ -20237,7 +20237,7 @@ Tie
 
 ---
 
-# Lesson 52 — `>` vs `>=`
+# Lesson 52 - `>` vs `>=`
 
 ধরো:
 
@@ -20293,7 +20293,7 @@ Later character replaces earlier character.
 
 ---
 
-# Lesson 53 — Tie Rule Problem Statement থেকে আসবে
+# Lesson 53 - Tie Rule Problem Statement থেকে আসবে
 
 Problem বলতে পারে:
 
@@ -20328,7 +20328,7 @@ Choose Update Rule / Second Pass
 
 ---
 
-# Lesson 54 — Print All Maximum Frequency Characters
+# Lesson 54 - Print All Maximum Frequency Characters
 
 Approach:
 
@@ -20364,9 +20364,9 @@ Collect / Print All Matching Best Candidates
 
 ---
 
-# Part 15 — Common Bugs & Edge Cases
+# Part 15 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — Existence Search-এ Counter ব্যবহার করা
+# 🐞 Bug 1 - Existence Search-এ Counter ব্যবহার করা
 
 Problem:
 
@@ -20398,7 +20398,7 @@ Store only what the problem needs.
 
 ---
 
-# 🐞 Bug 2 — First Occurrence-এ `break` না দেওয়া
+# 🐞 Bug 2 - First Occurrence-এ `break` না দেওয়া
 
 Code:
 
@@ -20421,7 +20421,7 @@ First না।
 
 ---
 
-# 🐞 Bug 3 — Last Occurrence-এ `break`
+# 🐞 Bug 3 - Last Occurrence-এ `break`
 
 ```c
 if (str[i] == target)
@@ -20443,7 +20443,7 @@ Last না।
 
 ---
 
-# 🐞 Bug 4 — Count-এ `break`
+# 🐞 Bug 4 - Count-এ `break`
 
 ```c
 if (str[i] == target)
@@ -20457,7 +20457,7 @@ if (str[i] == target)
 
 ---
 
-# 🐞 Bug 5 — Index Initialize with `0`
+# 🐞 Bug 5 - Index Initialize with `0`
 
 ```c
 int index = 0;
@@ -20473,7 +20473,7 @@ int index = -1;
 
 ---
 
-# 🐞 Bug 6 — Index এবং Position Confusion
+# 🐞 Bug 6 - Index এবং Position Confusion
 
 ```text
 Index 0
@@ -20489,7 +20489,7 @@ Problem Statement-এর indexing convention check করবে।
 
 ---
 
-# 🐞 Bug 7 — Frequency Mapping without Constraint Check
+# 🐞 Bug 7 - Frequency Mapping without Constraint Check
 
 ```c
 freq[ch - 'a']++;
@@ -20505,7 +20505,7 @@ freq[ch - 'a']++;
 
 ---
 
-# 🐞 Bug 8 — Minimum Frequency-তে Zero Count Include করা
+# 🐞 Bug 8 - Minimum Frequency-তে Zero Count Include করা
 
 Wrong idea:
 
@@ -20529,7 +20529,7 @@ Consider only freq[i] > 0
 
 ---
 
-# 🐞 Bug 9 — Tie Ignore করা
+# 🐞 Bug 9 - Tie Ignore করা
 
 Input:
 
@@ -20547,7 +20547,7 @@ Problem যদি tie rule দেয়, সেটা implement করতে হব
 
 ---
 
-# 🐞 Bug 10 — Repeated Query-তে Repeated Full Traversal
+# 🐞 Bug 10 - Repeated Query-তে Repeated Full Traversal
 
 যদি:
 
@@ -20567,9 +20567,9 @@ Answer Many
 
 ---
 
-# Part 16 — Guided Problem Solving
+# Part 16 - Guided Problem Solving
 
-# Problem 1 — Character Exists?
+# Problem 1 - Character Exists?
 
 ## Problem
 
@@ -20590,7 +20590,7 @@ Found
 
 ---
 
-## Step 1 — What is needed?
+## Step 1 - What is needed?
 
 ```text
 Existence only
@@ -20598,7 +20598,7 @@ Existence only
 
 ---
 
-## Step 2 — State?
+## Step 2 - State?
 
 ```text
 Flag
@@ -20606,7 +20606,7 @@ Flag
 
 ---
 
-## Step 3 — Initial State?
+## Step 3 - Initial State?
 
 ```text
 Not Found
@@ -20620,7 +20620,7 @@ int found = 0;
 
 ---
 
-## Step 4 — On Match?
+## Step 4 - On Match?
 
 ```text
 found = 1
@@ -20628,7 +20628,7 @@ found = 1
 
 ---
 
-## Step 5 — Continue?
+## Step 5 - Continue?
 
 ```text
 No
@@ -20650,7 +20650,7 @@ Early Termination
 
 ---
 
-# Problem 2 — First Occurrence
+# Problem 2 - First Occurrence
 
 Input:
 
@@ -20686,7 +20686,7 @@ Break
 
 ---
 
-# Problem 3 — Last Occurrence
+# Problem 3 - Last Occurrence
 
 Same Input:
 
@@ -20722,7 +20722,7 @@ Full Traversal
 
 ---
 
-# Problem 4 — Count Occurrence
+# Problem 4 - Count Occurrence
 
 Input:
 
@@ -20755,7 +20755,7 @@ break
 
 ---
 
-# Problem 5 — Multiple Frequency Queries
+# Problem 5 - Multiple Frequency Queries
 
 Input:
 
@@ -20788,7 +20788,7 @@ Direct Indexed Query
 
 ---
 
-# Problem 6 — Find Most Frequent Character
+# Problem 6 - Find Most Frequent Character
 
 Input:
 
@@ -20841,9 +20841,9 @@ is not always enough.
 
 ---
 
-# Part 17 — Exercises
+# Part 17 - Exercises
 
-# Exercise 1 — Existence Search
+# Exercise 1 - Existence Search
 
 Input:
 
@@ -20878,7 +20878,7 @@ Pattern:
 
 ---
 
-# Exercise 2 — Not Found Case
+# Exercise 2 - Not Found Case
 
 Input:
 
@@ -20905,7 +20905,7 @@ Why index = 0 would be dangerous:
 
 ---
 
-# Exercise 3 — First Occurrence
+# Exercise 3 - First Occurrence
 
 Input:
 
@@ -20929,7 +20929,7 @@ First Index:
 
 ---
 
-# Exercise 4 — Last Occurrence
+# Exercise 4 - Last Occurrence
 
 Same Input:
 
@@ -20954,7 +20954,7 @@ Why break cannot be used:
 
 ---
 
-# Exercise 5 — Total Occurrence
+# Exercise 5 - Total Occurrence
 
 Input:
 
@@ -20985,7 +20985,7 @@ Total Count:
 
 ---
 
-# Exercise 6 — Index vs Position
+# Exercise 6 - Index vs Position
 
 String:
 
@@ -21011,7 +21011,7 @@ Find:
 
 ---
 
-# Exercise 7 — Frequency Query
+# Exercise 7 - Frequency Query
 
 String:
 
@@ -21034,7 +21034,7 @@ i
 
 ---
 
-# Exercise 8 — Distinct Count
+# Exercise 8 - Distinct Count
 
 Input:
 
@@ -21061,7 +21061,7 @@ Count ...
 
 ---
 
-# Exercise 9 — Exactly Once
+# Exercise 9 - Exactly Once
 
 Input:
 
@@ -21088,7 +21088,7 @@ complete করো।
 
 ---
 
-# Exercise 10 — Repeated Character Types
+# Exercise 10 - Repeated Character Types
 
 Input:
 
@@ -21111,7 +21111,7 @@ Why the answer is not the total number of repeated positions:
 
 ---
 
-# Exercise 11 — Maximum Frequency
+# Exercise 11 - Maximum Frequency
 
 Input:
 
@@ -21141,7 +21141,7 @@ maxIndex:
 
 ---
 
-# Exercise 12 — Tie Case
+# Exercise 12 - Tie Case
 
 Input:
 
@@ -21168,7 +21168,7 @@ If using >= :
 
 ---
 
-# Exercise 13 — All Maximum Characters
+# Exercise 13 - All Maximum Characters
 
 Input:
 
@@ -21205,7 +21205,7 @@ Phase 3:
 
 ---
 
-# Exercise 14 — Direct Search vs Preprocessing
+# Exercise 14 - Direct Search vs Preprocessing
 
 Scenario A:
 
@@ -21231,7 +21231,7 @@ Explain।
 
 ---
 
-# Exercise 15 — State Selection Drill
+# Exercise 15 - State Selection Drill
 
 প্রতিটি Problem-এর জন্য State নির্বাচন করো।
 
@@ -21297,9 +21297,9 @@ State:
 
 ---
 
-# Part 18 — Chapter Assignment
+# Part 18 - Chapter Assignment
 
-# 📝 Task 1 — Search Dictionary
+# 📝 Task 1 - Search Dictionary
 
 নিজের ভাষায় explain করবে:
 
@@ -21342,7 +21342,7 @@ When I should not use it:
 
 ---
 
-# 📝 Task 2 — Four Search Variants
+# 📝 Task 2 - Four Search Variants
 
 একই String এবং Target-এর জন্য চারটি Program লিখবে।
 
@@ -21402,7 +21402,7 @@ Reason:
 
 ---
 
-# 📝 Task 3 — Comparison Table
+# 📝 Task 3 - Comparison Table
 
 নিজে পূরণ করবে:
 
@@ -21419,7 +21419,7 @@ Notes দেখে copy করবে না।
 
 ---
 
-# 📝 Task 4 — Frequency Query System
+# 📝 Task 4 - Frequency Query System
 
 File:
 
@@ -21475,7 +21475,7 @@ Character mapping:
 
 ---
 
-# 📝 Task 5 — Frequency Analyzer
+# 📝 Task 5 - Frequency Analyzer
 
 File:
 
@@ -21512,7 +21512,7 @@ e → 3
 
 ---
 
-# 📝 Task 6 — Most Frequent Character
+# 📝 Task 6 - Most Frequent Character
 
 File:
 
@@ -21548,7 +21548,7 @@ Why value state alone is not enough:
 
 ---
 
-# 📝 Task 7 — Tie Handling
+# 📝 Task 7 - Tie Handling
 
 File:
 
@@ -21594,7 +21594,7 @@ Phase 3
 
 ---
 
-# 📝 Task 8 — Least Frequent Present Character
+# 📝 Task 8 - Least Frequent Present Character
 
 File:
 
@@ -21634,7 +21634,7 @@ Why minFreq = 0 can be problematic:
 
 ---
 
-# 📝 Task 9 — Test Case Design
+# 📝 Task 9 - Test Case Design
 
 Problem:
 
@@ -21676,7 +21676,7 @@ Why Important:
 
 ---
 
-# 📝 Task 10 — Last Occurrence Test Cases
+# 📝 Task 10 - Last Occurrence Test Cases
 
 Problem:
 
@@ -21703,11 +21703,11 @@ Why break would produce the wrong answer:
 
 ---
 
-# 📝 Task 11 — Pattern Recognition Drill
+# 📝 Task 11 - Pattern Recognition Drill
 
 Complete করো।
 
-## A — Character Exists
+## A - Character Exists
 
 ```text
 ...
@@ -21721,7 +21721,7 @@ Complete করো।
 
 ---
 
-## B — First Occurrence
+## B - First Occurrence
 
 ```text
 ...
@@ -21735,7 +21735,7 @@ Complete করো।
 
 ---
 
-## C — Last Occurrence
+## C - Last Occurrence
 
 ```text
 ...
@@ -21749,7 +21749,7 @@ Complete করো।
 
 ---
 
-## D — Total Occurrence
+## D - Total Occurrence
 
 ```text
 ...
@@ -21761,7 +21761,7 @@ Complete করো।
 
 ---
 
-## E — Many Character Frequency Queries
+## E - Many Character Frequency Queries
 
 ```text
 ...
@@ -21773,7 +21773,7 @@ Complete করো।
 
 ---
 
-## F — Most Frequent Character
+## F - Most Frequent Character
 
 ```text
 ...
@@ -21785,7 +21785,7 @@ Complete করো।
 
 ---
 
-## G — Print All Most Frequent Characters
+## G - Print All Most Frequent Characters
 
 ```text
 Phase 1:
@@ -21800,12 +21800,12 @@ Phase 3:
 
 ---
 
-# 📝 Task 12 — Chapter Reflection
+# 📝 Task 12 - Chapter Reflection
 
 Copy-Paste Version:
 
 ````markdown
-# 🧠 Day 3 — Chapter 6 Reflection
+# 🧠 Day 3 - Chapter 6 Reflection
 
 ## 1. What Is Search?
 
@@ -22248,7 +22248,7 @@ Most Frequent Character Problem-এ Tie Case কী?
 
 [ ] -1 Sentinel Value বুঝি
 
-[ ] 0 একটি Valid Index—এটা মনে রাখি
+[ ] 0 একটি Valid Index-এটা মনে রাখি
 
 [ ] Index এবং Position confuse করি না
 
@@ -22842,34 +22842,34 @@ Answer Queries
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ⏳ Chapter 7 — String Transformation
+├── ⏳ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 6 Complete.**
+**Day 3 - Chapter 6 Complete.**
 
 পরের Chapter:
 
 ```text
-Day 3 — Chapter 7
+Day 3 - Chapter 7
 String Transformation
 ```
 
@@ -22907,7 +22907,7 @@ Transformation Problem
 
 ---
 
-# 📘 Day 3 — Chapter 7
+# 📘 Day 3 - Chapter 7
 
 # 🔄 String Transformation Pattern
 
@@ -23023,25 +23023,25 @@ Produce Modified String
 # 📖 Chapter Map
 
 ```text
-Day 3 — Chapter 7
+Day 3 - Chapter 7
 │
-├── Part 1  — Transformation Mental Model
-├── Part 2  — Three Transformation Strategies
-├── Part 3  — Character Replacement
-├── Part 4  — Lowercase to Uppercase
-├── Part 5  — Uppercase to Lowercase
-├── Part 6  — Toggle Case
-├── Part 7  — Conditional Transformation
-├── Part 8  — Character Mapping Pattern
-├── Part 9  — Filtering & Character Removal
-├── Part 10 — Read Index & Write Index
-├── Part 11 — Building a Result String
-├── Part 12 — Keep vs Remove Mental Model
-├── Part 13 — Transformation Pipeline
-├── Part 14 — Common Bugs & Edge Cases
-├── Part 15 — Guided Problem Solving
-├── Part 16 — Exercises
-└── Part 17 — Assignment & Reflection
+├── Part 1  - Transformation Mental Model
+├── Part 2  - Three Transformation Strategies
+├── Part 3  - Character Replacement
+├── Part 4  - Lowercase to Uppercase
+├── Part 5  - Uppercase to Lowercase
+├── Part 6  - Toggle Case
+├── Part 7  - Conditional Transformation
+├── Part 8  - Character Mapping Pattern
+├── Part 9  - Filtering & Character Removal
+├── Part 10 - Read Index & Write Index
+├── Part 11 - Building a Result String
+├── Part 12 - Keep vs Remove Mental Model
+├── Part 13 - Transformation Pipeline
+├── Part 14 - Common Bugs & Edge Cases
+├── Part 15 - Guided Problem Solving
+├── Part 16 - Exercises
+└── Part 17 - Assignment & Reflection
 ```
 
 ---
@@ -23153,9 +23153,9 @@ Modification
 
 ---
 
-# Part 1 — Transformation Mental Model
+# Part 1 - Transformation Mental Model
 
-# Lesson 1 — Analysis Problem vs Transformation Problem
+# Lesson 1 - Analysis Problem vs Transformation Problem
 
 এটি Chapter-এর সবচেয়ে গুরুত্বপূর্ণ foundation।
 
@@ -23225,7 +23225,7 @@ Transformation Problem
 
 ---
 
-# Lesson 2 — Analysis ও Transformation Comparison
+# Lesson 2 - Analysis ও Transformation Comparison
 
 | Problem Type      |       Input Modify? | Common State               |
 | ----------------- | ------------------: | -------------------------- |
@@ -23253,7 +23253,7 @@ Transformation
 
 ---
 
-# Lesson 3 — Basic Transformation Pattern
+# Lesson 3 - Basic Transformation Pattern
 
 Generic Structure:
 
@@ -23281,7 +23281,7 @@ Does transformation rule apply?
 
 ---
 
-# Lesson 4 — Transformation Function View
+# Lesson 4 - Transformation Function View
 
 প্রতিটি Character-এর জন্য ভাবতে পারো:
 
@@ -23331,13 +23331,13 @@ f(character) → transformed character
 
 ---
 
-# Part 2 — Three Transformation Strategies
+# Part 2 - Three Transformation Strategies
 
 String Transformation করার তিনটি common strategy আমরা এখন চিনব।
 
 ---
 
-# Lesson 5 — Strategy 1: In-Place Transformation
+# Lesson 5 - Strategy 1: In-Place Transformation
 
 Input String-এর মধ্যেই Character পরিবর্তন করা।
 
@@ -23390,7 +23390,7 @@ Modify Existing Elements
 
 ---
 
-# Lesson 6 — Strategy 2: Output While Traversing
+# Lesson 6 - Strategy 2: Output While Traversing
 
 কখনো Original String modify না করেও transformed output print করা যায়।
 
@@ -23442,7 +23442,7 @@ Print transformed output
 
 ---
 
-# Lesson 7 — Strategy 3: Build a New Result String
+# Lesson 7 - Strategy 3: Build a New Result String
 
 Input:
 
@@ -23493,7 +23493,7 @@ j → Result Write Position
 
 ---
 
-# Lesson 8 — Strategy Selection
+# Lesson 8 - Strategy Selection
 
 ```text
 Same length after transformation?
@@ -23547,9 +23547,9 @@ Length:
 
 ---
 
-# Part 3 — Character Replacement
+# Part 3 - Character Replacement
 
-# Lesson 9 — Replace One Character
+# Lesson 9 - Replace One Character
 
 Problem:
 
@@ -23580,7 +23580,7 @@ a → is a  → x
 
 ---
 
-# Lesson 10 — Replacement Code
+# Lesson 10 - Replacement Code
 
 ```c
 #include <stdio.h>
@@ -23617,7 +23617,7 @@ Assignment
 
 ---
 
-# Lesson 11 — Target ও Replacement Input নেওয়া
+# Lesson 11 - Target ও Replacement Input নেওয়া
 
 Input:
 
@@ -23672,7 +23672,7 @@ mixxixxippi
 
 ---
 
-# Lesson 12 — Replace First Occurrence Only
+# Lesson 12 - Replace First Occurrence Only
 
 Problem:
 
@@ -23735,7 +23735,7 @@ Break after first modification
 
 ---
 
-# Lesson 13 — Replace Last Occurrence Only
+# Lesson 13 - Replace Last Occurrence Only
 
 Input:
 
@@ -23796,9 +23796,9 @@ Conditional Modification
 
 ---
 
-# Part 4 — Lowercase to Uppercase
+# Part 4 - Lowercase to Uppercase
 
-# Lesson 14 — ASCII Relationship
+# Lesson 14 - ASCII Relationship
 
 Lowercase:
 
@@ -23836,7 +23836,7 @@ ch = ch - 'a' + 'A';
 
 ---
 
-# Lesson 15 — Mapping Mental Model
+# Lesson 15 - Mapping Mental Model
 
 ধরো:
 
@@ -23878,7 +23878,7 @@ Apply same offset to uppercase base
 
 ---
 
-# Lesson 16 — Lowercase to Uppercase Code
+# Lesson 16 - Lowercase to Uppercase Code
 
 ```c
 #include <stdio.h>
@@ -23917,7 +23917,7 @@ ABC12XY
 
 ---
 
-# Lesson 17 — Condition কেন দরকার?
+# Lesson 17 - Condition কেন দরকার?
 
 Wrong:
 
@@ -23953,9 +23953,9 @@ Transform Only Valid Character
 
 ---
 
-# Part 5 — Uppercase to Lowercase
+# Part 5 - Uppercase to Lowercase
 
-# Lesson 18 — Reverse Mapping
+# Lesson 18 - Reverse Mapping
 
 Uppercase:
 
@@ -23995,7 +23995,7 @@ Example:
 
 ---
 
-# Lesson 19 — Uppercase to Lowercase Code
+# Lesson 19 - Uppercase to Lowercase Code
 
 ```c
 #include <stdio.h>
@@ -24034,9 +24034,9 @@ hello123
 
 ---
 
-# Part 6 — Toggle Case
+# Part 6 - Toggle Case
 
-# Lesson 20 — Toggle Case কী?
+# Lesson 20 - Toggle Case কী?
 
 Toggle মানে:
 
@@ -24060,7 +24060,7 @@ aBcXYz123
 
 ---
 
-# Lesson 21 — Toggle Decision Tree
+# Lesson 21 - Toggle Decision Tree
 
 প্রতিটি Character-এর জন্য:
 
@@ -24091,7 +24091,7 @@ natural choice।
 
 ---
 
-# Lesson 22 — Toggle Case Code
+# Lesson 22 - Toggle Case Code
 
 ```c
 #include <stdio.h>
@@ -24122,7 +24122,7 @@ int main()
 
 ---
 
-# Lesson 23 — কেন `if` + `else if`?
+# Lesson 23 - কেন `if` + `else if`?
 
 ধরো original character:
 
@@ -24189,9 +24189,9 @@ Transformation can affect later conditions.
 
 ---
 
-# Part 7 — Conditional Transformation
+# Part 7 - Conditional Transformation
 
-# Lesson 24 — সব Character Transform করতে হবে না
+# Lesson 24 - সব Character Transform করতে হবে না
 
 Problem:
 
@@ -24221,7 +24221,7 @@ Is lowercase?
 
 ---
 
-# Lesson 25 — Conditional Transformation Pattern
+# Lesson 25 - Conditional Transformation Pattern
 
 ```text
 Traverse
@@ -24252,7 +24252,7 @@ Mental Pattern হিসেবে বুঝবে।
 
 ---
 
-# Lesson 26 — Vowels to Uppercase
+# Lesson 26 - Vowels to Uppercase
 
 ধরি input lowercase English letters।
 
@@ -24294,7 +24294,7 @@ Conditional Transformation
 
 ---
 
-# Lesson 27 — Replace Digits with `#`
+# Lesson 27 - Replace Digits with `#`
 
 Input:
 
@@ -24334,7 +24334,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Lesson 28 — Multiple Transformation Rules
+# Lesson 28 - Multiple Transformation Rules
 
 Problem:
 
@@ -24375,9 +24375,9 @@ else if (digit_condition)
 
 ---
 
-# Part 8 — Character Mapping Pattern
+# Part 8 - Character Mapping Pattern
 
-# Lesson 29 — Mapping কী?
+# Lesson 29 - Mapping কী?
 
 Mapping মানে:
 
@@ -24417,7 +24417,7 @@ c → 3
 
 ---
 
-# Lesson 30 — Offset Mapping
+# Lesson 30 - Offset Mapping
 
 Character:
 
@@ -24465,7 +24465,7 @@ target = source - source_base + target_base
 
 ---
 
-# Lesson 31 — Character to Alphabet Index
+# Lesson 31 - Character to Alphabet Index
 
 Input:
 
@@ -24506,7 +24506,7 @@ Compare:
 
 ---
 
-# Lesson 32 — Alphabet Index to Character
+# Lesson 32 - Alphabet Index to Character
 
 ধরো:
 
@@ -24542,13 +24542,13 @@ Index → Character
 
 ---
 
-# Part 9 — Filtering & Character Removal
+# Part 9 - Filtering & Character Removal
 
-# Lesson 33 — Filtering কী?
+# Lesson 33 - Filtering কী?
 
 Filtering মানে:
 
-> প্রতিটি Character-এর জন্য decide করা—এটিকে Result-এ রাখব, নাকি বাদ দেব।
+> প্রতিটি Character-এর জন্য decide করা-এটিকে Result-এ রাখব, নাকি বাদ দেব।
 
 Input:
 
@@ -24587,7 +24587,7 @@ b n n
 
 ---
 
-# Lesson 34 — Filtering vs Replacement
+# Lesson 34 - Filtering vs Replacement
 
 Replacement:
 
@@ -24637,7 +24637,7 @@ Some Characters do not enter Result
 
 ---
 
-# Lesson 35 — Print While Filtering
+# Lesson 35 - Print While Filtering
 
 যদি শুধু output দরকার:
 
@@ -24673,7 +24673,7 @@ banana
 
 ---
 
-# Lesson 36 — Build Filtered Result
+# Lesson 36 - Build Filtered Result
 
 ```c
 #include <stdio.h>
@@ -24708,9 +24708,9 @@ int main()
 
 ---
 
-# Part 10 — Read Index & Write Index
+# Part 10 - Read Index & Write Index
 
-# Lesson 37 — `i` এবং `j` কী করছে?
+# Lesson 37 - `i` এবং `j` কী করছে?
 
 Code:
 
@@ -24743,7 +24743,7 @@ Write Index
 
 ---
 
-# Lesson 38 — Read Index
+# Lesson 38 - Read Index
 
 `i` সব Input Character visit করে।
 
@@ -24763,7 +24763,7 @@ banana
 
 ---
 
-# Lesson 39 — Write Index
+# Lesson 39 - Write Index
 
 `j` শুধু তখন বাড়ে যখন Character Result-এ রাখা হয়।
 
@@ -24813,7 +24813,7 @@ b n n \0
 
 ---
 
-# Lesson 40 — কেন `j++` সবসময় হয় না?
+# Lesson 40 - কেন `j++` সবসময় হয় না?
 
 Wrong:
 
@@ -24855,7 +24855,7 @@ if (keep_condition)
 
 ---
 
-# Lesson 41 — Read/Write Mental Model
+# Lesson 41 - Read/Write Mental Model
 
 ```text
 Read Pointer / Index
@@ -24875,9 +24875,9 @@ Moves only when output receives a character
 
 ---
 
-# Part 11 — Building a Result String
+# Part 11 - Building a Result String
 
-# Lesson 42 — Result String Construction Pattern
+# Lesson 42 - Result String Construction Pattern
 
 Generic:
 
@@ -24915,7 +24915,7 @@ Add Null Terminator
 
 ---
 
-# Lesson 43 — Null Terminator কেন manually দিতে হচ্ছে?
+# Lesson 43 - Null Terminator কেন manually দিতে হচ্ছে?
 
 Original String:
 
@@ -24955,7 +24955,7 @@ b n n \0
 
 ---
 
-# Lesson 44 — Empty Result Case
+# Lesson 44 - Empty Result Case
 
 Input:
 
@@ -25005,7 +25005,7 @@ Empty String
 
 ---
 
-# Lesson 45 — Remove Vowels
+# Lesson 45 - Remove Vowels
 
 Input:
 
@@ -25065,7 +25065,7 @@ result[j] = '\0';
 
 ---
 
-# Lesson 46 — Remove Digits
+# Lesson 46 - Remove Digits
 
 Input:
 
@@ -25106,9 +25106,9 @@ Digit?
 
 ---
 
-# Part 12 — Keep vs Remove Mental Model
+# Part 12 - Keep vs Remove Mental Model
 
-# Lesson 47 — দুইভাবে একই Problem ভাবা যায়
+# Lesson 47 - দুইভাবে একই Problem ভাবা যায়
 
 Problem:
 
@@ -25142,7 +25142,7 @@ Should this character enter the result?
 
 ---
 
-# Lesson 48 — Keep Condition Pattern
+# Lesson 48 - Keep Condition Pattern
 
 Generic:
 
@@ -25182,7 +25182,7 @@ if character is vowel
 
 ---
 
-# Lesson 49 — Filtering Decision Tree
+# Lesson 49 - Filtering Decision Tree
 
 ```text
 Need Result with selected characters only?
@@ -25211,9 +25211,9 @@ Write
 
 ---
 
-# Part 13 — Transformation Pipeline
+# Part 13 - Transformation Pipeline
 
-# Lesson 50 — Pipeline কী?
+# Lesson 50 - Pipeline কী?
 
 কখনো Problem-এ একাধিক Transformation Rule থাকে।
 
@@ -25270,7 +25270,7 @@ keep C
 
 ---
 
-# Lesson 51 — Pipeline Mental Model
+# Lesson 51 - Pipeline Mental Model
 
 ```text
 Input Character
@@ -25296,7 +25296,7 @@ Store
 
 ---
 
-# Lesson 52 — Filter + Transform Example
+# Lesson 52 - Filter + Transform Example
 
 Problem:
 
@@ -25343,7 +25343,7 @@ Store ch
 
 ---
 
-# Lesson 53 — `continue` কী করছে?
+# Lesson 53 - `continue` কী করছে?
 
 Code:
 
@@ -25378,7 +25378,7 @@ result
 
 ---
 
-# Lesson 54 — Order Matters
+# Lesson 54 - Order Matters
 
 ধরো Rules:
 
@@ -25437,9 +25437,9 @@ Lesson:
 
 ---
 
-# Part 14 — Common Bugs & Edge Cases
+# Part 14 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — Condition ছাড়া Case Conversion
+# 🐞 Bug 1 - Condition ছাড়া Case Conversion
 
 Wrong:
 
@@ -25467,7 +25467,7 @@ if (str[i] >= 'a' && str[i] <= 'z')
 
 ---
 
-# 🐞 Bug 2 — Toggle Case-এ Two Independent `if`
+# 🐞 Bug 2 - Toggle Case-এ Two Independent `if`
 
 Risky:
 
@@ -25498,7 +25498,7 @@ else if (uppercase)
 
 ---
 
-# 🐞 Bug 3 — Replacement-এ `==` এবং `=` Confusion
+# 🐞 Bug 3 - Replacement-এ `==` এবং `=` Confusion
 
 Wrong:
 
@@ -25525,7 +25525,7 @@ Remember:
 
 ---
 
-# 🐞 Bug 4 — Replace All Problem-এ `break`
+# 🐞 Bug 4 - Replace All Problem-এ `break`
 
 ```c
 if (str[i] == target)
@@ -25539,7 +25539,7 @@ if (str[i] == target)
 
 ---
 
-# 🐞 Bug 5 — Remove Character কিন্তু Original Index-এ Copy করা
+# 🐞 Bug 5 - Remove Character কিন্তু Original Index-এ Copy করা
 
 Wrong idea:
 
@@ -25568,7 +25568,7 @@ Separate Write Index
 
 ---
 
-# 🐞 Bug 6 — `j++` Skip-এর সময়ও করা
+# 🐞 Bug 6 - `j++` Skip-এর সময়ও করা
 
 Wrong:
 
@@ -25593,7 +25593,7 @@ if (keep)
 
 ---
 
-# 🐞 Bug 7 — Null Terminator Forget করা
+# 🐞 Bug 7 - Null Terminator Forget করা
 
 Wrong:
 
@@ -25613,7 +25613,7 @@ result[j] = '\0';
 
 ---
 
-# 🐞 Bug 8 — Original String Modified কি না না বোঝা
+# 🐞 Bug 8 - Original String Modified কি না না বোঝা
 
 এই Code:
 
@@ -25635,7 +25635,7 @@ Difference বুঝতে হবে।
 
 ---
 
-# 🐞 Bug 9 — Empty Result Handle না করা
+# 🐞 Bug 9 - Empty Result Handle না করা
 
 Input:
 
@@ -25661,7 +25661,7 @@ result[j] = '\0';
 
 ---
 
-# 🐞 Bug 10 — Transformation Order Ignore করা
+# 🐞 Bug 10 - Transformation Order Ignore করা
 
 Multiple rules থাকলে:
 
@@ -25683,7 +25683,7 @@ same result নাও দিতে পারে।
 
 ---
 
-# 🐞 Bug 11 — Spaces থাকা String-এ `scanf("%s")`
+# 🐞 Bug 11 - Spaces থাকা String-এ `scanf("%s")`
 
 Input:
 
@@ -25711,9 +25711,9 @@ fgets(str, sizeof(str), stdin);
 
 ---
 
-# Part 15 — Guided Problem Solving
+# Part 15 - Guided Problem Solving
 
-# Problem 1 — Replace All Occurrences
+# Problem 1 - Replace All Occurrences
 
 ## Problem
 
@@ -25727,7 +25727,7 @@ banana
 
 ---
 
-## Step 1 — Problem Type
+## Step 1 - Problem Type
 
 ```text
 Transformation
@@ -25735,7 +25735,7 @@ Transformation
 
 ---
 
-## Step 2 — Length Change?
+## Step 2 - Length Change?
 
 ```text
 No
@@ -25751,7 +25751,7 @@ In-place transformation
 
 ---
 
-## Step 3 — Condition
+## Step 3 - Condition
 
 ```text
 str[i] == 'a'
@@ -25759,7 +25759,7 @@ str[i] == 'a'
 
 ---
 
-## Step 4 — Transformation
+## Step 4 - Transformation
 
 ```text
 str[i] = 'x'
@@ -25779,7 +25779,7 @@ Assignment
 
 ---
 
-# Problem 2 — Convert Lowercase to Uppercase
+# Problem 2 - Convert Lowercase to Uppercase
 
 Input:
 
@@ -25816,7 +25816,7 @@ In-Place Modification
 
 ---
 
-# Problem 3 — Toggle Case
+# Problem 3 - Toggle Case
 
 Input:
 
@@ -25854,7 +25854,7 @@ No frequency array required
 
 ---
 
-# Problem 4 — Remove All `x`
+# Problem 4 - Remove All `x`
 
 Input:
 
@@ -25896,7 +25896,7 @@ Null Termination
 
 ---
 
-# Problem 5 — Keep Only Digits
+# Problem 5 - Keep Only Digits
 
 Input:
 
@@ -25928,7 +25928,7 @@ Digit?
 
 ---
 
-# Problem 6 — Remove Vowels and Uppercase Remaining Lowercase Letters
+# Problem 6 - Remove Vowels and Uppercase Remaining Lowercase Letters
 
 Input:
 
@@ -25980,9 +25980,9 @@ Pattern Combination
 
 ---
 
-# Part 16 — Exercises
+# Part 16 - Exercises
 
-# Exercise 1 — Replace Character
+# Exercise 1 - Replace Character
 
 Input:
 
@@ -26018,7 +26018,7 @@ Pattern:
 
 ---
 
-# Exercise 2 — Replace First Only
+# Exercise 2 - Replace First Only
 
 Input:
 
@@ -26043,7 +26043,7 @@ Why break is valid:
 
 ---
 
-# Exercise 3 — Replace Last Only
+# Exercise 3 - Replace Last Only
 
 Input:
 
@@ -26069,7 +26069,7 @@ Transformation Phase
 
 ---
 
-# Exercise 4 — Lowercase to Uppercase
+# Exercise 4 - Lowercase to Uppercase
 
 Input:
 
@@ -26093,7 +26093,7 @@ Mapping formula:
 
 ---
 
-# Exercise 5 — Uppercase to Lowercase
+# Exercise 5 - Uppercase to Lowercase
 
 Input:
 
@@ -26105,7 +26105,7 @@ HELLoWORLD123
 
 ---
 
-# Exercise 6 — Toggle Case
+# Exercise 6 - Toggle Case
 
 Input:
 
@@ -26126,7 +26126,7 @@ Why if + else if is safer here:
 
 ---
 
-# Exercise 7 — Replace Digits
+# Exercise 7 - Replace Digits
 
 Input:
 
@@ -26144,7 +26144,7 @@ Expected Output নিজে বের করো।
 
 ---
 
-# Exercise 8 — Remove Character
+# Exercise 8 - Remove Character
 
 Input:
 
@@ -26166,7 +26166,7 @@ Dry Run Table বানাও:
 
 ---
 
-# Exercise 9 — Remove Vowels
+# Exercise 9 - Remove Vowels
 
 Input:
 
@@ -26194,7 +26194,7 @@ Final Step:
 
 ---
 
-# Exercise 10 — Keep Only Digits
+# Exercise 10 - Keep Only Digits
 
 Input:
 
@@ -26218,7 +26218,7 @@ Traversal
 
 ---
 
-# Exercise 11 — Keep Only Letters
+# Exercise 11 - Keep Only Letters
 
 Input:
 
@@ -26239,7 +26239,7 @@ range-এর Character রাখবে।
 
 ---
 
-# Exercise 12 — Transformation Pipeline
+# Exercise 12 - Transformation Pipeline
 
 Input:
 
@@ -26271,7 +26271,7 @@ Read
 
 ---
 
-# Exercise 13 — Order Matters
+# Exercise 13 - Order Matters
 
 Input:
 
@@ -26303,7 +26303,7 @@ Explain কেন difference হয়।
 
 ---
 
-# Exercise 14 — Empty Result
+# Exercise 14 - Empty Result
 
 Input:
 
@@ -26332,7 +26332,7 @@ What result string contains:
 
 ---
 
-# Exercise 15 — Strategy Selection Drill
+# Exercise 15 - Strategy Selection Drill
 
 প্রতিটি Problem-এর জন্য Strategy select করো।
 
@@ -26396,9 +26396,9 @@ Strategy:
 
 ---
 
-# Part 17 — Chapter Assignment
+# Part 17 - Chapter Assignment
 
-# 📝 Task 1 — Transformation Dictionary
+# 📝 Task 1 - Transformation Dictionary
 
 নিজের ভাষায় explain করবে:
 
@@ -26438,7 +26438,7 @@ Common Mistake:
 
 ---
 
-# 📝 Task 2 — Basic Transformation Programs
+# 📝 Task 2 - Basic Transformation Programs
 
 নিচের Files বানাবে:
 
@@ -26472,7 +26472,7 @@ Pattern:
 
 ---
 
-# 📝 Task 3 — Filtering Programs
+# 📝 Task 3 - Filtering Programs
 
 Files:
 
@@ -26504,7 +26504,7 @@ Where null terminator is added:
 
 ---
 
-# 📝 Task 4 — Transformation Pipeline
+# 📝 Task 4 - Transformation Pipeline
 
 File:
 
@@ -26546,7 +26546,7 @@ Digit?
 
 ---
 
-# 📝 Task 5 — Read/Write Dry Run
+# 📝 Task 5 - Read/Write Dry Run
 
 Input:
 
@@ -26584,7 +26584,7 @@ Final String:
 
 ---
 
-# 📝 Task 6 — Pattern Comparison Table
+# 📝 Task 6 - Pattern Comparison Table
 
 নিজে পূরণ করবে:
 
@@ -26599,7 +26599,7 @@ Final String:
 
 ---
 
-# 📝 Task 7 — Edge Case Design
+# 📝 Task 7 - Edge Case Design
 
 Transformation Problems-এর জন্য Test Case বানাবে।
 
@@ -26639,7 +26639,7 @@ Why Important:
 
 ---
 
-# 📝 Task 8 — Bug Analysis
+# 📝 Task 8 - Bug Analysis
 
 নিচের Code analyze করবে:
 
@@ -26678,7 +26678,7 @@ Correct mental rule:
 
 ---
 
-# 📝 Task 9 — Toggle Case Bug Analysis
+# 📝 Task 9 - Toggle Case Bug Analysis
 
 Analyze:
 
@@ -26712,11 +26712,11 @@ How to fix?
 
 ---
 
-# 📝 Task 10 — Pattern Recognition Drill
+# 📝 Task 10 - Pattern Recognition Drill
 
 Complete করবে।
 
-## A — Replace All
+## A - Replace All
 
 ```text
 ...
@@ -26728,21 +26728,7 @@ Complete করবে।
 
 ---
 
-## B — Case Conversion
-
-```text
-...
-+
-...
-+
-...
-+
-...
-```
-
----
-
-## C — Remove Character
+## B - Case Conversion
 
 ```text
 ...
@@ -26756,7 +26742,21 @@ Complete করবে।
 
 ---
 
-## D — Build Filtered String
+## C - Remove Character
+
+```text
+...
++
+...
++
+...
++
+...
+```
+
+---
+
+## D - Build Filtered String
 
 ```text
 Read
@@ -26772,7 +26772,7 @@ Null Terminate
 
 ---
 
-## E — Filter + Transform
+## E - Filter + Transform
 
 ```text
 ...
@@ -26786,12 +26786,12 @@ Null Terminate
 
 ---
 
-# 📝 Task 11 — Chapter Reflection
+# 📝 Task 11 - Chapter Reflection
 
 Copy-Paste Version:
 
 ````markdown
-# 🧠 Day 3 — Chapter 7 Reflection
+# 🧠 Day 3 - Chapter 7 Reflection
 
 ## 1. What Is String Transformation?
 
@@ -27912,34 +27912,34 @@ j = Where am I writing next?
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ✅ Chapter 7 — String Transformation
+├── ✅ Chapter 7 - String Transformation
 │
-├── ⏳ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ⏳ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 7 Complete.**
+**Day 3 - Chapter 7 Complete.**
 
 পরের Chapter:
 
 ```text
-Day 3 — Chapter 8
+Day 3 - Chapter 8
 Reverse & Two-Pointer Mental Model
 ```
 
@@ -27977,7 +27977,7 @@ Meet at Center
 
 ---
 
-# 📘 Day 3 — Chapter 8
+# 📘 Day 3 - Chapter 8
 
 # 🔁 Reverse & Two-Pointer Mental Model
 
@@ -28126,26 +28126,26 @@ Two-Pointer Pattern
 # 📖 Chapter Map
 
 ```text
-Day 3 — Chapter 8
+Day 3 - Chapter 8
 │
-├── Part 1  — Reverse Mental Model
-├── Part 2  — Length & Last Index
-├── Part 3  — Three Types of Reverse
-├── Part 4  — Opposite Index Mapping
-├── Part 5  — Two-Pointer Introduction
-├── Part 6  — Left & Right Pointer
-├── Part 7  — Swap Pattern
-├── Part 8  — In-Place Reverse
-├── Part 9  — New Result Array Reverse
-├── Part 10 — Reverse Printing
-├── Part 11 — Pointer Movement
-├── Part 12 — Loop Stopping Condition
-├── Part 13 — Odd vs Even Length
-├── Part 14 — Compare vs Swap Two-Pointer
-├── Part 15 — Common Bugs & Edge Cases
-├── Part 16 — Guided Problem Solving
-├── Part 17 — Exercises
-└── Part 18 — Assignment & Reflection
+├── Part 1  - Reverse Mental Model
+├── Part 2  - Length & Last Index
+├── Part 3  - Three Types of Reverse
+├── Part 4  - Opposite Index Mapping
+├── Part 5  - Two-Pointer Introduction
+├── Part 6  - Left & Right Pointer
+├── Part 7  - Swap Pattern
+├── Part 8  - In-Place Reverse
+├── Part 9  - New Result Array Reverse
+├── Part 10 - Reverse Printing
+├── Part 11 - Pointer Movement
+├── Part 12 - Loop Stopping Condition
+├── Part 13 - Odd vs Even Length
+├── Part 14 - Compare vs Swap Two-Pointer
+├── Part 15 - Common Bugs & Edge Cases
+├── Part 16 - Guided Problem Solving
+├── Part 17 - Exercises
+└── Part 18 - Assignment & Reflection
 ```
 
 ---
@@ -28266,9 +28266,9 @@ L →       ← R
 
 ---
 
-# Part 1 — Reverse Mental Model
+# Part 1 - Reverse Mental Model
 
-# Lesson 1 — Reverse মানে কী?
+# Lesson 1 - Reverse মানে কী?
 
 Reverse মানে:
 
@@ -28341,7 +28341,7 @@ abc
 
 ---
 
-# Lesson 2 — Reverse-এ Position Relationship
+# Lesson 2 - Reverse-এ Position Relationship
 
 Input:
 
@@ -28392,7 +28392,7 @@ Third ↔ Third Last
 
 ---
 
-# Lesson 3 — Reverse Problem দেখলে প্রথম প্রশ্ন
+# Lesson 3 - Reverse Problem দেখলে প্রথম প্রশ্ন
 
 Problem বলল:
 
@@ -28440,9 +28440,9 @@ Reverse Problem
 
 ---
 
-# Part 2 — Length & Last Index
+# Part 2 - Length & Last Index
 
-# Lesson 4 — Length এবং Index এক না
+# Lesson 4 - Length এবং Index এক না
 
 ধরো:
 
@@ -28488,7 +28488,7 @@ right = 4
 
 ---
 
-# Lesson 5 — Memory View
+# Lesson 5 - Memory View
 
 String:
 
@@ -28543,7 +28543,7 @@ right = length
 
 ---
 
-# Lesson 6 — Length Manually বের করা
+# Lesson 6 - Length Manually বের করা
 
 ```c
 int length = 0;
@@ -28585,7 +28585,7 @@ int right = length - 1;
 
 ---
 
-# Lesson 7 — `strlen()` Version
+# Lesson 7 - `strlen()` Version
 
 C-এর `<string.h>` library ব্যবহার করলে:
 
@@ -28655,9 +28655,9 @@ Reuse
 
 ---
 
-# Part 3 — Three Types of Reverse
+# Part 3 - Three Types of Reverse
 
-# Lesson 8 — Reverse Strategy 1: Print Backward
+# Lesson 8 - Reverse Strategy 1: Print Backward
 
 Input:
 
@@ -28710,7 +28710,7 @@ i
 
 ---
 
-# Lesson 9 — Reverse Strategy 2: New Result Array
+# Lesson 9 - Reverse Strategy 2: New Result Array
 
 Input:
 
@@ -28761,7 +28761,7 @@ Write:
 
 ---
 
-# Lesson 10 — Reverse Strategy 3: In-Place
+# Lesson 10 - Reverse Strategy 3: In-Place
 
 Input Array:
 
@@ -28797,7 +28797,7 @@ Move Toward Center
 
 ---
 
-# Lesson 11 — Three Strategies Comparison
+# Lesson 11 - Three Strategies Comparison
 
 | Goal                    | Strategy           | Extra Array? | Original Modified? |
 | ----------------------- | ------------------ | -----------: | -----------------: |
@@ -28827,9 +28827,9 @@ Two Pointer + Swap
 
 ---
 
-# Part 4 — Opposite Index Mapping
+# Part 4 - Opposite Index Mapping
 
-# Lesson 12 — Opposite Index কী?
+# Lesson 12 - Opposite Index কী?
 
 ধরো:
 
@@ -28865,7 +28865,7 @@ opposite = length - 1 - i;
 
 ---
 
-# Lesson 13 — Formula Dry Run
+# Lesson 13 - Formula Dry Run
 
 ধরো:
 
@@ -28932,7 +28932,7 @@ So:
 
 ---
 
-# Lesson 14 — Reverse Mapping Pattern
+# Lesson 14 - Reverse Mapping Pattern
 
 Generic:
 
@@ -28965,7 +28965,7 @@ olleh
 
 ---
 
-# Lesson 15 — New Reversed String Code
+# Lesson 15 - New Reversed String Code
 
 ```c
 #include <stdio.h>
@@ -29007,9 +29007,9 @@ Null Termination
 
 ---
 
-# Part 5 — Two-Pointer Introduction
+# Part 5 - Two-Pointer Introduction
 
-# Lesson 16 — Two Pointer কী?
+# Lesson 16 - Two Pointer কী?
 
 Two Pointer মানে:
 
@@ -29053,7 +29053,7 @@ right--
 
 ---
 
-# Lesson 17 — এখানে Pointer মানে কি C Pointer?
+# Lesson 17 - এখানে Pointer মানে কি C Pointer?
 
 খুব গুরুত্বপূর্ণ।
 
@@ -29097,7 +29097,7 @@ Pointer = Position Tracker
 
 ---
 
-# Lesson 18 — Single Pointer vs Two Pointer
+# Lesson 18 - Single Pointer vs Two Pointer
 
 ## Single Index Traversal
 
@@ -29147,9 +29147,9 @@ Meet/Cross
 
 ---
 
-# Part 6 — Left & Right Pointer
+# Part 6 - Left & Right Pointer
 
-# Lesson 19 — Left Pointer
+# Lesson 19 - Left Pointer
 
 Initialization:
 
@@ -29193,7 +29193,7 @@ A B C D E
 
 ---
 
-# Lesson 20 — Right Pointer
+# Lesson 20 - Right Pointer
 
 Initialization:
 
@@ -29237,7 +29237,7 @@ A B C D E
 
 ---
 
-# Lesson 21 — Movement Together
+# Lesson 21 - Movement Together
 
 Initial:
 
@@ -29285,7 +29285,7 @@ Move Toward Center
 
 ---
 
-# Lesson 22 — Pointer State Table
+# Lesson 22 - Pointer State Table
 
 String:
 
@@ -29325,9 +29325,9 @@ Stop।
 
 ---
 
-# Part 7 — Swap Pattern
+# Part 7 - Swap Pattern
 
-# Lesson 23 — Swap কী?
+# Lesson 23 - Swap কী?
 
 Swap মানে:
 
@@ -29363,7 +29363,7 @@ swap করি।
 
 ---
 
-# Lesson 24 — Temporary Variable কেন দরকার?
+# Lesson 24 - Temporary Variable কেন দরকার?
 
 ধরো:
 
@@ -29415,7 +29415,7 @@ Wrong।
 
 ---
 
-# Lesson 25 — Correct Swap
+# Lesson 25 - Correct Swap
 
 ```c
 char temp = str[left];
@@ -29463,7 +29463,7 @@ Correct।
 
 ---
 
-# Lesson 26 — Swap Pattern Template
+# Lesson 26 - Swap Pattern Template
 
 ```c
 temp = a;
@@ -29491,9 +29491,9 @@ Core Pattern একই।
 
 ---
 
-# Part 8 — In-Place Reverse
+# Part 8 - In-Place Reverse
 
-# Lesson 27 — Complete Algorithm
+# Lesson 27 - Complete Algorithm
 
 Input:
 
@@ -29541,7 +29541,7 @@ Repeat
 
 ---
 
-# Lesson 28 — Complete Code
+# Lesson 28 - Complete Code
 
 ```c
 #include <stdio.h>
@@ -29576,7 +29576,7 @@ int main()
 
 ---
 
-# Lesson 29 — Code Breakdown
+# Lesson 29 - Code Breakdown
 
 ## Length
 
@@ -29654,7 +29654,7 @@ Move both toward center
 
 ---
 
-# Lesson 30 — Full Dry Run: `hello`
+# Lesson 30 - Full Dry Run: `hello`
 
 Initial:
 
@@ -29729,9 +29729,9 @@ olleh
 
 ---
 
-# Part 9 — New Result Array Reverse
+# Part 9 - New Result Array Reverse
 
-# Lesson 31 — Read Backward, Write Forward
+# Lesson 31 - Read Backward, Write Forward
 
 Input:
 
@@ -29768,7 +29768,7 @@ Write Forward
 
 ---
 
-# Lesson 32 — Two-Index Result Construction
+# Lesson 32 - Two-Index Result Construction
 
 ```c
 int j = 0;
@@ -29811,17 +29811,17 @@ edoc
 
 ---
 
-# Lesson 33 — Mapping vs Two-Index Construction
+# Lesson 33 - Mapping vs Two-Index Construction
 
 দুইভাবেই new reversed string বানানো যায়।
 
-## Method 1 — Formula
+## Method 1 - Formula
 
 ```c
 result[i] = str[length - 1 - i];
 ```
 
-## Method 2 — Two Indices
+## Method 2 - Two Indices
 
 ```c
 int j = 0;
@@ -29839,9 +29839,9 @@ Beginner হিসেবে দুইটিই বুঝবে।
 
 ---
 
-# Part 10 — Reverse Printing
+# Part 10 - Reverse Printing
 
-# Lesson 34 — শুধু Print করলে Array কেন দরকার নেই?
+# Lesson 34 - শুধু Print করলে Array কেন দরকার নেই?
 
 Problem:
 
@@ -29886,7 +29886,7 @@ Backward Traversal
 
 ---
 
-# Lesson 35 — Reverse Print ≠ Reverse String
+# Lesson 35 - Reverse Print ≠ Reverse String
 
 এই Code:
 
@@ -29923,9 +29923,9 @@ str = olleh
 
 ---
 
-# Part 11 — Pointer Movement
+# Part 11 - Pointer Movement
 
-# Lesson 36 — Two Pointer-এর চারটি Basic Movement Style
+# Lesson 36 - Two Pointer-এর চারটি Basic Movement Style
 
 Two Pointer মানেই সবসময়:
 
@@ -29938,7 +29938,7 @@ right--
 
 Future-এ বিভিন্ন Movement থাকবে।
 
-### Style 1 — Both Move Inward
+### Style 1 - Both Move Inward
 
 ```text
 L →       ← R
@@ -29954,7 +29954,7 @@ Symmetric Comparison
 
 ---
 
-### Style 2 — Both Move Forward
+### Style 2 - Both Move Forward
 
 ```text
 L →
@@ -29970,7 +29970,7 @@ Same Direction Two Pointer
 
 ---
 
-### Style 3 — Conditional Movement
+### Style 3 - Conditional Movement
 
 ```text
 If condition A:
@@ -29984,7 +29984,7 @@ Used in sorted array problems।
 
 ---
 
-### Style 4 — One Fixed, One Moving
+### Style 4 - One Fixed, One Moving
 
 ```text
 L fixed
@@ -30001,7 +30001,7 @@ Opposite Direction Two Pointer
 
 ---
 
-# Lesson 37 — Reverse Movement Rule
+# Lesson 37 - Reverse Movement Rule
 
 Reverse-এর জন্য:
 
@@ -30049,7 +30049,7 @@ A B C D E F
 
 ---
 
-# Lesson 38 — Movement ভুল হলে কী হয়?
+# Lesson 38 - Movement ভুল হলে কী হয়?
 
 Suppose:
 
@@ -30103,9 +30103,9 @@ Which direction?
 
 ---
 
-# Part 12 — Loop Stopping Condition
+# Part 12 - Loop Stopping Condition
 
-# Lesson 39 — কেন `left < right`?
+# Lesson 39 - কেন `left < right`?
 
 Reverse:
 
@@ -30135,7 +30135,7 @@ left > right
 
 ---
 
-# Lesson 40 — Odd Length Example
+# Lesson 40 - Odd Length Example
 
 String:
 
@@ -30185,7 +30185,7 @@ Middle Character change করার দরকার নেই।
 
 ---
 
-# Lesson 41 — Even Length Example
+# Lesson 41 - Even Length Example
 
 String:
 
@@ -30223,7 +30223,7 @@ Stop।
 
 ---
 
-# Lesson 42 — `left <= right` কি সবসময় ভুল?
+# Lesson 42 - `left <= right` কি সবসময় ভুল?
 
 না।
 
@@ -30261,7 +30261,7 @@ preferred।
 
 ---
 
-# Lesson 43 — Compare Problem-এ `<=` কখন useful হতে পারে?
+# Lesson 43 - Compare Problem-এ `<=` কখন useful হতে পারে?
 
 Problem-এর logic-এর উপর depend করে।
 
@@ -30287,9 +30287,9 @@ while (left < right)
 
 ---
 
-# Part 13 — Odd vs Even Length
+# Part 13 - Odd vs Even Length
 
-# Lesson 44 — Odd Length
+# Lesson 44 - Odd Length
 
 Example:
 
@@ -30341,7 +30341,7 @@ Middle is unpaired।
 
 ---
 
-# Lesson 45 — Even Length
+# Lesson 45 - Even Length
 
 Example:
 
@@ -30382,7 +30382,7 @@ Then cross।
 
 ---
 
-# Lesson 46 — Pair Count
+# Lesson 46 - Pair Count
 
 For a String of length `n`, reverse করতে Swap লাগে:
 
@@ -30415,13 +30415,13 @@ Mental Model:
 
 ---
 
-# Part 14 — Compare vs Swap Two-Pointer
+# Part 14 - Compare vs Swap Two-Pointer
 
-# Lesson 47 — Two Pointer শুধু Swap-এর জন্য না
+# Lesson 47 - Two Pointer শুধু Swap-এর জন্য না
 
 Two Pointer-এর দুইটি বড় use এখন তোমার জানা দরকার।
 
-## Type 1 — Swap-Based
+## Type 1 - Swap-Based
 
 ```text
 Compare না করে
@@ -30442,7 +30442,7 @@ L → Swap ← R
 
 ---
 
-## Type 2 — Compare-Based
+## Type 2 - Compare-Based
 
 ```text
 Left Value
@@ -30479,7 +30479,7 @@ foundation।
 
 ---
 
-# Lesson 48 — Swap-Based Flow
+# Lesson 48 - Swap-Based Flow
 
 ```text
 Initialize L and R
@@ -30502,7 +30502,7 @@ Reverse
 
 ---
 
-# Lesson 49 — Compare-Based Flow
+# Lesson 49 - Compare-Based Flow
 
 ```text
 Initialize L and R
@@ -30530,7 +30530,7 @@ Symmetric Pair Check
 
 ---
 
-# Lesson 50 — Pair Processing Mental Model
+# Lesson 50 - Pair Processing Mental Model
 
 Two Pointer Problem দেখলে জিজ্ঞেস করবে:
 
@@ -30566,9 +30566,9 @@ Compare
 
 ---
 
-# Part 15 — Common Bugs & Edge Cases
+# Part 15 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — `right = length`
+# 🐞 Bug 1 - `right = length`
 
 Wrong:
 
@@ -30590,7 +30590,7 @@ int right = length - 1;
 
 ---
 
-# 🐞 Bug 2 — Null Terminator Swap করা
+# 🐞 Bug 2 - Null Terminator Swap করা
 
 Input:
 
@@ -30614,7 +30614,7 @@ String corrupt হয়ে যাবে।
 
 ---
 
-# 🐞 Bug 3 — Temporary Variable ছাড়া Swap
+# 🐞 Bug 3 - Temporary Variable ছাড়া Swap
 
 Wrong:
 
@@ -30635,7 +30635,7 @@ str[right] = temp;
 
 ---
 
-# 🐞 Bug 4 — Pointer Move ভুলে যাওয়া
+# 🐞 Bug 4 - Pointer Move ভুলে যাওয়া
 
 Wrong:
 
@@ -30665,7 +30665,7 @@ Infinite Loop
 
 ---
 
-# 🐞 Bug 5 — শুধু Left Move করা
+# 🐞 Bug 5 - শুধু Left Move করা
 
 ```c
 left++;
@@ -30683,7 +30683,7 @@ right--;
 
 ---
 
-# 🐞 Bug 6 — Backward Loop-এ Wrong Start
+# 🐞 Bug 6 - Backward Loop-এ Wrong Start
 
 Wrong:
 
@@ -30711,7 +30711,7 @@ for (int i = length - 1; i >= 0; i--)
 
 ---
 
-# 🐞 Bug 7 — New Result String-এ `'\0'` না দেওয়া
+# 🐞 Bug 7 - New Result String-এ `'\0'` না দেওয়া
 
 Wrong:
 
@@ -30732,7 +30732,7 @@ result[j] = '\0';
 
 ---
 
-# 🐞 Bug 8 — Reverse Print করে ভাবা String Reverse হয়েছে
+# 🐞 Bug 8 - Reverse Print করে ভাবা String Reverse হয়েছে
 
 ```c
 for (int i = length - 1; i >= 0; i--)
@@ -30747,7 +30747,7 @@ Original String unchanged।
 
 ---
 
-# 🐞 Bug 9 — `i > 0` ব্যবহার
+# 🐞 Bug 9 - `i > 0` ব্যবহার
 
 Backward Loop:
 
@@ -30771,7 +30771,7 @@ i >= 0
 
 ---
 
-# 🐞 Bug 10 — Unsigned Index Trap
+# 🐞 Bug 10 - Unsigned Index Trap
 
 এটি এখন তোমার Contest-এর জন্য advanced warning।
 
@@ -30793,7 +30793,7 @@ Beginner Contest Code-এ backward traversal-এর জন্য simple `int` le
 
 ---
 
-# 🐞 Bug 11 — Empty String-এ `length - 1`
+# 🐞 Bug 11 - Empty String-এ `length - 1`
 
 যদি:
 
@@ -30828,7 +30828,7 @@ Loop চলবে না।
 
 ---
 
-# 🐞 Bug 12 — Space-containing String
+# 🐞 Bug 12 - Space-containing String
 
 Input:
 
@@ -30854,7 +30854,7 @@ Full Line Reverse করতে হলে `fgets()` প্রয়োজন।
 
 ---
 
-# 🐞 Bug 13 — Length-এর মধ্যে Newline থাকা
+# 🐞 Bug 13 - Length-এর মধ্যে Newline থাকা
 
 যদি:
 
@@ -30876,7 +30876,7 @@ hello\n\0
 
 ---
 
-# 🐞 Bug 14 — Wrong Opposite Index Formula
+# 🐞 Bug 14 - Wrong Opposite Index Formula
 
 Wrong:
 
@@ -30898,9 +30898,9 @@ length - 1
 
 ---
 
-# Part 16 — Guided Problem Solving
+# Part 16 - Guided Problem Solving
 
-# Problem 1 — Print String in Reverse
+# Problem 1 - Print String in Reverse
 
 ## Problem
 
@@ -30918,7 +30918,7 @@ ytiruces
 
 ---
 
-## Step 1 — Need Modified String?
+## Step 1 - Need Modified String?
 
 ```text
 No
@@ -30928,7 +30928,7 @@ No
 
 ---
 
-## Step 2 — Best Strategy
+## Step 2 - Best Strategy
 
 ```text
 Backward Traversal
@@ -30936,7 +30936,7 @@ Backward Traversal
 
 ---
 
-## Step 3 — Start Position
+## Step 3 - Start Position
 
 ```text
 length - 1
@@ -30944,7 +30944,7 @@ length - 1
 
 ---
 
-## Step 4 — End Position
+## Step 4 - End Position
 
 ```text
 0
@@ -30973,7 +30973,7 @@ for (int i = length - 1; i >= 0; i--)
 
 ---
 
-# Problem 2 — Reverse Original String
+# Problem 2 - Reverse Original String
 
 Input:
 
@@ -31033,7 +31033,7 @@ Frequency Array
 
 ---
 
-# Problem 3 — Create New Reversed Copy
+# Problem 3 - Create New Reversed Copy
 
 Input:
 
@@ -31077,7 +31077,7 @@ Opposite Index Mapping
 
 ---
 
-# Problem 4 — Reverse Only First and Last Pair
+# Problem 4 - Reverse Only First and Last Pair
 
 Input:
 
@@ -31115,7 +31115,7 @@ Lesson:
 
 ---
 
-# Problem 5 — Reverse a Character Array Manually
+# Problem 5 - Reverse a Character Array Manually
 
 Input:
 
@@ -31165,7 +31165,7 @@ Pointer states:
 
 ---
 
-# Problem 6 — Decide: Swap or Compare?
+# Problem 6 - Decide: Swap or Compare?
 
 ### A
 
@@ -31207,9 +31207,9 @@ Compare-Based Two Pointer
 
 ---
 
-# Part 17 — Exercises
+# Part 17 - Exercises
 
-# Exercise 1 — Reverse Output
+# Exercise 1 - Reverse Output
 
 Input:
 
@@ -31242,7 +31242,7 @@ Code লিখবে শুধু Backward Traversal দিয়ে।
 
 ---
 
-# Exercise 2 — Manual Opposite Index
+# Exercise 2 - Manual Opposite Index
 
 String Length:
 
@@ -31276,7 +31276,7 @@ Opposite Index = ...
 
 ---
 
-# Exercise 3 — Reverse with Result Array
+# Exercise 3 - Reverse with Result Array
 
 Input:
 
@@ -31310,7 +31310,7 @@ Null Terminator Position:
 
 ---
 
-# Exercise 4 — In-Place Reverse
+# Exercise 4 - In-Place Reverse
 
 Input:
 
@@ -31343,7 +31343,7 @@ right =
 
 ---
 
-# Exercise 5 — Swap Dry Run
+# Exercise 5 - Swap Dry Run
 
 Initial:
 
@@ -31362,7 +31362,7 @@ Table পূরণ করো:
 
 ---
 
-# Exercise 6 — Even Length Dry Run
+# Exercise 6 - Even Length Dry Run
 
 Input:
 
@@ -31398,7 +31398,7 @@ Final:
 
 ---
 
-# Exercise 7 — Odd Length Dry Run
+# Exercise 7 - Odd Length Dry Run
 
 Input:
 
@@ -31430,7 +31430,7 @@ Final Reverse:
 
 ---
 
-# Exercise 8 — Strategy Selection
+# Exercise 8 - Strategy Selection
 
 Options:
 
@@ -31491,7 +31491,7 @@ Answer:
 
 ---
 
-# Exercise 9 — Find the Bug
+# Exercise 9 - Find the Bug
 
 ```c
 int length = strlen(str);
@@ -31525,7 +31525,7 @@ Correct Line:
 
 ---
 
-# Exercise 10 — Find the Infinite Loop
+# Exercise 10 - Find the Infinite Loop
 
 ```c
 int left = 0;
@@ -31551,7 +31551,7 @@ Why loop never ends:
 
 ---
 
-# Exercise 11 — Wrong Swap Analysis
+# Exercise 11 - Wrong Swap Analysis
 
 Analyze:
 
@@ -31587,7 +31587,7 @@ What value was lost?
 
 ---
 
-# Exercise 12 — Reverse Print vs Reverse Modify
+# Exercise 12 - Reverse Print vs Reverse Modify
 
 Explain:
 
@@ -31613,7 +31613,7 @@ abc
 
 ---
 
-# Exercise 13 — Pair Count
+# Exercise 13 - Pair Count
 
 Table পূরণ করো:
 
@@ -31636,7 +31636,7 @@ Swaps = ...
 
 ---
 
-# Exercise 14 — Loop Condition Analysis
+# Exercise 14 - Loop Condition Analysis
 
 Explain difference:
 
@@ -31662,7 +31662,7 @@ Because:
 
 ---
 
-# Exercise 15 — Pattern Recognition
+# Exercise 15 - Pattern Recognition
 
 Problem:
 
@@ -31702,9 +31702,9 @@ Movement:
 
 ---
 
-# Part 18 — Chapter Assignment
+# Part 18 - Chapter Assignment
 
-# 📝 Task 1 — Two-Pointer Dictionary
+# 📝 Task 1 - Two-Pointer Dictionary
 
 নিজের ভাষায় explain করবে:
 
@@ -31749,7 +31749,7 @@ Common Mistake:
 
 ---
 
-# 📝 Task 2 — Reverse Programs
+# 📝 Task 2 - Reverse Programs
 
 নিচের Files বানাবে:
 
@@ -31781,7 +31781,7 @@ Main Pattern:
 
 ---
 
-# 📝 Task 3 — Swap Practice
+# 📝 Task 3 - Swap Practice
 
 File:
 
@@ -31818,7 +31818,7 @@ Z A
 
 ---
 
-# 📝 Task 4 — Reverse Dry Run
+# 📝 Task 4 - Reverse Dry Run
 
 Input:
 
@@ -31853,7 +31853,7 @@ Final String:
 
 ---
 
-# 📝 Task 5 — Odd Length Analysis
+# 📝 Task 5 - Odd Length Analysis
 
 Input:
 
@@ -31893,7 +31893,7 @@ Final Result:
 
 ---
 
-# 📝 Task 6 — Even Length Analysis
+# 📝 Task 6 - Even Length Analysis
 
 Input:
 
@@ -31927,7 +31927,7 @@ Final:
 
 ---
 
-# 📝 Task 7 — Opposite Index Table
+# 📝 Task 7 - Opposite Index Table
 
 Input:
 
@@ -31959,7 +31959,7 @@ Opposite Index =
 
 ---
 
-# 📝 Task 8 — Bug Analysis
+# 📝 Task 8 - Bug Analysis
 
 Analyze:
 
@@ -31990,7 +31990,7 @@ Correct Loop:
 
 ---
 
-# 📝 Task 9 — Pattern Comparison Table
+# 📝 Task 9 - Pattern Comparison Table
 
 নিজে পূরণ করবে:
 
@@ -32003,7 +32003,7 @@ Correct Loop:
 
 ---
 
-# 📝 Task 10 — Two-Pointer Control Questions
+# 📝 Task 10 - Two-Pointer Control Questions
 
 নিচের Questions-এর answer নিজের ভাষায় লিখবে:
 
@@ -32035,7 +32035,7 @@ Correct Loop:
 
 ---
 
-# 📝 Task 11 — Code Without Looking
+# 📝 Task 11 - Code Without Looking
 
 Notes বন্ধ করে তিনটি Program লিখবে:
 
@@ -32069,12 +32069,12 @@ Implement
 
 ---
 
-# 📝 Task 12 — Chapter Reflection
+# 📝 Task 12 - Chapter Reflection
 
 Copy-Paste Version:
 
 ````markdown
-# 🧠 Day 3 — Chapter 8 Reflection
+# 🧠 Day 3 - Chapter 8 Reflection
 
 ## 1. What Is Reverse?
 
@@ -32731,7 +32731,7 @@ while (left < right)
 
 ## 8. Result Array Reverse
 
-### Method A — Opposite Index
+### Method A - Opposite Index
 
 ```c
 for (int i = 0; i < length; i++)
@@ -32742,7 +32742,7 @@ for (int i = 0; i < length; i++)
 result[length] = '\0';
 ```
 
-### Method B — Read Backward, Write Forward
+### Method B - Read Backward, Write Forward
 
 ```c
 int j = 0;
@@ -33217,34 +33217,34 @@ Swap → Compare
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ✅ Chapter 7 — String Transformation
+├── ✅ Chapter 7 - String Transformation
 │
-├── ✅ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ✅ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ⏳ Chapter 9 — Palindrome Pattern
+├── ⏳ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 8 Complete.**
+**Day 3 - Chapter 8 Complete.**
 
 পরের Chapter:
 
 ```text
-Day 3 — Chapter 9
+Day 3 - Chapter 9
 Palindrome Pattern
 ```
 
@@ -33286,11 +33286,11 @@ r a c e c a r
 Move Inward
 ```
 
-এভাবেই আমরা **Palindrome Pattern**, **Flag Strategy**, **Early Exit**, **Reverse-based Solution বনাম Two-Pointer Solution**, এবং Contest-এ কোন approach কখন ব্যবহার করবে—সব build করব।
+এভাবেই আমরা **Palindrome Pattern**, **Flag Strategy**, **Early Exit**, **Reverse-based Solution বনাম Two-Pointer Solution**, এবং Contest-এ কোন approach কখন ব্যবহার করবে-সব build করব।
 
 ---
 
-# 📘 Day 3 — Chapter 9
+# 📘 Day 3 - Chapter 9
 
 # 🔍 Palindrome Pattern
 
@@ -33383,25 +33383,25 @@ Symmetric Pair Comparison
 # 📖 Chapter Map
 
 ```text
-Day 3 — Chapter 9
+Day 3 - Chapter 9
 │
-├── Part 1  — Palindrome Mental Model
-├── Part 2  — Symmetry & Opposite Pairs
-├── Part 3  — Manual Palindrome Checking
-├── Part 4  — Two-Pointer Palindrome Pattern
-├── Part 5  — Flag Strategy
-├── Part 6  — Early Exit Pattern
-├── Part 7  — Direct Return Strategy
-├── Part 8  — Reverse-Based Palindrome Check
-├── Part 9  — Two Approaches Comparison
-├── Part 10 — Odd & Even Length Palindrome
-├── Part 11 — Case, Space & Symbol Handling
-├── Part 12 — Complexity Mental Model
-├── Part 13 — Common Bugs & Edge Cases
-├── Part 14 — Guided Problem Solving
-├── Part 15 — Pattern Recognition Session
-├── Part 16 — Exercises
-└── Part 17 — Assignment & Reflection
+├── Part 1  - Palindrome Mental Model
+├── Part 2  - Symmetry & Opposite Pairs
+├── Part 3  - Manual Palindrome Checking
+├── Part 4  - Two-Pointer Palindrome Pattern
+├── Part 5  - Flag Strategy
+├── Part 6  - Early Exit Pattern
+├── Part 7  - Direct Return Strategy
+├── Part 8  - Reverse-Based Palindrome Check
+├── Part 9  - Two Approaches Comparison
+├── Part 10 - Odd & Even Length Palindrome
+├── Part 11 - Case, Space & Symbol Handling
+├── Part 12 - Complexity Mental Model
+├── Part 13 - Common Bugs & Edge Cases
+├── Part 14 - Guided Problem Solving
+├── Part 15 - Pattern Recognition Session
+├── Part 16 - Exercises
+└── Part 17 - Assignment & Reflection
 ```
 
 ---
@@ -33519,9 +33519,9 @@ L →   Compare Pairs   ← R
 
 ---
 
-# Part 1 — Palindrome Mental Model
+# Part 1 - Palindrome Mental Model
 
-# Lesson 1 — Palindrome কী?
+# Lesson 1 - Palindrome কী?
 
 Palindrome হলো এমন Sequence যেটি:
 
@@ -33593,7 +33593,7 @@ Not Palindrome
 
 ---
 
-# Lesson 2 — কিছু Simple Palindrome Example
+# Lesson 2 - কিছু Simple Palindrome Example
 
 ```text
 a
@@ -33663,7 +33663,7 @@ abca
 
 ---
 
-# Lesson 3 — Palindrome-এর প্রথম Mental Model
+# Lesson 3 - Palindrome-এর প্রথম Mental Model
 
 Beginner সাধারণত ভাবে:
 
@@ -33708,7 +33708,7 @@ Not Palindrome
 
 ---
 
-# Lesson 4 — Palindrome মানে Symmetry
+# Lesson 4 - Palindrome মানে Symmetry
 
 Palindrome String:
 
@@ -33764,7 +33764,7 @@ Right Half
 
 ---
 
-# Lesson 5 — One Mismatch Is Enough
+# Lesson 5 - One Mismatch Is Enough
 
 ধরো:
 
@@ -33826,9 +33826,9 @@ Early Exit Pattern
 
 ---
 
-# Part 2 — Symmetry & Opposite Pairs
+# Part 2 - Symmetry & Opposite Pairs
 
-# Lesson 6 — Opposite Pair Relationship
+# Lesson 6 - Opposite Pair Relationship
 
 Chapter 8 থেকে Formula:
 
@@ -33879,7 +33879,7 @@ C
 
 ---
 
-# Lesson 7 — Palindrome Condition
+# Lesson 7 - Palindrome Condition
 
 Conceptually:
 
@@ -33902,7 +33902,7 @@ Not Palindrome
 
 ---
 
-# Lesson 8 — সব Character কেন Compare করতে হয় না?
+# Lesson 8 - সব Character কেন Compare করতে হয় না?
 
 String:
 
@@ -33966,7 +33966,7 @@ Process each pair once
 
 ---
 
-# Lesson 9 — Pair Table
+# Lesson 9 - Pair Table
 
 String:
 
@@ -34000,9 +34000,9 @@ Palindrome
 
 ---
 
-# Part 3 — Manual Palindrome Checking
+# Part 3 - Manual Palindrome Checking
 
-# Lesson 10 — Code লেখার আগে Dry Run
+# Lesson 10 - Code লেখার আগে Dry Run
 
 Input:
 
@@ -34068,7 +34068,7 @@ Palindrome
 
 ---
 
-# Lesson 11 — Not Palindrome Dry Run
+# Lesson 11 - Not Palindrome Dry Run
 
 Input:
 
@@ -34114,7 +34114,7 @@ This is Early Exit।
 
 ---
 
-# Lesson 12 — Later Mismatch Example
+# Lesson 12 - Later Mismatch Example
 
 Input:
 
@@ -34160,9 +34160,9 @@ Stop।
 
 ---
 
-# Part 4 — Two-Pointer Palindrome Pattern
+# Part 4 - Two-Pointer Palindrome Pattern
 
-# Lesson 13 — State Identification
+# Lesson 13 - State Identification
 
 Palindrome Problem-এ কী State লাগবে?
 
@@ -34202,7 +34202,7 @@ Problem অনুযায়ী State নির্বাচন করতে হব
 
 ---
 
-# Lesson 14 — Pointer Initialization
+# Lesson 14 - Pointer Initialization
 
 ```c
 int left = 0;
@@ -34233,7 +34233,7 @@ L           R
 
 ---
 
-# Lesson 15 — Comparison Condition
+# Lesson 15 - Comparison Condition
 
 Current Pair compare:
 
@@ -34263,7 +34263,7 @@ Whole String Not Palindrome
 
 ---
 
-# Lesson 16 — Pointer Movement
+# Lesson 16 - Pointer Movement
 
 Pair match করলে:
 
@@ -34310,7 +34310,7 @@ Move Inward
 
 ---
 
-# Lesson 17 — Basic Algorithm
+# Lesson 17 - Basic Algorithm
 
 ```text
 Find Length
@@ -34342,7 +34342,7 @@ Mismatch?
 
 ---
 
-# Lesson 18 — Basic Two-Pointer Code
+# Lesson 18 - Basic Two-Pointer Code
 
 ```c
 #include <stdio.h>
@@ -34388,7 +34388,7 @@ int main()
 
 ---
 
-# Lesson 19 — Code Mental Breakdown
+# Lesson 19 - Code Mental Breakdown
 
 ## Step 1
 
@@ -34497,9 +34497,9 @@ Move to Next Inner Pair
 
 ---
 
-# Part 5 — Flag Strategy
+# Part 5 - Flag Strategy
 
-# Lesson 20 — Flag Variable কী?
+# Lesson 20 - Flag Variable কী?
 
 Flag হলো এমন একটি Variable যেটি কোনো State বা Decision remember করে।
 
@@ -34549,7 +34549,7 @@ Now Proven False
 
 ---
 
-# Lesson 21 — Flag Mental Model
+# Lesson 21 - Flag Mental Model
 
 ```text
 Initial State
@@ -34579,7 +34579,7 @@ Mismatch Found?
 
 ---
 
-# Lesson 22 — কেন শুরুতে `1`?
+# Lesson 22 - কেন শুরুতে `1`?
 
 Palindrome Check-এর logic:
 
@@ -34615,7 +34615,7 @@ False
 
 ---
 
-# Lesson 23 — Flag Name গুরুত্বপূর্ণ
+# Lesson 23 - Flag Name গুরুত্বপূর্ণ
 
 Poor Name:
 
@@ -34649,7 +34649,7 @@ Contest-এ short variable ব্যবহার করা যায়, কিন�
 
 ---
 
-# Lesson 24 — Flag Without Break
+# Lesson 24 - Flag Without Break
 
 এটাও technically কাজ করতে পারে:
 
@@ -34707,9 +34707,9 @@ if (str[left] != str[right])
 
 ---
 
-# Part 6 — Early Exit Pattern
+# Part 6 - Early Exit Pattern
 
-# Lesson 25 — Early Exit কী?
+# Lesson 25 - Early Exit কী?
 
 Early Exit মানে:
 
@@ -34737,7 +34737,7 @@ if (str[left] != str[right])
 
 ---
 
-# Lesson 26 — কেন Early Exit গুরুত্বপূর্ণ?
+# Lesson 26 - কেন Early Exit গুরুত্বপূর্ণ?
 
 ধরো String Length:
 
@@ -34769,7 +34769,7 @@ Worst-case complexity একই class থাকতে পারে, কিন্
 
 ---
 
-# Lesson 27 — `break` কী করে?
+# Lesson 27 - `break` কী করে?
 
 ```c
 break;
@@ -34810,7 +34810,7 @@ else
 
 ---
 
-# Lesson 28 — `break` vs `return`
+# Lesson 28 - `break` vs `return`
 
 `break`:
 
@@ -34847,9 +34847,9 @@ if (str[left] != str[right])
 
 ---
 
-# Part 7 — Direct Return Strategy
+# Part 7 - Direct Return Strategy
 
-# Lesson 29 — Function-Based Solution
+# Lesson 29 - Function-Based Solution
 
 Professional habit হিসেবে logic function-এ রাখা যায়।
 
@@ -34894,7 +34894,7 @@ Return True
 
 ---
 
-# Lesson 30 — Full Function Version
+# Lesson 30 - Full Function Version
 
 ```c
 #include <stdio.h>
@@ -34942,7 +34942,7 @@ int main()
 
 ---
 
-# Lesson 31 — Flag vs Direct Return
+# Lesson 31 - Flag vs Direct Return
 
 ## Flag Strategy
 
@@ -34986,9 +34986,9 @@ Then understand Direct Return
 
 ---
 
-# Part 8 — Reverse-Based Palindrome Check
+# Part 8 - Reverse-Based Palindrome Check
 
-# Lesson 32 — Alternative Approach
+# Lesson 32 - Alternative Approach
 
 Palindrome definition:
 
@@ -35012,7 +35012,7 @@ Same?
 
 ---
 
-# Lesson 33 — Reverse-Based Code
+# Lesson 33 - Reverse-Based Code
 
 ```c
 #include <stdio.h>
@@ -35049,7 +35049,7 @@ int main()
 
 ---
 
-# Lesson 34 — `strcmp()` Basic Idea
+# Lesson 34 - `strcmp()` Basic Idea
 
 `strcmp()` দুইটি String compare করে।
 
@@ -35083,7 +35083,7 @@ Palindrome
 
 ---
 
-# Lesson 35 — Reverse Approach Mental Model
+# Lesson 35 - Reverse Approach Mental Model
 
 ```text
 Input
@@ -35117,7 +35117,7 @@ Yes।
 
 ---
 
-# Lesson 36 — Two-Pointer Approach Mental Model
+# Lesson 36 - Two-Pointer Approach Mental Model
 
 ```text
 Input
@@ -35135,9 +35135,9 @@ No reversed copy needed।
 
 ---
 
-# Part 9 — Two Approaches Comparison
+# Part 9 - Two Approaches Comparison
 
-# Lesson 37 — Reverse vs Two Pointer
+# Lesson 37 - Reverse vs Two Pointer
 
 | Feature               | Reverse Approach               | Two Pointer               |
 | --------------------- | ------------------------------ | ------------------------- |
@@ -35155,7 +35155,7 @@ For your Bootcamp:
 
 ---
 
-# Lesson 38 — কোনটা Contest-এ ব্যবহার করব?
+# Lesson 38 - কোনটা Contest-এ ব্যবহার করব?
 
 যদি simple Palindrome Check হয়:
 
@@ -35186,7 +35186,7 @@ Problem Context matters।
 
 ---
 
-# Lesson 39 — Code ছোট হলেই সবসময় Better না
+# Lesson 39 - Code ছোট হলেই সবসময় Better না
 
 তুমি হয়তো library function দিয়ে short code লিখতে পারো।
 
@@ -35214,9 +35214,9 @@ Early Exit
 
 ---
 
-# Part 10 — Odd & Even Length Palindrome
+# Part 10 - Odd & Even Length Palindrome
 
-# Lesson 40 — Odd Length Palindrome
+# Lesson 40 - Odd Length Palindrome
 
 Example:
 
@@ -35288,7 +35288,7 @@ does not need comparison।
 
 ---
 
-# Lesson 41 — Even Length Palindrome
+# Lesson 41 - Even Length Palindrome
 
 Example:
 
@@ -35350,7 +35350,7 @@ Palindrome।
 
 ---
 
-# Lesson 42 — Single Character
+# Lesson 42 - Single Character
 
 Input:
 
@@ -35395,7 +35395,7 @@ Correct।
 
 ---
 
-# Lesson 43 — Two Characters
+# Lesson 43 - Two Characters
 
 Input:
 
@@ -35429,9 +35429,9 @@ Not Palindrome।
 
 ---
 
-# Part 11 — Case, Space & Symbol Handling
+# Part 11 - Case, Space & Symbol Handling
 
-# Lesson 44 — Case Sensitivity
+# Lesson 44 - Case Sensitivity
 
 Input:
 
@@ -35483,7 +35483,7 @@ Rule:
 
 ---
 
-# Lesson 45 — Spaces
+# Lesson 45 - Spaces
 
 Input:
 
@@ -35515,7 +35515,7 @@ Are spaces significant?
 
 ---
 
-# Lesson 46 — Symbols
+# Lesson 46 - Symbols
 
 Example:
 
@@ -35562,7 +35562,7 @@ master করবে।
 
 ---
 
-# Lesson 47 — Problem Constraints আগে পড়ো
+# Lesson 47 - Problem Constraints আগে পড়ো
 
 Palindrome Problem দেখেই assume করবে না:
 
@@ -35591,9 +35591,9 @@ Solution input handling এবং comparison logic এর উপর depend ক�
 
 ---
 
-# Part 12 — Complexity Mental Model
+# Part 12 - Complexity Mental Model
 
-# Lesson 48 — Time Complexity কীভাবে ভাবব?
+# Lesson 48 - Time Complexity কীভাবে ভাবব?
 
 String Length:
 
@@ -35621,7 +35621,7 @@ Time Complexity।
 
 ---
 
-# Lesson 49 — Space Complexity
+# Lesson 49 - Space Complexity
 
 Two-Pointer Solution uses:
 
@@ -35642,7 +35642,7 @@ O(1)
 
 ---
 
-# Lesson 50 — Reverse Approach Complexity
+# Lesson 50 - Reverse Approach Complexity
 
 Reverse copy বানাতে:
 
@@ -35683,7 +35683,7 @@ Space: O(n)
 
 ---
 
-# Lesson 51 — Two-Pointer Complexity
+# Lesson 51 - Two-Pointer Complexity
 
 Pair comparison:
 
@@ -35746,9 +35746,9 @@ O(1) Extra Space
 
 ---
 
-# Part 13 — Common Bugs & Edge Cases
+# Part 13 - Common Bugs & Edge Cases
 
-# 🐞 Bug 1 — Wrong Right Boundary
+# 🐞 Bug 1 - Wrong Right Boundary
 
 Wrong:
 
@@ -35770,7 +35770,7 @@ str[length] = '\0'
 
 ---
 
-# 🐞 Bug 2 — Comparing Wrong Positions
+# 🐞 Bug 2 - Comparing Wrong Positions
 
 Wrong:
 
@@ -35788,7 +35788,7 @@ if (str[left] != str[right])
 
 ---
 
-# 🐞 Bug 3 — Pointer Move ভুলে যাওয়া
+# 🐞 Bug 3 - Pointer Move ভুলে যাওয়া
 
 ```c
 while (left < right)
@@ -35822,7 +35822,7 @@ right--;
 
 ---
 
-# 🐞 Bug 4 — Only One Pointer Moves
+# 🐞 Bug 4 - Only One Pointer Moves
 
 Wrong:
 
@@ -35840,7 +35840,7 @@ right--;
 
 ---
 
-# 🐞 Bug 5 — Flag Initialize না করা
+# 🐞 Bug 5 - Flag Initialize না করা
 
 Wrong:
 
@@ -35864,7 +35864,7 @@ int isPalindrome = 1;
 
 ---
 
-# 🐞 Bug 6 — Mismatch-এ Flag ভুল Value
+# 🐞 Bug 6 - Mismatch-এ Flag ভুল Value
 
 Wrong:
 
@@ -35889,7 +35889,7 @@ isPalindrome = 0;
 
 ---
 
-# 🐞 Bug 7 — Wrong Comparison Operator
+# 🐞 Bug 7 - Wrong Comparison Operator
 
 Wrong:
 
@@ -35910,7 +35910,7 @@ if (str[left] != str[right])
 
 ---
 
-# 🐞 Bug 8 — `=` vs `==`
+# 🐞 Bug 8 - `=` vs `==`
 
 Wrong:
 
@@ -35934,7 +35934,7 @@ if (isPalindrome)
 
 ---
 
-# 🐞 Bug 9 — `strcmp()` Result ভুল বোঝা
+# 🐞 Bug 9 - `strcmp()` Result ভুল বোঝা
 
 Wrong:
 
@@ -35956,7 +35956,7 @@ if (strcmp(str, reversed) == 0)
 
 ---
 
-# 🐞 Bug 10 — Reversed String Null-Terminate না করা
+# 🐞 Bug 10 - Reversed String Null-Terminate না করা
 
 ```c
 for (int i = 0; i < length; i++)
@@ -35975,7 +35975,7 @@ reversed[length] = '\0';
 
 ---
 
-# 🐞 Bug 11 — Case Sensitivity Ignore করা
+# 🐞 Bug 11 - Case Sensitivity Ignore করা
 
 Input:
 
@@ -35993,7 +35993,7 @@ L != l
 
 ---
 
-# 🐞 Bug 12 — `scanf("%s")` দিয়ে Sentence Input
+# 🐞 Bug 12 - `scanf("%s")` দিয়ে Sentence Input
 
 Input:
 
@@ -36021,7 +36021,7 @@ fgets()
 
 ---
 
-# 🐞 Bug 13 — Newline Problem with `fgets()`
+# 🐞 Bug 13 - Newline Problem with `fgets()`
 
 `fgets()` Input:
 
@@ -36037,7 +36037,7 @@ Palindrome check-এর আগে newline remove করতে হতে পা�
 
 ---
 
-# 🐞 Bug 14 — Reverse Approach-এ Original Modify করে ফেলা
+# 🐞 Bug 14 - Reverse Approach-এ Original Modify করে ফেলা
 
 যদি Original এবং Reverse compare করতে চাও, কিন্তু Original String-ই in-place reverse করে ফেলো, তাহলে original version হারিয়ে যাবে।
 
@@ -36055,7 +36055,7 @@ Separate Reversed Array
 
 ---
 
-# 🐞 Bug 15 — Unnecessary Full Comparison
+# 🐞 Bug 15 - Unnecessary Full Comparison
 
 Mismatch পাওয়া গেছে:
 
@@ -36079,9 +36079,9 @@ return 0;
 
 ---
 
-# Part 14 — Guided Problem Solving
+# Part 14 - Guided Problem Solving
 
-# Problem 1 — Basic Palindrome
+# Problem 1 - Basic Palindrome
 
 Input:
 
@@ -36097,7 +36097,7 @@ Is it a palindrome?
 
 ---
 
-## Step 1 — Problem Pattern
+## Step 1 - Problem Pattern
 
 Need:
 
@@ -36107,7 +36107,7 @@ Symmetric Comparison
 
 ---
 
-## Step 2 — State
+## Step 2 - State
 
 ```text
 left
@@ -36117,7 +36117,7 @@ isPalindrome
 
 ---
 
-## Step 3 — Initialization
+## Step 3 - Initialization
 
 ```text
 left = 0
@@ -36127,7 +36127,7 @@ isPalindrome = 1
 
 ---
 
-## Step 4 — Pair Sequence
+## Step 4 - Pair Sequence
 
 ```text
 m vs m
@@ -36157,7 +36157,7 @@ Palindrome
 
 ---
 
-# Problem 2 — Immediate Mismatch
+# Problem 2 - Immediate Mismatch
 
 Input:
 
@@ -36191,7 +36191,7 @@ Early Exit
 
 ---
 
-# Problem 3 — Late Mismatch
+# Problem 3 - Late Mismatch
 
 Input:
 
@@ -36225,7 +36225,7 @@ Important Lesson:
 
 ---
 
-# Problem 4 — Single Character
+# Problem 4 - Single Character
 
 Input:
 
@@ -36258,7 +36258,7 @@ Palindrome
 
 ---
 
-# Problem 5 — Even Length
+# Problem 5 - Even Length
 
 Input:
 
@@ -36281,7 +36281,7 @@ Palindrome
 
 ---
 
-# Problem 6 — Numeric String
+# Problem 6 - Numeric String
 
 Input:
 
@@ -36312,7 +36312,7 @@ String Palindrome Pattern digits-এর ক্ষেত্রেও কাজ �
 
 ---
 
-# Problem 7 — Decide the Approach
+# Problem 7 - Decide the Approach
 
 Problem:
 
@@ -36344,9 +36344,9 @@ Compare with Original
 
 ---
 
-# Part 15 — Pattern Recognition Session
+# Part 15 - Pattern Recognition Session
 
-# Lesson 52 — কোন শব্দ দেখলে Palindrome Pattern চিনবে?
+# Lesson 52 - কোন শব্দ দেখলে Palindrome Pattern চিনবে?
 
 Problem Statement-এ থাকতে পারে:
 
@@ -36390,7 +36390,7 @@ Two Pointer
 
 ---
 
-# Lesson 53 — Pattern Recognition Tree
+# Lesson 53 - Pattern Recognition Tree
 
 ```text
 Need to inspect opposite ends?
@@ -36414,7 +36414,7 @@ What operation?
 
 ---
 
-# Lesson 54 — Reverse vs Palindrome
+# Lesson 54 - Reverse vs Palindrome
 
 ## Reverse
 
@@ -36440,7 +36440,7 @@ This is the key connection between Chapter 8 and Chapter 9।
 
 ---
 
-# Lesson 55 — State Selection Practice
+# Lesson 55 - State Selection Practice
 
 ### Problem
 
@@ -36512,9 +36512,9 @@ Decision State / Early Return
 
 ---
 
-# Part 16 — Exercises
+# Part 16 - Exercises
 
-# Exercise 1 — Manual Palindrome Check
+# Exercise 1 - Manual Palindrome Check
 
 Input:
 
@@ -36552,7 +36552,7 @@ Final Decision:
 
 ---
 
-# Exercise 2 — Not Palindrome Dry Run
+# Exercise 2 - Not Palindrome Dry Run
 
 Input:
 
@@ -36579,7 +36579,7 @@ Final Answer:
 
 ---
 
-# Exercise 3 — Even Length Palindrome
+# Exercise 3 - Even Length Palindrome
 
 Input:
 
@@ -36609,7 +36609,7 @@ Answer:
 
 ---
 
-# Exercise 4 — Single Character
+# Exercise 4 - Single Character
 
 Input:
 
@@ -36641,7 +36641,7 @@ Palindrome?
 
 ---
 
-# Exercise 5 — Two Character Cases
+# Exercise 5 - Two Character Cases
 
 Case A:
 
@@ -36659,7 +36659,7 @@ ab
 
 ---
 
-# Exercise 6 — Flag Strategy
+# Exercise 6 - Flag Strategy
 
 Complete:
 
@@ -36682,7 +36682,7 @@ Why break?
 
 ---
 
-# Exercise 7 — Find the Bug
+# Exercise 7 - Find the Bug
 
 ```c
 int left = 0;
@@ -36716,7 +36716,7 @@ Correct Line:
 
 ---
 
-# Exercise 8 — Infinite Loop
+# Exercise 8 - Infinite Loop
 
 ```c
 while (left < right)
@@ -36741,7 +36741,7 @@ Missing lines:
 
 ---
 
-# Exercise 9 — Wrong Flag Logic
+# Exercise 9 - Wrong Flag Logic
 
 ```c
 int isPalindrome = 0;
@@ -36777,7 +36777,7 @@ Correct Mismatch Assignment:
 
 ---
 
-# Exercise 10 — Strategy Selection
+# Exercise 10 - Strategy Selection
 
 Choose:
 
@@ -36826,7 +36826,7 @@ Answer:
 
 ---
 
-# Exercise 11 — Reverse vs Palindrome
+# Exercise 11 - Reverse vs Palindrome
 
 Complete:
 
@@ -36837,7 +36837,7 @@ Complete:
 
 ---
 
-# Exercise 12 — Complexity
+# Exercise 12 - Complexity
 
 Complete:
 
@@ -36863,7 +36863,7 @@ Extra Space:
 
 ---
 
-# Exercise 13 — Pair Count
+# Exercise 13 - Pair Count
 
 Complete:
 
@@ -36886,7 +36886,7 @@ Maximum Pair Comparisons = ...
 
 ---
 
-# Exercise 14 — Case Sensitivity
+# Exercise 14 - Case Sensitivity
 
 Input:
 
@@ -36912,7 +36912,7 @@ Result after normalization:
 
 ---
 
-# Exercise 15 — Pattern Recognition
+# Exercise 15 - Pattern Recognition
 
 Problem says:
 
@@ -36939,7 +36939,7 @@ Stopping Condition:
 
 ---
 
-# Exercise 16 — Write Algorithm Without Code
+# Exercise 16 - Write Algorithm Without Code
 
 Problem:
 
@@ -36968,7 +36968,7 @@ Step 5:
 
 ---
 
-# Exercise 17 — Early Exit Analysis
+# Exercise 17 - Early Exit Analysis
 
 Input:
 
@@ -36993,7 +36993,7 @@ Why further comparison is unnecessary:
 
 ---
 
-# Exercise 18 — Function Logic
+# Exercise 18 - Function Logic
 
 Complete:
 
@@ -37024,9 +37024,9 @@ int isPalindrome(char str[])
 
 ---
 
-# Part 17 — Chapter Assignment
+# Part 17 - Chapter Assignment
 
-# 📝 Task 1 — Palindrome Dictionary
+# 📝 Task 1 - Palindrome Dictionary
 
 নিজের ভাষায় explain করবে:
 
@@ -37071,7 +37071,7 @@ Common Mistake:
 
 ---
 
-# 📝 Task 2 — Palindrome Programs
+# 📝 Task 2 - Palindrome Programs
 
 Files বানাবে:
 
@@ -37102,7 +37102,7 @@ Extra Space Complexity:
 
 ---
 
-# 📝 Task 3 — Manual Dry Run
+# 📝 Task 3 - Manual Dry Run
 
 Input:
 
@@ -37139,7 +37139,7 @@ Final Answer:
 
 ---
 
-# 📝 Task 4 — Mismatch Dry Run
+# 📝 Task 4 - Mismatch Dry Run
 
 Input:
 
@@ -37166,7 +37166,7 @@ Why were remaining pairs unnecessary?
 
 ---
 
-# 📝 Task 5 — Write Three Solutions
+# 📝 Task 5 - Write Three Solutions
 
 Same Problem:
 
@@ -37195,7 +37195,7 @@ Reverse Copy + Compare
 
 ---
 
-# 📝 Task 6 — Edge Case Testing
+# 📝 Task 6 - Edge Case Testing
 
 নিজের Program এই Inputs দিয়ে test করবে:
 
@@ -37253,7 +37253,7 @@ Format:
 
 ---
 
-# 📝 Task 7 — Bug Hunting
+# 📝 Task 7 - Bug Hunting
 
 নিচের Code Analyze করবে:
 
@@ -37327,7 +37327,7 @@ Fix:
 
 ---
 
-# 📝 Task 8 — Pattern Conversion
+# 📝 Task 8 - Pattern Conversion
 
 Chapter 8 Reverse Pattern:
 
@@ -37360,7 +37360,7 @@ Mismatch?
 
 ---
 
-# 📝 Task 9 — Pattern Selection Drill
+# 📝 Task 9 - Pattern Selection Drill
 
 নিচের প্রতিটি Problem-এর জন্য শুধু Pattern লিখবে।
 
@@ -37428,7 +37428,7 @@ Pattern Recognition
 
 ---
 
-# 📝 Task 10 — Explain Without Code
+# 📝 Task 10 - Explain Without Code
 
 নিজের ভাষায় explain করবে:
 
@@ -37451,7 +37451,7 @@ Decision
 
 ---
 
-# 📝 Task 11 — Code Without Looking
+# 📝 Task 11 - Code Without Looking
 
 Notes বন্ধ করবে।
 
@@ -37489,12 +37489,12 @@ Decision
 
 ---
 
-# 📝 Task 12 — Chapter Reflection
+# 📝 Task 12 - Chapter Reflection
 
 Copy-Paste Version:
 
 ````markdown
-# 🧠 Day 3 — Chapter 9 Reflection
+# 🧠 Day 3 - Chapter 9 Reflection
 
 ## 1. What Is a Palindrome?
 
@@ -38569,34 +38569,34 @@ Reject Early
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ✅ Chapter 7 — String Transformation
+├── ✅ Chapter 7 - String Transformation
 │
-├── ✅ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ✅ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ✅ Chapter 9 — Palindrome Pattern
+├── ✅ Chapter 9 - Palindrome Pattern
 │
-├── ⏳ Chapter 10 — Common Bugs, Edge Cases & Problem Session
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+├── ⏳ Chapter 10 - Common Bugs, Edge Cases & Problem Session
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-**Day 3 — Chapter 9 Complete.**
+**Day 3 - Chapter 9 Complete.**
 
 পরের Chapter:
 
 ```text
-Day 3 — Chapter 10
+Day 3 - Chapter 10
 Common Bugs, Edge Cases & Problem Solving Session
 ```
 
@@ -38631,7 +38631,7 @@ Test Edge Cases
 
 ---
 
-# 📘 Day 3 — Chapter 10
+# 📘 Day 3 - Chapter 10
 
 # 🧪 Common Bugs, Edge Cases & String Problem Solving Session
 
@@ -38756,24 +38756,24 @@ Code কীভাবে লিখব?
 # 📖 Chapter Map
 
 ```text
-Day 3 — Chapter 10
+Day 3 - Chapter 10
 │
-├── Part 1  — From Learning Patterns to Solving Problems
-├── Part 2  — String Pattern Decision System
-├── Part 3  — State Selection System
-├── Part 4  — Common Input Bugs
-├── Part 5  — Traversal & Boundary Bugs
-├── Part 6  — Counting & Classification Bugs
-├── Part 7  — Search & Frequency Bugs
-├── Part 8  — Transformation Bugs
-├── Part 9  — Reverse & Palindrome Bugs
-├── Part 10 — Edge Case Engineering
-├── Part 11 — Debugging Workflow
-├── Part 12 — Guided Problem Solving Session
-├── Part 13 — Mixed Pattern Problems
-├── Part 14 — Contest Simulation
-├── Part 15 — Exercises
-└── Part 16 — Assignment & Reflection
+├── Part 1  - From Learning Patterns to Solving Problems
+├── Part 2  - String Pattern Decision System
+├── Part 3  - State Selection System
+├── Part 4  - Common Input Bugs
+├── Part 5  - Traversal & Boundary Bugs
+├── Part 6  - Counting & Classification Bugs
+├── Part 7  - Search & Frequency Bugs
+├── Part 8  - Transformation Bugs
+├── Part 9  - Reverse & Palindrome Bugs
+├── Part 10 - Edge Case Engineering
+├── Part 11 - Debugging Workflow
+├── Part 12 - Guided Problem Solving Session
+├── Part 13 - Mixed Pattern Problems
+├── Part 14 - Contest Simulation
+├── Part 15 - Exercises
+└── Part 16 - Assignment & Reflection
 ```
 
 ---
@@ -38836,9 +38836,9 @@ Submit
 
 ---
 
-# Part 1 — From Learning Patterns to Solving Problems
+# Part 1 - From Learning Patterns to Solving Problems
 
-# Lesson 1 — Pattern জানা এবং Problem Solve করা এক জিনিস না
+# Lesson 1 - Pattern জানা এবং Problem Solve করা এক জিনিস না
 
 ধরো তুমি জানো:
 
@@ -38987,7 +38987,7 @@ Early Exit
 
 ---
 
-# Lesson 2 — Problem-এর Surface Story Ignore করতে শেখো
+# Lesson 2 - Problem-এর Surface Story Ignore করতে শেখো
 
 একই Pattern বিভিন্ন Story-এর মধ্যে আসতে পারে।
 
@@ -39049,11 +39049,11 @@ Recognize Pattern
 
 ---
 
-# Lesson 3 — Problem Statement ভাঙার ৪টি Question
+# Lesson 3 - Problem Statement ভাঙার ৪টি Question
 
 প্রতিটি Problem-এ চারটি Question করবে।
 
-## Question 1 — Input কী?
+## Question 1 - Input কী?
 
 Example:
 
@@ -39067,7 +39067,7 @@ String + number?
 
 ---
 
-## Question 2 — Output কী?
+## Question 2 - Output কী?
 
 Example:
 
@@ -39082,7 +39082,7 @@ Frequency?
 
 ---
 
-## Question 3 — Need কী?
+## Question 3 - Need কী?
 
 Example:
 
@@ -39097,7 +39097,7 @@ Build?
 
 ---
 
-## Question 4 — State কী?
+## Question 4 - State কী?
 
 Example:
 
@@ -39127,7 +39127,7 @@ Pattern
 
 ---
 
-# Lesson 4 — Output Type থেকে Pattern Guess করা
+# Lesson 4 - Output Type থেকে Pattern Guess করা
 
 অনেক সময় Output দেখেও Pattern-এর clue পাওয়া যায়।
 
@@ -39148,9 +39148,9 @@ Pattern
 
 ---
 
-# Part 2 — String Pattern Decision System
+# Part 2 - String Pattern Decision System
 
-# Lesson 5 — Master Decision Tree
+# Lesson 5 - Master Decision Tree
 
 String Problem দেখলে এই Decision Tree ব্যবহার করবে:
 
@@ -39190,7 +39190,7 @@ String Problem
 
 ---
 
-# Lesson 6 — Traversal Pattern Recognition
+# Lesson 6 - Traversal Pattern Recognition
 
 Problem says:
 
@@ -39244,7 +39244,7 @@ for (int i = 0; i < length; i++)
 
 ---
 
-# Lesson 7 — Counting Pattern Recognition
+# Lesson 7 - Counting Pattern Recognition
 
 Keywords:
 
@@ -39292,7 +39292,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Lesson 8 — Search Pattern Recognition
+# Lesson 8 - Search Pattern Recognition
 
 Keywords:
 
@@ -39338,7 +39338,7 @@ Not Found Yet
 
 ---
 
-# Lesson 9 — Frequency Pattern Recognition
+# Lesson 9 - Frequency Pattern Recognition
 
 Problem asks:
 
@@ -39398,7 +39398,7 @@ freq[str[i] - 'a']++;
 
 ---
 
-# Lesson 10 — Transformation Pattern Recognition
+# Lesson 10 - Transformation Pattern Recognition
 
 Keywords:
 
@@ -39441,7 +39441,7 @@ Convert
 
 ---
 
-# Lesson 11 — Reverse Pattern Recognition
+# Lesson 11 - Reverse Pattern Recognition
 
 Keywords:
 
@@ -39474,7 +39474,7 @@ Selection depends on Requirement।
 
 ---
 
-# Lesson 12 — Palindrome Pattern Recognition
+# Lesson 12 - Palindrome Pattern Recognition
 
 Keywords:
 
@@ -39498,9 +39498,9 @@ Early Exit
 
 ---
 
-# Part 3 — State Selection System
+# Part 3 - State Selection System
 
-# Lesson 13 — Pattern চিনলাম, এবার State কী?
+# Lesson 13 - Pattern চিনলাম, এবার State কী?
 
 Pattern জানলেই Code complete না।
 
@@ -39512,7 +39512,7 @@ State মানে:
 
 ---
 
-# Lesson 14 — State Table
+# Lesson 14 - State Table
 
 | Need             | State              |
 | ---------------- | ------------------ |
@@ -39527,7 +39527,7 @@ State মানে:
 
 ---
 
-# Lesson 15 — Example: Count Vowels
+# Lesson 15 - Example: Count Vowels
 
 Need:
 
@@ -39560,7 +39560,7 @@ One Counter
 
 ---
 
-# Lesson 16 — Example: Character Exists?
+# Lesson 16 - Example: Character Exists?
 
 Need:
 
@@ -39602,7 +39602,7 @@ Stop
 
 ---
 
-# Lesson 17 — Example: First Occurrence
+# Lesson 17 - Example: First Occurrence
 
 Need:
 
@@ -39638,7 +39638,7 @@ Not Found
 
 ---
 
-# Lesson 18 — Example: Character Frequency
+# Lesson 18 - Example: Character Frequency
 
 Need:
 
@@ -39670,7 +39670,7 @@ One Bucket
 
 ---
 
-# Lesson 19 — Example: Palindrome
+# Lesson 19 - Example: Palindrome
 
 Need:
 
@@ -39701,9 +39701,9 @@ Two Pointer State
 
 ---
 
-# Part 4 — Common Input Bugs
+# Part 4 - Common Input Bugs
 
-# Lesson 20 — Input Bug কেন Dangerous?
+# Lesson 20 - Input Bug কেন Dangerous?
 
 তোমার Algorithm perfect হতে পারে।
 
@@ -39721,7 +39721,7 @@ String Problem-এ Input Bug খুব common।
 
 ---
 
-# 🐞 Bug 1 — `%s` দিয়ে Full Line পড়া
+# 🐞 Bug 1 - `%s` দিয়ে Full Line পড়া
 
 Input:
 
@@ -39757,7 +39757,7 @@ fgets(str, sizeof(str), stdin);
 
 ---
 
-# Lesson 21 — Word vs Line
+# Lesson 21 - Word vs Line
 
 Problem Input:
 
@@ -39799,7 +39799,7 @@ fgets()
 
 ---
 
-# 🐞 Bug 2 — `fgets()` Newline
+# 🐞 Bug 2 - `fgets()` Newline
 
 Input:
 
@@ -39851,7 +39851,7 @@ Replace with Null Terminator
 
 ---
 
-# 🐞 Bug 3 — `scanf()` তারপর `fgets()`
+# 🐞 Bug 3 - `scanf()` তারপর `fgets()`
 
 Example:
 
@@ -39879,7 +39879,7 @@ Empty-looking String
 
 ---
 
-# 🐞 Bug 4 — Unsafe Width
+# 🐞 Bug 4 - Unsafe Width
 
 Instead of:
 
@@ -39909,9 +39909,9 @@ scanf("%99s", str);
 
 ---
 
-# Part 5 — Traversal & Boundary Bugs
+# Part 5 - Traversal & Boundary Bugs
 
-# 🐞 Bug 5 — Null Terminator Process করা
+# 🐞 Bug 5 - Null Terminator Process করা
 
 Suppose:
 
@@ -39956,7 +39956,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# 🐞 Bug 6 — `<= length`
+# 🐞 Bug 6 - `<= length`
 
 Wrong:
 
@@ -39986,7 +39986,7 @@ use করবে।
 
 ---
 
-# Lesson 22 — Off-by-One Error
+# Lesson 22 - Off-by-One Error
 
 Off-by-One Error মানে:
 
@@ -40024,7 +40024,7 @@ Last Index = Length - 1
 
 ---
 
-# 🐞 Bug 7 — Wrong Start Index
+# 🐞 Bug 7 - Wrong Start Index
 
 Wrong:
 
@@ -40042,7 +40042,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# 🐞 Bug 8 — Missing Increment
+# 🐞 Bug 8 - Missing Increment
 
 ```c
 int i = 0;
@@ -40073,7 +40073,7 @@ i++;
 
 ---
 
-# 🐞 Bug 9 — Increment Wrong Variable
+# 🐞 Bug 9 - Increment Wrong Variable
 
 ```c
 int i = 0;
@@ -40106,9 +40106,9 @@ What controls loop progress?
 
 ---
 
-# Part 6 — Counting & Classification Bugs
+# Part 6 - Counting & Classification Bugs
 
-# 🐞 Bug 10 — Counter Initialize না করা
+# 🐞 Bug 10 - Counter Initialize না করা
 
 Wrong:
 
@@ -40140,7 +40140,7 @@ Counting Starts From Zero
 
 ---
 
-# 🐞 Bug 11 — Counter Wrong Place-এ Initialize করা
+# 🐞 Bug 11 - Counter Wrong Place-এ Initialize করা
 
 Wrong:
 
@@ -40175,7 +40175,7 @@ for (...)
 
 ---
 
-# 🐞 Bug 12 — Wrong OR Condition
+# 🐞 Bug 12 - Wrong OR Condition
 
 Suppose vowel check:
 
@@ -40219,7 +40219,7 @@ Is it A OR E OR I OR O OR U?
 
 ---
 
-# 🐞 Bug 13 — Lowercase Range ভুল
+# 🐞 Bug 13 - Lowercase Range ভুল
 
 Correct:
 
@@ -40251,7 +40251,7 @@ x <= high
 
 ---
 
-# Lesson 23 — Classification Questions
+# Lesson 23 - Classification Questions
 
 প্রতিটি Character-এর জন্য তুমি Question করতে পারো:
 
@@ -40284,9 +40284,9 @@ digitCount++
 
 ---
 
-# Part 7 — Search & Frequency Bugs
+# Part 7 - Search & Frequency Bugs
 
-# 🐞 Bug 14 — Search-এ Wrong Initial Index
+# 🐞 Bug 14 - Search-এ Wrong Initial Index
 
 First occurrence search:
 
@@ -40316,7 +40316,7 @@ Not Found
 
 ---
 
-# 🐞 Bug 15 — First Occurrence-এ `break` না দেওয়া
+# 🐞 Bug 15 - First Occurrence-এ `break` না দেওয়া
 
 String:
 
@@ -40370,7 +40370,7 @@ if (str[i] == target)
 
 ---
 
-# Lesson 24 — First vs Last Occurrence
+# Lesson 24 - First vs Last Occurrence
 
 ## First Occurrence
 
@@ -40398,7 +40398,7 @@ Later Match overwrites previous index
 
 ---
 
-# 🐞 Bug 16 — Frequency Array Initialize না করা
+# 🐞 Bug 16 - Frequency Array Initialize না করা
 
 Wrong:
 
@@ -40424,7 +40424,7 @@ int freq[26] = {0};
 
 ---
 
-# 🐞 Bug 17 — Wrong Frequency Mapping
+# 🐞 Bug 17 - Wrong Frequency Mapping
 
 For lowercase:
 
@@ -40450,7 +40450,7 @@ freq[str[i]]++;
 
 ---
 
-# 🐞 Bug 18 — Character Type Validate না করে Mapping
+# 🐞 Bug 18 - Character Type Validate না করে Mapping
 
 Suppose:
 
@@ -40478,9 +40478,9 @@ Then Map
 
 ---
 
-# Part 8 — Transformation Bugs
+# Part 8 - Transformation Bugs
 
-# Lesson 25 — Transformation-এর Core Structure
+# Lesson 25 - Transformation-এর Core Structure
 
 ```text
 Traverse
@@ -40506,7 +40506,7 @@ Result Array
 
 ---
 
-# 🐞 Bug 19 — Wrong ASCII Direction
+# 🐞 Bug 19 - Wrong ASCII Direction
 
 Lowercase to Uppercase:
 
@@ -40532,7 +40532,7 @@ Direction mix করলে wrong result হবে।
 
 ---
 
-# 🐞 Bug 20 — Classification ছাড়া Transform
+# 🐞 Bug 20 - Classification ছাড়া Transform
 
 Suppose:
 
@@ -40553,7 +40553,7 @@ if (str[i] >= 'a' && str[i] <= 'z')
 
 ---
 
-# 🐞 Bug 21 — Result String Null-Terminate না করা
+# 🐞 Bug 21 - Result String Null-Terminate না করা
 
 Suppose:
 
@@ -40576,9 +40576,9 @@ result[length] = '\0';
 
 ---
 
-# Part 9 — Reverse & Palindrome Bugs
+# Part 9 - Reverse & Palindrome Bugs
 
-# 🐞 Bug 22 — Reverse-এ Wrong Opposite Index
+# 🐞 Bug 22 - Reverse-এ Wrong Opposite Index
 
 Correct:
 
@@ -40619,7 +40619,7 @@ Correct:
 
 ---
 
-# 🐞 Bug 23 — In-Place Reverse-এ Full Length Loop
+# 🐞 Bug 23 - In-Place Reverse-এ Full Length Loop
 
 Suppose:
 
@@ -40650,7 +40650,7 @@ while (left < right)
 
 ---
 
-# 🐞 Bug 24 — Palindrome-এ Swap করা
+# 🐞 Bug 24 - Palindrome-এ Swap করা
 
 Palindrome Problem:
 
@@ -40688,7 +40688,7 @@ Need Modify?
 
 ---
 
-# 🐞 Bug 25 — Wrong Palindrome Right Boundary
+# 🐞 Bug 25 - Wrong Palindrome Right Boundary
 
 Wrong:
 
@@ -40710,7 +40710,7 @@ str[length] = '\0'
 
 ---
 
-# 🐞 Bug 26 — Palindrome Flag Wrong Initialization
+# 🐞 Bug 26 - Palindrome Flag Wrong Initialization
 
 Wrong:
 
@@ -40740,7 +40740,7 @@ isPalindrome = 0;
 
 ---
 
-# 🐞 Bug 27 — Two Pointers Move না করা
+# 🐞 Bug 27 - Two Pointers Move না করা
 
 ```c
 while (left < right)
@@ -40774,9 +40774,9 @@ right--;
 
 ---
 
-# Part 10 — Edge Case Engineering
+# Part 10 - Edge Case Engineering
 
-# Lesson 26 — Edge Case কী?
+# Lesson 26 - Edge Case কী?
 
 Edge Case হলো এমন Input যা:
 
@@ -40824,7 +40824,7 @@ Problem অনুযায়ী Edge Case আলাদা হবে।
 
 ---
 
-# Lesson 27 — Sample Test যথেষ্ট না
+# Lesson 27 - Sample Test যথেষ্ট না
 
 Problem দেয়:
 
@@ -40860,7 +40860,7 @@ Edge Cases
 
 ---
 
-# Lesson 28 — Universal String Edge Case Checklist
+# Lesson 28 - Universal String Edge Case Checklist
 
 String Problem solve করার পরে ভাববে:
 
@@ -40888,7 +40888,7 @@ Problem অনুযায়ী relevant Test বেছে নেবে।
 
 ---
 
-# Lesson 29 — Counting Edge Cases
+# Lesson 29 - Counting Edge Cases
 
 Problem:
 
@@ -40958,7 +40958,7 @@ Expected:
 
 ---
 
-# Lesson 30 — Search Edge Cases
+# Lesson 30 - Search Edge Cases
 
 Problem:
 
@@ -41016,7 +41016,7 @@ Expected:
 
 ---
 
-# Lesson 31 — Palindrome Edge Cases
+# Lesson 31 - Palindrome Edge Cases
 
 Tests:
 
@@ -41068,7 +41068,7 @@ Inner Mismatch
 
 ---
 
-# Lesson 32 — Edge Case Design Formula
+# Lesson 32 - Edge Case Design Formula
 
 Problem-এর Rule নিয়ে Question করো:
 
@@ -41100,9 +41100,9 @@ What if all values are same?
 
 ---
 
-# Part 11 — Debugging Workflow
+# Part 11 - Debugging Workflow
 
-# Lesson 33 — Wrong Answer হলে Random Change করবে না
+# Lesson 33 - Wrong Answer হলে Random Change করবে না
 
 Beginner Debugging:
 
@@ -41140,27 +41140,27 @@ Retest
 
 ---
 
-# Lesson 34 — Debugging-এর ৭-Step System
+# Lesson 34 - Debugging-এর ৭-Step System
 
 ```text
-Step 1 — Reproduce the Bug
+Step 1 - Reproduce the Bug
 ↓
-Step 2 — Create Small Input
+Step 2 - Create Small Input
 ↓
-Step 3 — Write Expected Output
+Step 3 - Write Expected Output
 ↓
-Step 4 — Track Variables
+Step 4 - Track Variables
 ↓
-Step 5 — Find First Divergence
+Step 5 - Find First Divergence
 ↓
-Step 6 — Fix Root Cause
+Step 6 - Fix Root Cause
 ↓
-Step 7 — Run Old + New Tests
+Step 7 - Run Old + New Tests
 ```
 
 ---
 
-# Lesson 35 — Variable Tracking Table
+# Lesson 35 - Variable Tracking Table
 
 Suppose vowel counting wrong।
 
@@ -41190,7 +41190,7 @@ Expected:
 
 ---
 
-# Lesson 36 — Search Debug Table
+# Lesson 36 - Search Debug Table
 
 Input:
 
@@ -41229,7 +41229,7 @@ Missing Early Exit
 
 ---
 
-# Lesson 37 — Palindrome Debug Table
+# Lesson 37 - Palindrome Debug Table
 
 Input:
 
@@ -41253,7 +41253,7 @@ Final condition?
 
 ---
 
-# Lesson 38 — Print Debugging
+# Lesson 38 - Print Debugging
 
 Learning stage-এ temporary debug print ব্যবহার করতে পারো।
 
@@ -41277,7 +41277,7 @@ printf("left = %d, right = %d, %c vs %c\n",
 
 ---
 
-# Lesson 39 — Compiler Warning Ignore করবে না
+# Lesson 39 - Compiler Warning Ignore করবে না
 
 Compile:
 
@@ -41310,9 +41310,9 @@ uninitialized variable
 
 ---
 
-# Part 12 — Guided Problem Solving Session
+# Part 12 - Guided Problem Solving Session
 
-# Problem 1 — Count Vowels
+# Problem 1 - Count Vowels
 
 ## Problem
 
@@ -41332,7 +41332,7 @@ Output:
 
 ---
 
-## Step 1 — Input
+## Step 1 - Input
 
 ```text
 One String
@@ -41340,7 +41340,7 @@ One String
 
 ---
 
-## Step 2 — Output
+## Step 2 - Output
 
 ```text
 One Number
@@ -41348,7 +41348,7 @@ One Number
 
 ---
 
-## Step 3 — Need
+## Step 3 - Need
 
 ```text
 Inspect Every Character
@@ -41360,7 +41360,7 @@ Count Matches
 
 ---
 
-## Step 4 — Pattern
+## Step 4 - Pattern
 
 ```text
 Traversal
@@ -41372,7 +41372,7 @@ Counting
 
 ---
 
-## Step 5 — State
+## Step 5 - State
 
 ```text
 count
@@ -41380,7 +41380,7 @@ count
 
 ---
 
-## Step 6 — Algorithm
+## Step 6 - Algorithm
 
 ```text
 Read String
@@ -41399,7 +41399,7 @@ Print count
 
 ---
 
-## Step 7 — Code
+## Step 7 - Code
 
 ```c
 #include <stdio.h>
@@ -41432,7 +41432,7 @@ int main()
 
 ---
 
-## Step 8 — Tests
+## Step 8 - Tests
 
 ```text
 aeiou → 5
@@ -41452,7 +41452,7 @@ z → 0
 
 ---
 
-# Problem 2 — Find First Occurrence
+# Problem 2 - Find First Occurrence
 
 ## Problem
 
@@ -41574,7 +41574,7 @@ scanf(" %c", &target);
 
 ---
 
-# Problem 3 — Count Uppercase, Lowercase and Digits
+# Problem 3 - Count Uppercase, Lowercase and Digits
 
 ## Problem
 
@@ -41674,7 +41674,7 @@ int main()
 
 ---
 
-# Problem 4 — Toggle Case
+# Problem 4 - Toggle Case
 
 Input:
 
@@ -41747,7 +41747,7 @@ int main()
 
 ---
 
-# Problem 5 — Character Frequency
+# Problem 5 - Character Frequency
 
 ## Problem
 
@@ -41830,7 +41830,7 @@ int main()
 
 ---
 
-# Problem 6 — Reverse String In-Place
+# Problem 6 - Reverse String In-Place
 
 ## Need
 
@@ -41881,7 +41881,7 @@ int main()
 
 ---
 
-# Problem 7 — Palindrome Check
+# Problem 7 - Palindrome Check
 
 ## Need
 
@@ -41945,9 +41945,9 @@ int main()
 
 ---
 
-# Part 13 — Mixed Pattern Problems
+# Part 13 - Mixed Pattern Problems
 
-# Lesson 40 — এক Problem-এ একাধিক Pattern
+# Lesson 40 - এক Problem-এ একাধিক Pattern
 
 Actual Problem-এ অনেক সময় Pattern combine হবে।
 
@@ -41977,7 +41977,7 @@ Maximum
 
 ---
 
-# Mixed Problem 1 — Most Frequent Character
+# Mixed Problem 1 - Most Frequent Character
 
 Input:
 
@@ -42072,7 +42072,7 @@ int main()
 
 ---
 
-# Lesson 41 — Tie Behaviour বুঝতে হবে
+# Lesson 41 - Tie Behaviour বুঝতে হবে
 
 Input:
 
@@ -42129,7 +42129,7 @@ print any
 
 ---
 
-# Mixed Problem 2 — Count Distinct Lowercase Characters
+# Mixed Problem 2 - Count Distinct Lowercase Characters
 
 Input:
 
@@ -42208,7 +42208,7 @@ int main()
 
 ---
 
-# Mixed Problem 3 — Is Every Character Unique?
+# Mixed Problem 3 - Is Every Character Unique?
 
 Input:
 
@@ -42274,7 +42274,7 @@ Found?
 
 ---
 
-# Mixed Problem 4 — Count Palindromic Words? Conceptual Preview
+# Mixed Problem 4 - Count Palindromic Words? Conceptual Preview
 
 Suppose multiple words দেওয়া হলো।
 
@@ -42308,9 +42308,9 @@ Counting
 
 ---
 
-# Part 14 — Contest Simulation
+# Part 14 - Contest Simulation
 
-# Lesson 42 — Problem দেখার পর প্রথম ৫ মিনিট
+# Lesson 42 - Problem দেখার পর প্রথম ৫ মিনিট
 
 ধরো Contest-এ একটি String Problem এলো।
 
@@ -42382,7 +42382,7 @@ Single character
 
 ---
 
-# Lesson 43 — Coding-এর আগে ৩০-Second Checklist
+# Lesson 43 - Coding-এর আগে ৩০-Second Checklist
 
 ```text
 Input word নাকি line?
@@ -42408,7 +42408,7 @@ Spaces possible?
 
 ---
 
-# Lesson 44 — Submission-এর আগে Checklist
+# Lesson 44 - Submission-এর আগে Checklist
 
 ```text
 [ ] Debug prints removed
@@ -42432,7 +42432,7 @@ Spaces possible?
 
 ---
 
-# Lesson 45 — Wrong Answer এলে Contest Workflow
+# Lesson 45 - Wrong Answer এলে Contest Workflow
 
 ```text
 WA
@@ -42510,9 +42510,9 @@ while (str[i] != '\0')      // Condition
 
 ---
 
-# Part 15 — Exercises
+# Part 15 - Exercises
 
-# Exercise 1 — Pattern Identification
+# Exercise 1 - Pattern Identification
 
 প্রতিটি Problem-এর Pattern লিখো।
 
@@ -42581,7 +42581,7 @@ Pattern:
 
 ---
 
-# Exercise 2 — State Selection
+# Exercise 2 - State Selection
 
 Fill:
 
@@ -42597,7 +42597,7 @@ Fill:
 
 ---
 
-# Exercise 3 — Find Input Bug
+# Exercise 3 - Find Input Bug
 
 ```c
 char str[100];
@@ -42626,7 +42626,7 @@ Correct input method:
 
 ---
 
-# Exercise 4 — Find Boundary Bug
+# Exercise 4 - Find Boundary Bug
 
 ```c
 int length = strlen(str);
@@ -42652,7 +42652,7 @@ Correct condition:
 
 ---
 
-# Exercise 5 — Counter Bug
+# Exercise 5 - Counter Bug
 
 ```c
 for (int i = 0; str[i] != '\0'; i++)
@@ -42681,7 +42681,7 @@ Fix:
 
 ---
 
-# Exercise 6 — Search Bug
+# Exercise 6 - Search Bug
 
 ```c
 int index = 0;
@@ -42713,7 +42713,7 @@ Correct initial value:
 
 ---
 
-# Exercise 7 — Frequency Bug
+# Exercise 7 - Frequency Bug
 
 ```c
 int freq[26];
@@ -42736,7 +42736,7 @@ Fix:
 
 ---
 
-# Exercise 8 — Reverse Bug
+# Exercise 8 - Reverse Bug
 
 ```c
 for (int i = 0; i < length; i++)
@@ -42762,7 +42762,7 @@ Better stopping condition:
 
 ---
 
-# Exercise 9 — Palindrome Bug Hunt
+# Exercise 9 - Palindrome Bug Hunt
 
 ```c
 int left = 0;
@@ -42808,7 +42808,7 @@ Fix:
 
 ---
 
-# Exercise 10 — Build Edge Cases
+# Exercise 10 - Build Edge Cases
 
 Problem:
 
@@ -42838,7 +42838,7 @@ Mixed Character Case:
 
 ---
 
-# Exercise 11 — Search Edge Cases
+# Exercise 11 - Search Edge Cases
 
 Problem:
 
@@ -42871,7 +42871,7 @@ Single-character absent:
 
 ---
 
-# Exercise 12 — Dry Run
+# Exercise 12 - Dry Run
 
 Input:
 
@@ -42911,7 +42911,7 @@ Digits:
 
 ---
 
-# Exercise 13 — Frequency Dry Run
+# Exercise 13 - Frequency Dry Run
 
 Input:
 
@@ -42942,7 +42942,7 @@ Distinct Characters:
 
 ---
 
-# Exercise 14 — Mixed Pattern Identification
+# Exercise 14 - Mixed Pattern Identification
 
 Problem:
 
@@ -42982,7 +42982,7 @@ Code এখন লিখতে হবে না।
 
 ---
 
-# Exercise 15 — Debugging Table
+# Exercise 15 - Debugging Table
 
 Buggy Program `banana`-তে first `a` খুঁজছে কিন্তু output `5` দিচ্ছে।
 
@@ -43009,7 +43009,7 @@ What line/keyword is missing?
 
 ---
 
-# Exercise 16 — Choose Correct Pattern
+# Exercise 16 - Choose Correct Pattern
 
 Options:
 
@@ -43040,7 +43040,7 @@ Toggle case → ?
 
 ---
 
-# Exercise 17 — Five-Part Loop Analysis
+# Exercise 17 - Five-Part Loop Analysis
 
 Code:
 
@@ -43080,7 +43080,7 @@ Progress Update:
 
 ---
 
-# Exercise 18 — Problem Decomposition
+# Exercise 18 - Problem Decomposition
 
 Problem:
 
@@ -43118,9 +43118,9 @@ Edge Cases:
 
 ---
 
-# Part 16 — Chapter Assignment
+# Part 16 - Chapter Assignment
 
-# 📝 Task 1 — String Pattern Decision Sheet
+# 📝 Task 1 - String Pattern Decision Sheet
 
 নিজের ভাষায় নিচের Table complete করবে:
 
@@ -43137,7 +43137,7 @@ Edge Cases:
 
 ---
 
-# 📝 Task 2 — Bug Dictionary
+# 📝 Task 2 - Bug Dictionary
 
 তোমার Notes-এ Section বানাবে:
 
@@ -43200,7 +43200,7 @@ Format:
 
 ---
 
-# 📝 Task 3 — Solve 7 Core Problems
+# 📝 Task 3 - Solve 7 Core Problems
 
 Files:
 
@@ -43238,7 +43238,7 @@ Extra Space:
 
 ---
 
-# 📝 Task 4 — Mixed Pattern Problems
+# 📝 Task 4 - Mixed Pattern Problems
 
 Files:
 
@@ -43268,7 +43268,7 @@ Edge Cases
 
 ---
 
-# 📝 Task 5 — Test Case Sheet
+# 📝 Task 5 - Test Case Sheet
 
 এই Problems-এর জন্য নিজের Test Case তৈরি করবে:
 
@@ -43296,7 +43296,7 @@ Most Frequent Character
 
 ---
 
-# 📝 Task 6 — Bug Hunting Challenge
+# 📝 Task 6 - Bug Hunting Challenge
 
 নিচের Code fix করবে:
 
@@ -43365,7 +43365,7 @@ Early Exit দেওয়া safe কি না?
 
 ---
 
-# 📝 Task 7 — Explain the Mixed Loop Problem
+# 📝 Task 7 - Explain the Mixed Loop Problem
 
 ধরো একই Loop:
 
@@ -43411,7 +43411,7 @@ while another task is incomplete.
 
 ---
 
-# 📝 Task 8 — Contest Workflow লিখবে
+# 📝 Task 8 - Contest Workflow লিখবে
 
 নিজের ভাষায়:
 
@@ -43452,7 +43452,7 @@ Submit
 
 ---
 
-# 📝 Task 9 — Pattern Recognition Drill
+# 📝 Task 9 - Pattern Recognition Drill
 
 নিচের Problems-এর Code লিখবে না।
 
@@ -43522,7 +43522,7 @@ Reason:
 
 ---
 
-# 📝 Task 10 — Manual Debugging Session
+# 📝 Task 10 - Manual Debugging Session
 
 তোমার লেখা আগের String Programs থেকে যেকোনো ৩টি নাও।
 
@@ -43600,7 +43600,7 @@ Report:
 
 ---
 
-# 📝 Task 11 — Mini Contest
+# 📝 Task 11 - Mini Contest
 
 Time Limit:
 
@@ -43611,12 +43611,12 @@ Time Limit:
 Problems:
 
 ```text
-A — Count Vowels
-B — Find First Occurrence
-C — Toggle Case
-D — Character Frequency
-E — Reverse String
-F — Palindrome Check
+A - Count Vowels
+B - Find First Occurrence
+C - Toggle Case
+D - Character Frequency
+E - Reverse String
+F - Palindrome Check
 ```
 
 Rules:
@@ -43671,12 +43671,12 @@ Testing Habit
 
 ---
 
-# 📝 Task 12 — Chapter Reflection
+# 📝 Task 12 - Chapter Reflection
 
 Copy-Paste Version:
 
 ````markdown
-# 🧠 Day 3 — Chapter 10 Reflection
+# 🧠 Day 3 - Chapter 10 Reflection
 
 ## 1. My Problem-Solving Workflow
 
@@ -44262,7 +44262,7 @@ Problem
     └── Palindrome
 ```
 
-কিন্তু আসল বিষয় হলো—এগুলো সম্পূর্ণ আলাদা জিনিস না।
+কিন্তু আসল বিষয় হলো-এগুলো সম্পূর্ণ আলাদা জিনিস না।
 
 Example:
 
@@ -44465,37 +44465,37 @@ Progress Update
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ✅ Chapter 7 — String Transformation
+├── ✅ Chapter 7 - String Transformation
 │
-├── ✅ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ✅ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ✅ Chapter 9 — Palindrome Pattern
+├── ✅ Chapter 9 - Palindrome Pattern
 │
-├── ✅ Chapter 10 — Common Bugs, Edge Cases & Problem Solving Session
+├── ✅ Chapter 10 - Common Bugs, Edge Cases & Problem Solving Session
 │
-└── ⏳ Chapter 11 — Pattern Library Update, Assignment & Reflection
+└── ⏳ Chapter 11 - Pattern Library Update, Assignment & Reflection
 ```
 
-# 🎯 Day 3 — Chapter 10 Complete
+# 🎯 Day 3 - Chapter 10 Complete
 
 এখন Day 3-এর নতুন Theory এবং core String Problem-Solving অংশ প্রায় complete।
 
 পরের Chapter:
 
 ```text
-Day 3 — Chapter 11
+Day 3 - Chapter 11
 Pattern Library Update
 +
 Final Assignment
@@ -44529,11 +44529,11 @@ Debug
 Document Pattern
 ```
 
-এবং Day 3 শেষে তোমার `Pattern_Library/core_pattern.md`, assignment structure, problem folders, mistake log এবং contest-readiness checklist—সব একসঙ্গে update করার মতো করে সাজানো হবে।
+এবং Day 3 শেষে তোমার `Pattern_Library/core_pattern.md`, assignment structure, problem folders, mistake log এবং contest-readiness checklist-সব একসঙ্গে update করার মতো করে সাজানো হবে।
 
 ---
 
-# 📘 Day 3 — Chapter 11
+# 📘 Day 3 - Chapter 11
 
 # 🏁 Pattern Library Update, Final Assignment, Mini Contest Review & Day 3 Reflection
 
@@ -44596,33 +44596,33 @@ Mini Contest Experience
 # 📖 Chapter Map
 
 ```text
-Day 3 — Chapter 11
+Day 3 - Chapter 11
 │
-├── Part 1  — Day 3 Knowledge Consolidation
+├── Part 1  - Day 3 Knowledge Consolidation
 │
-├── Part 2  — String Pattern Library Update
+├── Part 2  - String Pattern Library Update
 │
-├── Part 3  — Pattern Card System
+├── Part 3  - Pattern Card System
 │
-├── Part 4  — Code Template Library
+├── Part 4  - Code Template Library
 │
-├── Part 5  — Repository Organization
+├── Part 5  - Repository Organization
 │
-├── Part 6  — Mistake Log System
+├── Part 6  - Mistake Log System
 │
-├── Part 7  — Final Practice Ladder
+├── Part 7  - Final Practice Ladder
 │
-├── Part 8  — Day 3 Mini Contest
+├── Part 8  - Day 3 Mini Contest
 │
-├── Part 9  — Contest Review System
+├── Part 9  - Contest Review System
 │
-├── Part 10 — Final Assignment
+├── Part 10 - Final Assignment
 │
-├── Part 11 — Day 3 Reflection
+├── Part 11 - Day 3 Reflection
 │
-├── Part 12 — Self Evaluation
+├── Part 12 - Self Evaluation
 │
-└── Part 13 — Day 4 Readiness Check
+└── Part 13 - Day 4 Readiness Check
 ```
 
 ---
@@ -44671,9 +44671,9 @@ How to select patterns?
 
 ---
 
-# Part 1 — Day 3 Knowledge Consolidation
+# Part 1 - Day 3 Knowledge Consolidation
 
-# Lesson 1 — তুমি আসলে কী কী শিখেছ?
+# Lesson 1 - তুমি আসলে কী কী শিখেছ?
 
 String Chapter শেষ করার পরে Beginner অনেক সময় ভাবে:
 
@@ -44747,7 +44747,7 @@ String
 
 ---
 
-# Lesson 2 — Pattern আলাদা, Syntax আলাদা
+# Lesson 2 - Pattern আলাদা, Syntax আলাদা
 
 একটা গুরুত্বপূর্ণ বিষয় মনে রাখবে।
 
@@ -44831,26 +44831,26 @@ Pattern Recognition
 
 ---
 
-# Lesson 3 — Pattern Family চিনো
+# Lesson 3 - Pattern Family চিনো
 
 আমরা Day 3-তে অনেক Pattern শিখেছি।
 
 কিন্তু এগুলোকে Family হিসেবে সাজালে মনে রাখা সহজ।
 
-## Family 1 — Visit
+## Family 1 - Visit
 
 ```text
 Traversal
 ```
 
-## Family 2 — Measure
+## Family 2 - Measure
 
 ```text
 Counting
 Frequency
 ```
 
-## Family 3 — Locate
+## Family 3 - Locate
 
 ```text
 Search
@@ -44858,14 +44858,14 @@ First Occurrence
 Last Occurrence
 ```
 
-## Family 4 — Change
+## Family 4 - Change
 
 ```text
 Transformation
 Reverse
 ```
 
-## Family 5 — Validate
+## Family 5 - Validate
 
 ```text
 Flag
@@ -44899,7 +44899,7 @@ String Problem
 
 ---
 
-# Part 2 — String Pattern Library Update
+# Part 2 - String Pattern Library Update
 
 তোমার Repository-তে আগে থেকেই:
 
@@ -44914,7 +44914,7 @@ String Problem
 
 ---
 
-# Lesson 4 — Pattern Library কী?
+# Lesson 4 - Pattern Library কী?
 
 Pattern Library কোনো Code Dump না।
 
@@ -44950,7 +44950,7 @@ Edge Cases
 
 ---
 
-# Lesson 5 — String Pattern Section Structure
+# Lesson 5 - String Pattern Section Structure
 
 `core_pattern.md`-এ নতুন Section:
 
@@ -44963,30 +44963,30 @@ Edge Cases
 ```text
 String Patterns
 │
-├── Pattern 01 — String Traversal
-├── Pattern 02 — Conditional Counting
-├── Pattern 03 — Character Classification
-├── Pattern 04 — Character Search
-├── Pattern 05 — First Occurrence
-├── Pattern 06 — Last Occurrence
-├── Pattern 07 — Frequency Array
-├── Pattern 08 — String Transformation
-├── Pattern 09 — Reverse String
-├── Pattern 10 — Two Pointer
-├── Pattern 11 — Palindrome Check
-├── Pattern 12 — Distinct Character Count
-└── Pattern 13 — Most Frequent Character
+├── Pattern 01 - String Traversal
+├── Pattern 02 - Conditional Counting
+├── Pattern 03 - Character Classification
+├── Pattern 04 - Character Search
+├── Pattern 05 - First Occurrence
+├── Pattern 06 - Last Occurrence
+├── Pattern 07 - Frequency Array
+├── Pattern 08 - String Transformation
+├── Pattern 09 - Reverse String
+├── Pattern 10 - Two Pointer
+├── Pattern 11 - Palindrome Check
+├── Pattern 12 - Distinct Character Count
+└── Pattern 13 - Most Frequent Character
 ```
 
 ---
 
-# Part 3 — Pattern Card System
+# Part 3 - Pattern Card System
 
 এখন প্রতিটি Pattern-কে ছোট একটি Card-এর মতো লিখবে।
 
 ---
 
-# Pattern Card 01 — String Traversal
+# Pattern Card 01 - String Traversal
 
 ## Problem Signal
 
@@ -45042,7 +45042,7 @@ Processing wrong boundary
 
 ---
 
-# Pattern Card 02 — Conditional Counting
+# Pattern Card 02 - Conditional Counting
 
 ## Problem Signal
 
@@ -45094,7 +45094,7 @@ Space: O(1)
 
 ---
 
-# Pattern Card 03 — Character Classification
+# Pattern Card 03 - Character Classification
 
 ## Problem Signal
 
@@ -45156,7 +45156,7 @@ Below Upper Bound
 
 ---
 
-# Pattern Card 04 — Character Search
+# Pattern Card 04 - Character Search
 
 ## Problem Signal
 
@@ -45201,7 +45201,7 @@ for (int i = 0; str[i] != '\0'; i++)
 
 ---
 
-# Pattern Card 05 — First Occurrence
+# Pattern Card 05 - First Occurrence
 
 ## Problem Signal
 
@@ -45256,7 +45256,7 @@ Save + Break
 
 ---
 
-# Pattern Card 06 — Last Occurrence
+# Pattern Card 06 - Last Occurrence
 
 ## Problem Signal
 
@@ -45302,7 +45302,7 @@ Last Occurrence
 
 ---
 
-# Pattern Card 07 — Frequency Array
+# Pattern Card 07 - Frequency Array
 
 ## Problem Signal
 
@@ -45373,7 +45373,7 @@ Input বড় হলেও array size বাড়ছে না।
 
 ---
 
-# Pattern Card 08 — String Transformation
+# Pattern Card 08 - String Transformation
 
 ## Problem Signal
 
@@ -45418,11 +45418,11 @@ replace character
 
 ---
 
-# Pattern Card 09 — Reverse String
+# Pattern Card 09 - Reverse String
 
 Reverse করার একাধিক Strategy আছে।
 
-## Strategy A — Backward Print
+## Strategy A - Backward Print
 
 ```text
 Need only output
@@ -45430,7 +45430,7 @@ Need only output
 Traverse from end to beginning
 ```
 
-## Strategy B — Build New String
+## Strategy B - Build New String
 
 ```text
 Need separate reversed copy
@@ -45438,7 +45438,7 @@ Need separate reversed copy
 Result Array
 ```
 
-## Strategy C — In-Place Reverse
+## Strategy C - In-Place Reverse
 
 ```text
 Need modify original string
@@ -45465,7 +45465,7 @@ while (left < right)
 
 ---
 
-# Pattern Card 10 — Two Pointer
+# Pattern Card 10 - Two Pointer
 
 ## Problem Signal
 
@@ -45508,7 +45508,7 @@ left >= right
 
 ---
 
-# Pattern Card 11 — Palindrome
+# Pattern Card 11 - Palindrome
 
 ## Problem Signal
 
@@ -45569,7 +45569,7 @@ while (left < right)
 
 ---
 
-# Pattern Card 12 — Distinct Character Count
+# Pattern Card 12 - Distinct Character Count
 
 ## Problem Signal
 
@@ -45615,7 +45615,7 @@ Conditional Counting
 
 ---
 
-# Pattern Card 13 — Most Frequent Character
+# Pattern Card 13 - Most Frequent Character
 
 ## Problem Signal
 
@@ -45658,9 +45658,9 @@ Analyze Counts Later
 
 ---
 
-# Part 4 — Code Template Library
+# Part 4 - Code Template Library
 
-# Lesson 6 — Template এবং Solution-এর Difference
+# Lesson 6 - Template এবং Solution-এর Difference
 
 Solution:
 
@@ -45720,7 +45720,7 @@ Then Review Template
 
 ---
 
-# Lesson 7 — Minimal CP C Template
+# Lesson 7 - Minimal CP C Template
 
 `template.c`:
 
@@ -45763,7 +45763,7 @@ Use What You Understand
 
 ---
 
-# Part 5 — Repository Organization
+# Part 5 - Repository Organization
 
 তোমার CP Bootcamp Repository-তে Day 3-এর কাজ organized হওয়া দরকার।
 
@@ -45829,7 +45829,7 @@ CP-Bootcamp-2026/
 
 ---
 
-# Lesson 8 — Practice Folder vs Platform Folder
+# Lesson 8 - Practice Folder vs Platform Folder
 
 তুমি প্রশ্ন করতে পারো:
 
@@ -45867,9 +45867,9 @@ HackerRank-এর actual problem solve করেছ:
 
 ---
 
-# Part 6 — Mistake Log System
+# Part 6 - Mistake Log System
 
-# Lesson 9 — Mistake Log কেন দরকার?
+# Lesson 9 - Mistake Log কেন দরকার?
 
 তুমি যদি একই Bug ৫ বার করো, কিন্তু record না করো:
 
@@ -45901,7 +45901,7 @@ Avoid
 
 ---
 
-# Lesson 10 — Mistake Categories
+# Lesson 10 - Mistake Categories
 
 Day 3-এর জন্য Mistakes category:
 
@@ -45985,7 +45985,7 @@ Yes / Not Sure
 
 ---
 
-# Lesson 11 — Mistake Severity
+# Lesson 11 - Mistake Severity
 
 সব Mistake same না।
 
@@ -46020,7 +46020,7 @@ Example:
 
 ---
 
-# Part 7 — Final Practice Ladder
+# Part 7 - Final Practice Ladder
 
 Day 3 Final Practice random হবে না।
 
@@ -46028,7 +46028,7 @@ Day 3 Final Practice random হবে না।
 
 ---
 
-# Level 1 — Direct Pattern
+# Level 1 - Direct Pattern
 
 এই Problems-এ Pattern প্রায় direct।
 
@@ -46048,7 +46048,7 @@ Basic Implementation
 
 ---
 
-# Level 2 — Search Variation
+# Level 2 - Search Variation
 
 ```text
 1. Character Exists
@@ -46091,7 +46091,7 @@ Counter + Continue
 
 ---
 
-# Level 3 — Transformation
+# Level 3 - Transformation
 
 ```text
 1. Lowercase to Uppercase
@@ -46110,7 +46110,7 @@ Modification
 
 ---
 
-# Level 4 — Frequency
+# Level 4 - Frequency
 
 ```text
 1. Frequency of Lowercase Letters
@@ -46130,7 +46130,7 @@ Analyze Frequency
 
 ---
 
-# Level 5 — Two Pointer
+# Level 5 - Two Pointer
 
 ```text
 1. Print Reverse
@@ -46146,7 +46146,7 @@ Opposite Index Thinking
 
 ---
 
-# Level 6 — Mixed Pattern
+# Level 6 - Mixed Pattern
 
 ```text
 1. Most Frequent Vowel
@@ -46161,7 +46161,7 @@ Opposite Index Thinking
 
 ---
 
-# Part 8 — Day 3 Mini Contest
+# Part 8 - Day 3 Mini Contest
 
 এখন Day 3-এর Final Mini Contest।
 
@@ -46203,7 +46203,7 @@ Independent Thinking
 
 ---
 
-# Contest Problem A — Character Type Counter
+# Contest Problem A - Character Type Counter
 
 ## Task
 
@@ -46227,7 +46227,7 @@ Multiple Counters
 
 ---
 
-# Contest Problem B — First Target Position
+# Contest Problem B - First Target Position
 
 ## Task
 
@@ -46253,7 +46253,7 @@ Early Exit
 
 ---
 
-# Contest Problem C — Toggle Case
+# Contest Problem C - Toggle Case
 
 Input:
 
@@ -46279,7 +46279,7 @@ Transformation
 
 ---
 
-# Contest Problem D — Distinct Lowercase Letters
+# Contest Problem D - Distinct Lowercase Letters
 
 Input:
 
@@ -46303,7 +46303,7 @@ Conditional Counting
 
 ---
 
-# Contest Problem E — Reverse In-Place
+# Contest Problem E - Reverse In-Place
 
 Pattern expected:
 
@@ -46315,7 +46315,7 @@ Swap
 
 ---
 
-# Contest Problem F — Palindrome
+# Contest Problem F - Palindrome
 
 Pattern expected:
 
@@ -46329,7 +46329,7 @@ Early Exit
 
 ---
 
-# Contest Problem G — Most Frequent Character
+# Contest Problem G - Most Frequent Character
 
 Input only lowercase letters।
 
@@ -46427,9 +46427,9 @@ Easy Problem আগে solve করা যায়।
 
 ---
 
-# Part 9 — Contest Review System
+# Part 9 - Contest Review System
 
-# Lesson 12 — Contest শেষ মানে কাজ শেষ না
+# Lesson 12 - Contest শেষ মানে কাজ শেষ না
 
 Contest:
 
@@ -46465,11 +46465,11 @@ Improvement
 
 ---
 
-# Lesson 13 — Problem Review Categories
+# Lesson 13 - Problem Review Categories
 
 প্রতিটি unsolved বা wrong problem-এর জন্য identify করবে:
 
-## Category A — Didn't Understand Statement
+## Category A - Didn't Understand Statement
 
 ```text
 Reading Problem
@@ -46477,7 +46477,7 @@ Reading Problem
 
 issue।
 
-## Category B — Didn't Recognize Pattern
+## Category B - Didn't Recognize Pattern
 
 ```text
 Pattern Recognition
@@ -46485,7 +46485,7 @@ Pattern Recognition
 
 issue।
 
-## Category C — Knew Pattern, Couldn't Implement
+## Category C - Knew Pattern, Couldn't Implement
 
 ```text
 Implementation
@@ -46493,7 +46493,7 @@ Implementation
 
 issue।
 
-## Category D — Code Written, Wrong Answer
+## Category D - Code Written, Wrong Answer
 
 ```text
 Logic / Edge Case
@@ -46501,7 +46501,7 @@ Logic / Edge Case
 
 issue।
 
-## Category E — Too Slow
+## Category E - Too Slow
 
 ```text
 Speed / Familiarity
@@ -46627,7 +46627,7 @@ Solved / Unsolved
 
 ---
 
-# Part 10 — Final Assignment
+# Part 10 - Final Assignment
 
 এখন Day 3-এর Complete Final Assignment।
 
@@ -46635,7 +46635,7 @@ Solved / Unsolved
 
 ---
 
-# 📝 Task 1 — Update Pattern Library
+# 📝 Task 1 - Update Pattern Library
 
 `18_Pattern_Library/core_pattern.md`-এ add করবে:
 
@@ -46669,7 +46669,7 @@ Edge Cases
 
 ---
 
-# 📝 Task 2 — Create Day 3 Practice Folder
+# 📝 Task 2 - Create Day 3 Practice Folder
 
 Structure:
 
@@ -46691,7 +46691,7 @@ Structure:
 
 ---
 
-# 📝 Task 3 — Every Code Must Have Analysis Header
+# 📝 Task 3 - Every Code Must Have Analysis Header
 
 প্রতিটি `.c` file-এর শুরুতে:
 
@@ -46723,7 +46723,7 @@ Extra Space:
 
 ---
 
-# 📝 Task 4 — Solve Without Copying
+# 📝 Task 4 - Solve Without Copying
 
 এই ৭টি Problem Notes না দেখে লিখবে:
 
@@ -46753,7 +46753,7 @@ Try Again
 
 ---
 
-# 📝 Task 5 — Pattern Comparison Sheet
+# 📝 Task 5 - Pattern Comparison Sheet
 
 একটি File:
 
@@ -46842,7 +46842,7 @@ Two Pointer
 
 ---
 
-# 📝 Task 6 — Build 20 Test Cases
+# 📝 Task 6 - Build 20 Test Cases
 
 Minimum 20 Test Case বানাবে।
 
@@ -46867,7 +46867,7 @@ File:
 
 ---
 
-# 📝 Task 7 — Build Mistake Log
+# 📝 Task 7 - Build Mistake Log
 
 File:
 
@@ -46900,7 +46900,7 @@ Output
 
 ---
 
-# 📝 Task 8 — Run Day 3 Mini Contest
+# 📝 Task 8 - Run Day 3 Mini Contest
 
 Create:
 
@@ -46929,7 +46929,7 @@ Timer শেষ হলে Code লেখা বন্ধ করবে।
 
 ---
 
-# 📝 Task 9 — Redo Unsolved Problems
+# 📝 Task 9 - Redo Unsolved Problems
 
 Contest-এর সময় যেগুলো solve হয়নি:
 
@@ -46981,7 +46981,7 @@ Meaning:
 
 ---
 
-# 📝 Task 10 — Update CP Dictionary
+# 📝 Task 10 - Update CP Dictionary
 
 তোমার:
 
@@ -47039,7 +47039,7 @@ Format:
 
 ---
 
-# 📝 Task 11 — Complexity Analysis
+# 📝 Task 11 - Complexity Analysis
 
 নিচের Problems-এর Time এবং Extra Space Complexity লিখবে:
 
@@ -47072,13 +47072,13 @@ O(n)
 
 ---
 
-# 📝 Task 12 — Pattern Chain Drill
+# 📝 Task 12 - Pattern Chain Drill
 
 নিচের Problemগুলোর Code লিখবে না।
 
 শুধু Pattern Chain লিখবে।
 
-## A — Count Vowels
+## A - Count Vowels
 
 ```text
 ...
@@ -47088,7 +47088,7 @@ O(n)
 ...
 ```
 
-## B — First Occurrence
+## B - First Occurrence
 
 ```text
 ...
@@ -47098,7 +47098,7 @@ O(n)
 ...
 ```
 
-## C — Most Frequent Character
+## C - Most Frequent Character
 
 ```text
 ...
@@ -47108,7 +47108,7 @@ O(n)
 ...
 ```
 
-## D — Palindrome
+## D - Palindrome
 
 ```text
 ...
@@ -47118,7 +47118,7 @@ O(n)
 ...
 ```
 
-## E — Distinct Digits
+## E - Distinct Digits
 
 ```text
 ...
@@ -47128,7 +47128,7 @@ O(n)
 ...
 ```
 
-## F — First Repeated Character
+## F - First Repeated Character
 
 ```text
 ...
@@ -47142,7 +47142,7 @@ O(n)
 
 ---
 
-# 📝 Task 13 — Explain These Without Code
+# 📝 Task 13 - Explain These Without Code
 
 নিজের ভাষায় explain করবে:
 
@@ -47188,7 +47188,7 @@ Pattern Selection এবং Implementation-এর difference কী?
 
 ---
 
-# Part 11 — Day 3 Reflection
+# Part 11 - Day 3 Reflection
 
 এখন তোমাকে নিজের progress evaluate করতে হবে।
 
@@ -47526,7 +47526,7 @@ The biggest thing I need to improve:
 
 ---
 
-# Part 12 — Self Evaluation
+# Part 12 - Self Evaluation
 
 # 🧪 Day 3 Final Test
 
@@ -47786,7 +47786,7 @@ Code লেখার আগে তোমার fixed Problem-Solving Workflow �
 
 ---
 
-# Part 13 — Day 4 Readiness Check
+# Part 13 - Day 4 Readiness Check
 
 Day 4 শুরু করার আগে এই Checklist complete করবে।
 
@@ -48089,27 +48089,27 @@ Submit
 ```text
 Day 3
 │
-├── ✅ Chapter 1 — String Mental Model
+├── ✅ Chapter 1 - String Mental Model
 │
-├── ✅ Chapter 2 — String Input & Output
+├── ✅ Chapter 2 - String Input & Output
 │
-├── ✅ Chapter 3 — String Traversal Pattern
+├── ✅ Chapter 3 - String Traversal Pattern
 │
-├── ✅ Chapter 4 — Character Classification
+├── ✅ Chapter 4 - Character Classification
 │
-├── ✅ Chapter 5 — Counting Patterns on Strings
+├── ✅ Chapter 5 - Counting Patterns on Strings
 │
-├── ✅ Chapter 6 — Character Search & Frequency
+├── ✅ Chapter 6 - Character Search & Frequency
 │
-├── ✅ Chapter 7 — String Transformation
+├── ✅ Chapter 7 - String Transformation
 │
-├── ✅ Chapter 8 — Reverse & Two-Pointer Mental Model
+├── ✅ Chapter 8 - Reverse & Two-Pointer Mental Model
 │
-├── ✅ Chapter 9 — Palindrome Pattern
+├── ✅ Chapter 9 - Palindrome Pattern
 │
-├── ✅ Chapter 10 — Common Bugs, Edge Cases & Problem Solving
+├── ✅ Chapter 10 - Common Bugs, Edge Cases & Problem Solving
 │
-└── ✅ Chapter 11 — Pattern Library, Final Assignment & Reflection
+└── ✅ Chapter 11 - Pattern Library, Final Assignment & Reflection
 ```
 
 # 🎉 Day 3 Complete

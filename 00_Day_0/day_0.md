@@ -1,4 +1,4 @@
-# 🏕️ Day 0 — CP Mindset (সবচেয়ে গুরুত্বপূর্ণ দিন)
+# 🏕️ Day 0 - CP Mindset (সবচেয়ে গুরুত্বপূর্ণ দিন)
 
 আজ **এক লাইনও code লিখবে না।**
 
@@ -83,7 +83,7 @@ Security নেই।
 
 UI নেই।
 
-শুধু—
+শুধু-
 
 > **ঠিক answer + time limit-এর মধ্যে।**
 
@@ -168,11 +168,11 @@ Given N integers.
 Print the largest number.
 ```
 
-Beginner ভাবে—
+Beginner ভাবে-
 
 > "Loop দিব?"
 
-Experienced ভাবে—
+Experienced ভাবে-
 
 ```
 Need Largest
@@ -200,7 +200,7 @@ Need Variable
 
 এটাই CP-এর সবচেয়ে powerful skill।
 
-ধরো লেখা আছে—
+ধরো লেখা আছে-
 
 ```
 Find the maximum.
@@ -226,7 +226,7 @@ Keep Best Answer
 
 ---
 
-ধরো—
+ধরো-
 
 ```
 Count Even Numbers
@@ -248,7 +248,7 @@ Need if
 
 ---
 
-ধরো—
+ধরো-
 
 ```
 Reverse Number
@@ -344,7 +344,7 @@ Uppercase
 
 ---
 
-একদিন দেখবে—
+একদিন দেখবে-
 
 Problem পড়েই pattern বুঝে ফেলছো।
 
@@ -354,7 +354,7 @@ Problem পড়েই pattern বুঝে ফেলছো।
 
 # Lesson 6: Brute Force কী?
 
-ধরো Problem—
+ধরো Problem-
 
 ```
 ১ থেকে ১০০ পর্যন্ত even count করো।
@@ -564,7 +564,7 @@ Keyboard Touch না।
 
 আমি উল্টো দেখি।
 
-তোমার Strength—
+তোমার Strength-
 
 ✅ Logic আছে।
 

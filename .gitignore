@@ -3,3 +3,16 @@
 
 # Template executable
 24_Templates/template
+
+# Compiled binaries
+*.out
+*.exe
+
+# C compiled files
+template
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
